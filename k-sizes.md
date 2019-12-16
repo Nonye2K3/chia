@@ -24,3 +24,16 @@
 | 27  | 81  | 2.7  | -  | -  |
 | 28  | 260  | 5.6  | 30.3  | -  |
 | 29  | 787  | 11.5  | 61  | -  |
+
+## Ubuntu 19.04
+* Intel(R) Xeon(R) W-2155 CPU @ 3.30GHz (10 cores)
+* 64 GB PC4-21300 DDR4-2666V-R REGISTERED ECC
+* Western Digital 4 GiB [WD10EZEX](https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-blue-hdd/data-sheet-wd-blue-pc-hard-drives-2879-771436.pdf)
+* ~ - MB/s write
+
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  |
+|---|---|---|---|---|
+| 28  |  55.3 | 5.58  | 30.3  | 99.56%  |
+| 30  | 308  | 23.8  | 128  | 83.78%  |
+| 31  | 805  | 49.1  | 262  | 67.36%  |
+| 32  | 1,866  | 101.4  | 544  | 60.57%  |
