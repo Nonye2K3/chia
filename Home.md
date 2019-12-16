@@ -1,4 +1,4 @@
 # chia-blockchain wiki
 
-* FAQ
+* [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ)
 * k and plot sizes
