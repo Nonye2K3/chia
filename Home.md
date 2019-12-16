@@ -1,1 +1,4 @@
-Welcome to the chia-blockchain wiki!
+# chia-blockchain wiki
+
+* FAQ
+* k and plot sizes
