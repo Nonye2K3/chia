@@ -37,3 +37,25 @@
 | 30  | 308  | 23.8  | 128  | 83.78%  |
 | 31  | 805  | 49.1  | 262  | 67.36%  |
 | 32  | 1,866  | 101.4  | 544  | 60.57%  |
+
+## MacBook Pro (15-inch, 2017)
+* 2,8 GHz Quad-Core Intel Core i7
+* 16 GB 2133 MHz LPDDR3
+* 251 GB (Flash Storage) Device Name: APPLE SSD SM0256L
+* ~ - MB/s write
+
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
+|---|---|---|---|---|---|
+| 30  |  559 | 23.79  | 217.94  | 61.65%  | alpha 1.0 |
+| 30  | 614  | 23.8  | 127.992  | 61.13%  | alpha 1.1 |
+
+## MacBook Pro (15-inch, 2017)
+* Processor: 2,8 GHz Quad-Core Intel Core i7
+* Memory: 16 GB 2133 MHz LPDDR3
+* Storage: 1 TB (TOSHIBA HD)
+* ~ - MB/s write
+
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
+|---|---|---|---|---|---|
+| 30  |  1512 | 23.838  | 128.05  | 27.59%  | alpha 1.0 |    |
+
