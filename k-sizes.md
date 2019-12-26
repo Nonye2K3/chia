@@ -6,11 +6,12 @@
 * APPLE SSD AP1024M
 * ~ 2900 MB/s write
 
-| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  |
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
 |---|---|---|---|---|
-| 29  |  179 | 11.5  | 60.9  | 69.68%  |
-| 30  | 406.5  | 23.8  | 128  | 71.67%  |
-| 31  |   |   |   |   |
+| 29  |  179 | 11.5  | 60.9  | 69.68%  |   |
+| 30  | 406.5  | 23.8  | 128  | 71.67%  | in use  |
+| 30  | 377  | 23.8  | 128  | 73.18%  | machine idle  |
+| 31  |   |   |   |   |   |
 
 ## iMac (Retina 4K, 21.5-inch, 2017)
 * 3.4 GHz Quad-Core Intel Core i5
