@@ -9,7 +9,7 @@
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  |
 |---|---|---|---|---|
 | 29  |  179 | 11.5  | 60.9  | 69.68%  |
-| 20  | 406.5  | 23.8  | 128  | 71.67%  |
+| 30  | 406.5  | 23.8  | 128  | 71.67%  |
 | 31  |   |   |   |   |
 
 ## iMac (Retina 4K, 21.5-inch, 2017)
