@@ -3,11 +3,9 @@
 
 You can read about each of them and the architecture in the [network architecture document](https://github.com/Chia-Network/chia-blockchain/blob/master/docs/3-chia-network-architecture.md).
 
-## What are VDFs?
+## What are VDFs/proofs of time?
 
-A VDF is a sequential operation that takes a prescribed amount of time to compute (and which
-cannot be accelerated by parallelism) and which produces an accompanying proof by which the
-result may be quickly verified. This must be done in a group, for which Chia uses ideal class groups, which are explained in this [class group document](https://github.com/Chia-Network/oldvdf-competition/blob/master/classgroups.pdf).
+A VDF, also known as a proof of time, is a sequential operation that takes a prescribed amount of time to compute (and which cannot be accelerated by parallelism) and which produces an accompanying proof by which the result may be quickly verified. This must be done in a group, for which Chia uses ideal class groups, which are explained in this [class group document](https://github.com/Chia-Network/oldvdf-competition/blob/master/classgroups.pdf).
 
 ## What is k?
 
