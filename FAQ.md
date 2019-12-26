@@ -11,7 +11,7 @@ result may be quickly verified. This must be done in a group, for which Chia use
 
 ## What is k?
 
-"k" is the space parameter. It is an integer for the following equation - `plot_size_bytes = C1 * 2^k(k + C2)` where C1 is constant 1 and C2 is constant 2. You can  read the details in the [Chia Proof of Space Construction document](https://www.chia.net/assets/proof_of_space.pdf).
+"k" is the space parameter. It is an integer for the following equation: `plot_size_bytes = C1 * 2^k(k + C2)` where C1 is constant 1 and C2 is constant 2. You can  read the details in the [Chia Proof of Space Construction document](https://www.chia.net/assets/proof_of_space.pdf).
 
 ## How big are plot sizes (k)?
 
