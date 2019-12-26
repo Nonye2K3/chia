@@ -7,7 +7,7 @@
 * ~ 2900 MB/s write
 
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | 29  |  179 | 11.5  | 60.9  | 69.68%  |   |
 | 30  | 406.5  | 23.8  | 128  | 71.67%  | in use  |
 | 30  | 377  | 23.8  | 128  | 73.18%  | machine idle  |
