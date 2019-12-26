@@ -19,4 +19,4 @@ We suggest using the [Community DB install instructions](https://docs.mongodb.co
 
 ## How big are plot sizes
 
-You can see some example plot sizes, times to plot, and working space needed based on various k's in these [k size tables](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)?
+You can see some example plot sizes, times to plot, and working space needed based on various k's in these [k size tables](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes).
