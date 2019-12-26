@@ -21,6 +21,10 @@ You can see some example plot sizes, times to plot, and working space needed bas
 
 We suggest using the [Community DB install instructions](https://docs.mongodb.com/manual/administration/install-on-linux/) from Mongo. If you're having issues starting `mongod` see if mongod is already running - e.g. `ps ax | grep mongo`
 
+## How do I upgrade and keep my keys and plots?
+
+The easiest method is to change the name of the existing chia-blockchain directory e.g. `mv chia-blockchain chia-blockchain-old` and then install the new release via `git clone https://github.com/Chia-Network/chia-blockchain.git`. Then copy the contents of your old plots/ and config/ directory into the new installation directory `cp -r chia-blockchain-old/config chia-blockchain/config` and the same for plots. An alternate method is to keep your plots/ and config/ directories outside of the chia-blockchain directory and symbolically link to them: `ln -s /Volumes/BigStorage/chia/plots chia-blockchain/plots`.
+
 ## Can I run this on a Raspberry Pi 3 or 4?
 
 Not yet. Pi 3 and Pi 4 don't have AES acceleration on the CPU and plotting currently relies upon that acceleration. This means that the Pi will never be a good plotting host, but we intend to make AES acceleration optional in a future release so one can install and run harvesters, farmers, and full nodes on the Pi.
