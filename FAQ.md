@@ -17,6 +17,6 @@ We suggest using the [Community DB install instructions](https://docs.mongodb.co
 
 "k" is the space parameter. It is an integer for the following equation - `plot_size_bytes = C1 * 2^k(k + C2)` where C1 is constant 1 and C2 is constant 2. You can  read the details in the [Chia Proof of Space Construction document](https://www.chia.net/assets/proof_of_space.pdf).
 
-## How big are plot sizes
+## How big are plot sizes (k)?
 
 You can see some example plot sizes, times to plot, and working space needed based on various k's in these [k size tables](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes).
