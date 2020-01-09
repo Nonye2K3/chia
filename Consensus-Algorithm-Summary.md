@@ -118,3 +118,5 @@ When a full node receives an unfinished block, is is propagated if:
 
 The unfinished block leader is the unfinished block of greatest height which is expected to finish first,
 according to the number of iterations required, and the current network IPS.
+
+The next document in the tutorial is the [Block Format](https://github.com/Chia-Network/chia-blockchain/wiki/Block-Format).
