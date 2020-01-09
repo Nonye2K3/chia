@@ -1,6 +1,6 @@
 # Alpha testnet Timelords
 
-The fastest timelord we've see so far is our own twin Intel machines running Ubuntu on an Intel(R) Xeon(R) W-2155 CPU @ 3.30GHz with 10 cores and  64 GB PC4-21300 DDR4-2666V-R REGISTERED ECC. These machines get about 130,000 ips (iterations per second.)
+The fastest timelord we've see so far is Chia's own twin Intel machines running Ubuntu on an Intel(R) Xeon(R) W-2155 CPU @ 3.30GHz with 10 cores and  64 GB PC4-21300 DDR4-2666V-R REGISTERED ECC. These machines get about 130,000 ips (iterations per second.) We would love to see additional faster Timelords.
 
 It looks like it takes two full cores (usually looks like 4 in the OS) to both run the squarings and run the proofs and it takes about 8GB of RAM per VDF - though that may now be down to 6GB or even 4GB with some changes implemented right at testnet launch.
 
