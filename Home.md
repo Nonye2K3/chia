@@ -13,9 +13,9 @@ Familiarity with either the Bitcoin or Ethereum protocols is assumed for this do
 The codebase is written in python, with several performance sensitive components (signatures, proof of space,
 and proof of time), written in C++.
 
-1. Consensus algorithm summary
-2. Block format
-3. Chia network architecture
-4. Networking and Serialization
-5. Protocols
-6. Codebase and Testing
+1. [Consensus algorithm summary](https://github.com/Chia-Network/chia-blockchain/wiki/Block-Format)
+2. [Block format](https://github.com/Chia-Network/chia-blockchain/wiki/Block-Format)
+3. [Network Architecture](https://github.com/Chia-Network/chia-blockchain/wiki/Network-Architecture)
+4. [Networking and Serialization](https://github.com/Chia-Network/chia-blockchain/wiki/Networking-and-Serialization)
+5. [Protocols](https://github.com/Chia-Network/chia-blockchain/wiki/Protocols)
+6. [Codebase and Testing](https://github.com/Chia-Network/chia-blockchain/wiki/Codebase-and-Testing)
