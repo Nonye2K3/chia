@@ -84,4 +84,10 @@ The introducer will then return a random subset of known recent peers that the c
 The plan is to switch to DNS and a more decentralized approach of asking different peers for their peers.
 
 
+## RPC 
+Aside from the Chia protocols described in the next page, there is also a local RPC protocol to allow simple control over a node, through HTTP. 
+All requests and responses for the RPC protocol are in JSON, to simplify the interface.
+This allows doing things like getting the tips of the chain, getting a specific block, adding connections, stopping the node, etc. The full node UI connects to the full node using the RPC.
+
+
 The next document in the tutorial is [Protocols](https://github.com/Chia-Network/chia-blockchain/wiki/Protocols).
