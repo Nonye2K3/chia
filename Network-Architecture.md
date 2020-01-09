@@ -1,86 +1,78 @@
-## Introduction
+## Full Nodes
+The core of the system is composed of full nodes. Full nodes have several responsibilities:
+1. Maintain a copy of the blockchain
+2. Validate the blockchain
+3. Propagate new blocks, transactions, and proofs through the network, through the peer protocol
+4. (Optional) Serve light clients (wallets) through the wallet protocol
+5. (Optional) Communicate with farmers and timelords
 
-The Chia protocol is an asynchronous peer to peer protocol running on top of TCP on port 8444, where all nodes act as both clients and servers, and can maintain long term connections with other peers.
+Full nodes earn no rewards or fees, but they are important to maintain the consensus rules
+and the security of the system. Running a full node allows a user to be confident about the
+full state of the blockchain, and avoid trusting others.
 
-Every message in the Chia protocol starts with 4 bytes, which is the encoded length in bytes of the dictionary, followed by a CBOR encoding of the following dictionary:
-
-
-```json
-{
-    f: "function_name",
-    d: cbor_encoded_message
-}
-```
-
-where f is the desired function to call, and data is a CBOR encoded message.
-For example, for a RequestBlock Chia protocol message, f is "request_block", while d is a CBOR encoded RequestBlock message.
-
-Chia protocol messages have a max length of `(4 + 2^32 - 1) = 4294967299` bytes, or around 4GB.
-
-## CBOR serialization
-
-[CBOR](https://cbor.io/) is a serialization format (Concise Binary Object Representation, RFC 7049), which optimizes for
-small code size and small message size.
-All protocol messages use CBOR, but objects which are hashable, such as blocks, headers, proofs, etc, are serialized to bytes using a more simple streamable format, and transmitted in that way.
+Full nodes are always connected to another random set of full nodes in the network.
 
 
-## Streamable Format
-The streamable format is designed to be deterministic and easy to implement, to prevent consensus issues.
+## Farmers
+Chia's farmers are analogous to Bitcoin's miners. They earn block rewards and fees by trying to
+create valid blocks before anyone else. Farmers don't maintain a copy of the blockchain, but they trust a full node to provide updates.
 
-The primitives are:
-* Sized ints serialized in big endian format, i.e uint64
-* Sized bytes serialized in big endian format, i.e bytes32
-* BLSPublic keys serialized in bls format
-* BLSSignatures serialized in bls format
+Farmers communicate with harvesters (individual machines that actually store the plots) through the harvester protocol.
 
-An item is one of:
-* streamable
-* primitive
-* List[item]
-* Optional[item]
+The full node and the farmer communicate through the farmer protocol.
 
-A streamable is an ordered group of items.
+Users who want to solo farm can run the farmer, harvester and full node on the same machine.
 
-1. A streamable with fields 1..n is serialized by appending the serialization of each field.
-2. A List is serialized into a 4 byte size prefix (number of items) and the serialization of each item
-3. An Optional is serialized into a 1 byte prefix of 0x00 or 0x01, and if it's one, it's followed by the serialization of the item
-
-This format can be implemented very easily, and allows us to hash objects like headers and proofs of space,
-without complex serialization logic.
-
-Most objects in the Chia protocol are stored and trasmitted using the streamable format.
-
-## Handshake
-
-All peers in the Chia protocol (whether they are farmers, full nodes, timelords, etc) act as both servers and clients (peers).
-As soon as a connection is initiated between two peers, both send a Handshake message, and a HandshakeAck message to complete the handshake.
+Farmers operate by waiting for updates from a full node, which give them new challenge_hashes every time a new block is created.
+Farmers then ask all harvesters for proof of space qualities. These qualities, based on the iterations formula, result in an expected block time.
+The farmer can choose to fetch the full proofs of space, for those proofs which are expected to finish soon, from
+the harvesters.
+the full proofs can then be propagated to the full nodes, or sent to a pool as partials.
 
 
-```Python
-class Handshake:
-    network_id: str      # 'testnet' or 'mainnet'
-    version: str         # Protocol version
-    node_id: bytes32     # Unique node_id
-    server_port: uint16  # Listening port
-    node_type: NodeType  # Node type (farmer, full node, etc)
-```
+## Harvesters
+Harvesters are individual machines controlled by a farmer.
+In a large farming operation, a farmer may be connected to many harvesters.
 
-After the handshake is completed, both peers can send Chia protocol messages, and disconnect at any time by sending an EOF.
 
-## Ping Pong
+Harvesters control the actual plot files by retrieving qualities or proofs from disk.
+Each plot file corresponds to one plot, and for each random 32 byte challenge, there is an expected
+value of one proof of space (although sometimes there are zero or more than one).
+On standard HDD drives, fetching a quality will take around 8 random disk seeks, or up to 50ms, whereas fetching a proof will take around 64 disk seeks, or up to 500ms.
+For most challenges, qualities will be very low, so fetching the entire proof is not necessary.
+There is an upper limit of number of plots for each drive, since fetching the qualities takes time.
+However, since there is a constant factor in the iterations formula (each block must have a proof of time of at least around 30 seconds), disk IO times should not be a problem.
 
-Ping pong messages are periodic messages to be sent to peers, to ensure the other peer is still online.
-A ping message contains a nonce, which is returned in the pong message.
 
-If a node does not hear from a peer node for a certain time (greater than the ping interval), then the node will disconnect and remove the peer from the active peer list.
+Finally, harvesters also maintain a private key for each plot.
+This private key is what actually signs the block, allowing farmers/harvesters (as opposed to pools) to actually control the contents of a block.
 
-## Introducer
+## Timelords
 
-For a new peer to join the decentralized network, they must choose a subset of all online nodes to connect to.
+Timelords support the network by creating sequential proofs of time (using Verifiable Delay Functions) on top of unfinished blocks.
+Since this computation is sequential, very little energy is consumed, as opposed to proof of work systems where computation is parallelizable.
+Timelords are also connected to full nodes.
+Although timelords earn no rewards, there only needs to be one honest timelord online for the blockchain to move forward.
 
-To facilitate this process, a number of introducer nodes will temporarily be run by Chia and other users, which will crawl the network and support one protocol message: GetPeers.
-The introducer will then return a random subset of known recent peers that the calling node will attempt to connect to.
+Someone who has a faster timelord can also earn more rewards from their space, since their blocks will finish slightly faster than those of other farmers.
 
-The plan is to switch to DNS and a more decentralized approach of asking different peers for their peers.
+Furthermore, an attacker with a much faster timelord can potentially 51% attack the network with less than 51% of the space, which is why open designs of VDF hardware are very important for the security of the blockchain.
+
+## Pools
+
+Pools allow farmers to smooth out their rewards by earning based on proof of space partials, as opposed to winning blocks.
+Pool public keys must be embedded into the plots themselves, so a pool cannot be changed unless the entire plot is recreated.
+
+Pools create and spend **coinbase transactions**, but in Chia's pool protocol they do not actually choose the contents of blocks.
+This gives more power to farmers and thus decreases the influence of centralized pools.
+
+Farmers periodically send partials, which contain a proof of space and a signature, to pools.
+
+
+## Wallets
+
+Wallets can communicate with full nodes through the wallet protocol.
+This is similar to Bitcoin's SPV protocol, and allows verification of transactions and block weight, without the bandwidth and CPU requirements of full nodes.
+
 
 The next document in the tutorial is [Networking and Serialization](https://github.com/Chia-Network/chia-blockchain/wiki/Networking-and-Serialization).
