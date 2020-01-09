@@ -1,4 +1,4 @@
-![Chia Blockchain](/docs/assets/block-format.png "Chia block format")
+![block-format](https://user-images.githubusercontent.com/3069354/72042054-9f0a1780-32f0-11ea-93f9-df8979845d25.png)
 
 ## Trunk and Foliage
 Chia's blockchain is based on a trunk and a foliage. The trunk is canonical, and contains proofs of time and proofs of space. The foliage is not canonical, and contains the rest of the block header, block body, and transaction filter. Arrows in the diagram represent hash pointers - a hash of the data pointed to.
