@@ -19,7 +19,7 @@ Chia Network has four timelords running:
 *   Expiremental cluster timelord
     *   [AWS t3small](https://aws.amazon.com/ec2/instance-types/t3/) as timelord
     *   3 VDFs on 3 AWS c5n.xlarge instances
-    *   [Intel(R) Xeon(R) Platinum 8124M\(https://en.wikichip.org/wiki/intel/xeon_platinum/8124m) CPU @ 3.00GHz
+    *   [Intel(R) Xeon(R) Platinum 8124M](https://en.wikichip.org/wiki/intel/xeon_platinum/8124m) CPU @ 3.00GHz
     *   10 GB RAM
     *   ~110,000 ips
     *   Still optimizing this
