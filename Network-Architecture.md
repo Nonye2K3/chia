@@ -1,3 +1,5 @@
+![chia-architecture](https://user-images.githubusercontent.com/3069354/72042027-8994ed80-32f0-11ea-8015-4af170796d7c.png)
+
 ## Full Nodes
 The core of the system is composed of full nodes. Full nodes have several responsibilities:
 1. Maintain a copy of the blockchain
