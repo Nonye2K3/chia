@@ -13,7 +13,7 @@ Chia Network has four timelords running:
 *   Older large instance with 21 cores (42 reported) that has 6 VDF's running on it
     *   [Intel(R) Xeon(R) CPU E7-L8867](https://ark.intel.com/content/www/us/en/ark/products/53577/intel-xeon-processor-e7-8867l-30m-cache-2-13-ghz-6-40-gt-s-intel-qpi.html)  @ 2.13GHz
     *   63G RAM
-    *   ~110,000 ips
+    *   ~57,000 ips
     *   It tends to garbage collect if the twins both choose the same possible proofs of space to run a VDF on
 
 *   Expiremental cluster timelord
