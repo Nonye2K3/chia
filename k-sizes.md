@@ -1,4 +1,4 @@
-# Various k size statistics from different hosts - versions alpha 1.0 - alpha 1.1
+# Various k size statistics from different hosts - versions alpha 1.0 - alpha 1.3
 
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
@@ -44,6 +44,16 @@
 | 33  | 4663.5  | 208.8  | 1095.97  | 52.2%  |
 | 34  | 10,865.6  | 429.8  | 2,287  | 50.13%  |
 
+## AWS EC2 r5.12xlarge
+* Processor: 48 Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz
+* Memory: 374GB
+* Storage: Memory tempfs (Ubuntu 19.10)
+* ~ - MB/s write
+
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
+|---|---|---|---|---|---|
+| 31  |  425 | 49.15  | 262  | 99.99%  | alpha 1.3 |    |
+
 ## MacBook Pro (15-inch, 2017)
 * 2,8 GHz Quad-Core Intel Core i7
 * 16 GB 2133 MHz LPDDR3
@@ -64,4 +74,3 @@
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
 |---|---|---|---|---|---|
 | 30  |  1512 | 23.838  | 128.05  | 27.59%  | alpha 1.0 |    |
-
