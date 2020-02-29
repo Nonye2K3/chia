@@ -1,6 +1,6 @@
 # What are harvesters, farmers, full nodes, and timelords?
 
-You can read about each of them and the architecture in the [network architecture document](https://github.com/Chia-Network/chia-blockchain/blob/master/docs/3-chia-network-architecture.md).
+You can read about each of them and the architecture in the [network architecture document](https://github.com/Chia-Network/chia-blockchain/wiki/Network-Architecture).
 
 # What is a proof of space?
 
