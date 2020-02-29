@@ -20,7 +20,7 @@ A VDF, also known as a proof of time, is a sequential operation that takes a pre
 
 # How do I upgrade and keep my keys and plots?
 
-The easiest method is to change the name of the existing chia-blockchain directory e.g. `mv chia-blockchain chia-blockchain-old` and then install the new release via `git clone https://github.com/Chia-Network/chia-blockchain.git`. Then copy the contents of your old plots/ and config/ directory into the new installation directory `cp -r chia-blockchain-old/config chia-blockchain/config` and the same for plots. 
+The easiest method is to change the name of the existing chia-blockchain directory e.g. `mv chia-blockchain chia-blockchain-old` and then install the new release via `git clone https://github.com/Chia-Network/chia-blockchain.git`. Then copy the contents of your old plots/ and config/ directory into the new installation directory `cp -r chia-blockchain-old/config chia-blockchain/config` and the same for plots. Note that when moving to Alpha 1.4 it's not advisable to copy `config/config.yaml` directly as the file format has been updated.
 
 An alternate method is to keep your plots/ and config/ directories outside of the chia-blockchain directory and symbolically link to them: `ln -s /Volumes/BigStorage/chia/plots chia-blockchain/plots`.
 
