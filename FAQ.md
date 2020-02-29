@@ -18,10 +18,6 @@ You can see some example plot sizes, times to plot, and working space needed bas
 
 A VDF, also known as a proof of time, is a sequential operation that takes a prescribed amount of time to compute (and which cannot be accelerated by parallelism) and which produces an accompanying proof by which the result may be quickly verified. This must be done in a group, for which Chia uses ideal class groups, which are explained in this [class group document](https://github.com/Chia-Network/oldvdf-competition/blob/master/classgroups.pdf).
 
-# How do I start mongo on linux? 
-
-We suggest using the [Community DB install instructions](https://docs.mongodb.com/manual/administration/install-on-linux/) from Mongo. If you're having issues starting `mongod` see if mongod is already running - e.g. `ps ax | grep mongo`
-
 # How do I upgrade and keep my keys and plots?
 
 The easiest method is to change the name of the existing chia-blockchain directory e.g. `mv chia-blockchain chia-blockchain-old` and then install the new release via `git clone https://github.com/Chia-Network/chia-blockchain.git`. Then copy the contents of your old plots/ and config/ directory into the new installation directory `cp -r chia-blockchain-old/config chia-blockchain/config` and the same for plots. 
@@ -30,4 +26,4 @@ An alternate method is to keep your plots/ and config/ directories outside of th
 
 # Can I run this on a Raspberry Pi 3 or 4?
 
-Not yet. Pi 3 and Pi 4 don't have AES acceleration on the CPU and plotting currently relies upon that acceleration. This means that the Pi will never be a good plotting host, but we intend to make AES acceleration optional in a future release so one can install and run harvesters, farmers, and full nodes on the Pi.
+Yes. Pi 3 and Pi 4 don't have AES acceleration on the CPU and plotting currently relies upon that acceleration. This means that the Pi will never be a good plotting host, but we have made AES acceleration optional so one can install and run harvesters, farmers, and full nodes on the Pi. We have not tested Pi 3 yet so any feedback would be welcomed.
