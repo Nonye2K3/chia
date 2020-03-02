@@ -114,3 +114,5 @@ Aggregate signatures are also supported at the protocol layer (using non interac
 Signatures are all combined into a single signature for each block.
 
 The current specification for BLS signatures used is [this one](https://github.com/Chia-Network/bls-signatures/blob/master/SPEC.md), but there is a plan to switch to the [IETF/blockchain standard](https://tools.ietf.org/html/draft-irtf-cfrg-bls-signature-00) when it is stable and implemented.
+
+The next document in the tutorial is [Network Architecture](https://github.com/Chia-Network/chia-blockchain/wiki/Network-Architecture).
