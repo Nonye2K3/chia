@@ -106,7 +106,7 @@ A block is considered valid, if it passes the unfinished block checks, and the f
 Unless specified otherwise, all hashes in the Chia protocol use SHA256.
 
 ## Signatures
-All signatures in the Chia system are BLS (Boneh–Lynn–Shacham) signatures.
+All signatures in the Chia system are [BLS (Boneh–Lynn–Shacham) signatures](https://en.wikipedia.org/wiki/Boneh%E2%80%93Lynn%E2%80%93Shacham).
 
 Where applicable, prepend signatures are used, where the public key is prepended to the hash of the message, in order to prevent rogue key attacks.
 
