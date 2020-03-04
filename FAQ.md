@@ -14,6 +14,11 @@ A proof of space is a proof that a farmer has allocated a portion of their stora
 
 You can see some example plot sizes, times to plot, and working space needed based on various k's in these [k size tables](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes).
 
+# What is recommended for plotting?
+
+We think you will want to use NVMe SSD drives to create your plots on. Then you can migrate your plots off to whatever storage you want to keep them on long term. You could even load them on a Raspberry Pi with outdated USB 2.0 drives attached and they will Harvest and Farm just fine. This gives you a sense of why we recommend NVMe SSD:
+![NVMe SSD vs SATA](images/plotting-nvme-ssd.png "NVMe SSD is 5.5 times faster than SATA SSD")
+
 # What is a VDF/proof of time?
 
 A VDF, also known as a proof of time, is a sequential operation that takes a prescribed amount of time to compute (and which cannot be accelerated by parallelism) and which produces an accompanying proof by which the result may be quickly verified. This must be done in a group, for which Chia uses ideal class groups, which are explained in this [class group document](https://github.com/Chia-Network/oldvdf-competition/blob/master/classgroups.pdf).
