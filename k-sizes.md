@@ -32,7 +32,7 @@
 ## Ubuntu 19.04
 * Intel(R) Xeon(R) W-2155 CPU @ 3.30GHz (10 cores)
 * 64 GB PC4-21300 DDR4-2666V-R REGISTERED ECC
-* Western Digital 4 GiB [WD10EZEX](https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-blue-hdd/data-sheet-wd-blue-pc-hard-drives-2879-771436.pdf)
+* Western Digital 4 TB [WD10EZEX](https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-blue-hdd/data-sheet-wd-blue-pc-hard-drives-2879-771436.pdf)
 * ~ - MB/s write
 
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  |
