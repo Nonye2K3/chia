@@ -40,3 +40,7 @@ An alternate method is to keep your plots/ and config/ directories outside of th
 # Can I run this on a Raspberry Pi 3 or 4?
 
 Yes. Pi 3 and Pi 4 don't have AES acceleration on the CPU and plotting currently relies upon that acceleration. This means that the Pi will never be a good plotting host, but we have made AES acceleration optional so one can install and run harvesters, farmers, and full nodes on the Pi. We have not tested Pi 3 yet so any feedback would be welcomed.
+
+# Why does chia-blockchain require python 3.7 or greater?
+
+The codebase takes advantage of the newest async generators, especially async/await which requires 3.7 or better. Python has a [walk through of Async IO](https://realpython.com/async-io-python/) and the related python 3.7 requirements.
