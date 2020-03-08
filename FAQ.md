@@ -43,4 +43,4 @@ Yes. Pi 3 and Pi 4 don't have AES acceleration on the CPU and plotting currently
 
 # Why does chia-blockchain require python 3.7 or greater?
 
-The codebase takes advantage of the newest async generators, especially async/await which requires 3.7 or better. Python has a [walk through of Async IO](https://realpython.com/async-io-python/) and the related python 3.7 requirements.
+The codebase takes advantage of the newest async generators, especially async/await, which requires 3.7 or better. Python has a [walk through of Async IO](https://realpython.com/async-io-python/) and the related python 3.7 requirements.
