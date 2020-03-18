@@ -2,7 +2,7 @@
 
 * [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ)
 * [k and plot sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
-* [Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
+* [Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords) and [Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Cluster-Timelord)
 * [Release and notes](https://www.chia.net/releases/)
 
 
