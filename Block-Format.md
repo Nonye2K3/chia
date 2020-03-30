@@ -1,4 +1,4 @@
-![block-format](images/chia-block-format.png)
+![block-format](images/chia-block-format2.png)
 
 ## Trunk and Foliage
 Chia's blockchain is based on a trunk and a foliage. The trunk is canonical, and contains proofs of time and proofs of space. The foliage is not canonical, and contains the rest of the block header, block body, and transaction filter. Arrows in the diagram represent hash pointers - a hash of the data pointed to.
@@ -23,31 +23,40 @@ one farmer did not double sign a block, such a deep reorg cannot happen.
 
 
 ## Formats
+### [Full Block](/src/types/full_block.py)
+* **proof_of_space**: the proof of space for this block.
+* **proof_of_time**: the proof of time for this block (Optional). If not present, this is an unfinished block.
+* **header**: the block header.
+* **transactions_generator**: ChiaList program that generates the spends for this block. (Optional)
+* **transactions_filter**: BIP158 filter for additions and removals. (Optional)
 
 ### [Header](/src/types/header.py)
 * **header_data**: the contents of the block header.
 * **harvester_signature**: BLS prepend signature by the plot public key. A prepend signature is a signature of a message with the the pk prepended to the message.
 
-### [Header data](/src/types/header.py)
-* **prev_header_hash** :The hash of the header of the previous block.
-* **timestamp**: Unix timestamp of block creation time.
-* **filter_hash**: Hash of the transaction filter.
-* **body_hash**: Hash of the body.
+### [Header Data](/src/types/header.py)
+* **height** : the height of the block
+* **prev_header_hash** : the hash of the header of the previous block.
+* **timestamp**: unix timestamp of block creation time.
+* **filter_hash**: hash of the transaction filter.
+* **proof_of_space_hash**: hash of the proof of space for this block.
+* **weight** : weight of the block (cumulative difficulty).
+* **total_iters** : total (cumulative) number of iterations including this block's PoT.
+* **additions_root** : merkle root hash of all coin additions in the block.
+* **removals_root** : merkle root hash of all coin removals in the block.
+* **coinbase** : coinbase coin.
+* **coinbase_signature** : PrependSignature of the coinbase Coin by the pool public key.
+* **fees_coin** : fees coin (including base fee plus sum of all transaction fees).
+* **aggregated_signature** : aggregated bls signature for all spends in the block.
+* **cost**: sum of cost of all spends in the block.
 * **extension data**: hash of any extension data or extension block, useful for future updates.
+* **generator_hash**: hash of the transactions generator.
 
-
-### [Body](/src/types/body.py)
-* **coinbase**: this is the transaction which pays out to the pool.
-* **coinbase_signature**: signature by the pool public key.
-* **fees_target_info**: this is where the fees will be paid out to (usually the farmer's public key), as well as the fee amount.
-* **aggregated_signature**: aggregated BLS signature of all signatures in all transactions of this block.
-* **solutions generator**: includes all spends in this block.
-* **cost**: the cost of all puzzles.
 
 ### [Proof of Time](/src/types/proof_of_time.py)
 * **challenge_hash**: the hash of the challenge, used to generate a VDF group.
 * **number_of_iterations**: the number of iterations that the VDF has to go through.
-* **output**: the output of the VDF.
+* **output**: the output of the VDF, a classgroup element represented as two signed 512 bit numbers (a and b).
 * **witness_type**: proof type of VDF.
 * **witness**: VDF proof in bytes.
 
@@ -60,47 +69,41 @@ one farmer did not double sign a block, such a deep reorg cannot happen.
 
 ### [Challenge](/src/types/challenge.py)
 * **prev_challenge_hash**: the hash of the previous challenge.
-* **proof_of_space_hash**: hash of the proof of space.
-* **proof_of_time_output_hash**: hash of the proof of time output.
-* **height**: height of the block the block.
-* **total_weight**: cumulative difficulty of all blocks from genesis, including this one.
-* **total_iters** cumulative VDF iterations from genesis, including this one.
+* **proofs_hash**: hash of the proof of space.
+* **new_work_difficulty** the new difficulty, once per epoch. (Optional)
 
 
 ## Block Validation
 An unfinished block is considered valid if it passes the following checks:
-
-1. If not genesis, the previous block must exist
-2. If not genesis, the timestamp must be >= the average timestamp of last 11 blocks, and less than 2 hours in the future
-3. The compact block filter must be correct, according to the body (BIP158)
-4. The hash of the proof of space must match header_data.proof_of_space_hash
-5. The hash of the body must match header_data.body_hash
-6. Extension data must be valid, if any is present
-7. If not genesis, the hash of the challenge on top of the last block, must be the same as proof_of_space.challenge_hash
-8. If genesis, the challenge hash in the proof of time must be the same as in the proof of space
-9. The harvester signature must sign the header_hash, with the key in the proof of space
+1. The hash of the proof of space must match header_data.proof_of_space_hash
+2. The coinbase signature must be valid, according the the pool public key
+3. The harvester signature must sign the header_hash, with the key in the proof of space
+4. If not genesis, the previous block must exist
+5. If not genesis, the timestamp must be >= the average timestamp of last 11 blocks, and less than 2 hours in the future (if block height < 11, average all previous blocks). Average is the sum, int diveded by the number of timestamps.
+6. The compact block filter must be correct, according to the body (BIP158)
+7. Extension data must be valid, if any is present
+8. If not genesis, the hash of the challenge on top of the last block, must be the same as proof_of_space.challenge_hash
+9. If genesis, the challenge hash in the proof of time must be the same as in the proof of space
 10. The proof of space must be valid on the challenge
-11. The coinbase height must be the previous block's coinbase height + 1
-12. The coinbase amount must be correct according to reward schedule
-13. The coinbase signature must be valid, according the the pool public key
-14. All transactions must be valid
-15. Aggregate signature retrieved from transactions must be valid
-16. Fees must be valid
-17. Cost must be valid
+11. If not genesis, the height on the previous block must be one less than on this block
+12. If genesis, the height must be 0
+13. The coinbase reward must match the block schedule
+14. Make sure transactions generator hash is valid (or all 0 if not present)
+15. If not genesis, the transactions must be valid and fee must be valid (verifies that fee_base + TX fees = fee_coin.amount)
+16. If genesis, the fee must be the base fee, agg_sig must be None, and merkle roots must be valid
+17. If not genesis, the total weight must be the parent weight + difficulty
+18. If not genesis, the total iters must be parent iters + number_iters
+19. If genesis, the total weight must be starting difficulty
+20. If genesis, the total iters must be number iters
 
 A block is considered valid, if it passes the unfinished block checks, and the following additional checks:
+1. The number of iterations (based on quality, pos, difficulty, ips) must be the same as in the PoT
+2. the PoT must be valid, on a discriminant of size 1024, and the challenge_hash
+3. If not genesis, the challenge_hash in the proof of time must match the challenge on the previous block
 
-1. The proof of space hash must match the proof of space hash in the challenge
-2. The number of iterations (based on quality, pos, difficulty, ips) must be the same as in the PoT
-3. the PoT must be valid, on a discriminant of size 1024, and the challenge_hash
-4. The coinbase height must equal the height in the challenge
-5. If not genesis, the challenge_hash in the proof of time must match the challenge on the previous block
-6. If not genesis, the height of the challenge on the previous block must be one less than on this block
-7. If genesis, the challenge height must be 0
-8. If not genesis, the total weight must be the parent weight + difficulty
-9. If genesis, the total weight must be starting difficulty
-10. If not genesis, the total iters must be parent iters + number_iters
-11. If genesis, the total iters must be number iters
+
+An block's transactions are considered valid if they pass the following checks:
+1. TODO
 
 ## Hashes
 Unless specified otherwise, all hashes in the Chia protocol use SHA256.
