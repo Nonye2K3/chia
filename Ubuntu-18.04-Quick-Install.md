@@ -42,6 +42,6 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==0.1.dev5 setproctitle=
 Install everything else
 
 ```bash
-pip install -i https://pypi.org/simple/ chia-blockchain==1.0.beta1
+pip install chia-blockchain==1.0.beta1
 ```
 
