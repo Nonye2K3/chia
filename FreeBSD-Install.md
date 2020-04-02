@@ -2,6 +2,11 @@
 
 ```bash
 pkg install gcc9-9.2.0
+
+# create and enter a venv
+python3.7 -m venv venv
+source venv/bin/activate
+
 BUILD_VDF_CLIENT=N CXX=g++9 CC=gcc9 pip install chia-blockchain==1.0b1  # takes a while, builds a lot
 export LD_LIBRARY_PATH=/usr/local/lib/gcc9
 
