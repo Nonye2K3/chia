@@ -32,22 +32,10 @@ pip install --upgrade pip
 ```
 
 
-Install two binary wheels from alternate source
+Install three binary wheels from alternate source
 
 ```bash
-pip install -i https://hosted.chia.net/simple/ miniupnpc==0.1.dev5 setproctitle==1.1.10
-```
-
-Install tools for cbor2
-
-```bash
-apt install python3.7-dev gcc -y
-```
-
-Install cbor2
-```bash
-pip install certifi  # or it can't validate certs to download setuptools_scm
-pip install cbor2==5.0.1
+pip install -i https://hosted.chia.net/simple/ miniupnpc==0.1.dev5 setproctitle==1.1.10 cbor2==5.0.1
 ```
 
 
