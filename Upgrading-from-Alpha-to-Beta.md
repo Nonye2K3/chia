@@ -1,6 +1,6 @@
 Before upgrading we suggest you shut down the alpha with e.g. `sh scripts/stop_all_servers.sh` and then rename the `chia-blockchain/` directory to `chia-blockhain-alpha`. In MacOS and Linux the command is `mv chia-blockchain chia-blockchain-alpha` from your home directory (if that's where you put chia-blockchain.) You may also want to make a backup copy of the alpha directory - e.g. `tar -czvf chia-blockchain-alpha.tgz chia-blockchain-alpha` from your home directory on MacOS or Linux.
 
-If you don't have a lot of plots or are going to re-plot anyway, you can just follow the instructions in [INSTALL.MD] for your platform, and then follow the [README.md](README.md). Note that plot's remain functional on the beta but the key files changed slightly.
+If you don't have a lot of plots or are going to re-plot anyway, you can just follow the instructions in [INSTALL.md](https://github.com/Chia-Network/chia-blockchain/blob/master/INSTALL.md) for your platform, and then follow the [README.md](https://github.com/Chia-Network/chia-blockchain/blob/master/README.md). Note that plot's remain functional on the beta but the key files changed slightly.
 
 If you want to use the same plots as before, do the following:
 
