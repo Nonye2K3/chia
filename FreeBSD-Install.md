@@ -20,3 +20,16 @@ sed -i .bak 's/enable_upnp: True/enable_upnp: False' ~/.chia/beta-1.0b1/config/c
 ```
 
 Now go to town with `chia-start-node` or whatever.
+
+## gcc notes
+
+After installing gcc9, this message appears:
+
+```
+To ensure binaries built with this toolchain find appropriate versions
+of the necessary run-time libraries, you may want to link using
+
+  -Wl,-rpath=/usr/local/lib/gcc9
+```
+
+So it's probably possible to build the libraries in a way that doesn't require `export LD_LIBRARY_PATH=/usr/local/lib/gcc9`. If you know how, click "edit" and dish.
