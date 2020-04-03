@@ -25,17 +25,17 @@ A VDF, also known as a proof of time, is a sequential operation that takes a pre
 
 # What are the next milestones?
 
-At the end of March 2020, we expect to enter a beta phase. This will merge Chialisp and wallets with the blockchain to support smart transactions moving on the testnet blockchain. Between now and quite a few months before mainnet launch, we will have to make (hopefully only) one change to the file format of proof of space plots. This will require re-plotting but we expect to support both plot formats for a month or two. The new plot format will be the same as mainnet so you will be able to get your plots in order before mainnet launch. We expect to launch mainnet at the end of 2020. We also plan to have an 8-10 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
+We are now in the Beta testnet blockchain phase. During Beta you should expect continued improvements in ease of install, and support for and user interface for our reference smart transactions. We will have some over the wire protocol changes that will require hard forks but should migrate your existing installations easily to the newer chain. Between now and quite a few months before mainnet launch, we will have to make (hopefully only) one change to the file format of proof of space plots. This will require re-plotting but we expect to support both plot formats for a month or two. The new plot format will be the same as mainnet so you will be able to get your plots in order before mainnet launch. We expect to launch mainnet at the end of 2020. We also plan to have an 8-10 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
 
 # How can I contribute?
 
-You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-blockchain/blob/master/CONTRIBUTING.md) in the repository but the quick answer is to please base your pull requests off the next branch. For example, after the 1.4 release, the 1.5 branch is used for development, etc. The master branch is updated with the latest release only.
+You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-blockchain/blob/master/CONTRIBUTING.md) in the repository but the quick answer is to please base your pull requests off the next branch. For example, after the beta-1.0 release, the beta-1.1 branch is used for development, etc. The master branch is updated with the latest release only.
 
 # How do I upgrade and keep my keys and plots?
 
-The easiest method is to change the name of the existing chia-blockchain directory e.g. `mv chia-blockchain chia-blockchain-old` and then install the new release via `git clone https://github.com/Chia-Network/chia-blockchain.git`. Then copy the contents of your old plots/ and config/ directory into the new installation directory `cp -r chia-blockchain-old/config chia-blockchain/config` and the same for plots. Note that when moving to Alpha 1.4 it's not advisable to copy `config/config.yaml` directly as the file format has been updated.
+With the move from Alpha to Beta you should review these [notes on upgrading](https://github.com/Chia-Network/chia-blockchain/wiki/Upgrading-from-Alpha-to-Beta). We will be supporting tools to make upgrading between Beta releases easier though you may want to place your plots directory somewhere that's not the directory that 'config/config.yaml' of the 'chia-blockchain' directory for easier future migrations. You can set the path to each file in 'config/plots.yaml' individually or adjust set a 'plot_root' by uncommenting line 18 of 'config.yaml' and specifying the directory there.
 
-An alternate method is to keep your plots/ and config/ directories outside of the chia-blockchain directory and symbolically link to them: `ln -s /Volumes/BigStorage/chia/plots chia-blockchain/plots`.
+An alternate method is to keep your plots/ directory outside of the chia-blockchain directory and symbolically link to them: `ln -s /Volumes/BigStorage/chia/plots /home/username/plots` 
 
 # Can I run this on a Raspberry Pi 3 or 4?
 
