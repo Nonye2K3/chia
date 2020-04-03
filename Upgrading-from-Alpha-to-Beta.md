@@ -12,6 +12,6 @@ If you want to use the same plots as before, do the following:
 
 * Move the plots if necessary to `~/.chia/1.0beta1/plots`. You may have to create the new plots directory with `mkdir ~/.chia/1.0beta1/plots`. If you've used a symbolic link you can now just create a symbolic link in `~/.chia/1.0beta1/`. Double check that all of the paths to your plots are correct in the just copied over plots.yaml for your new plot location (if you move them to `~/.chia/1.0beta1/plots`.)
 
-* In your new keys.yaml, you want to copy *only* the two pool_sks, and sk_seed from the old config in `chia-blockchain-alpha/config/keys.yaml` into the new config at `~/.chia/1.0beta1/config/keys.yaml`. Make sure to keep the format of this file correct.
+* In your new keys.yaml, you want to copy *ONLY* the two pool_sks, and sk_seed from the old config in `chia-blockchain-alpha/config/keys.yaml` into the new keys config at `~/.chia/1.0beta1/config/keys.yaml`. Make sure to keep the format of this file correct. Note that the old config.yaml should not be copied, as the format has changed.
 
 That should allow you to run `chia-start-farmer &` and have farming begin. Then run `chia-start-wallet-gui &` on MacOS or Linux desktops or `chia-start-wallet-server&` and run the chia.exe on Windows WSL 2.
