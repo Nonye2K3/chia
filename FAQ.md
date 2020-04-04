@@ -23,6 +23,24 @@ We think you will want to use NVMe SSD drives to create your plots on. Then you 
 
 A VDF, also known as a proof of time, is a sequential operation that takes a prescribed amount of time to compute (and which cannot be accelerated by parallelism) and which produces an accompanying proof by which the result may be quickly verified. This must be done in a group, for which Chia uses ideal class groups, which are explained in this [class group document](https://github.com/Chia-Network/oldvdf-competition/blob/master/classgroups.pdf).
 
+# How do I tell if I'm farming correctly?
+
+There are a couple of ways. First note that you'll need some k=29 or better plots on Beta chain (circa 4/4/20) to be able to win chia. One of the most obvious ways is to monitor your Wallet to see if you have coins coming in. Chia, like Bitcoin, locks new farming rewards for 200 blocks for security and re-org reasons. If you want chia more quickly, ask in #testnet with your Wallet Deposit Address and you'll usually get some 'seasoned' chia.
+
+You can see what your farmer thinks its farming by looking in your debug.log for lines that look like:
+```bash
+Harvester src.harvester         : INFO     21:14:36.228 Farming plot plots/plot-0-27-87f55b056018e049276b59e571107dac848fcff250575c84b961a9e6bab3ad48.dat of size 27
+Harvester src.harvester         : INFO     21:14:36.228 Farming plot plots/plot-1-27-c1977c1741bf36eda34c09e5fe81e6b701add1eac2772a32d9e30303737aac83.dat of size 27
+```
+Those will show up about every 20 minutes as harvester reporting which plots it's actively looking at. If you need to add new plots after plotting but while already harvesting other plots you can just run (the not so well named currently) `chia-start-harvester` which will actually restart harvester which re-reads your plots.yaml file and starts harvesting/farming all current plots.
+
+The other thing you can look for are proofs of space being sent from your harvester to your farmer in response to the next block challenge. Those look like this in the debug.log:
+```bash
+Harvester src.server.server     : INFO     21:14:47.041 -> challenge_response to peer ('127.0.0.1', 8447)
+Harvester src.server.server     : INFO     21:14:47.042 -> challenge_response to peer ('127.0.0.1', 8447)
+```
+The command `grep` is very handy. To see all your harvester activity you can `grep Harvester ~/.chia/RELEASEDIR/logs/debug.log` or to see which plots Harvester thinks it's farming you can `grep "Farming plot" ~/.chia/RELEASEDIR/logs/debug.log`. If you're trying to match things with spaces, then you need the quotes for `grep`.
+
 # What are the next milestones?
 
 We are now in the Beta testnet blockchain phase. During Beta you should expect continued improvements in ease of install, and support for and user interface for our reference smart transactions. We will have some over the wire protocol changes that will require hard forks but should migrate your existing installations easily to the newer chain. Between now and quite a few months before mainnet launch, we will have to make (hopefully only) one change to the file format of proof of space plots. This will require re-plotting but we expect to support both plot formats for a month or two. The new plot format will be the same as mainnet so you will be able to get your plots in order before mainnet launch. We expect to launch mainnet at the end of 2020. We also plan to have an 8-10 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
