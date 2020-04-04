@@ -4,26 +4,29 @@ Everyone once in a while in our pre-mainnet software, an issue will come up that
 
 1. From your chia-blockchain directory type `git fetch` and then `git status`. You'll get back something that looks like this though sometimes you'll get much less:
 ```bash
-remote: Enumerating objects: 59, done.
-remote: Counting objects: 100% (59/59), done.
-remote: Compressing objects: 100% (33/33), done.
-remote: Total 59 (delta 34), reused 36 (delta 26), pack-reused 0
-Unpacking objects: 100% (59/59), done.
+remote: Enumerating objects: 60, done.
+remote: Counting objects: 100% (60/60), done.
+remote: Compressing objects: 100% (34/34), done.
+remote: Total 60 (delta 34), reused 36 (delta 26), pack-reused 0
+Unpacking objects: 100% (60/60), done.
 From https://github.com/Chia-Network/chia-blockchain
-   b077a7a..42aaf3b  master                 -> origin/master
+   b077a7a..1212590  master                 -> origin/master
  * [new branch]      beta-1.1               -> origin/beta-1.1
  * [new branch]      rk-remove-setproctitle -> origin/rk-remove-setproctitle
- * [new tag]         1.0beta1               -> 1.0beta1
 ```
 
 2. Now you should stop your node/farmer with `chia-stop-all` and exit the virtual environment with `deactivate`.
 
 3. Update your software with `git pull`. You'll get something like:
 ```bash
-Updating b077a7a..42aaf3b
+Updating b077a7a..1212590
 Fast-forward
- INSTALL.md | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
+ INSTALL.md                     | 4 ++--
+ README.md                      | 2 +-
+ src/full_node/blockchain.py    | 3 +++
+ src/full_node/full_node.py     | 3 +--
+ src/wallet/websocket_server.py | 2 +-
+ 5 files changed, 8 insertions(+), 6 deletions(-)
 ```
 4. Now run the install.sh file with `sh install.sh`.
 
