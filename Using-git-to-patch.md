@@ -39,3 +39,5 @@ Fast-forward
 4. Now run the install.sh file with `sh install.sh`.
 
 5. Once that completes successfully, re-enter the virtual environment with `. ./activate` and then start whatever is appropriate for you like `chia-start-farmer &`.
+
+6. Note that your configuration directory may have changed. If you run `ls ~/.chia` and you see more than one directory you may have to `chia-stop-all`, `rm -rf ~/.chia NEWDIR/*` where NEWDIR is the new directory created and then `mv ~/.chia/OLDDIR/* ~/.chia NEWDIR/*` as the newer install is going to look for it's configuration, plots, and plots.yaml and keys.yaml in the NEWDIR. We will be adding a script to do this for you soon.
