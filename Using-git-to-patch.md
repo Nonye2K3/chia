@@ -4,6 +4,7 @@ Everyone once in a while in our pre-mainnet software, an issue will come up that
 
 1. From your chia-blockchain directory type `git fetch` and then `git status`. You'll get back something that looks like this though sometimes you'll get much less:
 ```bash
+# Results of 'git fetch':
 remote: Enumerating objects: 60, done.
 remote: Counting objects: 100% (60/60), done.
 remote: Compressing objects: 100% (34/34), done.
@@ -14,7 +15,7 @@ From https://github.com/Chia-Network/chia-blockchain
  * [new branch]      beta-1.1               -> origin/beta-1.1
  * [new branch]      rk-remove-setproctitle -> origin/rk-remove-setproctitle
 
-# Results of git stautus:
+# Results of 'git status':
 On branch master
 Your branch is behind 'origin/master' by 4 commits, and can be fast-forwarded.
   (use "git pull" to update your local branch)
