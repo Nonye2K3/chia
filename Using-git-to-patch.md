@@ -13,6 +13,13 @@ From https://github.com/Chia-Network/chia-blockchain
    b077a7a..1212590  master                 -> origin/master
  * [new branch]      beta-1.1               -> origin/beta-1.1
  * [new branch]      rk-remove-setproctitle -> origin/rk-remove-setproctitle
+
+# Results of git stautus:
+On branch master
+Your branch is behind 'origin/master' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
 ```
 
 2. Now you should stop your node/farmer with `chia-stop-all` and exit the virtual environment with `deactivate`.
