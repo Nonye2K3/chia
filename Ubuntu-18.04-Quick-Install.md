@@ -14,14 +14,18 @@ cd ~
 apt update && apt install gnupg -y
 ```
 
-Add new source. Not required on Ubuntu 19 or later.
+Add new source. Not required on Ubuntu 19 or later. **UPDATE** We noted on April 4, 2020 that 18.04 also has python 3.7. Older versions of Ubuntu might still require it.
 
 ```bash
 echo deb http://ppa.launchpad.net/deadsnakes/ppa/ubuntu bionic main > /etc/apt/sources.list.d/deadsnakes-ubuntu-ppa-bionic.list
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA6932366A755776
-apt update && apt install python3.7-venv -y
 ```
 
+Ensure you have python 3.7 installed.
+
+```bash
+apt update && apt install python3.7-venv -y
+```
 
 Create a virtual env and upgrade pip, as pip 19.2.3 does not support binary wheels on Linux.
 
