@@ -1,3 +1,6 @@
+* [FreeBSD Install](https://github.com/Chia-Network/chia-blockchain/wiki/FreeBSD-Install)
+* [Ubuntu Install](https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Install)
+
 You need Python 3.7 or higher.
 
 Chia strives to provide [binary wheels](https://pythonwheels.com/) for modern systems. If your system does not have binary wheels, you may need to install development tools to build some Python extensions from source.
