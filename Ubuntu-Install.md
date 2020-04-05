@@ -8,7 +8,7 @@ which is very bare bones Ubuntu 18.04 install. This runs well on 18.04 LTS or ne
 
 Ensure you have python 3.7 installed:
 ```bash
-apt update && apt install python3.7-venv -y
+sudo apt update && apt install python3.7-venv -y
 ```
 
 Create a virtual env and upgrade pip, as pip 19.2.3 does not support binary wheels on Linux:
