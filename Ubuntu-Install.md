@@ -6,7 +6,7 @@ sudo docker run --network host --name ubuntu --rm -i -t ubuntu bash
 
 which is very bare bones Ubuntu 18.04 install. This runs well on 18.04 LTS or newer versions of Ubuntu.
 
-Ensure you have python 3.7 installed:
+Most will want to start here. Ensure you have python 3.7 installed:
 ```bash
 sudo apt update && apt install python3.7-venv python3.7-distutils -y
 ```
