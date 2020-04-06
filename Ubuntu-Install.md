@@ -19,7 +19,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 ```
 
-Install three binary wheels from alternate source:
+Install three binary wheels Chia Network's alternate source:
 ```bash
 pip install -i https://hosted.chia.net/simple/ miniupnpc==2.0.2 setproctitle==1.1.10 cbor2==5.0.1
 ```
