@@ -20,7 +20,7 @@ pip install --upgrade pip
 
 Install three binary wheels from alternate source:
 ```bash
-pip install -i https://hosted.chia.net/simple/ miniupnpc==0.1.dev5 setproctitle==1.1.10 cbor2==5.0.1
+pip install -i https://hosted.chia.net/simple/ miniupnpc==2.0.2 setproctitle==1.1.10 cbor2==5.0.1
 ```
 
 Install everything else:
