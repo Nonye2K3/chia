@@ -33,4 +33,4 @@ Now you can start using chia with a command like:
 ```bash
 chia-start-node &
 ```
-Refer to the [README.md](https://github.com/Chia-Network/chia-blockchain/blob/master/README.md) after the install instructions for information on how to run the Chia blockchain components.
+Refer to the [README.md](https://github.com/Chia-Network/chia-blockchain/blob/master/README.md) starting at Step 2 for details on how to run the Chia blockchain components.
