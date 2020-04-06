@@ -14,4 +14,4 @@ If you want to use the same plots as before, do the following:
 
 * In your new keys.yaml, you want to copy *ONLY* the two pool_sks, and sk_seed from the old config in `chia-blockchain-alpha/config/keys.yaml` into the new keys config at `~/.chia/1.0beta1/config/keys.yaml`. Make sure to keep the format of this file correct. Note that the old config.yaml should not be copied, as the format has changed.
 
-That should allow you to run `chia-start-farmer &` and have farming begin. Then run `chia-start-wallet-gui &` on MacOS or Linux desktops or `chia-start-wallet-server&` and run the chia.exe on Windows WSL 2.
+That should allow you to run `chia-start-farmer &` and have farming begin. Then run `chia-start-wallet-gui &` on MacOS or Linux desktops or `chia-start-wallet-server&` and run the chia.exe on Windows WSL 2. Note that the Chia balances have been reset, as the blockchain was started from scratch for the beta.
