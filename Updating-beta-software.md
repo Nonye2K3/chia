@@ -11,4 +11,4 @@ Otherwise, to update to the newest beta release (from an earlier beta release), 
 5. `chia init`
 6. Follow instructions to start your node in [README.md](https://github.com/Chia-Network/chia-blockchain/blob/master/README.md) (`chia-start-farmer &`, etc)
 
-This should copy the plot configuration (`plots.yaml`), key configuration (`keys.yaml`), and node configuration (`config.yaml`) from the old chia directories into the new chia directory. Note that your plots are not moved, only the references to them.
+This should copy the plot configuration (`plots.yaml`), key configuration (`keys.yaml`), and node configuration (`config.yaml`) from the old chia directories into the new chia directory. Note that your plots are not moved, only the references to them, but farming should still work.
