@@ -5,7 +5,7 @@ If you do not have the software or plots, and want to install from scratch, foll
 
 Otherwise, to update to the newest beta release (from an earlier beta release), do the following, from a terminal in the chia-blockchain directory:
 1. `. ./activate && chia-stop-all`
-2. `git pull origin master`
+2. `git fetch && git pull origin master`
 3. `sh install.sh`
 4. `. ./activate`
 5. `chia init`
