@@ -39,7 +39,7 @@ The other thing you can look for are proofs of space being sent from your harves
 Harvester src.server.server     : INFO     21:14:47.041 -> challenge_response to peer ('127.0.0.1', 8447)
 Harvester src.server.server     : INFO     21:14:47.042 -> challenge_response to peer ('127.0.0.1', 8447)
 ```
-The command `grep` is very handy. To see all your harvester activity you can `grep Harvester ~/.chia/RELEASEDIR/logs/debug.log` or to see which plots Harvester thinks it's farming you can `grep "Farming plot" ~/.chia/RELEASEDIR/logs/debug.log`. If you're trying to match things with spaces, then you need the quotes for `grep`.
+The command `grep` is very handy. To see all your harvester activity you can `grep Harvester ~/.chia/RELEASEDIR/log/debug.log` or to see which plots Harvester thinks it's farming you can `grep "Farming plot" ~/.chia/RELEASEDIR/log/debug.log`. If you're trying to match things with spaces, then you need the quotes for `grep`.
 
 # What are the next milestones?
 
