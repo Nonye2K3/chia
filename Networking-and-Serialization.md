@@ -32,18 +32,24 @@ The primitives are:
 * Sized bytes serialized in big endian format, i.e bytes32
 * BLSPublic keys serialized in bls format
 * BLSSignatures serialized in bls format
+* bool serialized into 4 bytes
 
 An item is one of:
 * streamable
 * primitive
 * List[item]
 * Optional[item]
+* Tuple[item1 .. itemx]
+* bytes
+
 
 A streamable is an ordered group of items.
 
 1. A streamable with fields 1..n is serialized by appending the serialization of each field.
 2. A List is serialized into a 4 byte size prefix (number of items) and the serialization of each item
 3. An Optional is serialized into a 1 byte prefix of 0x00 or 0x01, and if it's one, it's followed by the serialization of the item
+4. A tuple of x items is serialized by appending the serialization of each item.
+5. A bytes  object is serialized as a list, with a 4 byte size prefix and then the bytes.
 
 This format can be implemented very easily, and allows us to hash objects like headers and proofs of space,
 without complex serialization logic.
@@ -84,8 +90,8 @@ The introducer will then return a random subset of known recent peers that the c
 The plan is to switch to DNS and a more decentralized approach of asking different peers for their peers.
 
 
-## RPC 
-Aside from the Chia protocols described in the next page, there is also a local RPC protocol to allow simple control over a node, through HTTP. 
+## RPC
+Aside from the Chia protocols described in the next page, there is also a local RPC protocol to allow simple control over a node or wallet through HTTP.
 All requests and responses for the RPC protocol are in JSON, to simplify the interface.
 This allows doing things like getting the tips of the chain, getting a specific block, adding connections, stopping the node, etc. The full node UI connects to the full node using the RPC.
 

@@ -1,13 +1,13 @@
 ![block-format](images/chia-block-format2.png)
 
 ## Trunk and Foliage
-Chia's blockchain is based on a trunk and a foliage. The trunk is canonical, and contains proofs of time and proofs of space. The foliage is not canonical, and contains the rest of the block header, block body, and transaction filter. Arrows in the diagram represent hash pointers - a hash of the data pointed to.
+Chia's blockchain is based on a trunk and a foliage. The trunk is canonical, and contains proofs of time and proofs of space. The foliage is not canonical, and contains the rest of the block header, transaction generator, and transaction filter. Arrows in the diagram represent hash pointers - a hash of the data pointed to. The foliage and trunk combined form a full block.
 
-Light clients can download the trunk chain and the headers, and only download the body for blocks they are interested in.
+Wallets (light clients) can download the trunk chain and the headers, and only download the transactions that they are interested in.
 
 ## Canonical
 
-The reason why the blockchain is separated into a trunk and a foliage chain is that if the contents of blocks affected the proofs of space for the next block, a computationally powerful attacker could grind by creating many block bodies and seeing which one results in the best proof of space. This would make the consensus algorithm very similar to proof of work.
+The reason why the blockchain is separated into a trunk and a foliage chain is that if the contents of blocks affected the proofs of space for the next block, a computationally powerful attacker could grind by creating many block headers and seeing which one results in the best proof of space. This would make the consensus algorithm very similar to proof of work.
 
 Since proofs of space depend only on the previous block's proof of space and proof of time, a farmer get's only one proof attempt per block. Technically, the difficulty resets affect the number of iterations, and thus affect the trunk as well. That is why there is a delay in the block number at which difficulty resets come into play.
 
@@ -20,6 +20,8 @@ which steals the rewards from the previous farmer.
 
 While in the short term, double signatures can happen, clients can just wait for more confirmations, and as long as
 one farmer did not double sign a block, such a deep reorg cannot happen.
+
+Furthermore, farmers are encouraged to delete their plots after winning a block with that plot.
 
 
 ## Formats
@@ -87,7 +89,9 @@ An unfinished block is considered valid if it passes the following checks:
 10. The proof of space must be valid on the challenge
 11. If not genesis, the height on the previous block must be one less than on this block
 12. If genesis, the height must be 0
-13. The coinbase reward must match the block schedule
+13. The coinbase reward must match the block schedul
+    - 13b. The coinbase parent id must be the height
+    - 13c. The fees coin parent id must be hash(hash(height))
 14. Make sure transactions generator hash is valid (or all 0 if not present)
 15. If not genesis, the transactions must be valid and fee must be valid (verifies that fee_base + TX fees = fee_coin.amount)
 16. If genesis, the fee must be the base fee, agg_sig must be None, and merkle roots must be valid

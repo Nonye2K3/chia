@@ -75,6 +75,13 @@ Farmers periodically send partials, which contain a proof of space and a signatu
 
 Wallets can communicate with full nodes through the wallet protocol.
 This is similar to Bitcoin's SPV protocol, and allows verification of transactions and block weight, without the bandwidth and CPU requirements of full nodes.
+Wallet nodes are similar to full nodes, in that they are servers which communicate to other peers in the network. A common use case is to run a wallet locally along with a full node, where the wallet only connects to the full node.
+
+The wallet is also responsible for managing private keys, generating, storing and sending transactions. The wallet exposes an RPC HTTP websocket JSON API, which user interfaces can use to execute commands.
+
+## Electron GUI
+
+A reference electron graphical user interface exists which connects to the wallet and full node RPCs. From this UI, users can execute transactions, view balance, and view history. Various smart contract features will also be added in the future.
 
 
 The next document in the tutorial is [Networking and Serialization](https://github.com/Chia-Network/chia-blockchain/wiki/Networking-and-Serialization).

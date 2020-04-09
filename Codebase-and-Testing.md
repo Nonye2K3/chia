@@ -59,11 +59,14 @@ If the node is only a few blocks behind, a series of `RequestBlock` messages wil
 
 ## State and persistance
 
-The reference implementation currently uses a mongodb database for persistance and this may change.
-The database is only used by the full node, and it's only used to store full blocks that have been validated, and blocks that are downloaded during sync.
-The sync blocks collection is cleared after sync is done.
+The reference implementation currently uses a sqlite3 database for persistance and this may change.
+Both the full node and the wallet have databases.
+The wallet database is used to store full blocks that have been validated, and blocks that are downloaded during sync.
+The sync blocks table is cleared after sync is done.
+The wallet database is used to similarly store blocks, but only stores the coins that are relevant to that wallet.
+Furthermore, the wallet stores puzzle hashes, transaction records, and user wallet information in the database.
 
-The rest of the state is kept in memory in database.py.
+The rest of the state is kept in memory by the different servers.
 On launch of the full node, blockchain.py is loaded with the current block database.
 
 
@@ -73,3 +76,4 @@ The Blockchain class represents the current state of where we think the blockcha
 It maintains a list of three tips, which are the connected blocks with the highest weight, along with a height_to_hash map, to easily look up blocks using the height, a reference to the database to fetch blocks, and a map of all current headers.
 
 Blocks only get added to the persistant database after they have been fully verified as connected blocks.
+The wallet node similarly has the WalletStateManager, which maintains a list of header blocks, and interfaces with the user wallet.

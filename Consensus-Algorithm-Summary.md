@@ -21,7 +21,7 @@ see if they have any very good proofs of space (analogous to someone checking th
 see if they've won), and propagate these proofs if they've found a lucky number. Farmers also propagate a block
 with these proofs, and sign it with a private key that is associated with their plot.
 
-In order to prevent grinding attacks and long range attacks amongst others, these proofs of space must be put through a 
+In order to prevent grinding attacks and long range attacks amongst others, these proofs of space must be put through a
 proof of time as well. Each block has one proof of space and one proof of time.
 **Proofs of time**, or verifiable delay function proofs ("VDFs"), are cryptographic proofs that a sequential
 computation was performed on a given input, for a given number of iterations. These proofs of
@@ -41,14 +41,12 @@ the number of iterations required for the proof of time, and therefore change ex
 The formula for the proof of space iterations required to finish a block is below:
 
 ```
-Iterations required = 30 * ips + difficulty * -ln(0.H(qual_str)) / expected_plot_size(k)
+Iterations required = min_iters + difficulty * -ln(0.H(qual_str)) / expected_plot_size(k)
 ```
 
-* **ips** is the estimated iterations per second of the timelords in the network. This is calculated as
-the total iterations in the previous epoch, divided by the total time elapsed in that epoch. Epochs are groups of
-2048 blocks starting at block 0 (genesis). The ips is only used from block i+512 where i is the start of a
-new epoch (similarly to difficulty).
-Note that the 30 * ips factor is a constant 30 seconds that is always necessary.
+* **min_iters** is the minimum required iterations for each proof of time. This is calculated as
+the total iterations in the previous epoch divided by 10. Epochs are groups of
+2048 blocks starting at block 0 (genesis).
 This allows farmers some time to fetch all their qualities and proofs from disk.
 
 * **difficulty**  is a number that is also changed every epoch, starting at block i+512 where i%2048 is 0.
@@ -82,7 +80,7 @@ Increasing k by one roughly doubles the size of the plot.
 Whenever a farmer sees a new block in the network, she retrieves the quality and computes the iterations,
 which when divided by ips, yields the expected time to finalize that block. If this number is close enough
 to the expected block time (5 minutes), the entire proof of space is fetched from disk, the unfinished
-block is created, and then it is propagated through the network.
+block is created, and then it is propagated through the network. The threshold for looking up proofs of space can be configured in config.yaml.
 
 
 As farmers in the network receive new blocks, and find their qualities and proofs of space, they
@@ -95,8 +93,6 @@ i-1 is finalized by another timelord. More information is given in the [greenpap
 ### Difficulty formula
 TODO
 
-### IPS formula
-TODO
 
 ## Propagation rules
 

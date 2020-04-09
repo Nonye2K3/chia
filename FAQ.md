@@ -51,9 +51,9 @@ You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-bloc
 
 # How do I upgrade and keep my keys and plots?
 
-With the move from Alpha to Beta you should review these [notes on upgrading](https://github.com/Chia-Network/chia-blockchain/wiki/Upgrading-from-Alpha-to-Beta). We will be supporting tools to make upgrading between Beta releases easier though you may want to place your plots directory somewhere that's not the directory that 'config/config.yaml' of the 'chia-blockchain' directory for easier future migrations. You can set the path to each file in 'config/plots.yaml' individually or adjust set a 'plot_root' by uncommenting line 18 of 'config.yaml' and specifying the directory there.
+With the move from Alpha to Beta you should review these [notes on upgrading](https://github.com/Chia-Network/chia-blockchain/wiki/Upgrading-from-Alpha-to-Beta). To update between beta releases, please follow the instructions in [Updating Beta Software](https://github.com/Chia-Network/chia-blockchain/wiki/Updating-beta-software). You may want to place your plots directory somewhere that's not the directory that 'config/config.yaml' of the 'chia-blockchain' directory for easier future migrations. You can set the path to each file in 'config/plots.yaml' individually or adjust set a 'plot_root' by uncommenting line 18 of 'config.yaml' and specifying the directory there.
 
-An alternate method is to keep your plots/ directory outside of the chia-blockchain directory and symbolically link to them: `ln -s /Volumes/BigStorage/chia/plots /home/username/plots` 
+An alternate method is to keep your plots/ directory outside of the chia-blockchain directory and symbolically link to them: `ln -s /Volumes/BigStorage/chia/plots /home/username/plots`
 
 # Can I run this on a Raspberry Pi 3 or 4?
 
@@ -62,3 +62,4 @@ Yes. Pi 3 and Pi 4 don't have AES acceleration on the CPU and plotting currently
 # Why does chia-blockchain require python 3.7 or greater?
 
 The codebase takes advantage of the newest async generators, especially async/await, which requires 3.7 or better. Python has a [walk through of Async IO](https://realpython.com/async-io-python/) and the related python 3.7 requirements.
+
