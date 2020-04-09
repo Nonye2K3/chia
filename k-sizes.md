@@ -75,3 +75,21 @@
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
 |---|---|---|---|---|---|
 | 30  |  1512 | 23.838  | 128.05  | 27.59%  | alpha 1.0 |    |
+
+## Fedora Server 31
+* Processor: AMD Ryzen 5 3600 6-Core Processor            
+* Memory: G-Skill 64 GB DDR4 3000MHz            
+* Storage: GIGABYTE AORUS NVMe Gen4 SSD 1 TB               
+
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
+|---|---|---|---|---|---|
+| 32  |  957 | 101.36  | 544.0  | 97.49%  | beta 3.0 |    |
+
+## Fedora Server 31
+* Processor: AMD Ryzen Threadripper 2950X           
+* Memory: Corsair 128 GB DDR4 2133MHz           
+* Storage: LVM-RAID0 (3 x Inland Performance Gen4 SSD 1 TB)                 
+
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
+|---|---|---|---|---|---|
+| 32  |  3093 | 208.85  | 1096.03  | 79.63%  | beta 3.0 |    |
