@@ -32,7 +32,7 @@ You can see what your farmer thinks its farming by looking in your debug.log for
 Harvester src.harvester         : INFO     21:14:36.228 Farming plot plots/plot-0-27-87f55b056018e049276b59e571107dac848fcff250575c84b961a9e6bab3ad48.dat of size 27
 Harvester src.harvester         : INFO     21:14:36.228 Farming plot plots/plot-1-27-c1977c1741bf36eda34c09e5fe81e6b701add1eac2772a32d9e30303737aac83.dat of size 27
 ```
-Those will show up about every 20 minutes as harvester reporting which plots it's actively looking at. If you need to add new plots after plotting but while already harvesting other plots you can just run (the not so well named currently) `chia-start-harvester` which will actually restart harvester which re-reads your plots.yaml file and starts harvesting/farming all current plots.
+Those will show up about every 20 minutes as harvester reporting which plots it's actively looking at. If you need to add new plots after plotting but while already harvesting other plots you can just run (the correctly renamed in Beta3) `chia-restart-harvester` which will restart harvester which re-reads your plots.yaml file and starts harvesting/farming all currently completed plots.
 
 The other thing you can look for are proofs of space being sent from your harvester to your farmer in response to the next block challenge. Those look like this in the debug.log:
 ```bash
