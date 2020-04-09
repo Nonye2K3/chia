@@ -36,7 +36,7 @@ Each plot is expected to have one proof of space on average, so for 50 plots, a 
 ```Python
 class ChallengeResponse:
     challenge_hash: bytes32
-    quality: bytes32
+    quality_string: bytes32
     plot_size: uint8
 ```
 The harvester sends a response to the farmer, with `ChallengeResponse` for each of the qualities found.
@@ -47,7 +47,7 @@ If this time is lower than a threshold (a small constant times expected block si
 
 ```Python
 class RequestProofOfSpace:
-    quality: bytes32
+    quality_string: bytes32
 ```
 The farmer requests the entire proof of space from the harvester, which will require more disk seeks (around 50).
 This is done only for proofs with high quality.
@@ -56,7 +56,7 @@ This is done only for proofs with high quality.
 
 ```Python
 class RespondProofOfSpace:
-    quality: bytes32
+    quality_string: bytes32
     proof: ProofOfSpace
 ```
 The harvester responds with the requested proof of space.
@@ -67,7 +67,7 @@ In order to make a block the farmer must request a block header from the full no
 
 ```Python
 class RequestHeaderSignature:
-    quality: bytes32
+    quality_string: bytes32
     header_hash: bytes32
 ```
 The farmer requests a header signature for a header with the given hash.
@@ -77,7 +77,7 @@ This allows farmers to store their private keys in a more distributed way, with 
 
 ```Python
 class RespondHeaderSignature:
-    quality: bytes32
+    quality_string: bytes32
     header_hash_signature: PrependSignature
 ```
 The harvester responds with a BLS prepend signature on the header hash.
@@ -85,7 +85,7 @@ The harvester responds with a BLS prepend signature on the header hash.
 
 ```Python
 class RequestPartialProof:
-    quality: bytes32
+    quality_string: bytes32
     farmer_target_hash: bytes32
 ```
 The farmer requests a partial proof to be used for claiming pool rewards.
@@ -95,7 +95,7 @@ The harvester signs that farmer target hash (target of funds) with the plot priv
 
 ```Python
 class RespondPartialProof:
-    quality: bytes32
+    quality_string: bytes32
     farmer_target_signature: PrependSignature
 ```
 The harvester responds with the signature, which the farmer can then send to the pool to claim funds.
@@ -107,7 +107,6 @@ class ProofOfSpaceFinalized:
     challenge_hash: bytes32
     height: uint32
     weight: uint64
-    quality: bytes32
     difficulty: uint64
 ```
 This message allows full nodes to notify farmers when new blocks get finalized with a proof of time (and therefore added to the blockchain).
@@ -119,6 +118,7 @@ The difficulty allows farmers to calculate how many iterations their proofs of s
 
 ```Python
 class ProofOfSpaceArrived:
+    previous_challenge_hash: bytes32
     weight: uint64
     quality: bytes32
 ```
@@ -129,8 +129,8 @@ If the farmer's proofs are much worse at his height, there is no need to attempt
 ```Python
 class RequestHeaderHash:
     challenge_hash: bytes32
-    coinbase: CoinbaseInfo
-    coinbase_signature: PrependSignature
+    coinbase: Coin
+    coinbase_signature: BLSSignature
     fees_target_puzzle_hash: bytes32
     proof_of_space: ProofOfSpace
 ```
@@ -205,17 +205,134 @@ The timelord can decide how many proofs to actually finalize for each challenge.
 
 ## Peer Protocol (full node <-> full node)
 
+```Python
+class NewTip:
+    height: uint32
+    weight: uint128
+    header_hash: bytes32
+```
+A peer notifies another peer that they have added a new tip to their blockchain. The receiver can choose to request the whole block, or not.
+
+```Python
+class RemovingTip:
+    header_hash: bytes32
+```
+A peer notifies another peer that the referenced block is no longer a tip in their blockchain.
+
+```Python
+class NewTransaction:
+    transaction_id: bytes32
+    cost: uint64
+    fees: uint64
+```
+Broadcast that a new transaction was added to the mempool, with the given cost and fees.
+
+```Python
+class RequestTransaction:
+    transaction_id: bytes32
+```
+Request a transaction from a peer.
+
+```Python
+class RespondTransaction:
+    transaction: SpendBundle
+```
+Send a transaction to a peer.
+
+```Python
+class ReejctTransactionRequest:
+    transaction_id: bytes32
+```
+Message that a transaction is not available.
+
+
 
 ```Python
 class NewProofOfTime:
-    proof: ProofOfTime
+    height: uint32
+    challenge_hash: bytes32
+    number_of_iterations: uint64
 ```
-A new proof of time is received from a peer.
+Message that a new proof of time has been created.
 This message gets sent to peers that already have the rest of the block, as soon as a timelord finishes a proof of time.
-Recipients can complete the block and broadcast it, or broadcast just the proof of time.
+Recipients can request the whole proof of time.
+
 
 ```Python
-class UnfinishedBlock:
+class RequestProofOfTime:
+    height: uint32
+    challenge_hash: bytes32
+    number_of_iterations: uint64
+```
+Request proof of time from a peer.
+
+
+```Python
+class RespondProofOfTime:
+    proof: ProofOfTime
+```
+Send a proof of time to a peer.
+
+
+```Python
+class RejectProofOfTimeRequest:
+    challenge_hash: bytes32
+    number_of_iterations: uint64
+```
+Reject request for a proof of time.
+
+
+```Python
+class NewCompactProofOfTime:
+    height: uint32
+    challenge_hash: bytes32
+    number_of_iterations: uint64
+```
+Message that a new compact proof of time has been created.
+Compact proofs of time are 1-wesolowski proofs, which are small in size, and can be stored and sent more efficiently.
+
+
+```Python
+class RequestCompactProofOfTime:
+    height: uint32
+    challenge_hash: bytes32
+    number_of_iterations: uint64
+```
+Request compact proof of time from a peer.
+
+
+```Python
+class RespondCompactProofOfTime:
+    proof: ProofOfTime
+```
+Send a compact proof of time to a peer.
+
+
+```Python
+class RejectCompactProofOfTimeRequest:
+    challenge_hash: bytes32
+    number_of_iterations: uint64
+```
+Reject request for a compact proof of time.
+
+
+```Python
+class NewUnfinishedBlock:
+    previous_header_hash: bytes32
+    number_of_iterations: uint64
+    new_header_hash: bytes32
+```
+Notify a peer that a new unfinished block has been created, with `new_header_hash` header has, and requiring a proof of time of `number_of_iterations` iterations.
+
+```Python
+class RequestUnfinishedBlock:
+    header_hash: bytes32
+```
+Request an unfinished block from a peer.
+
+
+```Python
+class RespondUnfinishedBlock:
     block: FullBlock
 ```
 An unfinished block is a block without a proof of time and without a challenge.
@@ -223,9 +340,16 @@ This message gets initially sent by nodes connected to farmers, as soon as their
 It then gets propagated to full nodes, which can notify timelords about the number of iterations.
 Unfinished blocks are only propagated if they extend the tips of the blockchain, and if they are sufficiently good (proof of time is expected to be faster than a threshold).
 
+```Python
+class RejectUnfinishedBlockRequest:
+    header_hash: bytes32
+```
+Reject a request for an unfinished block.
+
 
 ```Python
 class RequestBlock:
+    height: uint32
     header_hash: bytes32
 ```
 A block is requested from a peer.
@@ -233,7 +357,7 @@ The full node can search in the database, and send a `Block` message in response
 
 
 ```Python
-class Block:
+class RespondBlock:
     block: FullBlock
 ```
 A block is sent to a peer, either as a response to `RequestBlock`, or just propagated as a new block.
@@ -246,6 +370,12 @@ Otherwise, it will try to add it to the blockchain.
 * In the case of an orphan block (it's valid but does not extend tips), the internal node state is updated but nothing more is done.
 * In the case of a block that extends one of the three tips, the block should be broadcast to the network.
 
+```Python
+class RejectBlockRequest:
+    height: uint32
+    header_hash: bytes32
+```
+Reject a request for a block.
 
 ```Python
 class RequestPeers:
@@ -258,7 +388,7 @@ Nodes should respond by sending a Peers message with the peer list.
 
 
 ```Python
-class Peers:
+class RespondPeers:
     peer_list: List[PeerInfo]
 ```
 A message containing information on peers.
@@ -283,61 +413,38 @@ The list of all header hashes up to (and including) the requested tip_header_has
 
 
 ```Python
-class RequestHeaderBlocks:
-    tip_header_hash: bytes32
-    heights: List[uint32]
+class RequestHeaderBlock:
+    height: uint32
+    header_hash: bytes32
 ```
-A request for header blocks at the given heights, with tip ancestor `tip_header_hash`.
+A request for header blocks at the given height, with header hash `header_hash`.
 This is used in the sync process, where headers are downloaded from the fork point, to the tip.
-There is a limit to how many headers can be requested, which is set by the full node config.
 
 
 ```Python
-class HeaderBlocks:
-    tip_header_hash: bytes32
-    header_blocks: List[HeaderBlock]
+class RespondHeaderBlock:
+    header_block: HeaderBlock
 ```
-A response to `RequestHeaderBlocks`, with all the desired header blocks.
-This includes proofs of space, proofs of time, challenges, and headers.
+A response to `RequestHeaderBlocks`, with the desired header blocks.
+This includes the proof of space, proof of time, challenge, and header.
+
+```Python
+class RejectHeaderBlockRequest:
+    height: uint32
+    header_hash: bytes32
+```
+Reject a request for a header block.
 
 
 ```Python
-class RequestSyncBlocks:
-    tip_header_hash: bytes32
-    heights: List[uint32]
+class RequestMempoolTransactions:
+    filter: bytes
 ```
-
-A request for full blocks at the given heights, with tip ancestor `tip_header_hash`.
-This is used in the sync process, after downloading and verifying all the headers.
-The full node should retrieve all these blocks, if they exist, and if the number of heights does not exceed the limit.
+Request mempool transactions (that are not in filter) from a peer.
 
 
-```Python
-class SyncBlocks:
-    tip_header_hash: bytes32
-    blocks: List[FullBlock]
-```
-A response to `RequestSyncBlocks`, with all the desired blocks.
+## Wallet protocol (wallet/light client <-> full node)
 
-
-```Python
-class TransactionId:
-    transaction_id: bytes32
-```
-Propagates a transaction id to a peer, used to broadcast new transactions, while saving bandwitdh.
-
-
-```Python
-class RequestTransaction:
-    transaction_id: bytes32
-```
-Request a transaction from another peer, usually after receiving a new transaction id.
-
-
-```Python
-class NewTransaction:
-    transaction: Transaction
-```
-Broadcast a new transaction to a peer.
+TODO
 
 The next document in the tutorial is [Codebase and Testing](https://github.com/Chia-Network/chia-blockchain/wiki/Codebase-and-Testing).
