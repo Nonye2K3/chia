@@ -83,6 +83,7 @@
 
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
 |---|---|---|---|---|---|
+| 31  |  571.5 | 49.15  | 261.99  | 71.17%  | beta 3.0 |    |
 | 32  |  957 | 101.36  | 544.0  | 97.49%  | beta 3.0 |    |
 
 ## Fedora Server 31
