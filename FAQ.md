@@ -61,7 +61,7 @@ Yes. Pi 3 and Pi 4 don't have AES acceleration on the CPU and plotting currently
 
 # Wallet GUI won't start on my linux distribution.
 
-Some linux distros don't allow Electron to install correctly. The error is some variant of `The SUID sandbox helper binary was found, but is not configured correctly`. Details and fixes are in [Electron Issue 17972](https://github.com/electron/electron/issues/17972). Thanks @kargakis.
+Some linux distros don't allow Electron to install correctly. The error is some variant of `The SUID sandbox helper binary was found, but is not configured correctly`. Details and fixes are in [Electron Issue 17972](https://github.com/electron/electron/issues/17972). Thanks [@kargakis](https://github.com/kargakis).
 
 # Why does chia-blockchain require python 3.7 or greater?
 
