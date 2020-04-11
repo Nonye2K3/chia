@@ -93,4 +93,4 @@
 
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
 |---|---|---|---|---|---|
-| 33  |  3093 | 208.85  | 1096.03  | 79.63%  | beta 3.0 |    |
+| 33  |  3093 | 208.85  | 1096.03  | 79.63%  | beta 3.0 2 concurrent |    |
