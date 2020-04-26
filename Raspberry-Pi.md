@@ -2,12 +2,15 @@
 
 The following recipe was tested on a Pi 4 running Ubuntu Server 20.04 LTS 64 bit. 64 bit OSes and python 3.7+ are required but helpfully Ubuntu 20.04 has python 3.8 out of the box.
 
+This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_.
+
+
 Make sure you have some swap space, 2048MB is suggested:
 ```bash
 sudo dd if=/dev/zero of=/swap bs=1M count=2048
 sudo chmod 600 /swap ; sudo mkswap /swap ; sudo swapon /swap
 ```
-Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as the swap is only required during the building of chiapos, chiavdf, and blspy.
+Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy.
 ```bash
 /swap swap swap defaults 0 0
 ```
