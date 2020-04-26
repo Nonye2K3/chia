@@ -1,9 +1,7 @@
-# Installation
-
 To install the chia-blockchain node, follow the instructions according to your operating system.
 After installing, follow the remaining instructions in [README.md](README.md) to run the software.
 
-## MacOS
+# MacOS
 MacOS Mojave (10.14.x) or newer is required for 1.0b4.
 Make sure [brew](https://brew.sh/) is available before starting the setup.
 ```bash
@@ -14,7 +12,7 @@ sh install.sh
 . ./activate
 ```
 
-## Debian/Ubuntu
+# Debian/Ubuntu
 
 Install dependencies for Ubuntu 18.04 or newer.
 ```bash
@@ -40,8 +38,8 @@ pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.
 pip install chia-blockchain==1.0.beta4
 ```
 
-## Windows (WSL)
-### Install WSL2 + Ubuntu 18.04 LTS
+# Windows (WSL)
+## Install WSL2 + Ubuntu 18.04 LTS
 
 From an Administrator PowerShell
 ```
@@ -79,7 +77,7 @@ You will need to download the Windows native Wallet and unzip into somewhere con
 
 Instead of `chia start wallet-ui &` as explained in the [README.md](README.md) you run `chia start wallet-server &` in Ubuntu/WSL 2 to allow the Wallet to connect to the Full Node running in Ubuntu/WSL 2. Once you've enabled `chia start wallet-server &` you can run "Chia" from the Start menu or your Desktop.
 
-## Amazon Linux 2
+# Amazon Linux 2
 
 ```bash
 sudo yum update -y
@@ -105,7 +103,7 @@ pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.
 pip install chia-blockchain==1.0.beta3
 ```
 
-## CentOS/RHEL 7.7 or newer
+# CentOS/RHEL 7.7 or newer
 
 ```bash
 sudo yum update -y
