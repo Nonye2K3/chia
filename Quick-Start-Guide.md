@@ -1,5 +1,5 @@
 # Install the code
-To install chia-blockchain, follow [these install](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) instructions according to your operating system. This project only supports 64 bit operating systems.
+To install chia-blockchain, follow [these install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) according to your operating system. This project only supports 64 bit operating systems.
 
 All configuration and plot data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/ if that variable is not set. You can find databases, keys, plots, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots.
 
