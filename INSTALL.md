@@ -140,7 +140,7 @@ pip install chia-blockchain==1.0.beta3
 ## Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
 * [FreeBSD Install](https://github.com/Chia-Network/chia-blockchain/wiki/FreeBSD-Install)
-* [Ubuntu Install](https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Install)
+* [Ubuntu Binary Install](https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Binary-Install)
 
 
 You need Python 3.7 or higher.
