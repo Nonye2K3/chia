@@ -64,3 +64,9 @@ blocks to make them valid. This requires fast CPUs and a few cores per VDF as we
 sh install-timelord.sh
 chia start timelord &
 ```
+# Alternatively run the local simulation
+You can instead run the simulation, which runs all servers and multiple full nodes, locally. Note the the simulation is local only and requires installation of timelords and VDFs. The introducer will only know the local ips of the full nodes, so it cannot broadcast the correct ips to external peers. This should work on MacOS and Linux.
+
+```bash
+chia-start-sim
+```
