@@ -1,6 +1,8 @@
 # Install the code
 To install chia-blockchain, follow [these install](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) instructions according to your operating system. This project only supports 64 bit operating systems.
 
+All configuration and plot data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/ if that variable is not set. You can find databases, keys, plots, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots.
+
 Remember that once you complete your install you **must be in the [Python virtual environment](https://docs.python-guide.org/dev/virtualenvs/)** which you access from the chia-blockchain directory (or your home directory if you opted for a binary install) with the command `.   ./activate` or `.\venv\Scipts\activate.ps1` on Windows PowerShell. Both dots are critical and once executed correctly your cli prompt will look something like `(venv) username@machine:~$` with ``(venv)`` prepended. 
 
 Use `deactivate` should you want to exit the venv. Windows users will find the venv with `cd "~\AppData\Local\Programs\Chia Network\Chia Blockchain\"`. If you're not a fan of dots, an equivalent alternative on most platforms is `source venv/bin/activate` that you'll see in places in this documentation.
