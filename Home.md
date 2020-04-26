@@ -1,9 +1,9 @@
 # chia-blockchain wiki
 
-* [Repository FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ)
-* [Project FAQ](https://www.chia.net/faq/)
 * [Install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL)
 * [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
+* [Repository FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ)
+* [Chia Project FAQ](https://www.chia.net/faq/)
 * [k and plot sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 * [Upgrading between Beta releases](https://github.com/Chia-Network/chia-blockchain/wiki/Updating-beta-software).
 * [Upgrading from Alpha](https://github.com/Chia-Network/chia-blockchain/wiki/Upgrading-from-Alpha-to-Beta)
