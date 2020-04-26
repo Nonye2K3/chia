@@ -1,9 +1,12 @@
 To install the chia-blockchain node, follow the instructions according to your operating system.
 After installing, follow the remaining instructions in [README.md](README.md) to run the software.
 
+| Jump to: | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [Windows](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#windows) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+
 # MacOS
 MacOS Mojave (10.14.x) or newer is required for 1.0b4.
-Make sure [brew](https://brew.sh/) is available before starting the setup.
+Make sure [brew](https://brew.sh/) is available before starting the setup. If you don't have python3 on your Mac you can `brew install python3`.
 ```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
@@ -12,7 +15,7 @@ sh install.sh
 . ./activate
 ```
 
-# Debian/Ubuntu
+# Ubuntu/Debian
 
 Install dependencies for Ubuntu 18.04 or newer.
 ```bash
@@ -38,7 +41,7 @@ pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.
 pip install chia-blockchain==1.0.beta4
 ```
 
-# Windows (WSL)
+# Windows
 ## Install WSL2 + Ubuntu 18.04 LTS
 
 From an Administrator PowerShell
@@ -135,7 +138,7 @@ pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.
 
 pip install chia-blockchain==1.0.beta3
 ```
-## Other install methods and environments
+# Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
 * [FreeBSD Install](https://github.com/Chia-Network/chia-blockchain/wiki/FreeBSD-Install)
 * [Ubuntu Binary Install](https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Binary-Install)
@@ -145,7 +148,7 @@ You need Python 3.7 or higher.
 
 Chia strives to provide [binary wheels](https://pythonwheels.com/) for modern systems. If your system does not have binary wheels, you may need to install development tools to build some Python extensions from source. If you're attempting to install from source, setting the environment variable BUILD_VDF_CLIENT to N will skip trying to build Timelord components that aren't very cross platform, e.g. `export BUILD_VDF_CLIENT=N`.
 
-# Create a virtual environment
+## Create a virtual environment
 
 Your installation goes inside a [virtual environment](https://docs.python-guide.org/dev/virtualenvs/).
 
