@@ -87,7 +87,7 @@ As farmers in the network receive new blocks, and find their qualities and proof
 will propagate them and timelords will receive them. The proofs of space on block i will determine
 the number of iterations that the proof of time on block i must have, but it is not included in
 the challenge for block i. Therefore the timelord can start iterating on their VDF as soon as block
-i-1 is finalized by another timelord. More information is given in the [greenpaper](https://github.com/Chia-Network/proof-of-space).
+i-1 is finalized by another timelord. More information is given in the [Greenpaper](https://www.chia.net/assets/ChiaGreenPaper.pdf).
 
 
 ### Difficulty formula
