@@ -117,7 +117,7 @@ sudo yum install libsqlite3x-devel -y
 
 wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
 tar -zxvf Python-3.7.7.tgz ; cd Python-3.7.7
-./configure --enable-optimizations; sudo make install; cd ..
+./configure --enable-optimizations; sudo make -j$(nproc) altinstall; cd ..
 
 # Download and install the source version
 git clone https://github.com/Chia-Network/chia-blockchain.git
