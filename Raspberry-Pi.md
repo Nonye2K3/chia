@@ -43,4 +43,4 @@ These instructions were compiled using a pre-release beta1.4 but should work for
 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
-As noted above the Raspberry Pi is not cut out to be a Timelord or a plotter. It makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and transferred to it.
+As noted above the Raspberry Pi is not cut out to be a Timelord or a plotter. It makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
