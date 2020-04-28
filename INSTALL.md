@@ -17,7 +17,7 @@ sh install.sh
 
 # Ubuntu/Debian
 
-Install dependencies for Ubuntu 18.04 or newer.
+Install dependencies for Ubuntu 18.04 or newer. If you are installing on Ubuntu 20.04 LTS you should use Python 3.8 instead `sudo apt-get install python3.8-venv python3.8-distutils git -y`
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
