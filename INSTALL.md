@@ -42,6 +42,15 @@ pip install chia-blockchain==1.0.beta4
 ```
 
 # Windows
+With Beta 1.4 there are two ways to install on Windows. You can install and run natively or you can have a hybrid install where the farmer, plotter, and node are in WSL2 and the Wallet GUI is in Windows.
+## Windows native
+Download the full Windows Installer:
+[https://download.chia.net/beta-1.4-win64/chia-0.1.10.exe][https://download.chia.net/beta-1.4-win64/chia-0.1.10.exe]
+
+When you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the currently unsigned installer. This installs Python 3.7, some Microsoft dependencies and the Chia blockchain. The installer will place a Chia Wallet icon in your Start menu and on your Desktop that starts the Wallet UI. There will also be a [readme.txt\(https://github.com/Chia-Network/chia-blockchain/blob/master/electron-wix/blockchain/readme.txt) added to your Desktop that explains how to finish the install and run chia commands in PowerShell.
+
+You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
+
 ## Install WSL2 + Ubuntu 18.04 LTS
 
 From an Administrator PowerShell
