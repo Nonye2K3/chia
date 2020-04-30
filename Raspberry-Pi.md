@@ -36,7 +36,7 @@ pip install setproctitle
 ```
 Finally attempt to install chia-blockchain:
 ```
-pip install chia-blockchain
+pip install chia-blockchain==1.0b4
 ```
 
 These instructions were compiled using a pre-release beta1.4 but should work for beta1.3. The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above.
