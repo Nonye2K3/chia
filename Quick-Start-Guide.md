@@ -5,7 +5,7 @@ All configuration and plot data is stored in a directory structure at the $CHIA_
 
 Remember that once you complete your install you **must be in the [Python virtual environment](https://docs.python-guide.org/dev/virtualenvs/)** which you access from the chia-blockchain directory (or your home directory if you opted for a binary install) with the command `.   ./activate` or `.\venv\Scipts\activate.ps1` on Windows PowerShell. Both dots are critical and once executed correctly your cli prompt will look something like `(venv) username@machine:~$` with ``(venv)`` prepended. 
 
-Use `deactivate` should you want to exit the venv. Windows users will find the venv with `cd "~\AppData\Local\Programs\Chia Network\Chia Blockchain\"`. If you're not a fan of dots, an equivalent alternative on most platforms is `source venv/bin/activate` that you'll see in places in this documentation.
+Use `deactivate` should you want to exit the venv. Windows users will find the venv with `cd "~\AppData\Local\Programs\Chia Network\Chia Blockchain\"`. If you're not a fan of dots, an equivalent alternative on most platforms is `source venv/bin/activate` and you'll see that method in places in this documentation.
 
 # Migrate or set up configuration files
 ```bash
@@ -23,14 +23,14 @@ To run a full node on port 8444, and connect to the testnet, run the following c
 
 ```bash
 chia start node &
-chia start wallet-gui &
+chia start wallet &
 ```
-If you're using Windows/WSL 2, you should instead run:
+If you're using Windows native or WSL 2, you should instead run:
 ```bash
 chia start node &
 chia start wallet-server &
 ```
-And then run `Chia Wallet` from the Chia Wallet Installer in Windows.
+And then run `Chia Wallet` from the Chia Wallet icon on the Desktop or in the Start Menu on Windows. Windows specific help is available in the [readme.txt](https://github.com/Chia-Network/chia-blockchain/blob/master/electron-wix/blockchain/readme.txt) that installs on your desktop with the Windows native install.
 
 # Run a farmer + full node + wallet
 In addition to running a full node, as explained above, you can also run a farmer.
@@ -44,7 +44,7 @@ You can change the working directory and output directory for plotting, with the
 ```bash
 chia-create-plots -k 29 -n 2
 chia start farmer &
-chia start wallet-gui &
+chia start wallet &
 ```
 If you're using Windows/WSL 2, you should instead run:
 ```bash
@@ -70,5 +70,5 @@ chia start timelord &
 You can instead run the simulation, which runs all servers and multiple full nodes, locally. Note the the simulation is local only and requires installation of timelords and VDFs. The introducer will only know the local ips of the full nodes, so it cannot broadcast the correct ips to external peers. This should work on MacOS and Linux.
 
 ```bash
-chia-start-sim
+chia start sim
 ```
