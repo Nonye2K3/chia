@@ -29,6 +29,6 @@ sh install.sh
 export CHIA_ROOT=~/.chia/beta1.0b4
 ```
 
-And now you can go back to plotting and farming. You may want to add `export CHIA_ROOT=~/.chia/beta1.0b4` to your .bashrc or .zshrc. When you upgrade you will need to unset the $CHIA_ROOT environment variable.
+And now you can go back to plotting and farming. You may want to add `export CHIA_ROOT=~/.chia/beta1.0b4` to your .bashrc or .zshrc. When you upgrade you will need to unset the $CHIA_ROOT environment variable with `export CHIA_ROOT=""` and remove it from your .bashrc or .zshrc
 
 If you experienced the memory leak, you should run `chia-check-plots` to make sure all of your plots are valid.
