@@ -26,6 +26,7 @@ nano setup.py
 In nano (or the editor of your choice) you want to change `chiapos==0.12.8` to `chiapos==0.12.10` and then save setup.py (control-s, control-x.)
 ```
 pip install chiapos
+sh install.sh
 ```
 
 And now you can go back to plotting and farming.
