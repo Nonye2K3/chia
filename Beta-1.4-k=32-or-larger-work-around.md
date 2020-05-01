@@ -26,8 +26,9 @@ nano setup.py
 In nano (or the editor of your choice) you want to change `chiapos==0.12.8` to `chiapos==0.12.10` and then save setup.py (control-s, control-x.)
 ```
 sh install.sh
+echo CHIA_ROOT=~/.chia/beta1.0b4
 ```
 
-And now you can go back to plotting and farming.
+And now you can go back to plotting and farming. You may want to add `echo CHIA_ROOT=~/chia/beta1.0b4` to your .bashrc or .zshrc. When you upgrade you will need to unset the $CHIA_ROOT environment variable.
 
 If you experienced the memory leak, you should run `chia-check-plots` to make sure all of your plots are valid.
