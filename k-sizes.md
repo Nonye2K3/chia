@@ -35,15 +35,16 @@
 * Western Digital 4 TB [WD10EZEX](https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-blue-hdd/data-sheet-wd-blue-pc-hard-drives-2879-771436.pdf)
 * ~ - MB/s write
 
-| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  |
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
 |---|---|---|---|---|
-| 28  |  55.3 | 5.58  | 30.3  | 99.56%  |
-| 30  | 308  | 23.8  | 128  | 83.78%  |
-| 31  | 805  | 49.1  | 262  | 67.36%  |
-| 32  | 1,866  | 101.4  | 544  | 60.57%  |
-| 33  | 4663.5  | 208.8  | 1095.97  | 52.2%  |
-| 34  | 10,865.6  | 429.8  | 2,287  | 50.13%  |
-| 35  | 25,703  | 884.1  | 4672.2  | 39.45%  |
+| 28  |  55.3 | 5.58  | 30.3  | 99.56%  | |
+| 30  | 308  | 23.8  | 128  | 83.78%  | |
+| 31  | 805  | 49.1  | 262  | 67.36%  | |
+| 31  | 621  | 49.1  | 262  | 69.68%  | beta4 |
+| 32  | 1,866  | 101.4  | 544  | 60.57%  | |
+| 33  | 4663.5  | 208.8  | 1095.97  | 52.2%  | |
+| 34  | 10,865.6  | 429.8  | 2,287  | 50.13%  | |
+| 35  | 25,703  | 884.1  | 4672.2  | 39.45%  | |
 
 ## AWS EC2 r5.12xlarge
 * Processor: 48 Intel(R) Xeon(R) Platinum 8175M CPU @ 2.50GHz
