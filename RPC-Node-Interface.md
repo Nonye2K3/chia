@@ -5,7 +5,7 @@ api to access information and control the full node:
 Some examples:
 ```bash
 curl -X POST http://localhost:8555/get_blockchain_state
-curl -d '{"header_hash":"afe223d75d40dd7bd19bf35846d0c9dce608bfc77ee5baa9f9cd6b98436e428b"}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_header
+curl -d '{"header_hash":"4ba1f698836798bda170364d3b3e8bb9fe1134eb1af8260ab1319d3ede52555e"}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_header
 ```
 
 The endpoints currently supported in Node:
