@@ -99,12 +99,5 @@ pip install -e ".[uvloop]"
 
 # RPC Interface
 
-You can also use the
-[HTTP JSON-RPC](https://github.com/Chia-Network/chia-blockchain/wiki/Networking-and-Serialization#rpc)
-api to access information and control the full node:
-
-```bash
-curl -X POST http://localhost:8555/get_blockchain_state
-curl -d '{"header_hash":"afe223d75d40dd7bd19bf35846d0c9dce608bfc77ee5baa9f9cd6b98436e428b"}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_header
-```
+The Node has an RPC Interface with [documentation](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Node-Interface).
 
