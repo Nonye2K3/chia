@@ -23,3 +23,5 @@ The endpoints currently supported in Node:
 /get_heaviest_block_seen
 ```
 Documentation is limited but one can get a sense for parameters and actions from the [RPC server source](https://github.com/Chia-Network/chia-blockchain/blob/master/src/rpc/rpc_server.py#L247).
+
+`chia show` [implements](https://github.com/Chia-Network/chia-blockchain/blob/master/src/cmds/show.py) most of the RPC functionality on the command line.
