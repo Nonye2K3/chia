@@ -41,6 +41,11 @@ Harvester src.server.server     : INFO     21:14:47.042 -> challenge_response to
 ```
 The command `grep` is very handy. To see all your harvester activity you can `grep Harvester ~/.chia/RELEASEDIR/log/debug.log` or to see which plots Harvester thinks it's farming you can `grep "Farming plot" ~/.chia/RELEASEDIR/log/debug.log`. If you're trying to match things with spaces, then you need the quotes for `grep`.
 
+
+# How do I know if my plots are OK?
+Run `chia-check-plots -n 100` to try 100 sample challenges for each plot. Each of your plots should return a number around 100, which means it found 100 proofs of space. If the plots are not found, check your `~/.chia/RELEASEDIR/config/plots.yaml` file, and make sure you have run `chia init`.
+
+
 # What are the next milestones?
 
 We are now in the Beta testnet blockchain phase. During Beta you should expect continued improvements in ease of install, and support for and user interface for our reference smart transactions. We will have some over the wire protocol changes that will require hard forks but should migrate your existing installations easily to the newer chain. Between now and quite a few months before mainnet launch, we will have to make (hopefully only) one change to the file format of proof of space plots. This will require re-plotting but we expect to support both plot formats for a month or two. The new plot format will be the same as mainnet so you will be able to get your plots in order before mainnet launch. We expect to launch mainnet at the end of 2020. We also plan to have an 8-10 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
