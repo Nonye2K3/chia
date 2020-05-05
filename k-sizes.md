@@ -1,4 +1,4 @@
-# Various k size statistics from different hosts - versions alpha 1.0 - alpha 1.3
+# Various k size statistics from different hosts
 
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
