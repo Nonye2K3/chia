@@ -76,6 +76,6 @@ The codebase takes advantage of the newest async generators, especially async/aw
 
 Upnp is an optional setting that allows users to open a port in their router and therefore allow other nodes to connect to them. This is not required, since your node can still make outgoing connections without Upnp.
 
-For some routers, Upnp is enabled automatically, but for others, you might have to go into your router settings and enable Upnp manually.
+For some routers, Upnp is enabled automatically, but for others, you might have to go into your router settings and enable Upnp manually. Sometimes restarting the router is also necessary.
 
 Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 to your machine.
