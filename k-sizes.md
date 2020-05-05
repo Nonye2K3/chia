@@ -58,6 +58,18 @@
 |---|---|---|---|---|---|
 | 31  |  425 | 49.15  | 262  | 99.99%  | alpha 1.3 |    |
 
+## AWS EC2 r5dn.12xlarge
+* Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+* Memory: 374GB
+* Storage: tempdir: ramdisk of 264GB (Ubuntu 18.04) finaldir: 
+* ~ - MB/s write
+
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization | Note         |
+| ---|  ---                 |       ---       |    ---        | ---             |    ---       |
+| 26 |    9                 |     1.3         |      7.1      |   99.99%        | pre-beta-1.5 |
+
+
+
 ## MacBook Pro (15-inch, 2017)
 * 2,8 GHz Quad-Core Intel Core i7
 * 16 GB 2133 MHz LPDDR3
