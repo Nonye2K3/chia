@@ -67,7 +67,7 @@
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization | Note         |
 | ---|  ---                 |       ---       |    ---        | ---             |    ---       |
 | 26 |    9                 |     1.3         |      7.1      |   99.99%        | pre-beta-1.5 |
-
+| 28 |    37.5              |     5.57        |      30.2     |   99.99%        | pre-beta-1.5 |
 
 
 ## MacBook Pro (15-inch, 2017)
