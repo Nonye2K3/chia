@@ -51,20 +51,20 @@ When you run the installer, you will have to choose "More Info" and "Run Anyway"
 
 You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 
-## Install WSL2 + Ubuntu 18.04 LTS
+## Install WSL2 + Ubuntu 20.04 LTS
 
 From an Administrator PowerShell
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all
 ```
-You will be prompted to reboot. Once that is complete, install Ubuntu 18.04 LTS from the Microsoft Store and run it and complete its initial install steps. You now have linux bash shell that can run linux native software on Windows.
+You will be prompted to reboot. Once that is complete, install Ubuntu 20.04 LTS from the Microsoft Store and run it and complete its initial install steps. You now have linux bash shell that can run linux native software on Windows.
 
 Then follow the steps below which are the same as the usual Ubuntu instructions above.
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install python3.7-venv python3.7-distutils git -y
+sudo apt-get install python3.8-venv python3.8-distutils git -y
 
 # Either checkout the source and install
 git clone https://github.com/Chia-Network/chia-blockchain.git
