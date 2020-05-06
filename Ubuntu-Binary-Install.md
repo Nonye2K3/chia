@@ -26,9 +26,9 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.0.2 setproctitle==1.
 
 Install everything else:
 ```bash
-pip install chia-blockchain==1.0.beta2
+pip install chia-blockchain==CURRENTVERSION
 ```
-
+Where current version is e.g. `1.0b5`.
 Now you can start using chia with a command like:
 ```bash
 chia-start-node &
