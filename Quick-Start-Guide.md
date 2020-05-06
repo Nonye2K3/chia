@@ -1,9 +1,9 @@
 # Install the code
-To install chia-blockchain, follow [these install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) according to your operating system. This project only supports 64 bit operating systems.
+To install chia-blockchain, follow [these install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) according to your operating system. This software only supports 64 bit operating systems.
 
-All configuration and plot data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/ if that variable is not set. You can find databases, keys, plots, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots.
+All configuration and plot data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/. You can find databases, keys, plots, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots. If you set $CHIA_ROOT you will have to migrate configuration items by hand or unset the variable for `chia init` to work with `unset CHIA_ROOT`.
 
-Remember that once you complete your install you **must be in the [Python virtual environment](https://docs.python-guide.org/dev/virtualenvs/)** which you access from the chia-blockchain directory (or your home directory if you opted for a binary install) with the command `.   ./activate` or `.\venv\Scipts\activate.ps1` on Windows PowerShell. Both dots are critical and once executed correctly your cli prompt will look something like `(venv) username@machine:~$` with ``(venv)`` prepended. 
+Remember that once you complete your install you **must be in the [Python virtual environment](https://docs.python-guide.org/dev/virtualenvs/)** which you access from the chia-blockchain directory, or the Windows "Chia Blockchain" directory, or your home directory if you opted for a binary install with the command `.   ./activate` or `.\venv\Scipts\activate.ps1` in Windows PowerShell. Both dots are critical and once executed correctly your cli prompt will look something like `(venv) username@machine:~$` with ``(venv)`` prepended. 
 
 Use `deactivate` should you want to exit the venv. Windows users will find the venv with `cd "~\AppData\Local\Programs\Chia Network\Chia Blockchain\"`. If you're not a fan of dots, an equivalent alternative on most platforms is `source venv/bin/activate` and you'll see that method in places in this documentation.
 
@@ -25,7 +25,12 @@ To run a full node on port 8444, and connect to the testnet, run the following c
 chia start node &
 chia start wallet &
 ```
-If you're using Windows native or WSL 2, you should instead run:
+If you're using Windows native run:
+```bash
+Start-Job -Name chia-node -ScriptBlock { chia start node }
+Start-Job -Name chia-wallet-server -ScriptBlock { chia start wallet-server }
+```
+If you're using Windows and WSL 2, you should run:
 ```bash
 chia start node &
 chia start wallet-server &
@@ -40,13 +45,19 @@ can take a long time depending on the [size of the plots](https://github.com/Chi
 (the k variable). To be competitive on the current network you will probably have to have a few k=29 or larger plots but a k=29 plot currently takes about 4.5 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2).
 Once you have a few plots, run the farmer + full node with the following commands. A full node is also started when you start the farmer.
 
-You can change the working directory and output directory for plotting, with the "-t" (temp), "-2" (second temp), and "-d" (destination) arguments to the `chia-create-plots` command.
+You can change the working directories and output directory for plotting, with the "-t" (temp), "-2" (second temp), and "-d" (destination) arguments to the `chia-create-plots` command.
 ```bash
 chia-create-plots -k 29 -n 2
 chia start farmer &
 chia start wallet &
 ```
-If you're using Windows/WSL 2, you should instead run:
+If you're using Windows, you should run:
+```bash
+chia-create-plots -k 29 -n 2
+Start-Job -Name chia-farmer -ScriptBlock { chia start farmer }
+Start-Job -Name chia-wallet-server -ScriptBlock { chia start wallet-server }
+```
+If you're using Windows/WSL 2, you should run:
 ```bash
 chia-create-plots -k 29 -n 2
 chia start farmer &
