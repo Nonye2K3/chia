@@ -28,7 +28,7 @@ Install everything else:
 ```bash
 pip install chia-blockchain==CURRENTVERSION
 ```
-Where current version is e.g. `1.0b5`.
+Where CURRENTVERSION is e.g. `1.0b5`.
 Now you can start using chia with a command like:
 ```bash
 chia-start-node &
