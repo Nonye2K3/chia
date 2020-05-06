@@ -42,7 +42,7 @@ pip install chia-blockchain==1.0.beta5
 ```
 
 # Windows
-With Beta 1.4 there are two ways to install on Windows. You can install and run natively or you can have a hybrid install where the farmer, plotter, and node are in WSL2 and the Wallet GUI is in Windows.
+Since Beta 1.4 there are two ways to install on Windows. You can install and run natively or you can have a hybrid install where the farmer, plotter, and node are in WSL2 and the Wallet GUI is in Windows.
 ## Windows native
 Download the full Windows Installer:
 [https://download.chia.net/beta-1.5-win64/chia-0.1.12.exe](https://download.chia.net/beta-1.5-win64/chia-0.1.12.exe)
