@@ -60,7 +60,7 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all
 ```
 You will be prompted to reboot. Once that is complete, install Ubuntu 20.04 LTS from the Microsoft Store and run it and complete its initial install steps. You now have a linux bash shell environment that can run linux native software on Windows.
 
-Then follow the steps below which are the same as the usual Ubuntu instructions above but targeting Python 3.8.
+Then follow the steps below which are the same as the usual Ubuntu instructions above with a target of Python 3.8.
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
@@ -75,7 +75,7 @@ sh install.sh
 . ./activate
 
 # Or install chia-blockchain as a binary package
-python3.7 -m venv venv
+python3.8 -m venv venv
 ln -s venv/bin/activate
 . ./activate
 pip install --upgrade pip
@@ -87,7 +87,7 @@ You will need to download the Windows native Wallet. You may have to choose "Mor
 
 [Download: chia-wallet-0.1.12](https://download.chia.net/beta-1.5-win64/chia-wallet-0.1.12.msi)
 
-Instead of `chia start wallet-ui &` as explained in the [README.md](README.md) you run `chia start wallet-server &` in Ubuntu/WSL 2 to allow the Wallet to connect to the Full Node running in Ubuntu/WSL 2. Once you've enabled `chia start wallet-server &` you can run "Chia" from the Start menu or your Desktop.
+Once you have run the correct method of `chia start wallet-server &' outlined in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) you can launch Chia Wallet from the Start menu or your Desktop.
 
 # Amazon Linux 2
 
@@ -153,7 +153,7 @@ pip install chia-blockchain==1.0.beta3
 * [Ubuntu Binary Install](https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Binary-Install)
 
 
-You need Python 3.7 or higher.
+You need Python 3.7 or newer.
 
 Chia strives to provide [binary wheels](https://pythonwheels.com/) for modern systems. If your system does not have binary wheels, you may need to install development tools to build some Python extensions from source. If you're attempting to install from source, setting the environment variable BUILD_VDF_CLIENT to N will skip trying to build Timelord components that aren't very cross platform, e.g. `export BUILD_VDF_CLIENT=N`.
 
@@ -180,7 +180,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0.beta5
+pip install chia-blockchain==1.0b5
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
