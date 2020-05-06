@@ -67,6 +67,7 @@
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization | Note         |
 | ---|  ---                 |       ---       |    ---        | ---             |    ---       |
 | 26 |    9                 |     1.3         |      7.1      |   99.99%        | pre-beta-1.5 |
+| 27 |    20                |     2.7         |      14.5     |   99.99%        | pre-beta-1.5 |
 | 28 |    37.5              |     5.57        |      30.2     |   99.99%        | pre-beta-1.5 |
 | 30 |    200               |     23.8        |      128.1    |   99.99%        | pre-beta-1.5 |
 
