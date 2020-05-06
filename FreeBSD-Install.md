@@ -10,8 +10,8 @@ source venv/bin/activate
 BUILD_VDF_CLIENT=N CXX=g++9 CC=gcc9 pip install chia-blockchain==1.0b5  # takes a while, builds a lot
 export LD_LIBRARY_PATH=/usr/local/lib/gcc9
 
-# create config files (a hack for 1.0b2)
-chia
+# create config files
+chia init
 
 # set "enable_upnp: False" in config.yaml
 
