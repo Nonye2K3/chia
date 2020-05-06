@@ -6,7 +6,7 @@ sudo nano /etc/logrotate.d/chia
 ```
 Make the following the contents of that file, adjust for your username and version, save the file, and exit.
 ```bash
-/home/username/.chia/beta-1.0b3/log/debug.log {
+/home/username/.chia/beta-1.0b5/log/debug.log {
   rotate 4
   weekly
   compress
