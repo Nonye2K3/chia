@@ -24,6 +24,7 @@ python3 -m venv venv
 ln -s venv/bin/activate
 . ./activate
 pip install wheel
+pip install setuptools_scm
 ```
 There is one piece of magic. This environment variable is set so that chiavdf doesn't attempt to compile Timelord components. The Pi isn't cut out to be a Timelord and the Timelord requirements are very x86-64 specific currently.
 ```bash
@@ -36,10 +37,10 @@ pip install setproctitle
 ```
 Finally attempt to install chia-blockchain:
 ```
-pip install chia-blockchain==1.0b4
+pip install chia-blockchain==1.0b5
 ```
 
-These instructions were compiled using a pre-release beta1.4 but should work for beta1.3. The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above.
+The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above. If the install.sh script doesn't work for you try `pip install .` in the chia-blockchain directory instead.
 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
