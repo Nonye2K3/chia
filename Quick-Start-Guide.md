@@ -48,18 +48,21 @@ Once you have a few plots, run the farmer + full node with the following command
 You can change the working directories and output directory for plotting, with the "-t" (temp), "-2" (second temp), and "-d" (destination) arguments to the `chia-create-plots` command.
 ```bash
 chia-create-plots -k 29 -n 2
+chia-check-plots -n 100
 chia start farmer &
 chia start wallet &
 ```
 If you're using Windows, you should run:
 ```bash
 chia-create-plots -k 29 -n 2
+chia-check-plots -n 100
 Start-Job -Name chia-farmer -ScriptBlock { chia start farmer }
 Start-Job -Name chia-wallet-server -ScriptBlock { chia start wallet-server }
 ```
 If you're using Windows/WSL 2, you should run:
 ```bash
 chia-create-plots -k 29 -n 2
+chia-check-plots -n 100
 chia start farmer &
 chia start wallet-server &
 ```
