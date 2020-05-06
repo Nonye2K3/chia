@@ -5,7 +5,7 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
 | :--- | :---: | :---: | :---: | :---: | :---: |
 
 # MacOS
-MacOS Mojave (10.14.x) or newer is required for 1.0b4.
+MacOS Mojave (10.14.x) or newer is required.
 Make sure [brew](https://brew.sh/) is available before starting the setup. If you don't have python3 on your Mac you can `brew install python3`.
 ```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
@@ -38,14 +38,14 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
 
-pip install chia-blockchain==1.0.beta4
+pip install chia-blockchain==1.0.beta5
 ```
 
 # Windows
 With Beta 1.4 there are two ways to install on Windows. You can install and run natively or you can have a hybrid install where the farmer, plotter, and node are in WSL2 and the Wallet GUI is in Windows.
 ## Windows native
 Download the full Windows Installer:
-[https://download.chia.net/beta-1.4-win64/chia-0.1.10.exe](https://download.chia.net/beta-1.4-win64/chia-0.1.10.exe)
+[https://download.chia.net/beta-1.5-win64/chia-0.1.12.exe](https://download.chia.net/beta-1.5-win64/chia-0.1.12.exe)
 
 When you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the currently unsigned installer. This installs Python 3.7, some Microsoft dependencies and the Chia blockchain. The installer will place a Chia Wallet icon in your Start menu and on your Desktop that starts the Wallet UI. There will also be a [readme.txt\(https://github.com/Chia-Network/chia-blockchain/blob/master/electron-wix/blockchain/readme.txt) added to your Desktop that explains how to finish the install and run chia commands in PowerShell.
 
@@ -81,11 +81,11 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
 
-pip install chia-blockchain==1.0.beta4
+pip install chia-blockchain==1.0.beta5
 ```
 You will need to download the Windows native Wallet. You may have to choose "More Info" and "Run Anyway" to be able to run the currently unsigned installer. This will place a Chia icon in your Start menu and on your Desktop that starts the Wallet UI.
 
-[Download: chia-wallet-0.1.10](https://download.chia.net/beta-1.4-win64/chia-wallet-0.1.10.msi)
+[Download: chia-wallet-0.1.12](https://download.chia.net/beta-1.5-win64/chia-wallet-0.1.12.msi)
 
 Instead of `chia start wallet-ui &` as explained in the [README.md](README.md) you run `chia start wallet-server &` in Ubuntu/WSL 2 to allow the Wallet to connect to the Full Node running in Ubuntu/WSL 2. Once you've enabled `chia start wallet-server &` you can run "Chia" from the Start menu or your Desktop.
 
@@ -180,7 +180,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0.beta3
+pip install chia-blockchain==1.0.beta5
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
