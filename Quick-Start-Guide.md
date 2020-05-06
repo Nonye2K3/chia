@@ -1,6 +1,4 @@
 # Install the code
-There is a known issue in beta 1.4 that effects plots of size k32 or larger. You will need to add the [workaround](https://github.com/Chia-Network/chia-blockchain/wiki/Beta-1.4-k=32-or-larger-work-around) at the end of your install process if you have those large plots.
-
 To install chia-blockchain, follow [these install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) according to your operating system. This project only supports 64 bit operating systems.
 
 All configuration and plot data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/ if that variable is not set. You can find databases, keys, plots, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots.
@@ -42,7 +40,7 @@ can take a long time depending on the [size of the plots](https://github.com/Chi
 (the k variable). To be competitive on the current network you will probably have to have a few k=29 or larger plots but a k=29 plot currently takes about 4.5 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2).
 Once you have a few plots, run the farmer + full node with the following commands. A full node is also started when you start the farmer.
 
-You can change the working directory and output directory for plotting, with the "-t" (temp) and "-d" (destination) arguments to the `chia-create-plots` command.
+You can change the working directory and output directory for plotting, with the "-t" (temp), "-2" (second temp), and "-d" (destination) arguments to the `chia-create-plots` command.
 ```bash
 chia-create-plots -k 29 -n 2
 chia start farmer &
@@ -77,7 +75,7 @@ chia start sim
 
 
 # Tips
-Ubuntu 18.04 LTS, 19.xx, Amazon Linux 2, and CentOS 7.7 or newer are the
+Ubuntu 18.04 LTS or newer, Amazon Linux 2, and CentOS 7.7 or newer are the
 easiest linux install environments.
 
 UPnP is enabled by default to open port 8444 for incoming connections.
