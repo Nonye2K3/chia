@@ -8,7 +8,7 @@ Make sure you have some swap space, 2048MB is suggested:
 sudo dd if=/dev/zero of=/swap bs=1M count=2048
 sudo chmod 600 /swap ; sudo mkswap /swap ; sudo swapon /swap
 ```
-Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy.
+Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy. However, if you plan to run Ubuntu Desktop and the GUI Wallet, you will need the swap space on subsequent reboots.
 ```bash
 /swap swap swap defaults 0 0
 ```
