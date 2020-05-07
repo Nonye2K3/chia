@@ -39,14 +39,21 @@ Finally attempt to install chia-blockchain:
 pip install chia-blockchain==1.0b5
 ```
 
-The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above. If the install.sh script doesn't work for you try `pip install .` in the chia-blockchain directory instead. If you want to run the Wallet GUI and the install.sh script doesn't work, you'll need to run the node.js and npm related commands in the install.sh manually.
+The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above. If the install.sh script doesn't work for you try `pip install .` in the chia-blockchain directory instead. If you want to run the Wallet GUI and the install.sh script doesn't work, you can follow the instructions below.
 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
 As noted above the Raspberry Pi is not cut out to be a Timelord or a plotter. It makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
 
-## Tips for installing GUI Wallet
+## Installing GUI Wallet
 
-Ubuntu 20.04 LTS requires `sudo apt-get install libxss1` for Electron
+Ubuntu 20.04 LTS needs additional dependencies installed. From the chia-blockchain directory and within the venv (aka `. ./activate`):
+```
+sudo apt-get install libxss1 npm nodejs -y
+cd ./electron-ui
+npm install
+cd ..
+npm run --prefix electron-ui start &
+```
 
-In Beta 1.5 the `chia start wallet &` command often will not work. Instead try `npm run --prefix electron-ui start &` from the chia-blockchain repository checkout directory.
+In Beta 1.5 the `chia start wallet &` command often will not work on Pi so you can run npm directly as outlined above.
