@@ -45,3 +45,9 @@ The chia-blockchain source or source python module can be downloaded locally as 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
 As noted above the Raspberry Pi is not cut out to be a Timelord or a plotter. It makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
+
+## Tips for installing GUI Wallet
+
+Ubuntu 20.04 LTS requires `sudo apt-get install libxss1` for Electron
+
+In Beta 1.5 the `chia start wallet` command often will not work. Instead try `npm run --prefix electron-ui start` from the chia-blockchain repository checkout directory.
