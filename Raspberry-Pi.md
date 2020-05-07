@@ -39,7 +39,7 @@ Finally attempt to install chia-blockchain:
 pip install chia-blockchain==1.0b5
 ```
 
-The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above. If the install.sh script doesn't work for you try `pip install .` in the chia-blockchain directory instead.
+The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above. If the install.sh script doesn't work for you try `pip install .` in the chia-blockchain directory instead. If you want to run the Wallet GUI and the install.sh script doesn't work, you'll need to run the node.js and npm related commands in the install.sh manually.
 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
