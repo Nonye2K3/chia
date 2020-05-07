@@ -50,4 +50,4 @@ As noted above the Raspberry Pi is not cut out to be a Timelord or a plotter. It
 
 Ubuntu 20.04 LTS requires `sudo apt-get install libxss1` for Electron
 
-In Beta 1.5 the `chia start wallet` command often will not work. Instead try `npm run --prefix electron-ui start` from the chia-blockchain repository checkout directory.
+In Beta 1.5 the `chia start wallet &` command often will not work. Instead try `npm run --prefix electron-ui start &` from the chia-blockchain repository checkout directory.
