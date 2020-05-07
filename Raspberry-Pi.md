@@ -30,10 +30,9 @@ There is one piece of magic. This environment variable is set so that chiavdf do
 ```bash
 export BUILD_VDF_CLIENT=N
 ```
-Before attempt to install chia-blockchain, install these semi-optional components first:
+Before attempt to install chia-blockchain, install these components first:
 ```
-pip install miniupnpc 
-pip install setproctitle
+pip install miniupnpc setproctitle setuptools_scm
 ```
 Finally attempt to install chia-blockchain:
 ```
