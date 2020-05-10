@@ -21,7 +21,7 @@ pip install --upgrade pip
 
 Install three binary wheels Chia Network's alternate source:
 ```bash
-pip install -i https://hosted.chia.net/simple/ miniupnpc==2.0.2 setproctitle==1.1.10 cbor2==5.0.1
+pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
 ```
 
 Install everything else:
@@ -33,4 +33,4 @@ Now you can start using chia with a command like:
 ```bash
 chia-start-node &
 ```
-Refer to the [README.md](https://github.com/Chia-Network/chia-blockchain/blob/master/README.md) starting at Step 2 for details on how to run the Chia blockchain components.
+Refer to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) for details on how to run the Chia blockchain components.
