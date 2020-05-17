@@ -70,8 +70,7 @@
 | 27 |    20                |     2.7         |      14.5     |   99.99%        | pre-beta-1.5 |
 | 28 |    37.5              |     5.57        |      30.2     |   99.99%        | pre-beta-1.5 |
 | 30 |    200               |     23.8        |      128.1    |   99.99%        | pre-beta-1.5 |
-
-
+| 31 |    412               |     49.14       |      262*     |   99.99%        | actual working 267GB, chiapos 0.12.13 |
 
 ## MacBook Pro (15-inch, 2017)
 * 2,8 GHz Quad-Core Intel Core i7
