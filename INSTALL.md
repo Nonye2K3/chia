@@ -164,6 +164,7 @@ Your installation goes inside a [virtual environment](https://docs.python-guide.
 
 There are lots of ways to create and manage a virtual environment. This is just one.
 
+
 ```bash
 python3.7 -m venv venv
 source venv/bin/activate
