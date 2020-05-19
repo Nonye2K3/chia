@@ -2,7 +2,6 @@ The following recipe was tested on a Pi 4 running Ubuntu Server 20.04 LTS 64 bit
 
 This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_.
 
-
 Make sure you have some swap space, 2048MB is suggested:
 ```bash
 sudo dd if=/dev/zero of=/swap bs=1M count=2048
@@ -18,6 +17,8 @@ sudo apt-get update; sudo apt-get upgrade -y
 sudo apt-get install build-essential cmake libgmp-dev libffi-dev libssl-dev -y
 sudo apt-get install python3-venv libboost-python-dev -y
 ```
+Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS ships with a perfectly adequate CMake version 3.16.3.
+
 This install will pull chia-blockchain components from [PyPi](https://pypi.org/)
 ```bash
 python3 -m venv venv
