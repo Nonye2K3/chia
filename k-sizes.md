@@ -65,13 +65,14 @@
 * Storage: tempdir: ramdisk of 264GB (Ubuntu 18.04) finaldir: Amazon.com, Inc. NVMe SSD
 * ~ - MB/s write
 
-| k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization | Note         |
-| ---|  ---                 |       ---       |    ---        | ---             |    ---       |
-| 26 |    9                 |     1.3         |      7.1      |   99.99%        | pre-beta-1.5 |
-| 27 |    20                |     2.7         |      14.5     |   99.99%        | pre-beta-1.5 |
-| 28 |    37.5              |     5.57        |      30.2     |   99.99%        | pre-beta-1.5 |
-| 30 |    200               |     23.8        |      128.1    |   99.99%        | pre-beta-1.5 |
-| 31 |    412               |     49.14       |      262*     |   99.99%        | actual working 267GB, chiapos 0.12.13 |
+| k  |  plot time (minutes) | plot size (GB)  | working (GB)  |  GB/minute |  CPU Utilization | Note         |
+| ---|  ---                 |       ---       |    ---        |     ---    |  ---             |    ---       |
+| 26 |    9                 |     1.3         |      7.1      |   0.144    |    99.99%        | pre-beta-1.5 |
+| 27 |    20                |     2.7         |      14.5     |   0.135    |    99.99%        | pre-beta-1.5 |
+| 28 |    37.5              |     5.57        |      30.2     |   0.149    |    99.99%        | pre-beta-1.5 |
+| 30 |    200               |     23.8        |      128.1    |   0.119    |    99.99%        | pre-beta-1.5 |
+| 31 |    412               |     49.14       |      262*     |   0.119    |    99.99%        | actual working 267GB, chiapos 0.12.13 |
+| 31 |    408.4             |     49.14       |      262*     |   0.120    |    99.99%        | actual working 267GB, [speedy branch](https://github.com/Chia-Network/chiapos/commit/9200540e7e0a0e7cdbf307ef84a4f8e19cf33403) |
 
 ## MacBook Pro (15-inch, 2017)
 * 2,8 GHz Quad-Core Intel Core i7
