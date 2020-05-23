@@ -39,6 +39,8 @@ pip install wheel miniupnpc setproctitle setuptools setuptools_scm
 Finally attempt to install chia-blockchain:
 ```
 pip install -e .
+. ./activate
+chia init
 ```
 
 The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above. If the install.sh script doesn't work for you try `pip install .` in the chia-blockchain directory instead. If you want to run the Wallet GUI and the install.sh script doesn't work, you can follow the instructions below.
@@ -55,7 +57,7 @@ sudo apt-get install libxss1 npm nodejs -y
 cd ./electron-ui
 npm install
 cd ..
-npm run --prefix electron-ui start &
+npm run --prefix electron-react start &
 ```
 
 In Beta 1.5 the `chia start wallet &` command often will not work on Pi so you can run npm directly as outlined above.
