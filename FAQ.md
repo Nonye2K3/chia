@@ -45,7 +45,7 @@ The command `grep` is very handy. To see all your harvester activity you can `gr
 # How do I know if my plots are OK?
 Run `chia-check-plots -n 100` to try 100 sample challenges for each plot. Each of your plots should return a number around 100, which means it found 100 proofs of space. If the plots are not found, check your `~/.chia/RELEASEDIR/config/plots.yaml` file, and make sure you have run `chia init`.
 
-# Why are recommending that a winning plot be deleted on mainnet?
+# Why is it recommended that a winning plot be deleted on mainnet?
 
 There is a possible attack where an attacker who can co-ordinate N deep from the tip of the chain can try to coerce a winning farmer to re-write a historical transaction block. Additionally, having more than one set of rewards go to the same plot and farmer lowers the farmer's pseudonymity. We expect that by mainnet, plotting will both be much faster and most farmers will have large enough farms that re-plotting the space opened up by a winning plot will be quick enough and we plan to have the software automate the process up to and including kicking off a remote plotting process if the current hardware that a farmer or harvester are on is not up to the task of re-plotting.
 
