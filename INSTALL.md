@@ -29,9 +29,12 @@ npm run electron
 Install dependencies for Ubuntu 20.04 LTS. If you are installing on Ubuntu 18.04 LTS you should use Python 3.7 instead: `sudo apt-get install python3.7-venv python3.7-distutils git -y`
 ```bash
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 sudo apt-get install -y  python3.8-venv python3.8-distutils git
 sudo apt-get install -y npm nodejs
+
+# On Ubuntu 18.04 LTS you will need to upgrade node.js
+sudo npm install -g n
 
 # Either checkout the source and install
 git clone https://github.com/Chia-Network/chia-blockchain.git
