@@ -34,7 +34,9 @@ sudo apt-get install -y  python3.8-venv python3.8-distutils git
 sudo apt-get install -y npm nodejs
 
 # On Ubuntu 18.04 LTS you will need to upgrade node.js
+sudo npm cache clean -f
 sudo npm install -g n
+sudo n stable
 
 # Either checkout the source and install
 git clone https://github.com/Chia-Network/chia-blockchain.git
