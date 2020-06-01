@@ -4,7 +4,15 @@ To install chia-blockchain, follow [these install instructions](https://github.c
 All configuration and plot data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/. You can find databases, keys, plots, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots. If you set $CHIA_ROOT you will have to migrate configuration items by hand or unset the variable for `chia init` to work with `unset CHIA_ROOT`.
 
 If you are using the MacOS or Windows builds, your keys have been migrated for you or created during the first run. You can start plotting a plot file using the Plotter sub tab on the Farming Tab. This can take a long time depending on the [size of the plots](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
-(the k variable). To be competitive on the current network you will probably have to have a few k=30 or larger plots but a k=30 plot currently takes about 7 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 128 GB of temporary working space to create a final plot file of 23.8GB. You can choose to create multiple k=29 plots that will take a little less than half of that time and space. Your likelihood of winning a given plot is only driven by the final size of files 
+(the k variable). To be competitive on the current network you will probably have to have a few k=30 or larger plots but a k=30 plot currently takes about 7 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 128 GB of temporary working space to create a final plot file of 23.8GB. You can choose to create multiple k=29 plots that will take a little less than half of that time and space. Your likelihood of winning a given plot is only driven by the final size of files.
+
+## Windows
+You can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~/.chia/VERSION/log/debug.log -wait`. There are commands available in `~\AppData\Local\Chia\app-0.1.6\resources\app.asar.unpacked\daemon\` Try `.\create_plots -h` or `.\check_plots -h` for example.
+
+## MacOS
+You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`. There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./create_plots -h` or `./check_plots -h` for example.
+
+
 
 ## Development/source builds
 
