@@ -25,4 +25,9 @@ chia keys add_not_extended -k 2af395e80e9e65ae23851db8a8ac43a5725752afcab932db07
 chia keys add_not_extended -k 6e8caaaa7390b76c955fa580dc2bddbf15ae80dff884be169a45d7f4aa94ac79
 ```
 
+### To make sure config.yaml got updated with latest target:
+```
+Chia init
+```
+
 That's it, sk_seed doesn't need to be migrated, as new plots are using a random key by default.
