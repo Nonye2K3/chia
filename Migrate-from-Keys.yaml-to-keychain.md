@@ -11,7 +11,7 @@ wallet_sk: 0000000100000000000000000067bdce9f28cc0aee21e5feb869824fb068bd719d474
 wallet_target: 6a0a95abb20759ed6b86d4654645884a6f1bbaa7e39f3815cb431e37e8b2494f
 ```
 
-### First we'll add wallet_sk key:        
+### First add wallet_sk key:        
 Doing this will also automatically generate pool/wallet target for this wallet_sk. 
 
 ```
@@ -19,10 +19,10 @@ chia keys add -k  0000000100000000000000000067bdce9f28cc0aee21e5feb869824fb068bd
 ```
 
 
-### Then we'll add two pool_sks keys:
+### Then add two pool_sks keys:
 ```
 chia keys add_not_extended -k 2af395e80e9e65ae23851db8a8ac43a5725752afcab932db07850d826ca4d325
 chia keys add_not_extended -k 6e8caaaa7390b76c955fa580dc2bddbf15ae80dff884be169a45d7f4aa94ac79
 ```
 
-That's it, sk_seed doesn't need to be migrated, new plots are using random key by default.
+That's it, sk_seed doesn't need to be migrated, as new plots are using a random key by default.
