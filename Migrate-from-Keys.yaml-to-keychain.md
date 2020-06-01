@@ -1,5 +1,5 @@
 On beta1.6, keys are stored in the OS keychain instead of in keys.yaml.
-When you start the 1.6 Chia program for the first time, keys will automatically get migrated from previous versions. (~/.chia/beta-1.0bx folders).
+When you start the 1.6 Chia program for the first time, keys will automatically get migrated from previous versions. (~/.chia/beta-1.0bx folders). Make sure to stop all 1.5 servers before launching 1.6 for the first time, so there is no conflict in servers.
 
 After migrating your old keys, if you want to migrate additional keys from other keys.yaml files, do the following:
 
