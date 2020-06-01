@@ -1,5 +1,3 @@
-## Example: 
-
 On beta1.6, keys are stored in the OS keychain instead of in keys.yaml.
 When you start the 1.6 Chia program for the first time, keys will automatically get migrated from previous versions. (~/.chia/beta-1.0bx folders).
 
