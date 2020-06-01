@@ -6,22 +6,31 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
 
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
-Make sure [brew](https://brew.sh/) is available before starting the setup. If you don't have python3 on your Mac you can `brew install python3`.
+
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.6-macos/Chia-0.1.6.dmg)
+
+When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 9 times for your password. We suggest choosing "always allow."
+
+To build a development version, make sure [brew](https://brew.sh/) is available before starting the setup and that python 3.7 or newer is installed.
 ```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
 
 sh install.sh
 . ./activate
+
+cd electron-react
+npm run build
+npm run electron
 ```
 
 # Ubuntu/Debian
 
-Install dependencies for Ubuntu 18.04 or newer. If you are installing on Ubuntu 20.04 LTS you should use Python 3.8 instead: `sudo apt-get install python3.8-venv python3.8-distutils git -y`
+Install dependencies for Ubuntu 20.04 LTS. If you are installing on Ubuntu 18.04 LTS you should use Python 3.7 instead: `sudo apt-get install python3.7-venv python3.7-distutils git -y`
 ```bash
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt-get install -y python3.7-venv python3.7-distutils git
+sudo apt-get install -y  python3.8-venv python3.8-distutils git
 sudo apt-get install -y npm nodejs
 
 # Either checkout the source and install
@@ -31,24 +40,19 @@ cd chia-blockchain
 sh install.sh
 
 . ./activate
+cd electron-react
+npm run build
+npm run electron
 
-# Or install chia-blockchain as a binary package
-python3.7 -m venv venv
-ln -s venv/bin/activate
-. ./activate
-pip install --upgrade pip
-pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
-
-pip install chia-blockchain==1.0.beta5
 ```
 
 # Windows
-Since Beta 1.4 there are two ways to install on Windows. You can install and run natively or you can have a hybrid install where the farmer, plotter, and node are in WSL2 and the Wallet GUI is in Windows.
-## Windows native
-Download the full Windows Installer:
-[https://download.chia.net/beta-1.5-win64/chia-0.1.12.exe](https://download.chia.net/beta-1.5-win64/chia-0.1.12.exe)
 
-When you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the currently unsigned installer. This installs Python 3.7, some Microsoft dependencies and the Chia blockchain. The installer will place a Chia Wallet icon in your Start menu and on your Desktop that starts the Wallet UI. There will also be a [readme.txt](https://github.com/Chia-Network/chia-blockchain/blob/master/electron-wix/blockchain/readme.txt) added to your Desktop that explains how to finish the install and run chia commands in PowerShell.
+## Windows native
+Download the Windows Installer:
+[https://download.chia.net/beta-1.6-win64/ChiaSetup-0.1.6.exe](https://download.chia.net/beta-1.6-win64/ChiaSetup-0.1.6.exe)
+
+When you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the currently unsigned installer. There is no need to use the command line, however there are some command line tools located in `~\AppData\Local\Chia\app-0.1.6\resources\app.asar.unpacked\daemon\` Try `.\create_plots -h` or `.\check_plots -h` for example.
 
 You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 
@@ -82,13 +86,10 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
 
-pip install chia-blockchain==1.0.beta5
+pip install chia-blockchain==1.0b6
 ```
-You will need to download the Windows native Wallet. You may have to choose "More Info" and "Run Anyway" to be able to run the currently unsigned installer. This will place a Chia icon in your Start menu and on your Desktop that starts the Wallet UI.
 
-[Download: chia-wallet-0.1.12](https://download.chia.net/beta-1.5-win64/chia-wallet-0.1.12.msi)
-
-Once you have run the correct method of `chia start wallet-server &' outlined in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) you can launch Chia Wallet from the Start menu or your Desktop.
+Running a standalone Windows wallet gui is deprecated but may return in later versions.
 
 # Amazon Linux 2
 
@@ -103,6 +104,11 @@ sh install.sh
 
 . ./activate
 
+# gui
+cd electron-react
+npm run build
+npm run electron
+
 # Or install chia-blockchain as a binary package
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo yum install -y nodejs
@@ -113,7 +119,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
 
-pip install chia-blockchain==1.0.beta3
+pip install chia-blockchain==1.0b6
 ```
 
 # CentOS/RHEL 7.7 or newer
@@ -136,6 +142,11 @@ cd chia-blockchain
 sh install.sh
 . ./activate
 
+# gui
+cd electron-react
+npm run build
+npm run electron
+
 # Or install from binary wheels
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
 sudo yum install -y nodejs
@@ -146,7 +157,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
 
-pip install chia-blockchain==1.0.beta3
+pip install chia-blockchain==1.0b6
 ```
 # Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
@@ -163,7 +174,6 @@ Chia strives to provide [binary wheels](https://pythonwheels.com/) for modern sy
 Your installation goes inside a [virtual environment](https://docs.python-guide.org/dev/virtualenvs/).
 
 There are lots of ways to create and manage a virtual environment. This is just one.
-
 
 ```bash
 python3.7 -m venv venv
@@ -182,7 +192,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0b5
+pip install chia-blockchain==1.0b6
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
