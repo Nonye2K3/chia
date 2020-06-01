@@ -38,7 +38,7 @@ sudo npm cache clean -f
 sudo npm install -g n
 sudo n stable
 
-# Either checkout the source and install
+# Checkout the source and install
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
 
