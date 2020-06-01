@@ -6,7 +6,7 @@ After migrating your old keys, if you want to migrate additional keys from other
 1. Close the Chia program and make sure no servers are running in Task Manager/activity monitor
 2. Delete the ~/.chia/beta-1.0b6/ directory (This will not delete keys from keychain)
 3. Backup the ~/.chia/beta-1.0b5/config/keys.yaml 
-4. Put the keys you want to migrate into ~/.chia/beta-1.0b5/config/keys.yaml
+4. Put the keys.yaml file that you want to migrate into ~/.chia/beta-1.0b5/config/keys.yaml
 5. Launch the Chia program again
 
 Note that only wallet_sk and pool_sks are migrated. sk_seed doesn't need to be migrated, as new plots are using a random key by default. The pool and wallet targets are generated when Chia starts.
