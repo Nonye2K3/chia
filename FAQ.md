@@ -82,3 +82,11 @@ Upnp is an optional setting that allows users to open a port in their router and
 For some routers, Upnp is enabled automatically, but for others, you might have to go into your router settings and enable Upnp manually. Sometimes restarting the router is also necessary.
 
 Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 to your machine.
+
+# How do I send or receive a transaction?
+
+To send or receive chia, you should use the wallet software.
+The wallet will show you your address and provide an interface for you to spend your chia funds.
+Read about how to build and start the wallet GUI in our [quickstart guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#run-a-full-node--farmer--harvester--wallet).
+
+The wallet software also handles coloured coins, and trade offers.
