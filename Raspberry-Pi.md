@@ -7,7 +7,7 @@ Make sure you have some swap space, 2048MB is suggested:
 sudo dd if=/dev/zero of=/swap bs=1M count=2048
 sudo chmod 600 /swap ; sudo mkswap /swap ; sudo swapon /swap
 ```
-Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy. However, if you plan to run Ubuntu Desktop and the GUI Wallet, you will need the swap space on subsequent reboots.
+Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy. However, if you plan to run Ubuntu Desktop and the GUI, you will need the swap space on subsequent reboots.
 ```bash
 /swap swap swap defaults 0 0
 ```
@@ -15,6 +15,7 @@ Install build prerequisites:
 ```bash
 sudo apt-get update; sudo apt-get upgrade -y
 sudo apt-get install build-essential cmake libgmp-dev libffi-dev libssl-dev -y
+sudo apt-get install libxss1 npm nodejs -y
 sudo apt-get install python3-venv libboost-python-dev -y
 ```
 Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS ships with a perfectly adequate CMake version 3.16.3.
@@ -36,28 +37,24 @@ Before attempt to install chia-blockchain, install these components first:
 ```
 pip install wheel miniupnpc setproctitle setuptools setuptools_scm
 ```
-Finally attempt to install chia-blockchain:
+Finally attempt to install chia-blockchain. Compiling - especially chiapos - will take a while:
 ```
-pip install -e .
-. ./activate
-chia init
+pip install .
 ```
-
-The chia-blockchain source or source python module can be downloaded locally as an alternate final build step. The `sh install.sh` script in the source repository should "just work" once you've completed the steps up to `pip install chia-blockchain` though you will want your `venv` to be in the chia-blockchain directory and not the current directory as assumed above. If the install.sh script doesn't work for you try `pip install .` in the chia-blockchain directory instead. If you want to run the Wallet GUI and the install.sh script doesn't work, you can follow the instructions below.
 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
 As noted above the Raspberry Pi is not cut out to be a Timelord or a plotter. It makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
 
-## Installing GUI Wallet
+## Installing GUI
 
-Ubuntu 20.04 LTS needs additional dependencies installed. From the chia-blockchain directory and within the venv (aka `. ./activate`):
 ```
-sudo apt-get install libxss1 npm nodejs -y
-cd ./electron-ui
+cd electron-react
 npm install
-cd ..
-npm run --prefix electron-react start &
+npm run build
+npm run electron
 ```
 
-In Beta 1.5 the `chia start wallet &` command often will not work on Pi so you can run npm directly as outlined above.
+## Headless
+
+You can run without the GUI using commands like `chia init` and `chia start farmer`. Be sure to check out `chia show -h` if you do.
