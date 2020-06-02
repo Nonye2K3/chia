@@ -45,6 +45,14 @@ The command `grep` is very handy. To see all your harvester activity you can `gr
 # How do I know if my plots are OK?
 Run `chia-check-plots -n 100` to try 100 sample challenges for each plot. Each of your plots should return a number around 100, which means it found 100 proofs of space. If the plots are not found, check your `~/.chia/RELEASEDIR/config/plots.yaml` file, and make sure you have run `chia init`.
 
+# How do I send or receive a transaction?
+
+To send or receive chia, you should use the wallet software.
+The wallet will show you your address and provide an interface for you to spend your chia funds.
+Read about how to build and start the wallet GUI in our [quickstart guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#run-a-full-node--farmer--harvester--wallet).
+
+The wallet software also provides features related to coloured coins, and trade offers.
+
 # Why is it recommended that a winning plot be deleted on mainnet?
 
 There is a possible attack where an attacker who can co-ordinate N deep from the tip of the chain can try to coerce a winning farmer to re-write a historical transaction block. Additionally, having more than one set of rewards go to the same plot and farmer lowers the farmer's pseudonymity. We expect that by mainnet, plotting will both be much faster and most farmers will have large enough farms that re-plotting the space opened up by a winning plot will be quick enough and we plan to have the software automate the process up to and including kicking off a remote plotting process if the current hardware that a farmer or harvester are on is not up to the task of re-plotting.
@@ -82,11 +90,3 @@ Upnp is an optional setting that allows users to open a port in their router and
 For some routers, Upnp is enabled automatically, but for others, you might have to go into your router settings and enable Upnp manually. Sometimes restarting the router is also necessary.
 
 Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 to your machine.
-
-# How do I send or receive a transaction?
-
-To send or receive chia, you should use the wallet software.
-The wallet will show you your address and provide an interface for you to spend your chia funds.
-Read about how to build and start the wallet GUI in our [quickstart guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#run-a-full-node--farmer--harvester--wallet).
-
-The wallet software also handles coloured coins, and trade offers.
