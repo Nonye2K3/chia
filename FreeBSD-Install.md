@@ -1,7 +1,7 @@
 # Tested on FreeBSD 11.3-RELEASE
 
 ```bash
-pkg install gcc9-9.2.0
+pkg install lang/gcc
 
 # create and enter a venv
 python3.7 -m venv venv
