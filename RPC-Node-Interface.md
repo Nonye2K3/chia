@@ -4,8 +4,14 @@ api to access information and control the full node:
 
 Some examples:
 ```bash
+# Get blockchain state
 curl -X POST http://localhost:8555/get_blockchain_state
+
+# Get block header by header hash
 curl -d '{"header_hash":"4ba1f698836798bda170364d3b3e8bb9fe1134eb1af8260ab1319d3ede52555e"}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_header
+
+# Get all unspent coins by puzzle hash
+curl -X POST --data '{"puzzle_hash":"0xa4259182b4d8e0af21331fc5be2681f953400b6726fa4095e3b91ae8f005a836"}'   http://localhost:8555/get_unspent_coins
 ```
 
 The endpoints currently supported in Node:
