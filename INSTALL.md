@@ -7,7 +7,7 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.6-macos/Chia-0.1.6.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.7-macos/Chia-0.1.7.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 9 times for your password. We suggest choosing "always allow."
 
