@@ -4,6 +4,8 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
 | Jump to: | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [Windows](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#windows) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 
+Important Note: If you are migrating from beta1.6 to beta1.7, your plots will not get transferred automatically. The workaround is to rename ~/.chia/beta1.0b6 to ~/.chia/beta1.0b5 before running the new application, or just copy over the plots.yaml from the ~/.chia/beta1.0b6/config/plots.yaml to ~/.chia/beta1.0b7/config/plots.yaml.
+
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
