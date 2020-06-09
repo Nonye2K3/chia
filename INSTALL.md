@@ -55,9 +55,9 @@ npm run electron
 
 ## Windows native
 Download the Windows Installer:
-[https://download.chia.net/beta-1.6-win64/ChiaSetup-0.1.6.exe](https://download.chia.net/beta-1.6-win64/ChiaSetup-0.1.6.exe)
+[https://download.chia.net/beta-1.7-win64/ChiaSetup-0.1.7.exe](https://download.chia.net/beta-1.7-win64/ChiaSetup-0.1.7.exe)
 
-When you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the currently unsigned installer. There is no need to use the command line, however there are some command line tools located in `~\AppData\Local\Chia\app-0.1.6\resources\app.asar.unpacked\daemon\` Try `.\create_plots -h` or `.\check_plots -h` for example.
+As the Chia code signing certificate is new you will likely have to ask to keep the download a couple of times and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line, however there are some command line tools located in `~\AppData\Local\Chia\app-0.1.7\resources\app.asar.unpacked\daemon\` Try `.\create_plots -h` or `.\check_plots -h` for example.
 
 You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 
