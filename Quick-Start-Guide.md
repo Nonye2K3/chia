@@ -6,6 +6,9 @@ All configuration and plot data is stored in a directory structure at the $CHIA_
 If you are using the MacOS or Windows builds, your keys have been migrated for you or created during the first run. You can start plotting a plot file using the Plotter sub tab on the Farming Tab. This can take a long time depending on the [size of the plots](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 (the k variable). To be competitive on the current network you will probably have to have a few k=30 or larger plots but a k=30 plot currently takes about 7 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 128 GB of temporary working space to create a final plot file of 23.8GB. You can choose to create multiple k=29 plots that will take a little less than half of that time and space. Your likelihood of winning a given plot is only driven by the final size of files.
 
+Important Note:
+If you are migrating from beta1.6 to beta1.7, your plots will not get transferred automatically. The workaround is to rename ~/.chia/beta1.0b6 to ~/.chia/beta1.0b5 before running the new application, or just copy over the plots.yaml from the ~/.chia/beta1.0b6/config/plots.yaml to ~/.chia/beta1.0b7/config/plots.yaml.
+
 ## Windows
 You can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`. There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.7\resources\app.asar.unpacked\daemon\` Try `.\create_plots -h` or `.\check_plots -h` for example.
 
