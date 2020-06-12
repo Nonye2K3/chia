@@ -32,6 +32,8 @@ cd chia-blockchain
 sh install.sh
 ```
 
+*Note: During the install above an electron installation will fail. For CLI usage this can be ignored.*
+
 The command line tools should now be available for use in the created Python virtual environment, which can be activated using:
 
 ```bash
