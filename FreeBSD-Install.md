@@ -1,4 +1,4 @@
-# Tested on FreeBSD 11.3-RELEASE
+# Method 1 - Tested on FreeBSD 11.3-RELEASE
 
 ```bash
 pkg install lang/gcc
@@ -37,3 +37,45 @@ of the necessary run-time libraries, you may want to link using
 ```
 
 So it's probably possible to build the libraries in a way that doesn't require `export LD_LIBRARY_PATH=/usr/local/lib/gcc9`. If you know how, click "edit" and dish.
+
+# Method 2 - Building from source
+
+The following procedure has been tested on FreeBSD 11.3 and 12.1.
+
+## Prerequisite package installation
+
+First, install prerequisite packages (as root, or using sudo):
+
+```bash
+pkg install git gmake cmake node npm py37-sqlite3-3.7.7_7
+```
+Note: If a more recent version of Python is already installed, the py37-sqlite3-3.7.7_7 package should be replaced with the version matching the installed version of Python 3.x (which can be found by executing the `pkg search py3.*sqlite3` command).
+
+## Fetch source code
+
+Then, as any user, use git to fetch the chia-blockchain source code, using SSH or HTTPS:
+
+```bash
+# clone via SSH
+git clone git@github.com:Chia-Network/chia-blockchain.git
+# OR
+# clone via HTTPS
+git clone https://github.com/Chia-Network/chia-blockchain.git
+```
+
+## Build
+Change directory into the chia-blockchain directory, and run the main install script. All programs will be installed into a Python virtual environment in the "venv" sub-directory:
+
+```bash
+cd chia-blockchain
+sh install.sh
+```
+
+The command line tools should now be available for use in the created venv, which can be activated using:
+
+```bash
+cd chia-blockchain
+. ./activate
+```
+
+More details can be found in the [Chia Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide).
