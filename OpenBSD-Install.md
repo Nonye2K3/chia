@@ -12,7 +12,7 @@ pkg_add -i git python3 cmake gmake electron node gmpxx
 
 # Fetch source code
 
-Then, as any user, use git to fetch the chia-blockchain source code, using SSH or HTTPS:
+Then, as any user (preferably not root), use git to fetch the chia-blockchain source code, using SSH or HTTPS:
 
 ```bash
 # clone via SSH
