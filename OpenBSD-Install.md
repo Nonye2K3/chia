@@ -53,10 +53,11 @@ cd electron-react
 # build / set up GUI
 npm run build
 
-# Remove failed electron 8.2.5 install and fall back to the OpenBSD ports tree 8.2.0 electron,
-# which currently (as of 6/10/2020) works but may not continue to work in the future.
+# Remove failed electron 8.2.5 install and fall back to the OpenBSD
+# ports tree 8.2.0 electron, which currently (as of 6/10/2020) works.
 #
-# A full solution to this requires official OpenBSD electron builds, provided by the
+# This may not continue to work in the future.  A full solution to
+# this requires official OpenBSD electron builds, provided by the
 # electron project itself.
 
 rm -rf node_modules/electron
