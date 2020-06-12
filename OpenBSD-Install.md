@@ -4,7 +4,7 @@ The installation procedure below has been tested on OpenBSD 6.7, amd64.
 
 # Prerequisite package installation
 
-As root (or using doas / sudo), first install some prerequisite OpenBSD ports:
+As root (or using doas / sudo), first install some prerequisite OpenBSD packages:
 
 ```bash
 pkg_add -i git python3 cmake gmake electron node gmpxx
