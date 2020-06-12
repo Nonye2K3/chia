@@ -1,16 +1,18 @@
-# IMPORTANT: These installation notes will apply for a future release of the Chia Network tools. The current 1.0beta7 release does not cleanly build using the procedure below.
-
 The installation procedure below has been tested on OpenBSD 6.7, amd64.
 
-# Prerequisite package installation
+*IMPORTANT: These installation notes will apply for a future release of the Chia Network tools. The current 1.0beta7 release does not cleanly build using the procedure below.*
+
+# Command line tools
+
+## Prerequisite package installation
 
 As root (or using doas / sudo), first install some prerequisite OpenBSD packages:
 
 ```bash
-pkg_add -i git python3 cmake gmake electron node gmpxx
+pkg_add -i git python3 cmake gmake node gmpxx
 ```
 
-# Fetch source code
+## Fetch source code
 
 Then, as any user (preferably not root), use git to fetch the chia-blockchain source code, using SSH or HTTPS:
 
@@ -22,7 +24,7 @@ git clone git@github.com:Chia-Network/chia-blockchain.git
 git clone https://github.com/Chia-Network/chia-blockchain.git
 ```
 
-# Build
+## Build
 Change directory into the chia-blockchain directory, and run the main install script. All programs will be installed into a Python virtual environment in the "venv" sub-directory:
 
 ```bash
@@ -30,7 +32,7 @@ cd chia-blockchain
 sh install.sh
 ```
 
-The command line tools should now be available for use in the created venv, which can be activated using:
+The command line tools should now be available for use in the created Python virtual environment, which can be activated using:
 
 ```bash
 cd chia-blockchain
@@ -41,11 +43,22 @@ More details can be found in the [Chia Quick Start Guide](https://github.com/Chi
 
 # GUI Build / Usage
 
-## WARNING: although the following steps have been used successfully, the resulting GUI will be run with an older version of electron than is recommended by the Chia Network team. This may result in unexpected problems.
+The build instructions in the previous sections above must be completed successfully before attempting to build the GUI using the procedure below.
+
+*WARNING: Although the following steps have been used successfully, the resulting GUI will be run with an older version of electron than is recommended by the Chia Network team. This may result in unexpected problems.*
+
+## Prerequisite package installation
+
+As root (or using doas / sudo), first install some additional OpenBSD packages required for GUI usage:
+
+```bash
+pkg_add -i electron
+```
+
+## Build
 
 ```bash
 cd chia-blockchain
-
 . ./activate
 
 cd electron-react
@@ -61,7 +74,15 @@ npm run build
 # electron project itself.
 
 rm -rf node_modules/electron
+```
 
-# Launch GUI
+## Launch GUI
+The GUI can now be launched using the following commands:
+
+```bash
+cd chia-blockchain
+. ./activate
+
+cd electron-react
 npm run electron
 ```
