@@ -1,7 +1,5 @@
 The installation procedure below has been tested on OpenBSD 6.7, amd64.
 
-*IMPORTANT: These installation notes will apply for a future release of the Chia Network tools. The current 1.0beta7 release does not cleanly build using the procedure below.*
-
 # Command line tools
 
 ## Prerequisite package installation
@@ -29,6 +27,10 @@ Change directory into the chia-blockchain directory, and run the main install sc
 
 ```bash
 cd chia-blockchain
+
+# for now, build using the dev branch (current master branch has build issues)
+git checkout dev
+
 sh install.sh
 ```
 
