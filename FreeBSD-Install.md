@@ -42,8 +42,6 @@ So it's probably possible to build the libraries in a way that doesn't require `
 
 The following procedure has been tested on FreeBSD 11.3 and 12.1.
 
-*IMPORTANT: These installation notes will apply for a future release of the Chia Network tools. The current 1.0beta7 release does not cleanly build using the procedure below.*
-
 ## Prerequisite package installation
 
 First, install prerequisite packages (as root, or using sudo):
@@ -70,6 +68,10 @@ Change directory into the chia-blockchain directory, and run the main install sc
 
 ```bash
 cd chia-blockchain
+
+# for now, build using the dev branch (current master branch has build issues)
+git checkout dev
+
 sh install.sh
 ```
 
