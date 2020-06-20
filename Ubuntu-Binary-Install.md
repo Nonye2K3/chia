@@ -1,4 +1,4 @@
-New install instructions at: https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Binary-Install
+New install instructions at: https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian
 
 This was tested on
 
