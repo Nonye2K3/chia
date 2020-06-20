@@ -1,3 +1,5 @@
+New install instructions at: https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Binary-Install
+
 This was tested on
 
 ```bash
