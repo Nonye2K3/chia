@@ -1,4 +1,4 @@
-# chia-blockchain wiki
+# Chia Blockchain Wiki
 
 * [Install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL)
 * [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
