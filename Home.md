@@ -5,6 +5,7 @@
 * [Repository FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ)
 * [Chia Project FAQ](https://www.chia.net/faq/)
 * [k and plot sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
+* [Chialisp Documentation](https://github.com/Chia-Network/chia-blockchain/wiki/Chialisp-Documentation)
 * [Upgrading between Beta releases](https://github.com/Chia-Network/chia-blockchain/wiki/Updating-beta-software)
 * [Binary Ubuntu and WSL Ubuntu install](https://github.com/Chia-Network/chia-blockchain/wiki/Ubuntu-Binary-Install)
 * [Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords) and [Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Cluster-Timelord)
