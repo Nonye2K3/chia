@@ -23,9 +23,8 @@ The first Chialisp smart transaction that we integrated into chia-blockchain wer
 2. [Part 2: Coins, Spends and Wallets](https://github.com/Chia-Network/wallets/blob/master/docs/part2_transactions.md)
 3. [Part 3: Deeper into CLVM](https://github.com/Chia-Network/wallets/blob/master/docs/part3_deeperintoCLVM.md)
 4. [Part 4: The Compiler and Other Useful Information](https://github.com/Chia-Network/wallets/blob/master/docs/part4_compiler_and_tips.md)
-5. [CLVM Opcodes](https://github.com/Chia-Network/clvm/blob/master/docs/clvm.org)
-6. [clvm-tools repository](https://github.com/Chia-Network/clvm_tools)
-7. [Glossary of Chialisp terms](https://github.com/Chia-Network/wallets/blob/master/docs/glossary.md)
+5. [ChiaLisp Compiler](https://github.com/Chia-Network/clvm_tools)
+6. [Glossary of Chialisp terms](https://github.com/Chia-Network/wallets/blob/master/docs/glossary.md)
 
 ## Reference Wallets and Smart Transactions to be integrated
 
