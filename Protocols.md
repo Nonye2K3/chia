@@ -240,7 +240,7 @@ class RespondTransaction:
 Send a transaction to a peer.
 
 ```Python
-class ReejctTransactionRequest:
+class RejectTransactionRequest:
     transaction_id: bytes32
 ```
 Message that a transaction is not available.
