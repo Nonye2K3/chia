@@ -22,7 +22,7 @@ Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer.
 
 ```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
-cd chia-blockchian
+cd chia-blockchain
 
 python3 -m venv venv
 ln -s venv/bin/activate
