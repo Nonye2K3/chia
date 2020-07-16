@@ -1,7 +1,7 @@
 To install the chia-blockchain, follow the instructions according to your operating system.
 After installing, follow the remaining instructions in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) to run the software. Make sure to review [README.md](https://github.com/Chia-Network/chia-blockchain/blob/master/README.md) as well.
 
-| Jump to: | [MacOS](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#MacOS) | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [Windows WSL2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#Windows-WSL2) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
+| Jump to: | [MacOS](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#MacOS) | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [WSL2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#Windows-WSL2) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
  
 All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Windows users on pre-Haswell CPUs have a known issue with a fix coming.
@@ -64,7 +64,7 @@ npm run build
 npm run electron
 
 ```
-# Windows WSL2
+# WSL2
 
 You can run chia-blockchain in Ubuntu 20.04 lts via WSL2 on Windows. From an Administrator PowerShell:
 ```
