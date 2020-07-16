@@ -1,10 +1,56 @@
 To install the chia-blockchain, follow the instructions according to your operating system.
 After installing, follow the remaining instructions in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) to run the software. Make sure to review [README.md](https://github.com/Chia-Network/chia-blockchain/blob/master/README.md) as well.
 
-| Jump to: | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [Windows](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#windows) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
+| Jump to: | [MacOS](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#MacOS) | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 
 All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Windows users on pre-Haswell CPUs have a known issue with a fix coming.
+
+# Windows
+
+## Windows native
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.8-win64/ChiaSetup-0.1.8.exe)
+
+As the Chia code signing certificate is new you will likely have to ask to keep the download a couple of times and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line, however there are some command line tools located in `~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots create -h` for example.
+
+If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia. We also recommend deleting your `~\.chia` directory.
+
+You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
+
+## Install WSL2 + Ubuntu 20.04 LTS
+
+From an Administrator PowerShell
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all
+```
+You will be prompted to reboot. Once that is complete, install Ubuntu 20.04 LTS from the Microsoft Store and run it and complete its initial install steps. You now have a linux bash shell environment that can run linux native software on Windows.
+
+Then follow the steps below which are the same as the usual Ubuntu instructions above with a target of Python 3.8.
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python3.8-venv python3.8-distutils git -y
+
+# Either checkout the source and install
+git clone https://github.com/Chia-Network/chia-blockchain.git
+cd chia-blockchain
+
+sh install.sh
+
+. ./activate
+
+# Or install chia-blockchain as a binary package
+python3.8 -m venv venv
+ln -s venv/bin/activate
+. ./activate
+pip install --upgrade pip
+pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
+
+pip install chia-blockchain==1.0b8
+```
+
+Running a standalone Windows wallet gui is deprecated but may return in later versions.
 
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
@@ -53,52 +99,6 @@ npm run electron
 
 ```
 
-# Windows
-
-## Windows native
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.8-win64/ChiaSetup-0.1.8.exe)
-
-As the Chia code signing certificate is new you will likely have to ask to keep the download a couple of times and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line, however there are some command line tools located in `~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots create -h` for example.
-
-If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia. We also recommend deleting your `~\.chia` directory.
-
-You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
-
-## Install WSL2 + Ubuntu 20.04 LTS
-
-From an Administrator PowerShell
-```
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all
-```
-You will be prompted to reboot. Once that is complete, install Ubuntu 20.04 LTS from the Microsoft Store and run it and complete its initial install steps. You now have a linux bash shell environment that can run linux native software on Windows.
-
-Then follow the steps below which are the same as the usual Ubuntu instructions above with a target of Python 3.8.
-```bash
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install python3.8-venv python3.8-distutils git -y
-
-# Either checkout the source and install
-git clone https://github.com/Chia-Network/chia-blockchain.git
-cd chia-blockchain
-
-sh install.sh
-
-. ./activate
-
-# Or install chia-blockchain as a binary package
-python3.8 -m venv venv
-ln -s venv/bin/activate
-. ./activate
-pip install --upgrade pip
-pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
-
-pip install chia-blockchain==1.0b6
-```
-
-Running a standalone Windows wallet gui is deprecated but may return in later versions.
-
 # Amazon Linux 2
 
 ```bash
@@ -127,7 +127,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
 
-pip install chia-blockchain==1.0b6
+pip install chia-blockchain==1.0b8
 ```
 
 # CentOS/RHEL 7.7 or newer
@@ -165,7 +165,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
 
-pip install chia-blockchain==1.0b6
+pip install chia-blockchain==1.0b8
 ```
 # Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
@@ -201,7 +201,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0b6
+pip install chia-blockchain==1.0b8
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
