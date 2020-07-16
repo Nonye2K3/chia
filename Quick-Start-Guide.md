@@ -1,20 +1,18 @@
 # Install
 To install chia-blockchain, follow [these install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) according to your operating system. This software only supports 64 bit operating systems.
 
-All configuration and plot data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/. You can find databases, keys, plots, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots. If you set $CHIA_ROOT you will have to migrate configuration items by hand or unset the variable for `chia init` to work with `unset CHIA_ROOT`.
+All configuration data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/. You can find databases, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots. If you set $CHIA_ROOT you will have to migrate configuration items by hand or unset the variable for `chia init` to work with `unset CHIA_ROOT`.
 
-If you are using the MacOS or Windows builds, your keys have been migrated for you or created during the first run. You can start plotting a plot file using the Plotter sub tab on the Farming Tab. This can take a long time depending on the [size of the plots](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
+If you are using the MacOS or Windows builds, you keys are created during the first run. We recommend saving the mnemonic. If you intend to use these plots on mainnet you should securely store the 24 words. You can start plotting a plot file using the Plotter sub tab on the Farming Tab. This can take a long time depending on the [size of the plots](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 (the k variable). To be competitive on the current network you will probably have to have a few k=30 or larger plots but a k=30 plot currently takes about 7 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 128 GB of temporary working space to create a final plot file of 23.8GB. You can choose to create multiple k=29 plots that will take a little less than half of that time and space. Your likelihood of winning a given plot is only driven by the final size of files.
 
-Important Note:
-If you are migrating from beta1.6 to beta1.7, your plots will not get transferred automatically. The workaround is to rename ~/.chia/beta1.0b6 to ~/.chia/beta1.0b5 before running the new application, or just copy over the plots.yaml from the ~/.chia/beta1.0b6/config/plots.yaml to ~/.chia/beta1.0b7/config/plots.yaml.
+We believe that plots created with Beta 1.8 and newer version of the chia software will work on mainnet at launch. We are certain that the minimum plot size will be at most k=32. The original design assumed that k=30 will be the minimum plot size but there are no guarantees as we intend to speed up the time it takes to plot and that may mean we choose a minimum k value of 31 or 32.
 
 ## Windows
-You can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`. There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.7\resources\app.asar.unpacked\daemon\` Try `.\create_plots -h` or `.\check_plots -h` for example.
+You can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`. There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example.
 
 ## MacOS
-You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`. There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./create_plots -h` or `./check_plots -h` for example.
-
+You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`. There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `.chia plots -h` for example.
 
 
 ## Development/source builds
@@ -46,17 +44,17 @@ npm run electron
 Farmers are entities in the network who use their drive space to try to create
 blocks (like Bitcoin's miners), and earn block rewards. 
 
-You can use the command line tools and change the working directories and output directory for plotting, with the "-t" (temp), "-2" (second temp), and "-d" (destination) arguments to the `create_plots` command. `-n 2` will create two plots of type k=29 and take about 6 hours on NVMe drives in the example below.
+You can use the command line tools and change the working directories and output directory for plotting, with the "-t" (temp), "-2" (second temp), and "-d" (destination) arguments to the `chia plots create` command. `-n 2` will create two plots of type k=29 and take about 6 hours on NVMe drives in the example below.
 ```bash
-create_plots -k 29 -n 2
-check_plots -n 100
+chia plots create -k 29 -n 2
+chia plots check -n 100
 ```
 Note that in the dev build the commands are `chia-create-plots` and `chia-check-plots`.
 
 ## Run a timelord
 
 *Note*
-If you want to run a timelord on Linux, see [LINUX_TIMELORD.md](https://github.com/Chia-Network/chia-blockchain/blob/master/LINUX_TIMELORD.md).
+If you want to run a timelord on Linux, see [LINUX_TIMELORD.md](https://github.com/Chia-Network/chia-blockchain/blob/master/LINUX_TIMELORD.md). Information on blue boxes coming soon.
 
 Timelords execute sequential verifiable delay functions (proofs of time or VDFs), that get added to
 blocks to make them valid. This requires fast CPUs and a few cores per VDF as well as completing the install steps above and running the following from the chia-blockchain directory:
