@@ -1,6 +1,6 @@
 The following recipe was tested on a Pi 4 running Ubuntu Server 20.04 LTS 64 bit. 64 bit OSes and python 3.7+ are required but helpfully Ubuntu 20.04 has python 3.8 out of the box.
 
-This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_.
+This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_. We now make available manylinux2014 ARM64 binary wheels for the main chia dependencies.
 
 Make sure you have some swap space, 2048MB is suggested:
 ```bash
@@ -29,7 +29,7 @@ ln -s venv/bin/activate
 . ./activate
 python -m pip install --upgrade pip
 ```
-There is one piece of magic. This environment variable is set so that chiavdf doesn't attempt to compile Timelord components. The Pi isn't cut out to be a Timelord and the Timelord requirements are very x86-64 specific currently.
+There is one piece of magic. You don't need this magic in general anymore now that chiavdf comes from a binary wheel on PyPi but we're leaving this here for people trying to build in other environments. This environment variable is set so that chiavdf doesn't attempt to compile Timelord components. The Pi isn't cut out to be a Timelord and the Timelord requirements are very x86-64 specific currently.
 ```bash
 export BUILD_VDF_CLIENT=N
 ```
@@ -37,7 +37,7 @@ Before attempt to install chia-blockchain, install these components first:
 ```
 pip install wheel miniupnpc setproctitle setuptools setuptools_scm
 ```
-Finally attempt to install chia-blockchain. Compiling - especially chiapos - will take a while:
+Finally attempt to install chia-blockchain. Compiling - especially pycryptography - will take a while:
 ```
 pip install .
 ```
