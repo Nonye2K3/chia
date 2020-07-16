@@ -4,14 +4,14 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
 | Jump to: | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [Windows](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#windows) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 
-Important Note: If you are migrating from beta1.6 to beta1.7, your plots will not get transferred automatically. The workaround is to rename ~/.chia/beta1.0b6 to ~/.chia/beta1.0b5 before running the new application, or just copy over the plots.yaml from the ~/.chia/beta1.0b6/config/plots.yaml to ~/.chia/beta1.0b7/config/plots.yaml.
+All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Windows users on pre-Haswell CPUs have a known issue with a fix coming.
 
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.7-macos/Chia-0.1.7.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.8-macos/Chia-0.1.8.dmg)
 
-When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 9 times for your password. We suggest choosing "always allow."
+When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
 To build a development version, make sure [brew](https://brew.sh/) is available before starting the setup and that python 3.7 or newer is installed.
 ```bash
@@ -56,12 +56,11 @@ npm run electron
 # Windows
 
 ## Windows native
-Download the Windows Installer:
-[https://download.chia.net/beta-1.7-win64/ChiaSetup-0.1.7.exe](https://download.chia.net/beta-1.7-win64/ChiaSetup-0.1.7.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.8-win64/ChiaSetup-0.1.8.exe)
 
-As the Chia code signing certificate is new you will likely have to ask to keep the download a couple of times and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line, however there are some command line tools located in `~\AppData\Local\Chia-Blockchain\app-0.1.7\resources\app.asar.unpacked\daemon\` Try `.\create_plots -h` or `.\check_plots -h` for example.
+As the Chia code signing certificate is new you will likely have to ask to keep the download a couple of times and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line, however there are some command line tools located in `~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots create -h` for example.
 
-If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia.
+If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia. We also recommend deleting your `~\.chia` directory.
 
 You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 
