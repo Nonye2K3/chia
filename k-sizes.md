@@ -1,4 +1,16 @@
-# Various k size statistics from different hosts
+# Various k size statistics - Post Beta 8
+
+## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
+* 2.8 GHz Quad-Core Intel Core i7
+* 16 GB 2133 MHz LPDDR3
+* APPLE SSD AP1024M
+* ~ 2900 MB/s write
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 30  |    149.91     |      327.83     |    23.79        |   0.0726  |   125.93     |     83.74%.      |   default  |   1.8   |      |
+
+# Historical k sizes - Pre Beta 8
 
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
