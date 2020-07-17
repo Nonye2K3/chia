@@ -18,35 +18,25 @@ sudo apt-get install build-essential cmake libgmp-dev libffi-dev libssl-dev -y
 sudo apt-get install libxss1 npm nodejs -y
 sudo apt-get install python3-venv libboost-python-dev -y
 ```
-Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS ships with a perfectly adequate CMake version 3.16.3.
+Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS ships with a perfectly adequate CMake version 3.16.3. Compiling third party dependencies - especially pycryptography - can take a while.
 
 ```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
 
-python3 -m venv venv
-ln -s venv/bin/activate
+sh install.sh
 . ./activate
-python -m pip install --upgrade pip
 ```
 There is one piece of magic. You don't need this magic in general anymore now that chiavdf comes from a binary wheel on PyPi but we're leaving this here for people trying to build in other environments. This environment variable is set so that chiavdf doesn't attempt to compile Timelord components. The Pi isn't cut out to be a Timelord and the Timelord requirements are very x86-64 specific currently.
 ```bash
 export BUILD_VDF_CLIENT=N
-```
-Before attempt to install chia-blockchain, install these components first:
-```
-pip install wheel miniupnpc setproctitle setuptools setuptools_scm
-```
-Finally attempt to install chia-blockchain. Compiling - especially pycryptography - will take a while:
-```
-pip install .
 ```
 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
 As noted above the Raspberry Pi is not cut out to be a Timelord or a plotter. It makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
 
-## Installing GUI
+## Installing and running the GUI
 
 ```
 cd electron-react
