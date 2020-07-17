@@ -8,7 +8,7 @@ All keys and plots from version prior to Beta 1.8 are deprecated and can be dele
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.8-win64/ChiaSetup-0.1.8.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.8-win64/ChiaSetup-0.1.8.exe) - **NOTE** pre-Haswell CPUs are not working. Fix shortly. See above.
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download a couple of times and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
