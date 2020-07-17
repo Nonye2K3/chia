@@ -1,4 +1,4 @@
-# Temporarily patching 1.8 for older (pre-Haswell) processors on Windows
+# Patching 1.8 for older (pre-Haswell) processors
 
 - Make sure the Chia application is totally shut down.
 
