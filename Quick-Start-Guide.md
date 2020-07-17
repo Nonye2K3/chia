@@ -9,30 +9,32 @@ If you are using the MacOS or Windows builds, you keys are created during the fi
 We believe that plots created with Beta 1.8 and newer version of the chia software will work on mainnet at launch. We are certain that the minimum plot size will be at most k=32. The original design assumed that k=30 will be the minimum plot size but there are no guarantees as we intend to speed up the time it takes to plot and that may mean we choose a minimum k value of 31 or 32.
 
 ## Windows
-You can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`. There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example.
+There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`.
 
 ## MacOS
-You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`. There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `.chia plots -h` for example.
+There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `.chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`. 
 
 
 ## Development/source builds
+
+If you've installed via the installers you can skip these steps.
 
 Remember that once you complete your install you **must be in the [Python virtual environment](https://docs.python-guide.org/dev/virtualenvs/)** which you access from the chia-blockchain directory, or the Windows "Chia Blockchain" directory, or your home directory if you opted for a binary install. Enter the virtual environment with the command `.   ./activate`. Both dots are critical and once executed correctly your cli prompt will look something like `(venv) username@machine:~$` with ``(venv)`` prepended. 
 
 Use `deactivate` should you want to exit the venv. If you're not a fan of dots, an equivalent alternative on most platforms is `source venv/bin/activate` and you'll see that method in places in this documentation.
 
-## Migrate or set up configuration files
+### Migrate or set up configuration files
 ```bash
 chia init
 ```
 
-## Generate keys
-First, create some keys by running the following script if you don't already have keys:
+### Generate keys
+Create some keys by running the following script if you don't already have keys:
 ```bash
 chia keys generate
 ```
 
-## Run a full node + farmer + harvester + wallet
+### Run a full node + farmer + harvester + wallet
 To run a full node on port 8444, and connect to the testnet, run the following command. Logs are usually at ~/.chia/VERSION/logs/debug.log or ~\.chia\VERSION\logs\debug.log on Windows
 
 ```bash
@@ -49,9 +51,9 @@ You can use the command line tools and change the working directories and output
 chia plots create -k 29 -n 2
 chia plots check -n 100
 ```
-Note that in the dev build the commands are `chia-create-plots` and `chia-check-plots`.
+Note that in the dev build the commands are `chia plots create` and `chia plots check`.
 
-## Run a timelord
+# Run a timelord
 
 *Note*
 If you want to run a timelord on Linux, see [LINUX_TIMELORD.md](https://github.com/Chia-Network/chia-blockchain/blob/master/LINUX_TIMELORD.md). Information on blue boxes coming soon.
