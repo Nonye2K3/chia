@@ -6,7 +6,7 @@
 
 - In Powershell `rm ~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\blspy.cp37-win_amd64.pyd`
 
-- Then copy the new .pyd into the daemon\ directory - `copy blspy.cp37-win_amd64.pyd ~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\`
+- Copy the new .pyd into the daemon\ directory - `copy blspy.cp37-win_amd64.pyd ~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon\`
 
 - Make sure the Chia application is totally shut down and then start it.
 
