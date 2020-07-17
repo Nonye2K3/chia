@@ -1,4 +1,4 @@
-# Various k size statistics - Post Beta 8
+# Various k size statistics - Current - Beta 8 and newer
 
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
@@ -9,6 +9,17 @@
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
 | 30  |    149.91     |      327.83     |    23.79        |   0.0726  |   125.93     |     83.74%.      |   default  |   1.8   |      |
+
+## AWS EC2 r5dn.12xlarge
+* Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+* Memory: 374GB
+* Storage: tempdir: ramdisk of 264GB (Ubuntu 18.04) finaldir: Amazon.com, Inc. NVMe SSD
+* ~ - MB/s write
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 31  |    185.59     |      361.67     |    49.17        |   0.13595 |   262.04     |     99.99%.      |     64GB   |   1.8   |      |
+
 
 # Historical k sizes - Pre Beta 8
 
