@@ -10,6 +10,16 @@
 | --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
 | 30  |    149.91     |      327.83     |    23.79        |   0.0726  |   125.93     |     83.74%.      |   default  |   1.8   |      |
 
+## Ubuntu 19.04
+* Intel(R) Xeon(R) W-2155 CPU @ 3.30GHz (10 cores)
+* 64 GB PC4-21300 DDR4-2666V-R REGISTERED ECC
+* Western Digital 4 TB [WD10EZEX](https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-blue-hdd/data-sheet-wd-blue-pc-hard-drives-2879-771436.pdf)
+* ~ - MB/s write
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 32  |               |      1577.7     |    101.3        |   0.0642  |   523.93     |     63.74%.      |            |   1.8   |      |
+
 ## AWS EC2 r5dn.12xlarge
 * Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
 * Memory: 374GB
