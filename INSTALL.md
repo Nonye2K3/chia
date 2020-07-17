@@ -1,7 +1,7 @@
 To install the chia-blockchain, follow the instructions according to your operating system.
 After installing, follow the remaining instructions in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) to run the software. You should read the [release notes](https://github.com/Chia-Network/chia-blockchain/releases/tag/1.0beta8) and [README.md](https://github.com/Chia-Network/chia-blockchain/blob/master/README.md) as well. This wiki has an [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ) that is also helpful.
 
-| Jump to: | [MacOS](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#MacOS) | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [WSL2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#Windows-WSL2) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
+| Jump to: | [MacOS](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#MacOS) | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [WSL2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#WSL2) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
  
 All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Windows users on pre-Haswell CPUs have a known issue with a fix coming.
@@ -73,6 +73,7 @@ Then follow the steps below which are the same as the usual Ubuntu instructions 
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install python3.8-venv python3.8-distutils git -y
+sudo apt-get install -y npm nodejs
 
 # Either checkout the source and install
 git clone https://github.com/Chia-Network/chia-blockchain.git
