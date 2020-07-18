@@ -10,6 +10,7 @@
 
 # Patching 1.8 for some Skylake processors
 
+- You will only ever need one of these patches or the other - never both.
 - Make sure the Chia application is totally shut down.
 - `cd ~\AppData\Local\Chia-Blockchain\app-0.1.8\resources\app.asar.unpacked\daemon`
 - `mv mpir.dll mpirold.dll`
