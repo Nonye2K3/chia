@@ -81,10 +81,6 @@ If this causes issues, you can disable it in config.yaml.
 Some routers may require port forwarding, or enabling UPnP
 in the router's configuration.
 
-Due to the nature of proof of space lookups by the harvester in the current
-release you should limit the number of plots on a physical drive to 50 or less.
-This limit will significantly increase soon.
-
 ## uvloop
 
 For potentially increased networking performance on non Windows platforms using development installs,
