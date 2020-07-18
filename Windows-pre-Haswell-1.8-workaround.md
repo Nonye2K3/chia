@@ -8,7 +8,7 @@
 - Start the Chia application and proceed as normal.
 - This will be fixed 1.9.
 
-# Patching 1.8 for some Skylake processors
+# Patching 1.8 for Pentium Skylake processors
 
 - You will only ever need one of these patches or the other - never both.
 - Make sure the Chia application is totally shut down.
