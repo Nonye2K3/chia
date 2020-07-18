@@ -18,7 +18,7 @@
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 32  |    101.76     |      1577.7     |    101.3        |   0.0642  |   523.93     |     63.74%.      |   default  |   1.8   |      |
+| 32  |    674.69     |      1577.7     |    101.3        |   0.0642  |   523.93     |     63.74%.      |   default  |   1.8   |      |
 
 ## AWS EC2 r5dn.12xlarge
 * Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
