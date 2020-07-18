@@ -8,7 +8,7 @@ All keys and plots from version prior to Beta 1.8 are deprecated and can be dele
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.8-win64/ChiaSetup-0.1.8.exe) - **NOTE:** pre-Haswell (e.g. prior to ~2014) CPUs need to **apply this [patch](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-pre-Haswell-1.8-workaround)** after installing.
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.8-win64/ChiaSetup-0.1.8.exe) - **NOTE:** pre-Haswell (e.g. prior to ~2014) aand some Skylake CPUs need to **apply [patches](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-pre-Haswell-1.8-workaround)** after installing.
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download a couple of times and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
