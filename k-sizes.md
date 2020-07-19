@@ -18,6 +18,7 @@
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 31  |    333.50     |       724.3     |    49.17        |   0.0679  |   262.04     |     70.66%.      |   default  |   1.8   |      |
 | 32  |    674.69     |      1577.7     |    101.3        |   0.0642  |   523.93     |     63.74%.      |   default  |   1.8   |      |
 
 ## AWS EC2 r5dn.12xlarge
