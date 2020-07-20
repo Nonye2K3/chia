@@ -21,6 +21,16 @@
 | 31  |    333.50     |       724.3     |    49.17        |   0.0679  |   262.04     |     70.66%.      |   default  |   1.8   |      |
 | 32  |    674.69     |      1577.7     |    101.3        |   0.0642  |   523.93     |     63.74%.      |   default  |   1.8   |      |
 
+## Intel i7 4770k
+* Intel i7 4770k (2013, 7 years old CPU)
+* ?? GB RAM
+* NVME SSD
+* ~ - MB/s write
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 32  |       ?       |      935.87     |    101.34       |   0.1083  |   523.96*    |     94.36%.      |      ?     |   1.8   | *Actual working space 10GiB higher     |
+
 ## AWS EC2 r5dn.12xlarge
 * Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
 * Memory: 374GB
