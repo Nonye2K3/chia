@@ -21,6 +21,17 @@
 | 31  |    333.50     |       724.3     |    49.17        |   0.0679  |   262.04     |     70.66%.      |   default  |   1.8   |      |
 | 32  |    674.69     |      1577.7     |    101.3        |   0.0642  |   523.93     |     63.74%.      |   default  |   1.8   |      |
 
+## Razer Blade Stealth 2018
+* Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 2001 Mhz, 4 Core(s), 8 Logical Processor(s)
+* 16 GB RAM
+* Samsung SSD PM981 MZVLB512HAJQ
+* Crystal - CDM 5 Write Seq: 1468 MB/s
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 31  |       ?       |      613.09     |    49.134       |   0.0801  |   261.944    |     100.0%.      |      ?     |   1.8   |      |
+
+
 ## Intel i7 4770k
 * Intel i7 4770k (2013, 7 years old CPU)
 * ?? GB RAM
