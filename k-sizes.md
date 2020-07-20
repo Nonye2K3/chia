@@ -48,7 +48,7 @@ These results from various machines should give a sense of how long and how much
 ## AWS EC2 r5dn.12xlarge
 * Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
 * Memory: 374GB
-* Storage: tempdir: ramdisk of 264GB (Ubuntu 18.04) finaldir: Amazon.com, Inc. NVMe SSD
+* Storage: tempdir: ramdisk of 310GB (Ubuntu 18.04) finaldir: Amazon.com, Inc. NVMe SSD
 * ~ - MB/s write
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
