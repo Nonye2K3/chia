@@ -37,13 +37,13 @@ These results from various machines should give a sense of how long and how much
 
 ## Intel i7 4770k
 * Intel i7 4770k (2013, 7 year old CPU)
-* ?? GB RAM
-* NVME SSD
-* ~ - MB/s write
+* 32 GB RAM
+* NVME SSD (Microcenter brand, raid0 over 2 x 512 GB)
+* Iozone 490 (256 kiB blocks, fsynced to storage): 876 MiB/s seq write, 3464 Mib/s reads
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 32  |       ?       |      935.87     |    101.34       |   0.1083  |   523.96*    |     94.36%.      |      ?     |   1.8   | *Actual working space 10GiB higher     |
+| 32  |     429.9     |      935.87     |    101.34       |   0.1083  |   523.96*    |     94.36%.      |   default  |   1.8   | *Actual working space 10GiB higher     |
 
 ## AWS EC2 r5dn.12xlarge
 * Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
