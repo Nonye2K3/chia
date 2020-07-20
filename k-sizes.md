@@ -1,5 +1,7 @@
 # Various k size statistics - Current - Beta 8 and newer
 
+These results from various machines should give a sense of how long and how much space a plot will take on different hardware. The first section is from Beta 1.8 or newer. Historical data is below and is currently still useful at the Beta 1.8 stage. Please add yours here or post the details in #testnet of the [Keybase Chat](https://keybase.io/team/chia_network.public)
+
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
 * 16 GB 2133 MHz LPDDR3
@@ -29,7 +31,7 @@
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 31  |       ?       |      613.09     |    49.134       |   0.0801  |   261.944    |     100.0%.      |      ?     |   1.8   |      |
+| 31  |     278.5     |      613.09     |    49.134       |   0.0801  |   261.944    |     100.0%       |   default  |   1.8   |      |
 
 
 ## Intel i7 4770k
