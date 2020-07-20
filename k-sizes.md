@@ -53,6 +53,7 @@ These results from various machines should give a sense of how long and how much
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 30  |     81.50     |      165.49     |    23.80        |   0.14382 |   125.95     |     99.99%.      |     64GB   |   1.8   |      |
 | 31  |    185.59     |      361.67     |    49.17        |   0.13595 |   262.04     |     99.99%.      |     64GB   |   1.8   |      |
 
 
