@@ -33,7 +33,7 @@
 
 
 ## Intel i7 4770k
-* Intel i7 4770k (2013, 7 years old CPU)
+* Intel i7 4770k (2013, 7 year old CPU)
 * ?? GB RAM
 * NVME SSD
 * ~ - MB/s write
