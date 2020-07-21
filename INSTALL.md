@@ -61,7 +61,11 @@ npm run electron
 ```
 # WSL2
 
-You can run chia-blockchain in Ubuntu 20.04 lts via WSL2 on Windows. From an Administrator PowerShell:
+You can run chia-blockchain in Ubuntu 20.04 lts via WSL2 on Windows.
+
+**You can not run the GUI** as WSL2 doesn't yet support graphical interfaces from WSL2. 
+
+From an Administrator PowerShell:
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all
@@ -73,7 +77,6 @@ Then follow the steps below which are the same as the usual Ubuntu instructions 
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install python3.8-venv python3.8-distutils git -y
-sudo apt-get install -y npm nodejs
 
 # Either checkout the source and install
 git clone https://github.com/Chia-Network/chia-blockchain.git
@@ -83,14 +86,6 @@ sh install.sh
 
 . ./activate
 
-# Or install chia-blockchain as a binary package
-python3.8 -m venv venv
-ln -s venv/bin/activate
-. ./activate
-pip install --upgrade pip
-pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
-
-pip install chia-blockchain==1.0b8
 ```
 Running a standalone Windows wallet gui is deprecated but may return in later versions.
 
