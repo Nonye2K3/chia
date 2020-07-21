@@ -78,7 +78,6 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install python3.8-venv python3.8-distutils git -y
 
-# Either checkout the source and install
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
 
