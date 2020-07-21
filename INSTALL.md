@@ -87,7 +87,7 @@ sh install.sh
 . ./activate
 
 ```
-Running a standalone Windows wallet gui is deprecated but may return in later versions.
+Running a standalone Windows wallet gui is deprecated but may return in later versions. You can run the Windows version and share keys. You can also plot in WSL2 and migrate the plots to a Windows farmed plot directory.
 
 # Amazon Linux 2
 
