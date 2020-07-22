@@ -46,6 +46,26 @@ These results from various machines should give a sense of how long and how much
 | --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
 | 32  |     429.9     |      935.87     |    101.34       |   0.1083  |   523.96*    |     94.36%.      |   default  |   1.8   | *Actual working space 10GiB higher     |
 
+## Intel Pentium CPU G4500 in WSL2 on ext4
+* Intel Pentium CPU G4500 @ 3.50Ghz - no AVX
+* 8 GB RAM
+* Samsung SSD 860 EVO 250GB
+* ? MB/s
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 30  |     244.8     |      540.59     |     23.82       |   0.0441  |   126.014    |     83.62%       |   default  |   1.8   |      |
+
+## Intel Pentium CPU G4500 in Windows on NTFS
+* Intel Pentium CPU G4500 @ 3.50Ghz - no AVX
+* 8 GB RAM
+* Samsung SSD 860 EVO 250GB
+* ? MB/s
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
+| 30  |     153.6     |      359.62     |     23.83       |   0.0663  |   126.038    |      100%        |   default  |   1.8   |      |
+
 ## AWS EC2 r5dn.12xlarge
 * Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
 * Memory: 374GB
