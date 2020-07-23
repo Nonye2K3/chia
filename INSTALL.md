@@ -61,16 +61,30 @@ npm run electron
 ```
 # WSL2
 
-You can run chia-blockchain in Ubuntu 20.04 lts via WSL2 on Windows.
+You can run chia-blockchain in Ubuntu 20.04 LTS via WSL2 on Windows.
+
+NOTE: WSL2 plotting is currently only *slightly* faster than plotting on the native windows client. WSL2 requires significant tweaking to set up correctly. If you find that daunting, it's probably easier to just use the native windows client.
 
 **You can not run the GUI** as WSL2 doesn't yet support graphical interfaces from WSL2. 
 
+## Check if you already have WSL2 or WSL1 installed:
+From PoweShell, type:
+```
+wsl -l -v
+```
+
+If you get a listing of help topics for wsl commands, you have WSL1, and need to upgrade. To upgrade, [follow the instructions here](https://docs.microsoft.com/en-us/windows/wsl/install-win10#update-to-wsl-2). If you get a blank result or a listing of installed Linux versions, you have WSL2 and are OK to proceed.
+
+## If WSL is not installed:
 From an Administrator PowerShell:
 ```
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all
 ```
-You will be prompted to reboot. Once that is complete, install Ubuntu 20.04 LTS from the Microsoft Store and run it and complete its initial install steps. You now have a linux bash shell environment that can run linux native software on Windows.
+You will be prompted to reboot. 
+
+## Installing a new WSL2 instance:
+Install Ubuntu 20.04 LTS from the Microsoft Store and run it and complete its initial install steps. You now have a linux bash shell environment that can run linux native software on Windows.
 
 Then follow the steps below which are the same as the usual Ubuntu instructions above with a target of Python 3.8.
 ```bash
@@ -87,6 +101,24 @@ sh install.sh
 
 ```
 Running a standalone Windows wallet gui is deprecated but may return in later versions. You can run the Windows version and share keys. You can also plot in WSL2 and migrate the plots to a Windows farmed plot directory.
+
+Plotting uses three commands for directory control:
+
+`-t` for initial temp directory. Phases 1 and 2 happen here.
+
+`-2` for secondary temp directory. Phase 3 (compression) happens here.
+
+`-d` for final destination. Phase 4 happens here.
+
+Plotting works such that `-t` and `-2` require the exact same amount of storage space. Therefore, if `-t` and `-2` point to the same drive, that drive needs 2x the final file size + 1x the max working file size.
+
+For maximum speed, `-t` and `-2` should be inside the WSL2 filesystem. Something like: `-t ~/chia_temp -2 ~/chia_temp`. Just beware that the WSL2 VHD will need a much larger maximum capacity.
+
+`-d` can point to any other drive for the final destination.
+
+## Increasing the WSL Maximum Storage Capacity
+WSL2 uses a Virtual Hardware Disk (VHD) to store files, and it automatically resizes as files grow. **However, the VHD has an initial maximum size of 256 GB.** Therefore, the default WSL2 VHD is probably only capable of plotting k=30 plots. To plot anything larger, you will need to increase the maximum allowable size. [Follow the guide here.](https://docs.microsoft.com/en-us/windows/wsl/compare-versions#expanding-the-size-of-your-wsl-2-virtual-hardware-disk)
+
 
 # Amazon Linux 2
 
