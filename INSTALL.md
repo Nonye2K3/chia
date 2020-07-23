@@ -68,7 +68,7 @@ NOTE: WSL2 plotting is currently only *slightly* faster than plotting on the nat
 **You can not run the GUI** as WSL2 doesn't yet support graphical interfaces from WSL2. 
 
 ## Check if you already have WSL2 or WSL1 installed:
-From PoweShell, type:
+From PowerShell, type:
 ```
 wsl -l -v
 ```
@@ -102,6 +102,12 @@ sh install.sh
 ```
 Running a standalone Windows wallet gui is deprecated but may return in later versions. You can run the Windows version and share keys. You can also plot in WSL2 and migrate the plots to a Windows farmed plot directory.
 
+## Increasing the WSL Maximum Storage Capacity
+WSL2 uses a Virtual Hardware Disk (VHD) to store files, and it automatically resizes as files grow. **However, the VHD has an initial maximum size of 256 GB.** Therefore, the default WSL2 VHD is probably only capable of plotting k=30 plots. To plot anything larger, you will need to increase the maximum allowable size. [Follow the guide here.](https://docs.microsoft.com/en-us/windows/wsl/compare-versions#expanding-the-size-of-your-wsl-2-virtual-hardware-disk)
+
+## WSL VHD Plotting Nuance
+Plotting within WSL2 can write to either the native VHD (which is EXT4) or to any other drive, which can be NTFS or any other FS-type. Writing to the native VHD is faster than writing out to another drive.
+
 Plotting uses three commands for directory control:
 
 `-t` for initial temp directory. Phases 1 and 2 happen here.
@@ -115,9 +121,6 @@ Plotting works such that `-t` and `-2` require the exact same amount of storage 
 For maximum speed, `-t` and `-2` should be inside the WSL2 filesystem. Something like: `-t ~/chia_temp -2 ~/chia_temp`. Just beware that the WSL2 VHD will need a much larger maximum capacity.
 
 `-d` can point to any other drive for the final destination.
-
-## Increasing the WSL Maximum Storage Capacity
-WSL2 uses a Virtual Hardware Disk (VHD) to store files, and it automatically resizes as files grow. **However, the VHD has an initial maximum size of 256 GB.** Therefore, the default WSL2 VHD is probably only capable of plotting k=30 plots. To plot anything larger, you will need to increase the maximum allowable size. [Follow the guide here.](https://docs.microsoft.com/en-us/windows/wsl/compare-versions#expanding-the-size-of-your-wsl-2-virtual-hardware-disk)
 
 
 # Amazon Linux 2
