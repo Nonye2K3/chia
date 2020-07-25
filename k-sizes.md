@@ -24,6 +24,7 @@ These results from various machines should give a sense of how long and how much
 | 30  |    131.25     |       302.8     |    23.82        |   0.0787  |   126.02     |     79.86%.      |   default  |   1.8   |      |
 | 31  |    333.50     |       724.3     |    49.17        |   0.0679  |   262.04     |     70.66%.      |   default  |   1.8   |      |
 | 32  |    674.69     |      1577.7     |    101.3        |   0.0642  |   523.93     |     63.74%.      |   default  |   1.8   |      |
+| 33  |    1738.2     |     4285.56     |    208.8        |   0.0487  |   777.86     |     52.53%       |   default  |   1.8   |      |
 
 ## Razer Blade Stealth 2018
 * Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 2001 Mhz, 4 Core(s), 8 Logical Processor(s)
