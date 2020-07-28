@@ -67,7 +67,11 @@ You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-bloc
 
 # How do I upgrade and keep my keys and plots?
 
-Updating between beta releases is simple. Keys, plots, and configs will auto-migrate. Just follow the normal [installation instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL). Make sure you're not actively plotting during installation.
+Updating between beta releases is simple.
+
+Make sure all chia processes (including plotting) are closed in task manager / activity monitor / terminals.
+
+Then just follow the normal [installation instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL). Keys, plots, and configs will auto-migrate.
 
 Your main configuration files are stored in ~/.chia/$VERSION/config. During installation, these files will auto-migrate to the updated version. After installation, it's safe to delete the old $VERSION folder.
 
