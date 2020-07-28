@@ -67,9 +67,9 @@ You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-bloc
 
 # How do I upgrade and keep my keys and plots?
 
-To update between beta releases, please follow the instructions in [Updating Beta Software](https://github.com/Chia-Network/chia-blockchain/wiki/Updating-beta-software). You may want to place your plots directory somewhere that's not the directory that 'config/config.yaml' of the 'chia-blockchain' directory for easier future migrations. You can set the path to each file in 'config/plots.yaml' individually or adjust set a 'plot_root' by uncommenting line 18 of 'config.yaml' and specifying the directory there.
+Updating between beta releases is simple. Keys, plots, and configs will auto-migrate. Just follow the normal [installation instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL). Make sure you're not actively plotting during installation.
 
-An alternate method is to keep your plots/ directory outside of the chia-blockchain directory and symbolically link to them: `ln -s /Volumes/BigStorage/chia/plots /home/username/.chia/VERSION/plots`
+Your main configuration files are stored in ~/.chia/$VERSION/config. During installation, these files will auto-migrate to the updated version. After installation, it's safe to delete the old $VERSION folder.
 
 # Can I run this on a Raspberry Pi 3 or 4?
 
