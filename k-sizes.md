@@ -4,37 +4,37 @@ These results from various machines should give a sense of how long and how much
 
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
-* 16 GB 2133 MHz LPDDR3
+* 16 GiB 2133 MHz LPDDR3
 * APPLE SSD AP1024M
 * ~ 2900 MB/s write
 
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 30  |    149.91     |      327.83     |    23.79        |   0.0726  |   125.93     |     83.74%.      |   default  |   1.8   |      |
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---          |    ---     |    ---        |      ---         |     ---    |   ---   | ---  |
+| 30  |    149.91     |      327.83     |    23.79         |   0.0726   |   125.93      |     83.74%.      |   default  |   1.8   |      |
 
 ## Ubuntu 19.04
 * Intel(R) Xeon(R) W-2155 CPU @ 3.30GHz (10 cores)
-* 64 GB PC4-21300 DDR4-2666V-R REGISTERED ECC
+* 64 GiB PC4-21300 DDR4-2666V-R REGISTERED ECC
 * Western Digital 4 TB [WD10EZEX](https://documents.westerndigital.com/content/dam/doc-library/en_us/assets/public/western-digital/product/internal-drives/wd-blue-hdd/data-sheet-wd-blue-pc-hard-drives-2879-771436.pdf)
 * ~ - MB/s write
 
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 29  |     60.36     |       128.9     |    11.52        |   0.0893  |    61.00     |     81.77%.      |   default  |   1.8   |      |
-| 30  |    131.25     |       302.8     |    23.82        |   0.0787  |   126.02     |     79.86%.      |   default  |   1.8   |      |
-| 31  |    333.50     |       724.3     |    49.17        |   0.0679  |   262.04     |     70.66%.      |   default  |   1.8   |      |
-| 32  |    674.69     |      1577.7     |    101.3        |   0.0642  |   523.93     |     63.74%.      |   default  |   1.8   |      |
-| 33  |    1738.2     |     4285.56     |    208.8        |   0.0487  |  1095.91     |     52.53%       |   default  |   1.8   |      |
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
+| 29  |     60.36     |       128.9     |     11.52        |   0.0893   |     61.00     |     81.77%.      |   default  |   1.8   |      |
+| 30  |    131.25     |       302.8     |     23.82        |   0.0787   |    126.02     |     79.86%.      |   default  |   1.8   |      |
+| 31  |    333.50     |       724.3     |     49.17        |   0.0679   |    262.04     |     70.66%.      |   default  |   1.8   |      |
+| 32  |    674.69     |      1577.7     |     101.3        |   0.0642   |    523.93     |     63.74%.      |   default  |   1.8   |      |
+| 33  |    1738.2     |     4285.56     |     208.8        |   0.0487   |   1095.91     |     52.53%       |   default  |   1.8   |      |
 
 ## Razer Blade Stealth 2018
 * Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 2001 Mhz, 4 Core(s), 8 Logical Processor(s)
-* 16 GB RAM
+* 16 GiB RAM
 * Samsung SSD PM981 MZVLB512HAJQ
 * Crystal - CDM 5 Write Seq: 1468 MB/s
 
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 31  |     278.5     |      613.09     |    49.134       |   0.0801  |   261.944    |     100.0%       |   default  |   1.8   |      |
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |      ---         |     ---    |     ---       |      ---         |     ---    |   ---   | ---  |
+| 31  |     278.5     |      613.09     |     49.134       |    0.0801  |    261.944    |     100.0%       |   default  |   1.8   |      |
 
 
 ## Intel i7 4770k
@@ -43,9 +43,9 @@ These results from various machines should give a sense of how long and how much
 * NVME SSD (Microcenter brand, raid0 over 2 x 512 GB)
 * Iozone 490 (256 kiB blocks, fsynced to storage): 876 MiB/s seq write, 3464 MiB/s seq reads
 
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 32  |     429.9     |      935.87     |    101.34       |   0.1083  |   523.96*    |     94.36%.      |   default  |   1.8   | *Actual working space 10GiB higher     |
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
+| 32  |     429.9     |      935.87     |     101.34       |   0.1083   |    523.96*    |     94.36%.      |   default  |   1.8   | *Actual working space 10GiB higher     |
 
 ## Intel Pentium CPU G4500 in WSL2 on ext4
 * Intel Pentium CPU G4500 @ 3.50Ghz - no AVX
@@ -53,33 +53,33 @@ These results from various machines should give a sense of how long and how much
 * Samsung SSD 860 EVO 250GB
 * ? MB/s
 
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 30  |     244.8     |      540.59     |     23.82       |   0.0441  |   126.014    |     83.62%       |   default  |   1.8   |      |
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
+| 30  |     244.8     |      540.59     |      23.82       |   0.0441   |    126.014    |     83.62%       |   default  |   1.8   |      |
 
 ## Intel Pentium CPU G4500 in Windows on NTFS
 * Intel Pentium CPU G4500 @ 3.50Ghz - no AVX
-* 8 GB RAM
+* 8 GiB RAM
 * Samsung SSD 860 EVO 250GB
 * ? MB/s
 
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 30  |     153.6     |      359.62     |     23.83       |   0.0663  |   126.038    |      100%        |   default  |   1.8   |      |
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
+| 30  |     153.6     |      359.62     |      23.83       |   0.0663   |    126.038    |      100%        |   default  |   1.8   |      |
 
 ## AWS EC2 r5dn.12xlarge
 * Processor: 48 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
-* Memory: 374GB
-* Storage: tempdir: ramdisk of 310GB (Ubuntu 18.04) finaldir: Amazon.com, Inc. NVMe SSD
+* Memory: 374GiB
+* Storage: tempdir: ramdisk of 310GiB (Ubuntu 18.04) finaldir: Amazon.com, Inc. NVMe SSD
 * ~ - MB/s write
 
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GB)  | GB/minute | working (GB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |     ---         |    ---    |    ---       |      ---         |     ---    |   ---   | ---  |
-| 30  |     81.50     |      165.49     |    23.80        |   0.14382 |   125.95     |     99.99%.      |     64GB   |   1.8   |      |
-| 31  |    185.59     |      361.67     |    49.17        |   0.13595 |   262.04     |     99.99%.      |     64GB   |   1.8   |      |
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting  | Version | Note |
+| --- |      ---      |        ---      |      ---         |     ---    |     ---       |      ---         |     ---     |   ---   | ---  |
+| 30  |     81.50     |      165.49     |     23.80        |   0.14382  |    125.95     |     99.99%.      |     64GiB   |   1.8   |      |
+| 31  |    185.59     |      361.67     |     49.17        |   0.13595  |    262.04     |     99.99%.      |     64GiB   |   1.8   |      |
 
 
-# Historical k sizes - Pre Beta 8
+# Historical k sizes - Pre Beta 8 - incorrectly listed as GB - most should be GiB
 
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
