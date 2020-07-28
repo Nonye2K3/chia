@@ -3,7 +3,7 @@
 These results from various machines should give a sense of how long and how much space a plot will take on different hardware. The first section is from Beta 1.8 or newer. Historical data is below and is currently still useful at the Beta 1.8 stage. Please add yours here or post the details in the #testnet channel of the [Keybase Chat](https://keybase.io/team/chia_network.public). The theory and process of plotting are described in the [Chia Proof of Space Construction](https://www.chia.net/assets/proof_of_space.pdf) document.
 
 ## Dell Inspiron Desktop 
-* Intel hexacore i5 8400,
+* Intel Hexacore i5 8400
 * 8 GiB DDR4
 * Toshiba dt01aca100 - 1TB Hard Drive
 * ~ write
