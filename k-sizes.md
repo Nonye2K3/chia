@@ -99,12 +99,13 @@ These results from various machines should give a sense of how long and how much
 ## Raspberry Pi 4
 * Processor: Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
 * Memory: 4 GB LPDDR4-3200 SDRAM
-* Storage: Samsung 860 EVO V-NAND SSD 1 TB
+* Storage: Samsung 860 EVO V-NAND SSD 1 TB (SATA to USB 3.0 connection)
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting  | Version | Note |
 | --- |      ---      |        ---      |      ---         |     ---    |     ---       |      ---         |     ---     |   ---   | ---  |
 | 30  |    448.87     |      919.50     |      23.8151     |   0.0259   |    125.996    |     92.92%.      |     2GiB    |   1.8   |      |
 | 31  |    940.39     |     1958.23     |      49.1596     |   0.0251   |    262.008    |     92.45%.      |     2GiB    |   1.8   |      |
+| 32  |   1857.45     |     3954.88     |     101.3680     |   0.0256   |    524.017    |     93.68%.      |     2GiB    |   1.8   |      |
 
 # Historical k sizes - Pre Beta 8 - incorrectly listed as GB - most should be GiB
 
