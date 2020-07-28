@@ -78,6 +78,33 @@ These results from various machines should give a sense of how long and how much
 | 30  |     81.50     |      165.49     |     23.80        |   0.14382  |    125.95     |     99.99%.      |     64GiB   |   1.8   |      |
 | 31  |    185.59     |      361.67     |     49.17        |   0.13595  |    262.04     |     99.99%.      |     64GiB   |   1.8   |      |
 
+## AWS EC2 i3en.large
+* Processor: 2 Intel(R) Xeon(R) Scalable (Skylake) processors with new Intel Advanced Vector Extension (AVX-512) instruction set @ 3.1 GHz
+* Memory: 16 GiB
+* Storage: 1 x 1,250 NVMe SSD
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting  | Version | Note |
+| --- |      ---      |        ---      |      ---         |     ---    |     ---       |      ---         |     ---     |   ---   | ---  |
+| 32  |    576.30     |     1360.41     |     101.338      |    0.0745  |    523.946    |     79.19%.      |      6GiB   |   1.8   |      |
+
+## AWS EC2 i3.xlarge
+* Processor: 4 Intel(R) Xeon(R) E5-2686 v4 (Broadwell) CPU @ 2.30 GHZ
+* Memory: 30.5 GiB
+* Storage: 1 x 950 NVMe SSD
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting  | Version | Note |
+| --- |      ---      |        ---      |      ---         |     ---    |     ---       |      ---         |     ---     |   ---   | ---  |
+| 32  |    616.78     |     1340.32     |     101.338      |    0.0742  |    523.997    |     90.96%.      |    20GiB    |   1.8   |      |
+
+## Raspberry Pi 4
+* Processor: Broadcom BCM2711, Quad core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
+* Memory: 4 GB LPDDR4-3200 SDRAM
+* Storage: Samsung 860 EVO V-NAND SSD 1 TB
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting  | Version | Note |
+| --- |      ---      |        ---      |      ---         |     ---    |     ---       |      ---         |     ---     |   ---   | ---  |
+| 30  |    448.87     |      919.50     |      23.8151     |   0.0259   |    125.996    |     92.92%.      |     2GiB    |   1.8   |      |
+| 31  |    940.39     |     1958.23     |      49.1596     |   0.0251   |    262.008    |     92.45%.      |     2GiB    |   1.8   |      |
 
 # Historical k sizes - Pre Beta 8 - incorrectly listed as GB - most should be GiB
 
