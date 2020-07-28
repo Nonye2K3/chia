@@ -20,9 +20,11 @@ We believe that plots created with Beta 1.8 and newer versions of the chia softw
 
 The simple answer is:
 * k29 (and smaller) plots are definitely not going to work on mainnet.
-* K30 plots MIGHT work on mainnet.
-* K31 plots MIGHT work on mainnet.
-* k32 plots will definitely work on mainnet.
+* k30 plots MIGHT work on mainnet.
+* k31 plots MIGHT work on mainnet.
+* k32 (and larger) plots will definitely work on mainnet.
+
+("Definitely" has the caveat understanding that this is beta software. There are no _plans_ to change the plot format, but if bugs are found, they'll need to be squashed.)
 
 The Chia dev team is going to great lengths to speed up the plotting process--from now until mainnet. The goal is to keep it so that the top-of-the-line hardware takes at least 1 hour to plot the minimum k-size, and there's no way to cheat the system. That's why the minimum k-size isn't clear yet--because the plotting speed improvements haven't been implemented yet.
 
