@@ -2,6 +2,16 @@
 
 These results from various machines should give a sense of how long and how much space a plot will take on different hardware. The first section is from Beta 1.8 or newer. Historical data is below and is currently still useful at the Beta 1.8 stage. Please add yours here or post the details in the #testnet channel of the [Keybase Chat](https://keybase.io/team/chia_network.public). The theory and process of plotting are described in the [Chia Proof of Space Construction](https://www.chia.net/assets/proof_of_space.pdf) document.
 
+## Dell Inspiron Desktop 
+* Intel hexacore i5 8400,
+* 8 GiB DDR4
+* Toshiba dt01aca100 - 1TB Hard Drive
+* ~ write
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---          |    ---     |    ---        |      ---         |     ---    |   ---   | ---  |
+| 32  |    1001.865   |      TBD        |    TBD           |   TBD      |   TBD         |     100  %.      |   default  |   1.9   | Using Native Window Plotter, not WSL2 |
+
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
 * 16 GiB 2133 MHz LPDDR3
