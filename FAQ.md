@@ -14,6 +14,18 @@ A proof of space is a proof that a farmer has allocated a portion of their stora
 
 You can see some example plot sizes, times to plot, and working space needed based on various k's in these [k size tables](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes).
 
+# What k-size should you plot?
+
+We believe that plots created with Beta 1.8 and newer versions of the chia software will work on mainnet at launch. We are certain that the minimum plot size will be at most k=32. The original design assumed that k=30 will be the minimum plot size but there are no guarantees as we intend to speed up the time it takes to plot and that may mean we choose a minimum k value of 31 or 32.
+
+The simple answer is:
+k29 (and smaller) plots are definitely not going to work on mainnet.
+K30 plots MIGHT work on mainnet.
+K31 plots MIGHT work on mainnet.
+k32 plots will definitely work on mainnet.
+
+The Chia dev team is going to great lengths to speed up the plotting process--from now until mainnet. The goal is to keep it so that the top-of-the-line hardware takes at least 1 hour to plot the minimum k-size, and there's no way to cheat the system. That's why the minimum k-size isn't clear yet--because the plotting speed improvements haven't been implemented yet.
+
 # What is recommended for plotting?
 
 We think you will want to use NVMe SSD drives to create your plots on. Then you can migrate your plots off to whatever storage you want to keep them on long term. You could even load them on a Raspberry Pi with outdated USB 2.0 drives attached and they will Harvest and Farm just fine. PC World offers this great [background on current storage technologies](https://www.pcworld.com/article/2899351/everything-you-need-to-know-about-nvme.html) but this graph gives you a quick view of why we recommend NVMe SSD:
