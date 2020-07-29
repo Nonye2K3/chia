@@ -47,15 +47,27 @@ These results from various machines should give a sense of how long and how much
 | 31  |     278.5     |      613.09     |     49.134       |    0.0801  |    261.944    |     100.0%       |   default  |   1.8   |      |
 
 
-## Intel i7 4770k
+## Fedora Server 32
 * Intel i7 4770k (2013, 7 year old CPU)
 * 32 GB RAM
 * NVME SSD (Microcenter brand, raid0 over 2 x 512 GB)
-* Iozone 490 (256 kiB blocks, fsynced to storage): 876 MiB/s seq write, 3464 MiB/s seq reads
+* Iozone v490 (ext4, 256 kiB blocks, fsynced to storage): 876 MiB/s seq write, 3464 MiB/s seq reads
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
 | 32  |     429.9     |      935.87     |     101.34       |   0.1083   |    523.96*    |     94.36%.      |   default  |   1.8   | *Actual working space 10GiB higher     |
+
+
+## Fedora Server 32
+* AMD Ryzen 3800x
+* 128 GB RAM
+* NVME SSD (Microcenter brand, PCIe v4, raid0 over 2 x 1 TB)
+* Iozone v490 (ext4, 256 kiB blocks, fsynced to storage): 2638 MiB/s seq write, 4554 MiB/s seq reads
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
+| 30  |     67.4      |      143.6      |     23.80        |   0.1657   |    125.95     |     99.6%.       |   default  |   1.8   |      |
+
 
 ## Intel Pentium CPU G4500 in WSL2 on ext4
 * Intel Pentium CPU G4500 @ 3.50Ghz - no AVX
