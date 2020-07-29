@@ -59,14 +59,15 @@ These results from various machines should give a sense of how long and how much
 
 
 ## Fedora Server 32
-* AMD Ryzen 3800x
+* AMD Ryzen 7 3800x
 * 128 GB RAM
 * NVME SSD (Microcenter brand, PCIe v4, raid0 over 2 x 1 TB)
 * Iozone v490 (ext4, 256 kiB blocks, fsynced to storage): 2638 MiB/s seq write, 4554 MiB/s seq reads
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
-| 30  |     67.4      |      143.6      |     23.80        |   0.1657   |    125.95     |     99.6%.       |   default  |   1.8   |      |
+| 30  |     67.4      |      143.6      |     23.80        |   0.1657   |    125.95     |     99.60%       |   default  |   1.8   |      |
+| 30  |     59.92     |      125.5      |     23.80        |   0.1657   |    125.95     |     99.67%       |   110000   |   1.8   |      |
 
 
 ## Intel Pentium CPU G4500 in WSL2 on ext4
