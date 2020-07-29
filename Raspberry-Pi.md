@@ -34,7 +34,7 @@ export BUILD_VDF_CLIENT=N
 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
-As noted above the Raspberry Pi is not cut out to be a Timelord or a plotter. It makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
+As noted above the Raspberry Pi is not cut out to be a Timelord. With our switch from AES to Chacha8 it is feasible to plot with the Pi but it's slow. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. It makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
 
 ## Installing and running the GUI
 
