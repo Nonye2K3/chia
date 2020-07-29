@@ -66,8 +66,8 @@ These results from various machines should give a sense of how long and how much
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
-| 30  |     67.4      |      143.6      |     23.80        |   0.1657   |    125.95     |     99.60%       |   default  |   1.8   | GiB temp re/writes 1282 |
-| 30  |     59.92     |      125.5      |     23.80        |   0.1657   |    125.95     |     99.67%       |   110000   |   1.8   | GiB temp re/writes 666 |
+| 30  |     67.4      |      143.6      |     23.80        |   0.1657   |    125.95     |     99.60%       |   default  |   1.8   | GiB tmp re/writes 1282 |
+| 30  |     59.92     |      125.5      |     23.80        |   0.1657   |    125.95     |     99.67%       |   110000   |   1.8   | GiB tmp re/writes 666 |
 
 
 ## Intel Pentium CPU G4500 in WSL2 on ext4
