@@ -5,7 +5,17 @@ These results from various machines should give a sense of how long and how much
 ## Dell Inspiron Desktop 
 * Intel Hexacore i5 8400
 * 8 GiB DDR4
-* Toshiba dt01aca100 - 1TB Hard Drive
+* Western Digital WD7500AYYS 750GB 7200 RPM
+* ~ write
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |     ---          |    ---     |    ---        |      ---         |     ---    |   ---   | ---  |
+| 32  |    1526.128   |      TBD        |    TBD           |   TBD      |   529         |     100  %.      |   default  |   1.9   | Using Native Window Plotter, not WSL2 |
+
+## Dell Inspiron Desktop 
+* Intel Hexacore i5 8400
+* 8 GiB DDR4
+* Toshiba dt01aca100 7200 RPM - 1TB Hard Drive
 * ~ write
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
