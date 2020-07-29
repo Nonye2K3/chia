@@ -61,8 +61,8 @@ These results from various machines should give a sense of how long and how much
 ## Fedora Server 32
 * AMD Ryzen 7 3800x
 * 128 GB RAM
-* NVME SSD (Microcenter brand, PCIe v4, raid0 over 2 x 1 TB)
-* Iozone v490 (ext4, 256 kiB blocks, fsynced to storage): 2638 MiB/s seq write, 4554 MiB/s seq reads
+* NVME SSD (Microcenter brand, PCIe v4, single 1 TB)
+* --
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
