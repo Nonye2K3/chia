@@ -20,7 +20,7 @@ These results from various machines should give a sense of how long and how much
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |     ---          |    ---     |    ---        |      ---         |     ---    |   ---   | ---  |
-| 32  |    1001.865   |      TBD        |    TBD           |   TBD      |   529         |     100  %.      |   default  |   1.9   | Using Native Window Plotter, not WSL2 |
+| 32  |    1001.865   |      2572.58    |    101.3         |   0.039    |   529         |     100  %.      |   default  |   1.9   | Using Native Window Plotter, not WSL2 |
 
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
