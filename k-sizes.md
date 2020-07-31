@@ -10,7 +10,7 @@ These results from various machines should give a sense of how long and how much
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |     ---          |    ---     |    ---        |      ---         |     ---    |   ---   | ---  |
-| 32  |    1526.128   |      TBD        |    TBD           |   TBD      |   529         |     100  %.      |   default  |   1.9   | Using Native Window Plotter, not WSL2 |
+| 32  |    1526.128   |      4253.52    |    101.3         |   0.024      |   529         |     100  %.      |   default  |   1.9   | Using Native Window Plotter, not WSL2 |
 
 ## Dell Inspiron Desktop 
 * Intel Hexacore i5 8400
