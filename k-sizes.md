@@ -2,6 +2,18 @@
 
 These results from various machines should give a sense of how long and how much space a plot will take on different hardware. The first section is from Beta 1.8 or newer. Historical data is below and is currently still useful at the Beta 1.8 stage. Please add yours here or post the details in the #testnet channel of the [Keybase Chat](https://keybase.io/team/chia_network.public). The theory and process of plotting are described in the [Chia Proof of Space Construction](https://www.chia.net/assets/proof_of_space.pdf) document.
 
+estimated space = 0.762 * k * 2^k bytes
+| k | space GiB | temp GiB | space GB | temp GB |
+| ---|---|---|---|---|
+| 28 |5.33 | 32.00 | 5.73 | 34.36 |
+| 29 |11.05 | 66.29 | 11.86 | 71.18 |
+| 30 |22.86 | 137.16 | 24.55 | 147.27 |
+| 31 |47.24 | 283.46 | 50.73 | 304.37 |
+| 32 |97.54 | 585.22 | 104.73 | 628.37 |
+| 33 |201.17 | 1207.01 | 216.00 | 1296.01 |
+| 34 |414.53 | 2487.17 | 445.10 | 2670.58 |
+| 35 |853.44 |5120.64 | 916.37 | 5498.25 |
+
 ## Dell Inspiron Desktop 
 * Intel Hexacore i5 8400
 * 8 GiB DDR4
