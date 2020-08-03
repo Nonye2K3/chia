@@ -52,6 +52,6 @@ Consider using `-n 1000` to get a better idea, but be warned that this will take
 For more detail, you can read about the DiskProver commands in [chiapos](https://github.com/Chia-Network/chiapos/blob/master/src/prover_disk.hpp)
 
 **What does the ratio of full proofs vs expected proofs mean?**
-* If the ratio is >1, your plot is relatively lucky plot, and probably has better odds of winning a block than another plot of equal space.
+* If the ratio is >1, your plot is relatively lucky, and probably has better odds of winning a block than another plot of equal space.
 * If the ratio is <1, your plot is relatively unlucky, and probably has worse odds of winning a block than another plot of equal space.
     * This shouldn't really concern you unless your ratio is <0.70
