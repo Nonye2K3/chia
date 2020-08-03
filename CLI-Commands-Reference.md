@@ -42,6 +42,10 @@ Command: `chia plots create [add flags and parameters]`
 
 -d [final dir]: Define final location for plot(s)
 
+**Example**
+
+`chia plots create -k 30 -b 4000 -t /location/to/temporary/directory -d /location/to/final/directory`
+
 ## [check](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/check_plots.py)
 
 First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`.
