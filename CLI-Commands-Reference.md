@@ -44,6 +44,8 @@ Command: `chia plots create [add flags and parameters]`
 
 **Example**
 
+Example below will create a k30 plot and use 4G of memory.
+
 `chia plots create -k 30 -b 4000 -t /location/to/temporary/directory -d /location/to/final/directory`
 
 ## [check](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/check_plots.py)
