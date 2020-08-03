@@ -1,6 +1,6 @@
 This page should provide additional high-level documentation and explanation beyond just `chia -h`.
 
-This is not meant to be comprehensive, because often the `-h` text is clear enough. We recommend fully investigating `-h` before looking elsewhere.
+This is not meant to be comprehensive, because often the `-h` text is clear enough. We recommend fully investigating with the `-h` switch before looking elsewhere.
 
 As with the rest of this project, this doc is a work-in-progress. Feel free to browse the [source code](https://github.com/Chia-Network/chia-blockchain/tree/master/src/cmds) for more insight in the meantime.
 
@@ -28,7 +28,7 @@ Command: `chia plots create [add flags and parameters]`
 
 -k [size]: Define the size of the plot(s). For a list of k-sizes and creation times on various systems check out: [k-Sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 
--n [number of plots]: The number of plots that will be made. Be sure you calculate both final plot and temporary plot sizes.
+-n [number of plots]: The number of plots that will be made. Be sure you calculate both final plot and temporary plot sizes. These will be plotted sequentially.
 
 -b [memory buffer size MiB]: Define memory/RAM usage. Default is 2000 (2G). More RAM will marginally increase speed of plot creation.
 
@@ -36,11 +36,11 @@ Command: `chia plots create [add flags and parameters]`
 
 -p [pool pk]: Development tool. Disregard for non-development usage.
 
--t [tmp dir]: Define the temporary directory for plot creation.
+-t [tmp dir]: Define the temporary directory for plot creation. This is where the largest temp file will written. The file is normally about 5 times the size of the final plot.
 
--2 [tmp dir 2]: Define a secondary temporary directory for plot creation.
+-2 [tmp dir 2]: Define a secondary temporary directory for plot creation. This is the temporary file that the plotter writes the finalizing data to. Defaults to the final directory. This is useful if your `-t` directory is not large enough to have both temporary files or if your final directory is on a particularly slow filesystem.
 
--d [final dir]: Define final location for plot(s)
+-d [final dir]: Define final location for plot(s). This directory is auto added to your `~/.chia/VERSION/config/config.yaml` file. You can use `chia plots remove -d` to remove a final directory from the configuration.
 
 **Example**
 
@@ -74,6 +74,6 @@ Consider using `-n 1000` to get a better idea, but be warned that this will take
 For more detail, you can read about the DiskProver commands in [chiapos](https://github.com/Chia-Network/chiapos/blob/master/src/prover_disk.hpp)
 
 **What does the ratio of full proofs vs expected proofs mean?**
-* If the ratio is >1, your plot is relatively lucky, and probably has better odds of winning a block than another plot of equal space.
-* If the ratio is <1, your plot is relatively unlucky, and probably has worse odds of winning a block than another plot of equal space.
+* If the ratio is >1, your plot was relatively lucky for this run of challenges.
+* If the ratio is <1, your plot was relatively unlucky.
     * This shouldn't really concern you unless your ratio is <0.70
