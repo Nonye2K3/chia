@@ -22,9 +22,25 @@ If no old version exists, `init`:
 
 ## [create](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/create_plots.py)
 
-TO DO
-* Define if -n is in series or parallel
-* Define -t and -2 and -d, and add recommendations
+Command: `chia plots create [add flags and parameters]`
+
+**Flags**
+
+-k [size]: Define the size of the plot(s). For a list of k-sizes and creation times on various systems check out: [k-Sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
+
+-n [number of plots]: The number of plots that will be made. Be sure you calculate both final plot and temporary plot sizes.
+
+-b [memory buffer size MiB]: Define memory/RAM usage. Default is 2000 (2G). More RAM will marginally increase speed of plot creation.
+
+-f [farmer pk]: Development tool. Disregard for non-development usage.
+
+-p [pool pk]: Development tool. Disregard for non-development usage.
+
+-t [tmp dir]: Define the temporary directory for plot creation.
+
+-2 [tmp dir 2]: Define a secondary temporary directory for plot creation.
+
+-d [final dir]: Define final location for plot(s)
 
 ## [check](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/check_plots.py)
 
