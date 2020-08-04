@@ -30,7 +30,7 @@ Command: `chia plots create [add flags and parameters]`
 
 `-n` [number of plots]: The number of plots that will be made, in sequence. Once a plot is finished, it will be moved to the final location `-d`, before starting the next plot in the sequence.
 
-`-b` [memory buffer size MiB]: Define memory/RAM usage. Default is 2000 (2G). More RAM will marginally increase speed of plot creation. Please bear in mind, that this is what is allocated to the plotting algorithm alone, code, container, libraries etc. are on top, and will require more RAM.
+`-b` [memory buffer size MiB]: Define memory/RAM usage. Default is 2000 (2G). More RAM will marginally increase speed of plot creation. Please bear in mind that this is what is allocated to the plotting algorithm alone. Code, container, libraries etc. will require additional RAM from your system.
 
 `-f` [farmer pk]: Development tool. Disregard for non-development usage.
 
