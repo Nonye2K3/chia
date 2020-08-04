@@ -6,6 +6,8 @@ As with the rest of this project, this doc is a work-in-progress. Feel free to b
 
 # [init](https://github.com/Chia-Network/chia-blockchain/blob/master/src/cmds/init.py)
 
+Command: `chia init`
+
 First, `init` checks for old versions of chia installed in your ~/.chia directory.
 
 If so, `init` migrates these old files to the new version:
@@ -56,15 +58,17 @@ Example below will create a k30 plot and use 4G of memory.
 
 * It's objectively faster to plot on SSD's instead of HDD's. However, SSD's have significantly more limited lifespans, and early Chia testing has seemed to indicate that plotting on SSD's wears them out pretty quickly. Therefore, many Chia users have decided it's more "green" to plot in parallel on many HDD's at once.
 
+* Plotting is designed to be as efficient as possible. However, to prevent grinding attacks, farmers should not be able to create a plot within the average block interval. That's why there will be a minimum k-size (likely k30 or perhaps k31) on mainnet. k29 has been confirmed to be too small.
+
 ## [check](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/check_plots.py)
+
+Command: `chia plots check -n [num checks]`
 
 First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`.
 
 This will scan all of your plots sequentially. There's currently no way to specify to check any particular plot. If you'd like to do so, you'll either need to manually edit your config.yaml, or temporarily move all your other plots (except the desired plot) to another directory or subdirectory.
 
-If you don't include an `-n` integer, the default is 20. `-n` represents the number of challenges given. They're sequential from 0 to `-n`, not random.
-
-For instance, if `-n` is 20, then 20 challenges will be given to each plot.
+`-n` represents the number of challenges given. If you don't include an `-n` integer, the default is 20. For instance, if `-n` is 20, then 20 challenges will be given to each plot. The challenges count from 0 to `-n`, and are not random.
 
 Each plot will take each challenge and:
 * Get the quality for the challenge (Is there a proof of space? You should expect 1 proof per challenge, but there may be 0 or more than 1.)
@@ -85,3 +89,5 @@ For more detail, you can read about the DiskProver commands in [chiapos](https:/
 * If the ratio is >1, your plot was relatively lucky for this run of challenges.
 * If the ratio is <1, your plot was relatively unlucky.
     * This shouldn't really concern you unless your ratio is <0.70
+
+In theory, a plot with a ratio >> 1 would be more likely to win challenges on the blockchain. Likewise, a plot with a ratio << 1 would be less likely to win. However, in practice, this isn't actually going to be noticeable. "Number of plots" and "k-size" are much more influential factors at winning blocks than "proofs produced per challenge". Therefore, don't worry if your plot check ratios are less than 1, unless they're _significantly_ less than 1.
