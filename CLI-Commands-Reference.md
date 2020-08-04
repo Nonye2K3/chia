@@ -2,7 +2,7 @@ This page should provide additional high-level documentation and explanation bey
 
 This is not meant to be comprehensive, because often the `-h` text is clear enough. We recommend fully investigating with the `-h` switch before looking elsewhere.
 
-As with the rest of this project, this doc is a work-in-progress. Feel free to browse the [source code](https://github.com/Chia-Network/chia-blockchain/tree/master/src/cmds) for more insight in the meantime.
+As with the rest of this project, this doc is a work-in-progress. Feel free to browse the [source code](https://github.com/Chia-Network/chia-blockchain/tree/master/src/cmds) or the [Chia Proof of Space Construction Document](https://www.chia.net/assets/Chia_Proof_of_Space_Construction_v1.1.pdf) for more insight in the meantime.
 
 # [init](https://github.com/Chia-Network/chia-blockchain/blob/master/src/cmds/init.py)
 
@@ -26,27 +26,35 @@ Command: `chia plots create [add flags and parameters]`
 
 **Flags**
 
--k [size]: Define the size of the plot(s). For a list of k-sizes and creation times on various systems check out: [k-Sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
+`-k` [size]: Define the size of the plot(s). For a list of k-sizes and creation times on various systems check out: [k-Sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 
--n [number of plots]: The number of plots that will be made. Be sure you calculate both final plot and temporary plot sizes. These will be plotted sequentially.
+`-n` [number of plots]: The number of plots that will be made, in sequence. Once a plot is finished, it will be moved to the final location `-d`, before starting the next plot in the sequence.
 
--b [memory buffer size MiB]: Define memory/RAM usage. Default is 2000 (2G). More RAM will marginally increase speed of plot creation. Please bare in mind, that this is what is allocated to the plotting algorithm alone, code, container, libraries etc. is on top.
+`-b` [memory buffer size MiB]: Define memory/RAM usage. Default is 2000 (2G). More RAM will marginally increase speed of plot creation. Please bear in mind, that this is what is allocated to the plotting algorithm alone, code, container, libraries etc. are on top, and will require more RAM.
 
--f [farmer pk]: Development tool. Disregard for non-development usage.
+`-f` [farmer pk]: Development tool. Disregard for non-development usage.
 
--p [pool pk]: Development tool. Disregard for non-development usage.
+`-p` [pool pk]: Development tool. Disregard for non-development usage.
 
--t [tmp dir]: Define the temporary directory for plot creation. This is where the largest temp file will written. The file is normally about 5 times the size of the final plot.
+`-t` [tmp dir]: Define the temporary directory for plot creation. This is where Plotting Phase 1 (Forward Propagation) and Phase 2 (Backpropagation) both occur. The `-t` dir requires the largest working space: normally about 5 times the size of the final plot.
 
--2 [tmp dir 2]: Define a secondary temporary directory for plot creation. This is the temporary file that the plotter writes the finalizing data to. Defaults to the final directory. This is useful if your `-t` directory is not large enough to have both temporary files or if your final directory is on a particularly slow filesystem.
+`-2` [tmp dir 2]: Define a secondary temporary directory for plot creation. This is where Plotting Phase 3 (Compression) and Phase 4 (Checkpoints) occur. Depending on your OS, `-2` might default to either `-t` or `-d`. Therefore, if either `-t` or `-d` are running low on space, it's recommended to set `-2` manually. The `-2` dir requires an equal amount of working space as the final size of the plot.
 
--d [final dir]: Define final location for plot(s). This directory is auto added to your `~/.chia/VERSION/config/config.yaml` file. You can use `chia plots remove -d` to remove a final directory from the configuration.
+`-d` [final dir]: Define the final location for plot(s). Of course, `-d` should have enough free space as the final size of the plot. This directory is automatically added to your `~/.chia/VERSION/config/config.yaml` file. You can use `chia plots remove -d` to remove a final directory from the configuration.
 
 **Example**
 
 Example below will create a k30 plot and use 4G of memory.
 
-`chia plots create -k 30 -b 4000 -t /location/to/temporary/directory -d /location/to/final/directory`
+`chia plots create -k 30 -b 4000 -t /path/to/temporary/directory -d /path/to/final/directory`
+
+**Additional Plotting Notes**
+
+* During plotting, Phase 1 (Forward Propagation) and Phase 3 (Compression) tend to take the most time. Therefore, to maximize plotting speed, `-t` and `-2` should be on your fastest drives, and `-d` can be on a slow drive.
+
+* Currently, plotting only uses 1 CPU thread. Therefore, most Chia users have determined it's more efficient to plot in parallel, rather than series. You can do this by just having multiple plotting instances open.
+
+* It's objectively faster to plot on SSD's instead of HDD's. However, SSD's have significantly more limited lifespans, and early Chia testing has seemed to indicate that plotting on SSD's wears them out pretty quickly. Therefore, many Chia users have decided it's more "green" to plot in parallel on many HDD's at once.
 
 ## [check](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/check_plots.py)
 
@@ -59,7 +67,7 @@ If you don't include an `-n` integer, the default is 20. `-n` represents the num
 For instance, if `-n` is 20, then 20 challenges will be given to each plot.
 
 Each plot will take each challenge and:
-* Get the quality for the challenge (Is there a proof of space? There should be 1, but there may be 0 or more than 1.)
+* Get the quality for the challenge (Is there a proof of space? You should expect 1 proof per challenge, but there may be 0 or more than 1.)
 * Get the full proof(s) for the challenge if a proof was present
 * Validate that the # of full proofs matches the # of expected quality proofs.
 
