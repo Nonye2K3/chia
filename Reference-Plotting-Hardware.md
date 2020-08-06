@@ -4,4 +4,4 @@ These are machines that work well to quickly create plots in parallel. These ser
 
 |                  Machine                         |             Notes                      |
 |                    ---                           |              ---                       |
-| [Dell PowerEdge R730XD Server - 2X E5-2660v3-2.60GHz=20 Cores - 192GB RAM - Renewed](https://www.amazon.com/dp/B07XSD81TM/ref=cm_sw_r_cp_api_i_DBVkFbDVWXDFX) | Large DDR4 RAM and SAS drives |
+| [Dell PowerEdge R730XD Server - 2X E5-2660v3-2.60GHz=20 Cores - 192GB RAM - Renewed](https://www.amazon.com/dp/B07XSD81TM/) | Large DDR4 RAM and SAS drives |
