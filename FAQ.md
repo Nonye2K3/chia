@@ -71,7 +71,7 @@ If you use the GUI, it will migrate from release to release for you. For both th
 
 Yes, and here are the [instructions](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi). This project requires a 64 bit OS. Pi 3 and Pi 4. One can install and run harvesters, farmers, and full nodes on the Pi. Plotting on a Pi is feasible now with Chacha8 instead of AES but the Pi isn't quick. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. Pi is also not a candidate for Timelords or VDF clients... We have not tested Pi 3 yet so any feedback would be welcomed.
 
-# GUI won't start on my linux distribution.
+# Why won't the GUI start on my linux distribution?
 
 Some linux distros don't allow Electron to install correctly. The error is some variant of `The SUID sandbox helper binary was found, but is not configured correctly`. Details and fixes are in [Electron Issue 17972](https://github.com/electron/electron/issues/17972). Thanks [@kargakis](https://github.com/kargakis). If you use the `sysctl` workaround it does not persist so you'll want to see how to change that [here](https://unix.stackexchange.com/questions/25382/make-changes-to-sys-persistent-between-boots).
 
@@ -79,10 +79,14 @@ Some linux distros don't allow Electron to install correctly. The error is some 
 
 The codebase takes advantage of the newest async generators, especially async/await, which requires 3.7 or better. Python has a [walk through of Async IO](https://realpython.com/async-io-python/) and the related python 3.7 requirements.
 
-# UPnP Error
+# What is this UPnP Error?
 
 UPnP is an optional setting that allows users to open a port in their router and therefore allow other nodes to connect to them. This is not required, since your node can still make outgoing connections without UPnP.
 
 For some routers, UPnP is enabled automatically, but for others, you might have to go into your router settings and enable UPnP manually. Sometimes restarting the router is also necessary.
 
 Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 to your machine.
+
+# How do I rotate logs?
+
+In the past we recommended using logrotate but python did not interact nicely with it. Starting with 1.0 beta 6, chia-blockchain will automatically rotate every 20MB and save 7 previous log segments before deleting the oldest so you don't have to do anything.
