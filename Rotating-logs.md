@@ -1,1 +1,0 @@
-In the past we recommended using logrotate but python did not interact nicely with it. Starting with 1.0 beta 6, chia-blockchain will automatically rotate every 20MB and save 7 previous log segments before deleting the oldest.
