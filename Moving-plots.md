@@ -11,4 +11,4 @@ If you want to move plots to a different machine:
 5. Add the new plot directory. If you use command line, do `chia plots add -d '/Users/example/folder'`. If you use the UI, go to the Farmer tab and click "Add plots", and select the new directory.
 
 
-After following these steps, and restarting your farmer, the new plots should be visible. You can check if they are working by running `chia plots check` or using the UI and checking if the plots are visible. If you would like to farm on many machines, but only run one full node and farmer (to save disk space, bandwidth, and keep private keys safer), you should run one harvester per machine.
+After following these steps, and restarting your farmer, the new plots should be visible. You can check if they are working by running `chia plots check` or using the UI and checking if the plots are visible. If you would like to farm on many machines, but only run one full node and farmer (to save disk space, bandwidth, and keep private keys safer), you should [run one harvester per machine](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines).
