@@ -1,7 +1,7 @@
 Plots can be moved from one folder to another, and even to another machine. If you want to move plots within the same machine:
 
 1. Move the plot file 
-2. Add the new plot directory. On command line, do `chia plots add -d '/Users/example/folder'`. On the UI, go to the Farmer tab and click "Add plots", and select the new directory.
+2. Add the new plot directory. If you use command line, do `chia plots add -d '/Users/example/folder'`. If you use the UI, go to the Farmer tab and click "Add plots", and select the new directory.
 
 If you want to move plots to a different machine:
 1. Install chia on the new machine
