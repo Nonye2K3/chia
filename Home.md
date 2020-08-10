@@ -6,7 +6,7 @@
 * [Chia Project FAQ](https://www.chia.net/faq/)
 * [k and plot sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 * [Chialisp Documentation](https://chialisp.com/)
-* [Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords) and [Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Cluster-Timelord)
+* [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
 * [Release and notes](https://www.chia.net/releases/)
 
 
