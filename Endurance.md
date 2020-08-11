@@ -1,3 +1,5 @@
+## Estimated SSD wear out, endurance table
+
 | Vendor  | Model                  | $ASP   | User Capacity (GB): | raw NAND endurance (WAF=1) | rated TBW | DWPD over 5 years (calculated) | GiB/min | days to wear out (worst case) | days to wear out (WAF=1) | TiB plotted (worst case) | TiB plotted (TiB, WAF=1) | $/TiB plotted worst case | $/TiB plotted (WAF=1) |
 |---------|------------------------|--------|---------------------|----------------------------|-----------|--------------------------------|---------|-------------------------------|--------------------------|--------------------------|--------------------------|--------------------------|-----------------------|
 | Intel   | P4610                  | $400   | 1600                | 22677                      | 10613     | 3.24                           | 0.2     | 5093                          | 12222                    | 1432                     | 3438                     | $0.28                    | $0.12                 |
@@ -15,7 +17,7 @@
 
 estimated GiB per minute based off class of drives for drives that have yet to be tested, for the drives in the wiki I have added the measured numbers.
 
-Math
+## Math
 * NAND P/E Cycles = amount of program / erase cycles NAND can do before wearing out. NAND programs (writes) in pages and erases in blocks (contains many pages)
 * Wearing out - SSD no longer meeting UBER (uncorrectable bit error rate),  retention (keeping data safe while powered off), failure rate, or user capacity
 * UBER = number of data errors / number of bits read
@@ -25,4 +27,19 @@ Math
 * DWPD (drive writes per day): amount of data you can write to device each day of the warranty (typically 5 years) without wearing out
 * DWPD = TBW/365/5/drive capacity
 
+## Monitor Endurance in Linux
+
+Reading endurance with NVMe-CLI - this is the gas gauge that shows total endurance used 
+
+`sudo nvme smart-log /dev/nvme0 | grep percentage_used`
+	
+Reading amount of writes that the drive have actually done
+
+`sudo nvme smart-log /dev/nvme0 | grep data_units_written`
+	
+Bytes written = output * 1000 * 512B
+TBW = output * 1000 * 512B / (1000^4) or (1024^4)
+
+
+## Adding new models
 Please add your model string below if you want me to put it into my calculator and add to the list!
