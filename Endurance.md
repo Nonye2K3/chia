@@ -40,6 +40,14 @@ Reading amount of writes that the drive have actually done
 Bytes written = output * 1000 * 512B
 TBW = output * 1000 * 512B / (1000^4) or (1024^4)
 
+To find out NAND writes, you will have use the vendor plugins for NVMe-cli.
+
+`sudo nvme <vendor name> help`
+
+Example with an Intel SSD
+
+`sudo nvme intel smart-log-add /dev/nvme0`
+
 
 ## Adding new models
 Please add your model string below if you want me to put it into my calculator and add to the list!
