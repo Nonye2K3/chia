@@ -38,9 +38,10 @@ Reading amount of writes that the drive have actually done
 `sudo nvme smart-log /dev/nvme0 | grep data_units_written`
 	
 Bytes written = output * 1000 * 512B
+
 TBW = output * 1000 * 512B / (1000^4) or (1024^4)
 
-To find out NAND writes, you will have use the vendor plugins for NVMe-cli.
+To find out NAND writes, you will have use the vendor plugins for NVMe-CLI.
 
 `sudo nvme <vendor name> help`
 
