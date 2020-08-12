@@ -32,6 +32,12 @@ estimated GiB per minute based off class of drives for drives that have yet to b
 
 ## Monitor Endurance in Linux
 
+
+### NVMe
+https://github.com/linux-nvme/nvme-cli
+
+https://nvmexpress.org/open-source-nvme-management-utility-nvme-command-line-interface-nvme-cli/
+
 Reading endurance with NVMe-CLI - this is the gas gauge that shows total endurance used 
 
 `sudo nvme smart-log /dev/nvme0 | grep percentage_used`
@@ -51,6 +57,14 @@ To find out NAND writes, you will have use the vendor plugins for NVMe-CLI.
 Example with an Intel SSD
 
 `sudo nvme intel smart-log-add /dev/nvme0`
+
+
+### SATA
+In SATA you can use the following commands
+
+`sudo apt install smartmontools`
+
+`sudo smartctl -x /dev/sda | grep Logical`
 
 
 ## Adding new models
