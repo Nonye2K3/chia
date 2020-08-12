@@ -66,6 +66,14 @@ In SATA you can use the following commands
 
 `sudo smartctl -x /dev/sda | grep Logical`
 
+`sudo smartctl -a /dev/sda`
+
+looking for Media_Wearout_Indicator
+
+note this does also work for NVMe for basic SMART health info
+
+`sudo smartctl -a /dev/nvme0`
+
 
 ## Adding new models
 Please add your model string below if you want me to put it into my calculator and add to the list!
