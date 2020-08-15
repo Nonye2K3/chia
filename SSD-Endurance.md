@@ -74,6 +74,12 @@ note this does also work for NVMe for basic SMART health info
 
 `sudo smartctl -a /dev/nvme0`
 
+### SAS
+`sg_logs /dev/sg1 --page=0x11`
+
+look for
+
+```Percentage used endurance indicator: 0%```
 
 ## Adding new models
 Please add your model string below if you want me to put it into my calculator and add to the list!
