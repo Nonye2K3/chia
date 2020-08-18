@@ -14,7 +14,7 @@ Keys and configs from 1.8 should automatically migrate to 1.9. For more details,
 
 Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.9-win64/ChiaSetup-0.1.9.exe)
 
-As the Chia code signing certificate is new you will likely have to ask to keep the download a couple of times and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
+As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
 If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia. We also recommend deleting your `~\.chia` directory.
 
