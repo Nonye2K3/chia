@@ -62,7 +62,7 @@ estimated space = 0.762 * k * 2^k bytes
 * Intel(R) Xeon(R) E3-1270v6 CPU @ 3.80GHz (4 cores)
 * Samsung(R) M391A2K43BB1-CRC 32 GiB (2x16) PC4-19200 DDR4 2400Mhz ECC
 * Intel(R) P4510 NVMe SSD (2x) RAID 1
-* fio randwrite - ~380 MB/s
+* fio randwrite: ~380 MB/s
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
