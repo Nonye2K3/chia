@@ -58,6 +58,16 @@ estimated space = 0.762 * k * 2^k bytes
 | 32  |    674.69     |      1577.7     |     101.3        |   0.0642   |    523.93     |     63.74%.      |   default  |   1.8   |      |
 | 33  |    1738.2     |     4285.56     |     208.8        |   0.0487   |   1095.91     |     52.53%       |   default  |   1.8   |      |
 
+## Ubuntu 20.04.1 LTS
+* Intel(R) Xeon(R) E3-1270v6 CPU @ 3.80GHz (4 cores)
+* Samsung(R) M391A2K43BB1-CRC 32 GiB (2x16) PC4-19200 DDR4 2400Mhz ECC
+* Intel P4510 NVMe SSD (2x) RAID 1
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
+| 32  |    389.07     |      880.45     |     101.42        |   0.1152   |    524.14     |     85.38%      |   20000  |   1.10   |      |
+| 32  |    325.61     |     ?     |     ?        |   ?   |   ?     |     ?       |   20000  |   1.9   |      |
+
 ## Razer Blade Stealth 2018
 * Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 2001 Mhz, 4 Core(s), 8 Logical Processor(s)
 * 16 GiB RAM
