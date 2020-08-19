@@ -9,7 +9,7 @@ If you are using the MacOS or Windows builds, your keys are created during the f
 We believe that plots created with Beta 1.8 and newer version of the chia software will work on mainnet at launch. We are certain that the minimum plot size will be at most k=32. The original design assumed that k=30 will be the minimum plot size but there are no guarantees as we intend to speed up the time it takes to plot and that may mean we choose a minimum k value of 31 or 32.
 
 ## Windows
-There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.9\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`.
+There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.10\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`.
 
 ## MacOS
 There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `.chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`. 
