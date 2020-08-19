@@ -6,13 +6,13 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
  
 All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Plots from both Beta 1.8 and 1.9 should work on mainnet. 
 
-## Updating from 1.8:
+## Updating from 1.8 or 1.9:
 
-Keys and configs from 1.8 should automatically migrate to 1.9. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots)
+Keys and configs from 1.8 and 1.9 should automatically migrate to 1.10. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots).
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.9-win64/ChiaSetup-0.1.9.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.10-win64/ChiaSetup-0.1.10.exe)
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
@@ -23,7 +23,7 @@ You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/c
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.9-macos/Chia-0.1.9.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.10-macos/Chia-0.1.10.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
@@ -156,7 +156,7 @@ python3.7 -m venv venv
 ln -s venv/bin/activate
 . ./activate
 pip install --upgrade pip
-pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
+pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.2
 
 pip install chia-blockchain==1.0b8
 ```
@@ -194,9 +194,9 @@ python3.7 -m venv venv
 ln -s venv/bin/activate
 . ./activate
 pip install --upgrade pip
-pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
+pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.2
 
-pip install chia-blockchain==1.0b8
+pip install chia-blockchain==1.0b10
 ```
 # Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
@@ -226,13 +226,13 @@ Wheels can be in source or binary format. Binary wheels are specific to an opera
 Chia hosts some binary wheels that are not available from [PyPI](https://pypi.org/). This step is optional, but it may succeed where building from source can take a while or fail in hard-to-debug ways. If wheels are not available for your system, this step will fail. But you can try it anyway.
 
 ```bash
-pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.0
+pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.2
 ```
 
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0b9
+pip install chia-blockchain==1.0b10
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
