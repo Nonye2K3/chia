@@ -65,7 +65,7 @@ estimated space = 0.762 * k * 2^k bytes
 * fio randwrite: ~380 MB/s
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ------  |
 | 32  |    343.18     |     838.89     |     101.38        |   0.1209   |   621.71     |     84.43%       |   20000  |   1.10   |      used cli -f -p |
 | 32  |    378.90     |      869.49     |     101.37        |   0.1166   |    524.03     |     85.24%      |   20000  |   1.9   |      used cli -f -p |
 
