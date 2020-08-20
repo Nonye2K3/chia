@@ -108,7 +108,7 @@ Therefore, there is a limit to how many valid blocks will get propagated at each
 This is an important network parameter that is talked about extensively in the greenpaper, since a low tip number will increase the advantage of large farmers.
 
 ### Unfinished Blocks
-When a full node receives an unfinished block, is is propagated if:
+When a full node receives an unfinished block, it is propagated if:
 1. It is a child of one of the tips
 2. Is the current unfinished block leader, or not expected to be finished much slower than the leader
 
