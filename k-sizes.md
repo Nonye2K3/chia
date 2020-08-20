@@ -103,6 +103,17 @@ estimated space = 0.762 * k * 2^k bytes
 | 30  |     59.92     |      125.5      |     23.80        |   0.1657   |    125.95     |     99.67%       |   110000   |   1.8   | GiB tmp re/writes 666 |
 
 
+## Fedora Server 32
+* AMD Ryzen 7 3700x
+* 128 GB RAM
+* NVME SSD (Microcenter brand, PCIe v4, single 1 TB)
+* --
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
+| 32  |      271      |      589.9      |     101.379      |   0.1719   |    628.046    |     96.53%       |    22300   |   1.10   | --- |
+
+
 ## Intel Pentium CPU G4500 in WSL2 on ext4
 * Intel Pentium CPU G4500 @ 3.50Ghz - no AVX
 * 8 GB RAM
