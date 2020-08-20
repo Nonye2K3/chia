@@ -66,8 +66,8 @@ estimated space = 0.762 * k * 2^k bytes
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
-| 32  |    343.18     |     838.89     |     101.38        |   0.1209   |   621.71     |     84.43%       |   20000  |   1.10   |      |
-| 32  |    378.90     |      869.49     |     101.37        |   0.1166   |    524.03     |     85.24%      |   20000  |   1.9   |      |
+| 32  |    343.18     |     838.89     |     101.38        |   0.1209   |   621.71     |     84.43%       |   20000  |   1.10   |      used cli -f -p |
+| 32  |    378.90     |      869.49     |     101.37        |   0.1166   |    524.03     |     85.24%      |   20000  |   1.9   |      used cli -f -p |
 
 ## Razer Blade Stealth 2018
 * Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz, 2001 Mhz, 4 Core(s), 8 Logical Processor(s)
