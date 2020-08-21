@@ -101,7 +101,7 @@ estimated space = 0.762 * k * 2^k bytes
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
 | 32  |      270.6    |      589.9      |     101.379      |   0.1719   |    628.046    |     96.53%       |    22,300   |   1.10   | --- |
-| 32  |      259.9    |      575.2      |     101.379      |   0.1763   |    628.046    |     96.53%       |    73,800   |   1.10   | --- |
+| 32  |      259.9    |      575.2      |     101.379      |   0.1763   |    628.046    |     94.55%       |    73,800   |   1.10   | --- |
 
 
 ## Intel Pentium CPU G4500 in WSL2 on ext4
