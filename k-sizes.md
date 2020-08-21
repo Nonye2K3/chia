@@ -89,19 +89,7 @@ estimated space = 0.762 * k * 2^k bytes
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
-| 32  |     429.9     |      935.87     |     101.34       |   0.1083   |    523.96*    |     94.36%.      |   default  |   1.8   | *Actual working space 10GiB higher     |
-
-
-## Fedora Server 32
-* AMD Ryzen 7 3800x
-* 128 GB RAM
-* NVME SSD (Microcenter brand, PCIe v4, single 1 TB)
-* --
-
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
-| 30  |     67.4      |      143.6      |     23.80        |   0.1657   |    125.95     |     99.60%       |   default  |   1.8   | GiB tmp re/writes 1282 |
-| 30  |     59.92     |      125.5      |     23.80        |   0.1657   |    125.95     |     99.67%       |   110000   |   1.8   | GiB tmp re/writes 666 |
+| 32  |     429.9     |      935.87     |     101.34       |   0.1083   |    523.96*    |     94.36%.      |   default  |   1.8   |      |
 
 
 ## Fedora Server 32
