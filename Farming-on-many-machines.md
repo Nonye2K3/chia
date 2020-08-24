@@ -5,7 +5,7 @@ The architecture is composed of one machine which runs the farmer, full node, an
 ```                                          
                                        _____  Harvester 1
                                       /
-Chia network  --------   Main machine ------  Harvester 2
+other network peers  --------   Main machine ------  Harvester 2
                                       \_____  Harvester 3
 ```
 1. First, make sure Chia is installed on all machines. Ensure you have private keys by running `chia keys show`. 
