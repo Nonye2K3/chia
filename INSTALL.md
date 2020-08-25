@@ -6,13 +6,13 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
  
 All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Plots from both Beta 1.8 and 1.9 should work on mainnet. 
 
-## Updating from 1.8 or 1.9:
+## Updating from 1.8 - 1.10:
 
-Keys and configs from 1.8 and 1.9 should automatically migrate to 1.10. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots).
+Keys and configs from 1.8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots).
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.10-win64/ChiaSetup-0.1.10.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.11-win64/ChiaSetup-0.1.11.exe)
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
@@ -23,7 +23,7 @@ You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/c
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.10-macos/Chia-0.1.10.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.11-macos/Chia-0.1.11.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
