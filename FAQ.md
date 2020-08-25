@@ -39,9 +39,10 @@ A VDF, also known as a proof of time, is a sequential operation that takes a pre
 
 # How do I tell if I'm farming correctly?
 
-If you see plots in the Plots section of the GUI - your plots are being farmed. You will see challenges as they come through in the Challenges section however you usually will not have a proof worth sending to the network. 
+If you see plots in the Plots section of the Farm page in the GUI - your plots are being farmed. You will see challenges as they come through in the Challenges section however you usually will not have a proof worth sending to the network. You can additionally check the tooltip on the top right of the "Total size of local plots" on the Farm view and it will tell you how much space is being farmed and statistically how long it should take - on average - to win a block.
 
 # How do I know if my plots are OK?
+
 Run `chia plots check -n 100` to try 100 sample challenges for each plot. Each of your plots should return a number around 100, which means it found 100 proofs of space. If some of your plots are missing for some reason you may need to add the directory they are in to your config.yaml file. That can be done in the GUI with the MANAGE PLOT DIRECTORIES button or on the command line with `chia plots add -d [directory]`.
 
 # How do I send or receive a transaction?
