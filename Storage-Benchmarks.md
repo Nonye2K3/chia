@@ -27,7 +27,6 @@ iodepth=256
 numjobs=1
 rw=read
 runtime=60
-write_hist_log=rd_qd_256_128k_1w_clat_hist.log
 write_bw_log=seq_read_bw.log
 
 [wr_qd_256_128k_1w]
