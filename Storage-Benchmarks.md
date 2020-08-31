@@ -36,6 +36,7 @@ iodepth=256
 numjobs=1
 rw=write
 runtime=60
-write_bw_log=seq_write_bw.log```
+write_bw_log=seq_write_bw.log
+```
 
 run `sudo fio chia.fio`
