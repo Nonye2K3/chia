@@ -165,6 +165,13 @@ estimated space = 0.762 * k * 2^k bytes
 | 32  |   1857.45     |     3954.88     |     101.3680     |   0.0256   |    524.017    |     93.68%.      |     2GiB    |   1.8   |      |
 | 32  |   1869.62     |     4311.85     |     101.2990     |   0.0235   |    523.855    |     85.38%.      |   2.5GiB    |   1.9   |      |
 
+* Storage: Seagate Backup Plus 10 TB (USB 3.0 connection)
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting  | Version | Note |
+| --- |      ---      |        ---      |      ---         |     ---    |     ---       |      ---         |     ---     |   ---   | ---  |
+| 32  |   1649.80     |     3677.30     |     101.3180     |   0.0276   |    532.690    |     94.09%.      |   1.8GiB    |   1.10  |      |
+
+
 # Historical k sizes - Pre Beta 8 - incorrectly listed as GB - most should be GiB
 
 ## MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
