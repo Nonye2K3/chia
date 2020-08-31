@@ -7,7 +7,8 @@
 
 save this file as a job file called "chia.fio" or whatever you want, and change filename to the path of the drive or RAID volume that you want to test
 
-```[global]
+```
+[global]
 bs=128K
 iodepth=256
 direct=1
