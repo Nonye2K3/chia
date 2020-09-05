@@ -14,16 +14,16 @@ estimated space = 0.762 * k * 2^k bytes
 | 34 |414.53 | 2487.17 | 445.10 | 2670.58 |
 | 35 |853.44 |5120.64 | 916.37 | 5498.25 |
 
-## Dell Inspiron Desktop 
-* Intel Hexacore i5 8400
-* 8 GiB DDR4
-* Western Digital WD7500AYYS 750GB 7200 RPM
-* ~ write
+## AWS EC2 r5d.8xlarge - Pre release Beta 12
+* Processor: 32 Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
+* Memory: 256GiB
+* Storage: tempdir: Amazon.com, Inc. NVMe SSD (Ubuntu 20.04) finaldir: Amazon.com, Inc. NVMe SSD
+* ~ - MB/s write
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting |  Version  | Note |
 | --- |      ---      |        ---      |     ---          |    ---     |    ---        |      ---         |     ---    |    ---    | ---  |
-| 30  |     84.9      |       168.1     |     23.8         |   0.142    |    67.3       |     98.11 %      |   300 GiB  | pre 1.12  |      |
-| 31  |     178.1     |       359.0     |     49.2         |   0.140    |   135.0       |     95.52 %      |   300 GiB  | pre 1.12  |      |
+| 30  |     84.9      |       168.1     |     23.8         |   0.142    |    67.3       |     98.11 %      |   192 GiB  | pre 1.12  |      |
+| 31  |     178.1     |       359.0     |     49.2         |   0.140    |   135.0       |     95.52 %      |   192 GiB  | pre 1.12  |      |
 | 32  |               |                 |                  |            |               |                  |            | pre 1.12  |      |
 
 ## Dell Inspiron Desktop 
