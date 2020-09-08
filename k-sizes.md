@@ -22,9 +22,9 @@ estimated space = 0.762 * k * 2^k bytes
 
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting |  Version  | Note |
 | --- |      ---      |        ---      |     ---          |    ---     |    ---        |      ---         |     ---    |    ---    | ---  |
-| 30  |     84.9      |       168.1     |     23.8         |   0.142    |    67.3       |     98.11 %      |   192 GiB  | pre 1.12  |      |
+| 30  |      84.9     |       168.1     |     23.8         |   0.142    |    67.3       |     98.11 %      |   192 GiB  | pre 1.12  |      |
 | 31  |     178.1     |       359.0     |     49.2         |   0.140    |   135.0       |     95.52 %      |   192 GiB  | pre 1.12  |      |
-| 32  |               |                 |                  |            |               |                  |            | pre 1.12  |      |
+| 32  |     399.5     |       796.0     |    101.2         |   0.127    |   391.0       |     92.50 %      |   192 GiB  | pre 1.12  |      |
 
 ## Dell Inspiron Desktop 
 * Intel Hexacore i5 8400
