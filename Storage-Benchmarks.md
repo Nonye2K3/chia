@@ -1,6 +1,6 @@
 # Notes
 To have reproducible results the aim should be to limit caching effects. For that:
-* Test data should be forced to storage and larger than flash drive caches
+* Test data should be forced to storage and larger than flash drive's internal caches
 * Block caches should be emptied between tests
 
 # [FIO](https://fio.readthedocs.io/en/latest/fio_doc.html)
