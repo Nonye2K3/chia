@@ -3,7 +3,7 @@ To have reproducible results the aim should be to limit caching effects. For tha
 * Test data should be forced to storage and larger than flash drive caches
 * Block caches should be emptied between tests
 
-# FIO
+# [FIO](https://fio.readthedocs.io/en/latest/fio_doc.html)
 
 `sudo apt update`
 `sudo apt install fio`
