@@ -3,6 +3,9 @@
 working model can be found here
 https://docs.google.com/spreadsheets/d/1mNUYRWeJUaijEZXupwP5k6IuATZGj1FB/edit#gid=1268465441
 
+overview of SSD endurance testing from JEDEC industry standard here
+https://www.jedec.org/sites/default/files/Alvin_Cox%20%5BCompatibility%20Mode%5D_0.pdf
+
 | Vendor  | Model                  | $ASP   | User Capacity (GB): | estimated NAND endurance (TBW, WAF=1) | Spec sheet rated TBW | DWPD over 5 years (calculated) | GiB/min | days to wearout | days to wear out (WAF=1) | amount plotted (TiB) | amount plotted (TiB, WAF=1) | $/TiB plotted worst case (high WAF) | $/TiB plotted best case (WAF=1) |
 |---------|------------------------|--------|---------------------|---------------------------------------|----------------------|--------------------------------|---------|-----------------|--------------------------|----------------------|-----------------------------|-------------------------------------|---------------------------------|
 | Intel   | P4610                  | $400   | 1600                | 22677                                 | 10613                | 3.24                           | 0.2     | 463             | 1111                     | 130                  | 313                         | $3.07                               | $1.28                           |
