@@ -18,7 +18,7 @@ As the Chia code signing certificate is new you will likely have to ask to keep 
 
 If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia.
 
-Note that there is a bug in Beta 12. If you do not have pre-existing private keys, you will need to generate them on the command line. If you get "Connecting to wallet" and a spinner that doesn't stop then shut down the application. Then open a powershell and do the following:
+**Note that there is a bug in Beta 12.** If you do not have pre-existing private keys, you will need to generate them on the command line. If you get "Connecting to wallet" and a spinner that doesn't stop then shut down the application. Then open a powershell and do the following:
 ```
 cd ~\AppData\Local\Chia-Blockchain\app-0.1.12\resources\app.asar.unpacked\daemon\
 
@@ -35,7 +35,7 @@ Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
-Note that there is a bug in Beta 12. If you do not have pre-existing private keys, you will need to generate them on the command line. If you get "Connecting to wallet" and a spinner that doesn't stop then shut down the application. Then open a Terminal and do the following:
+**Note that there is a bug in Beta 12.** If you do not have pre-existing private keys, you will need to generate them on the command line. If you get "Connecting to wallet" and a spinner that doesn't stop then shut down the application. Then open a Terminal and do the following:
 ```
 cd /Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon
 
