@@ -74,4 +74,5 @@ make linux-AMD64
 /opt/iozone3_490/src/current/iozone -e -r 256 -s 32G -i 0 -i 1 -i 2 -i 8 -f /chia/scratch/disk01/tfile -U /chia/scratch/disk01
 ```
 ## Run multi threaded
-tbd
+* Assume the test drive or volume is mounted as **/chia/scratch/disk01**
+* -I Use DIRECT I/O for all file operations. Tells the filesystem that all operations are to bypass the buffer cache and go directly to disk. This also will use VX_DIRECT on VxFS, and O_DIRECT on Linux, and directio() on Solaris.
