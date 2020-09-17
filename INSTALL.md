@@ -62,6 +62,19 @@ cd electron-react
 npm run build
 npm run electron
 
+#Update from previous version
+
+cd chia-blockchain
+chia stop all
+deactivate
+git pull
+sh install.sh
+
+. ./activate
+cd electron-react
+npm run build
+npm run electron
+
 ```
 # WSL2
 
