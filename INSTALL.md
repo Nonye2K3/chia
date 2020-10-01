@@ -6,13 +6,13 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
  
 All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Plots from both Beta 1.8 and newer should work on mainnet. 
 
-## Updating from 1.8 - 1.12:
+## Updating from 1.8 - 1.13:
 
 Keys and configs from 1.8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Beta 12/13's blockchain is new and does not bring forward previous test chia.**
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.13-win64/ChiaSetup-0.1.13.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.14-win64/ChiaSetup-0.1.14.exe)
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
@@ -23,7 +23,7 @@ You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/c
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.13-macos/Chia-0.1.13.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.14-macos/Chia-0.1.14.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
@@ -48,8 +48,6 @@ Install dependencies for Ubuntu 20.04 LTS. If you are installing on Ubuntu 18.04
 ```bash
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y  python3.8-venv python3.8-distutils git
-sudo apt-get install -y npm nodejs
 
 # Checkout the source and install
 git clone https://github.com/Chia-Network/chia-blockchain.git
@@ -58,9 +56,11 @@ cd chia-blockchain
 sh install.sh
 
 . ./activate
+
+sh install-gui.sh
+
 cd electron-react
-npm run build
-npm run electron
+npm run electron &
 
 #Update from previous version
 
@@ -71,9 +71,11 @@ git pull
 sh install.sh
 
 . ./activate
+
+sh install-gui.sh
+
 cd electron-react
-npm run build
-npm run electron
+npm run electron &
 
 ```
 # WSL2
@@ -106,8 +108,7 @@ Install Ubuntu 20.04 LTS from the Microsoft Store and run it and complete its in
 Then follow the steps below which are the same as the usual Ubuntu instructions above with a target of Python 3.8.
 ```bash
 sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install python3.8-venv python3.8-distutils git -y
+sudo apt-get upgrade -y
 
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
@@ -171,7 +172,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.2
 
-pip install chia-blockchain==1.0b8
+pip install chia-blockchain==1.0b14
 ```
 
 # CentOS/RHEL 7.7 or newer
@@ -209,7 +210,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.2
 
-pip install chia-blockchain==1.0b13
+pip install chia-blockchain==1.0b14
 ```
 # Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
@@ -245,7 +246,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0b13
+pip install chia-blockchain==1.0b14
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
