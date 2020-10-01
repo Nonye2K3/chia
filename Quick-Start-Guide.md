@@ -9,7 +9,7 @@ If you are using the MacOS or Windows builds, your keys are created during the f
 We believe that plots created with Beta 1.8 and newer version of the chia software will work on mainnet at launch. We are certain that the minimum plot size will be at most k=32. The original design assumed that k=30 will be the minimum plot size but testing on faster plotting algorithims has ruled it out. We are speeding up the time it takes to plot and have significantly decreased the temporary space needed starting in Beta 12. We will choose a minimum k value of 31 or 32 but we are confident that 32 will certainly work.
 
 ## Windows
-There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.13\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`.
+There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.14\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`.
 
 ## MacOS
 There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `.chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`. 
@@ -38,17 +38,17 @@ chia keys generate
 To run a full node on port 8444, and connect to the testnet, run the following command. Logs are usually at ~/.chia/VERSION/logs/debug.log or ~\.chia\VERSION\logs\debug.log on Windows
 
 ```bash
+sh install-gui.sh
 cd electron-react
-npm run build
-npm run electron
+npm run electron &
 ```
 
 Farmers are entities in the network who use their drive space to try to create
 blocks (like Bitcoin's miners), and earn block rewards. 
 
-You can use the command line tools and change the working directories and output directory for plotting, with the "-t" (temp), "-2" (second temp), and "-d" (destination) arguments to the `chia plots create` command. `-n 2` will create two plots of type k=29 and take about 6 hours on NVMe drives in the example below.
+You can use the command line tools and change the working directories and output directory for plotting, with the "-t" (temp), "-2" (second temp), and "-d" (destination) arguments to the `chia plots create` command. `-n 2` will create two plots of type k=32 and take about 12 hours on NVMe drives in the example below.
 ```bash
-chia plots create -k 29 -n 2
+chia plots create -k 32 -n 2
 chia plots check -n 100
 ```
 Note that in the dev build the commands are `chia plots create` and `chia plots check`.
@@ -73,7 +73,7 @@ chia start sim
 ```
 
 ## Tips
-Ubuntu 18.04 LTS or newer, Amazon Linux 2, and CentOS 7.7 or newer are the
+Ubuntu 20.04 LTS or newer, Amazon Linux 2, and CentOS 7.7 or newer are the
 easiest linux install environments.
 
 UPnP is enabled by default to open port 8444 for incoming connections.
