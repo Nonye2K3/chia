@@ -1,4 +1,4 @@
-# Warning - since release of Beta 14 on the 1st of October 2020 - all the below data is outdated and obsolete. It only serve as historical data.
+# Warning - since release of Beta 14 on the 1st of October 2020. All the below data is outdated and obsolete. It only serve as historical data.
 
 # Various k size statistics - Current - Beta 8 and newer
 
