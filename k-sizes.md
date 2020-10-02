@@ -1,4 +1,6 @@
-# Warning - since release of Beta 14 on the 1st of October 2020. All the below data is outdated and obsolete. It only serve as historical data.
+# Warning
+Since the release of Beta 14 on the 1st of October 2020. All the below data is outdated and obsolete. It only serve as historical data.
+One exception is the final .plot size of K values
 
 # Various k size statistics - Current - Beta 8 and newer
 
