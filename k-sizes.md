@@ -6,6 +6,18 @@ One exception is the final .plot size of k values. To get some insight into the 
 
 There was an oversight in Beta 14. For plots larger than k=32 the default buffer will not be enough to complete a plot. For k=33 a `-b 3077` is the absolute minimum needed with the rest of the defaults. A `-b 3139` will have better results by completing far more sorts in memory. More recommendations for 34-36 coming soon.
 
+## mini ITX NAS build
+* Processor: Intel(R) Core(TM) i5-9600K CPU @ 4.20GHz
+* Memory: 2x 16GiB DIMM DDR4 Synchronous Unbuffered (Unregistered) 2667 MHz
+* Storage: -t Intel SSD DC P4600 Series, 3.2TB NVMe
+
+| k  | Phase 1 (min) | Plot time (min) | Plot size (GiB) | GiB/minute  | working (GiB) | CPU Utilization (phase 1) | CPU Total | -b setting              | Version | Note                  |
+|----|---------------|-----------------|-----------------|-------------|---------------|---------------------------|-----------|-------------------------|---------|-----------------------|
+| 32 | 130.1166667   | 359.6521333     | 101.36          | 0.281827885 | 286.647       | 172.71                    | 123.08    |  -b 5000 -u 128 -r 4 -t | b14     | running 5 in parallel |
+| 32 | 155.2833333   | 389.4519833     | 101.326         | 0.260175848 | 286.58        | 150.33                    | 116.86    |  -b 5000 -u 128 -r 4 -t | b14     |                       |
+| 32 | 144.0666667   | 378.3778167     | 101.322         | 0.267779969 | 286.573       | 159.03                    | 119.24    |  -b 5000 -u 128 -r 4 -t | b14     |                       |
+
+
 # Various k size statistics - Current - Beta 8 and newer
 
 These results from various machines should give a sense of how long and how much space a plot will take on different hardware. The first section is from Beta 1.8 or newer. Historical data is below and is currently still useful at the Beta 1.8 stage. Please add yours here or post the details in the #testnet channel of the [Keybase Chat](https://keybase.io/team/chia_network.public). The theory and process of plotting are described in the [Chia Proof of Space Construction](https://www.chia.net/assets/proof_of_space.pdf) document.
