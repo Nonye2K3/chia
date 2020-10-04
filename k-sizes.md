@@ -6,6 +6,17 @@ One exception is the final .plot size of k values. To get some insight into the 
 
 There was an oversight in Beta 14. For plots larger than k=32 the default buffer will not be enough to complete a plot. For k=33 a `-b 3077` is the absolute minimum needed with the rest of the defaults. A `-b 3139` will have better results by completing far more sorts in memory. More recommendations for 34-36 coming soon.
 
+## i9-9900 Gaming Desktop, Z390
+* Processor: Intel(R) Core(TM) i9-9900 CPU @ 3.10GHz (turbo up to 5GHz)
+* Memory: 2x 32GiB DIMM DDR4 2666MHz
+* Motherboard: Asus TUF Z390-PRO GAMING
+* Storage: -t Intel SSD DC P4600 Series, 3.2TB NVMe, first run on 750GB Optane P4800X
+
+| k  | Phase 1 (min) | Plot time (min) | Plot size (GiB) | GiB/minute  | working (GiB) | CPU Utilization (phase 1) | CPU Total | -b setting            | Version | Note                          |
+|----|---------------|-----------------|-----------------|-------------|---------------|---------------------------|-----------|-----------------------|---------|-------------------------------|
+| 32 | 68.52         | 248.12          | 101.32          | 0.408345698 | 286.57        | 365%                      | 171.36%   |  -b 4096 -u 128 -r 16 | b14     | single                        |
+| 32 | 204.37        | 596.60          | 101.30          | 0.169795508 | 286           | 184.7                     | 128.6     |  -b 5000 -u 128 -r 4  | b14     | 8 at once, 1.36 GiB/min total |
+
 ## mini ITX NAS build
 * Processor: Intel(R) Core(TM) i5-9600K CPU @ 4.20GHz
 * Memory: 2x 16GiB DIMM DDR4 Synchronous Unbuffered (Unregistered) 2667 MHz
