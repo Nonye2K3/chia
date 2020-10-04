@@ -15,3 +15,6 @@ other network peers  --------   Main machine ------  Harvester 2
 5. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the harvester's farmer_peer section
 6. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine's Farming tab.
 7. To stop the harvester, you run CLI `chia stop harvester`
+
+Note:
+Currently (beta14), the GUI doesn't show harvester plots currently. Best way to see if it's working is to check the log on your main machine `~/.chia/beta-1.0bx/log/debug.log` and see if you get messages like `[time stamp] harvester src.harvester           : WARNING  KeyError plot [directory of your harvester + plot file name] does not exist.`. That means it knows you have a plot that has a proof that can solve the challenge hash, but it can't find the file locally but it's reading the information from your harvesters properly, knowing the file exists somewhere in your harvester network.
