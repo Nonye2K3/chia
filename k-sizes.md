@@ -28,6 +28,15 @@ There was an oversight in Beta 14. For plots larger than k=32 the default buffer
 | 32 | 155.28   | 389.45     | 101.326         | 0.260 | 286.58        | 150.33                    | 116.86    |  -b 5000 -u 128 -r 4 -t | b14     |                       |
 | 32 | 144.07   | 378.38     | 101.32         | 0.268 | 286.573       | 159.03                    | 119.24    |  -b 5000 -u 128 -r 4 -t | b14     |                       |
 
+## Fedora Server 32
+* AMD Ryzen 7 3800x
+* 128 GB RAM
+* LVM Software RAID-0, 2x NVME Gigabyte Aorus 1TB
+* --
+
+|  k  | Phase 1 F1/Total (min) | Plot time (min) | Plot size (GiB) | GiB/minute | working (GiB) | CPU Utilization |   -b   |  -r  |  -u  |   -s    | Version |
+| --- |           ---          |        ---      |       ---       |     ---    |      ---      |      ---        |   ---  |  --- |  --- |   ---   | --- |
+| 32  |       4.36/89.80       |      266.63     |     101.337     |   0.1719   |    286.601    |    140.130%     | 26,700 |   8  |  128 | 1048576 | 1.14 |
 
 # Various k size statistics - Current - Beta 8 and newer
 
@@ -122,30 +131,6 @@ estimated space = 0.762 * k * 2^k bytes
 |  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
 | --- |      ---      |        ---      |      ---         |     ---    |     ---       |      ---         |     ---    |   ---   | ---  |
 | 31  |     278.5     |      613.09     |     49.134       |    0.0801  |    261.944    |     100.0%       |   default  |   1.8   |      |
-
-
-## Fedora Server 32
-* Intel i7 4770k (2013, 7 year old CPU)
-* 32 GB RAM
-* NVME SSD (Microcenter brand, raid0 over 2 x 512 GB)
-* Iozone v490 (ext4, 256 kiB blocks, fsynced to storage): 876 MiB/s seq write, 3464 MiB/s seq reads
-
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
-| 32  |     429.9     |      935.87     |     101.34       |   0.1083   |    523.96*    |     94.36%.      |   default  |   1.8   |      |
-
-
-## Fedora Server 32
-* AMD Ryzen 7 3700x
-* 128 GB RAM
-* NVME SSD (Microcenter brand, PCIe v4, single 1 TB)
-* --
-
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version | Note |
-| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   | ---  |
-| 32  |      270.6    |      589.9      |     101.379      |   0.1719   |    628.046    |     96.53%       |    22,300   |   1.10   | --- |
-| 32  |      259.9    |      575.2      |     101.379      |   0.1763   |    628.046    |     94.55%       |    73,800   |   1.10   | --- |
-
 
 ## Intel Pentium CPU G4500 in WSL2 on ext4
 * Intel Pentium CPU G4500 @ 3.50Ghz - no AVX
