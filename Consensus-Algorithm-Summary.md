@@ -71,7 +71,7 @@ a proof of space is "good" (requires low iterations), without fetching the whole
 lookup takes around 50ms on a slow HDD, while a proof of space lookup takes around 500ms. Note that this
 is like finding a good hash in Bitcoin, but does not require elecricity, and can be done instantly.
 
-* **k** is an integer between 30 and 59 which determines the size of a plot. For testnet **k** may be a lower value.
+* **k** is an integer between 32 and 50 which determines the size of a plot. For testnet **k** may be a lower value.
 
 * **expected_plot_size** is a function from k to the number of bytes on disk to store a plot of that size.
 Increasing k by one roughly doubles the size of the plot.
