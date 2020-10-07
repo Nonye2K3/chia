@@ -2,7 +2,7 @@
 Since the release of Beta 14 on the 1st of October 2020. All the below data is outdated and obsolete. It only serve as historical data.
 One exception is the final .plot size of k values. To get some insight into the new features of the plotter check out [this post](https://github.com/Chia-Network/chia-blockchain/discussions/436) in the [Discussions](https://github.com/Chia-Network/chia-blockchain/discussions) forum.
 
-**k=32 is now the minimum plot size** that will be eligible for mainnet at the end of the year.
+**k=32 is now the minimum plot size** that will be eligible for mainnet at the end of the year. [More here.](https://github.com/Chia-Network/chia-blockchain/discussions/452)
 
 ## Plots larger than k=32
 
