@@ -37,6 +37,7 @@ There was an oversight in Beta 14. For plots larger than k=32 the default buffer
 |  k  | Phase 1 F1/Total (min) | Plot time (min) | Plot size (GiB) | GiB/min | working (GiB) | CPU Phase 1 | CPU Total |   -b    |  -r  |  -u  |   -s    | Version |
 | --- |           ---          |        ---      |       ---       |    ---  |      ---      |     ---     |     ---   |   ---   |  --- |  --- |   ---   |   ---   |
 | 32  |       4.36/89.80       |      266.63     |     101.337     |  0.3800 |    286.601    |  220.730%   |  140.130% |  26,700 |   8  |  128 | 1048576 |   1.14  |
+| 32  |       4.33/84.82       |      263.58     |     101.418     |  0.3800 |    286.601    |  308.550%   |  166.400% |   5,000 |  16  |  128 |  65536  |   1.14  |
 
 # Various k size statistics - Current - Beta 8 and newer
 
