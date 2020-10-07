@@ -2,6 +2,8 @@
 Since the release of Beta 14 on the 1st of October 2020. All the below data is outdated and obsolete. It only serve as historical data.
 One exception is the final .plot size of k values. To get some insight into the new features of the plotter check out [this post](https://github.com/Chia-Network/chia-blockchain/discussions/436) in the [Discussions](https://github.com/Chia-Network/chia-blockchain/discussions) forum.
 
+**k=32 is now the minimum plot size** that will be eligible for mainnet at the end of the year.
+
 ## Plots larger than k=32
 
 There was an oversight in Beta 14. For plots larger than k=32 the default buffer will not be enough to complete a plot. For k=33 a `-b 3077` is the absolute minimum needed with the rest of the defaults. A `-b 3139` will have better results by completing far more sorts in memory. More recommendations for 34-36 coming soon.
