@@ -16,16 +16,9 @@ You can see some example plot sizes, times to plot, and working space needed bas
 
 # What k-size should you plot?
 
-We believe that plots created with Beta 1.8 and newer versions of the chia software will work on mainnet at launch. We are certain that the minimum plot size will be at most k=32. The original design assumed that k=30 would be the minimum plot size but recent testing has ruled it out. We intend to speed up the time it takes to plot and that will mean we choose a minimum k value of 31 or 32.
+We believe that plots created with Beta 1.8 and newer versions of the chia software will work on mainnet at launch. The minimum plot size is k=32. The original design assumed that k=30 would be the minimum plot size but recent testing has ruled it and k=31 out.
 
-The simple answer is:
-* k30 (and smaller) plots are definitely not going to work on mainnet.
-* k31 plots MIGHT work on mainnet.
-* k32 (and larger) plots will definitely work on mainnet.
-
-("Definitely" has the caveat understanding that this is beta software. There are no _plans_ to change the plot format, but if bugs are found, they'll need to be squashed.)
-
-The Chia dev team is going to great lengths to speed up the plotting process--from now until mainnet. The goal is to keep it so that the top-of-the-line hardware takes at least 1 hour to plot the minimum k-size, and there's no way to cheat the system. That's why the minimum k-size isn't clear yet--because the plotting speed improvements haven't been implemented yet.
+The Chia dev team is going to great lengths to speed up the plotting process--from now until mainnet. The goal is to keep it so that the top-of-the-line hardware takes at least 1 hour to plot the minimum k-size, and there's no way to cheat the system.
 
 # What is recommended for plotting?
 
