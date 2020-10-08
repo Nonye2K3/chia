@@ -16,7 +16,7 @@ Install the Windows installer - [Chia Blockchain Windows](https://download.chia.
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
-If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia.
+If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia though the installer will automatically uninstall the previous version.
 
 You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 
@@ -65,7 +65,7 @@ npm run electron &
 #Update from previous version
 
 cd chia-blockchain
-chia stop all
+chia stop all -d
 deactivate
 git pull
 sh install.sh
