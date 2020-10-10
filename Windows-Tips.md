@@ -16,3 +16,5 @@
 2. Windows and Python do not get along regarding reporting CPU % so you have to ignore it on Windows.
 
 3. You configuration and logs are found in `~\.chia\VERSION\`. You can tail your logs with `Get-Content ~\.chia\VERSION\log\debug.log -wait`. To see more of what is going on, set your log level in `conf\config.yaml` to INFO from WARNING and restart.
+
+4. Consider going through a Windows Update check and install updates prior to starting a plot process. It can take a while, and updates might initiate a reboot.
