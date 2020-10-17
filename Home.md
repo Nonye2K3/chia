@@ -18,7 +18,7 @@ Familiarity with either the Bitcoin or Ethereum protocols is assumed for this do
 The codebase is written in python, with several performance sensitive components (signatures, proof of space,
 and proof of time), written in C++.
 
-The items below remain useful but we are about to implement a significant revision to the consensus algorithm. We invite your comments and questions on our [working draft of new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit).
+The items below remain useful but we are about to implement a significant revision to the consensus algorithm. We invite your comments and questions on our **[working draft of new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit)**.
 
 1. [Consensus algorithm summary](https://github.com/Chia-Network/chia-blockchain/wiki/Consensus-Algorithm-Summary)
 2. [Block format](https://github.com/Chia-Network/chia-blockchain/wiki/Block-Format)
