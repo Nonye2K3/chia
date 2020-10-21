@@ -68,6 +68,10 @@ npm run electron &
 cd chia-blockchain
 chia stop all -d
 deactivate
+
+#Upgrading from Beta 15 to Beta 16 requires a switch from master to main
+
+git checkout main
 git pull
 sh install.sh
 
