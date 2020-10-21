@@ -37,9 +37,10 @@ cd chia-blockchain
 sh install.sh
 . ./activate
 
+sh install-gui.sh
+
 cd electron-react
-npm run build
-npm run electron
+npm run electron &
 ```
 
 # Ubuntu/Debian
