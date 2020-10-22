@@ -1,17 +1,17 @@
-1. To plot parallel in Windows you will need to use powershell. A generic example for Beta 15:
+1. To plot parallel in Windows you will need to use powershell. A generic example for Beta 16:
 > ```
-> cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.1.15\resources\app.asar.unpacked\daemon\
+> cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.1.16\resources\app.asar.unpacked\daemon\
 > start-process ./chia.exe -argumentlist "plots create yourParametersGoHere"
 > start-process ....
 > ....
 > ```
 >
-> A specific example, again using Beta 15:
+> A specific example, again using Beta 16:
 > ```
-> cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.1.15\resources\app.asar.unpacked\daemon\
+> cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.1.16\resources\app.asar.unpacked\daemon\
 > start-process ./chia.exe -argumentlist "plots create -k 32 -b 4508 -u 128 -r 4 -t d:\tempdrive1 -2 e:\tempdrive2 -d F:\plots -n 1"
 > ```
-> If you are using Beta 16 you would change the `Chia-Blockchain\app-0.1.15\resources\` section to `Chia-Blockchain\app-0.1.16\resources\` in the command above.
+> If you are using Beta 16 you would change the `Chia-Blockchain\app-0.1.16\resources\` section to `Chia-Blockchain\app-0.1.16\resources\` in the command above.
 
 2. Windows and Python do not get along regarding reporting CPU % so you have to ignore it on Windows.
 
