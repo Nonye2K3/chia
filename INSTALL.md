@@ -6,13 +6,13 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
  
 All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Plots from both Beta 1.8 and newer should work on mainnet. 
 
-## Updating from 1.8 - 1.15:
+## Updating from 1.8 - 1.16:
 
 Keys and configs from 1.8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Beta 12/13's blockchain is new and does not bring forward previous test chia.**
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.16-win64/ChiaSetup-0.1.16.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.17-win64/ChiaSetup-0.1.17.exe)
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
@@ -23,7 +23,7 @@ You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/c
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.16-macos/Chia-0.1.16.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.17-macos/Chia-0.1.17.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
@@ -69,7 +69,7 @@ cd chia-blockchain
 chia stop all -d
 deactivate
 
-#Upgrading from Beta 15 to Beta 16 requires a switch from master to main
+#Upgrading from Beta 15 to Beta 16 or 17 requires a switch from master to main
 
 git checkout main
 git pull
@@ -177,7 +177,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.2
 
-pip install chia-blockchain==1.0b16
+pip install chia-blockchain==1.0b17
 ```
 
 # CentOS/RHEL 7.7 or newer
@@ -215,7 +215,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2==5.1.2
 
-pip install chia-blockchain==1.0b16
+pip install chia-blockchain==1.0b17
 ```
 # Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
@@ -251,7 +251,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0b16
+pip install chia-blockchain==1.0b17
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
