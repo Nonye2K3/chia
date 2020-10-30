@@ -71,6 +71,7 @@ deactivate
 
 #Upgrading from Beta 15 to Beta 16 or 17 requires a switch from master to main
 
+git fetch
 git checkout main
 git pull
 sh install.sh
