@@ -85,9 +85,9 @@ Consider using `-n 1000` to get a better idea, but be warned that this will take
 
 Examples for using `-g`
 
-> Long directory name like `/mnt/chia/DriveA` can use `chia plots check -g DriveA`
-> Check only k33 plots you can use `chia plots check -g k33`
-> Check plots created on October 31, 2020 can use `chia plots check -g 2020-10-31`
+* Long directory name like `/mnt/chia/DriveA` can use `chia plots check -g DriveA`
+* Check only k33 plots you can use `chia plots check -g k33`
+* Check plots created on October 31, 2020 can use `chia plots check -g 2020-10-31`
 
 For more detail, you can read about the DiskProver commands in [chiapos](https://github.com/Chia-Network/chiapos/blob/master/src/prover_disk.hpp)
 
