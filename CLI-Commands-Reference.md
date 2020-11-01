@@ -66,13 +66,13 @@ Command: `chia plots check -n [num checks] -g [substring]`
 
 First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`.
 
-`-g` allows you to specify to check only plots with directory or file name containing case-sensitive [substring].
+`-g` check only plots with directory or file name containing case-sensitive [substring].
 **If `-g` isn't specified all plots in every plot directory in your config.yaml will be checked.**
 
 Examples for using `-g`
 
-* Long directory name like `/mnt/chia/DriveA` can use `chia plots check -g DriveA`
-* Check only k33 plots you can use `chia plots check -g k33`
+* Check plots within a long directory name like `/mnt/chia/DriveA` can use `chia plots check -g DriveA`
+* Check only k33 plots can use `chia plots check -g k33`
 * Check plots created on October 31, 2020 can use `chia plots check -g 2020-10-31`
 
 `-n` represents the number of challenges given. If you don't include an `-n` integer, the default is 20. For instance, if `-n` is 20, then 20 challenges will be given to each plot. The challenges count from 0 to `-n`, and are not random.
