@@ -58,15 +58,15 @@ Example below will create a k30 plot and use 4GB (note - not GiB) of memory.
 
 * It's objectively faster to plot on SSD's instead of HDD's. However, SSD's have significantly more limited lifespans, and early Chia testing has seemed to indicate that plotting on SSD's wears them out pretty quickly. Therefore, many Chia users have decided it's more "green" to plot in parallel on many HDD's at once.
 
-* Plotting is designed to be as efficient as possible. However, to prevent grinding attacks, farmers should not be able to create a plot within the average block interval. That's why there will be a minimum k-size (likely k30 or perhaps k31) on mainnet. k29 has been confirmed to be too small.
+* Plotting is designed to be as efficient as possible. However, to prevent grinding attacks, farmers should not be able to create a plot within the average block interval. That's why the minimum k-size is k32 on mainnet.
 
 ## [check](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/check_plots.py)
 
-Command: `chia plots check -n [num checks]`
+Command: `chia plots check -n [num checks] -g [substring]`
 
 First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`.
 
-This will scan all of your plots sequentially. There's currently no way to specify to check any particular plot. If you'd like to do so, you'll either need to manually edit your config.yaml, or temporarily move all your other plots (except the desired plot) to another directory or subdirectory.
+`-g` allows you to specify to check only plots with directory or file name containing case-sensitive [substring]. If `-g` isn't specified all plots in every directory will be checked.
 
 `-n` represents the number of challenges given. If you don't include an `-n` integer, the default is 20. For instance, if `-n` is 20, then 20 challenges will be given to each plot. The challenges count from 0 to `-n`, and are not random.
 
@@ -82,6 +82,12 @@ Therefore, if `-n` is 20, you would expect 20 proofs, but your plot may have mor
 Running the command with `-n 10` or `-n 20` is good for a very minor check, but won't actually give you much information about if the plots are actually high-quality or not.
 
 Consider using `-n 1000` to get a better idea, but be warned that this will take a fairly long time if you're scanning multiple plots.
+
+Examples for using `-g`
+
+> Long directory name like `/mnt/chia/DriveA` can use `chia plots check -g DriveA`
+> Check only k33 plots you can use `chia plots check -g k33`
+> Check plots created on October 31, 2020 can use `chia plots check -g 2020-10-31`
 
 For more detail, you can read about the DiskProver commands in [chiapos](https://github.com/Chia-Network/chiapos/blob/master/src/prover_disk.hpp)
 
