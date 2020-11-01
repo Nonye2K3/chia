@@ -66,7 +66,14 @@ Command: `chia plots check -n [num checks] -g [substring]`
 
 First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`.
 
-`-g` allows you to specify to check only plots with directory or file name containing case-sensitive [substring]. If `-g` isn't specified all plots in every directory will be checked.
+`-g` allows you to specify to check only plots with directory or file name containing case-sensitive [substring].
+**If `-g` isn't specified all plots in every directory will be checked.**
+
+Examples for using `-g`
+
+* Long directory name like `/mnt/chia/DriveA` can use `chia plots check -g DriveA`
+* Check only k33 plots you can use `chia plots check -g k33`
+* Check plots created on October 31, 2020 can use `chia plots check -g 2020-10-31`
 
 `-n` represents the number of challenges given. If you don't include an `-n` integer, the default is 20. For instance, if `-n` is 20, then 20 challenges will be given to each plot. The challenges count from 0 to `-n`, and are not random.
 
@@ -82,12 +89,6 @@ Therefore, if `-n` is 20, you would expect 20 proofs, but your plot may have mor
 Running the command with `-n 10` or `-n 20` is good for a very minor check, but won't actually give you much information about if the plots are actually high-quality or not.
 
 Consider using `-n 1000` to get a better idea, but be warned that this will take a fairly long time if you're scanning multiple plots.
-
-Examples for using `-g`
-
-* Long directory name like `/mnt/chia/DriveA` can use `chia plots check -g DriveA`
-* Check only k33 plots you can use `chia plots check -g k33`
-* Check plots created on October 31, 2020 can use `chia plots check -g 2020-10-31`
 
 For more detail, you can read about the DiskProver commands in [chiapos](https://github.com/Chia-Network/chiapos/blob/master/src/prover_disk.hpp)
 
