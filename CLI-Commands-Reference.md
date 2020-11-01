@@ -67,7 +67,7 @@ Command: `chia plots check -n [num checks] -g [substring]`
 First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`.
 
 `-g` allows you to specify to check only plots with directory or file name containing case-sensitive [substring].
-**If `-g` isn't specified all plots in every directory will be checked.**
+**If `-g` isn't specified all plots in every plot directory in your config.yaml will be checked.**
 
 Examples for using `-g`
 
