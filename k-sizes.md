@@ -9,6 +9,7 @@ One exception is the final .plot size of k values. To get some insight into the 
 There was an oversight in Beta 14. For plots larger than k=32 the default buffer will not be enough to complete a plot. For k=33 a `-b 3077` is the absolute minimum needed with the rest of the defaults. A `-b 3139` will have better results by completing far more sorts in memory. More recommendations for 34-36 coming soon.
 
 [Pre Beta 8](#Pre-Beta-8)
+[Beta 8 thru Beta 13](#Beta-8-thru-Beta-13)
 
 ## Pre-Beta 14 Data
 
@@ -47,7 +48,7 @@ The following are data collected from plotting using the older and slower beta b
 | 32  |       4.36/89.80       |      266.63     |     101.337     |  0.3800 |    286.601    |  220.730%   |  140.130% |  26,700 |   8  |  128 | 1048576 |   1.14  |
 | 32  |       4.33/84.82       |      263.58     |     101.418     |  0.3800 |    286.601    |  308.550%   |  166.400% |   5,000 |  16  |  128 |  65536  |   1.14  |
 
-## Various k size statistics - Current - Beta 8 thru Beta 13
+## Beta 8 thru Beta 13
 
 These results from various machines should give a sense of how long and how much space a plot will take on different hardware. The first section is from Beta 1.8 or newer. Historical data is below and is currently still useful at the Beta 1.8 stage. Please add yours here or post the details in the #testnet channel of the [Keybase Chat](https://keybase.io/team/chia_network.public). The theory and process of plotting are described in the [Chia Proof of Space Construction](https://www.chia.net/assets/proof_of_space.pdf) document.
 
