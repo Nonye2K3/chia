@@ -8,6 +8,8 @@ One exception is the final .plot size of k values. To get some insight into the 
 
 There was an oversight in Beta 14. For plots larger than k=32 the default buffer will not be enough to complete a plot. For k=33 a `-b 3077` is the absolute minimum needed with the rest of the defaults. A `-b 3139` will have better results by completing far more sorts in memory. More recommendations for 34-36 coming soon.
 
+[## Pre Beta 8](## Pre Beta 8)
+
 ## Pre-Beta 14 Data
 
 The following are data collected from plotting using the older and slower beta beta versions.
@@ -207,7 +209,9 @@ estimated space = 0.762 * k * 2^k bytes
 | 32  |   1649.80     |     3677.30     |     101.3180     |   0.0276   |    532.690    |     94.09%.      |   1.8GiB    |   1.10  |      |
 
 
-## Historical k sizes - Pre Beta 8 - incorrectly listed as GB - most should be GiB
+## Pre Beta 8
+
+incorrectly listed as GB - most should be GiB
 
 ### MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)
 * 2.8 GHz Quad-Core Intel Core i7
