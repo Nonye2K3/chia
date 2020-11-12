@@ -5,7 +5,7 @@ api to access information and control the full node:
 Some examples:
 ```bash
 # Get blockchain state
-curl -X POST http://localhost:8555/get_blockchain_state
+curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_blockchain_state
 
 # Get block header by header hash
 curl -d '{"header_hash":"4ba1f698836798bda170364d3b3e8bb9fe1134eb1af8260ab1319d3ede52555e"}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_header
