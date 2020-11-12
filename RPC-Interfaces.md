@@ -1,5 +1,5 @@
-# Full node has an
-[HTTP JSON-RPC](https://github.com/Chia-Network/chia-blockchain/wiki/Networking-and-Serialization#rpc)
+# Full node
+Full node has an [HTTP JSON-RPC](https://github.com/Chia-Network/chia-blockchain/wiki/Networking-and-Serialization#rpc)
 api to access information and control the full node:
 
 Some examples:
@@ -45,3 +45,4 @@ curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8
 
 curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8560/get_plots
 ```
+You can refer to the [harvester rpc client source](https://github.com/Chia-Network/chia-blockchain/blob/main/src/rpc/harvester_rpc_client.py#L14) to see the additional endpoints available.
