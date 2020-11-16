@@ -10,6 +10,7 @@ There was an oversight in Beta 14. For plots larger than k=32 the default buffer
 
 * [Pre Beta 8](#Pre-Beta-8)  
 * [Beta 8 thru Beta 13](#Beta-8-thru-Beta-13)
+* [Beta 14 Data](#Beta 14 Data) 
 
 ## Beta 17 Data
 
@@ -23,7 +24,7 @@ There was an oversight in Beta 14. For plots larger than k=32 the default buffer
 |----|---------------|-----------------|-----------------|-------------|---------------|---------------------------|-----------|-----------------------|---------|-------------------------------|
 | 34 | 397.25         | 1,406.57          | 429.88          | 0.305622898 | 1176.478        | 100%                      | 100%   |  -b 12000 -u 128 -r 8 | b17     |      
 
-## Pre-Beta 14 Data
+## Beta 14 Data
 
 The following are data collected from plotting using the older and slower beta beta versions.
 
