@@ -10,7 +10,7 @@ There was an oversight in Beta 14. For plots larger than k=32 the default buffer
 
 * [Pre Beta 8](#Pre-Beta-8)  
 * [Beta 8 thru Beta 13](#Beta-8-thru-Beta-13)
-* [Beta 14 Data](#Beta 14 Data) 
+* [Beta 14 Data](#Beta-14-Data) 
 
 ## Beta 17 Data
 
