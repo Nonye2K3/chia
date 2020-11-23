@@ -20,6 +20,13 @@ If no old version exists, `init`:
 * Creates a default chia configuration
 * Initializes a new SSL key and cert (for secure communication with the GUI)
 
+# start
+
+Command: `chia start {service}`
+
+* Service `node` will start only the full node.
+* Service `farmer` will start the farmer, harvester, a full node, and the wallet.
+
 # plots
 
 ## [create](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/create_plots.py)
