@@ -12,6 +12,9 @@ curl -d '{"header_hash":"4ba1f698836798bda170364d3b3e8bb9fe1134eb1af8260ab1319d3
 
 # Get all unspent coins by puzzle hash
 curl -X POST --data '{"puzzle_hash":"0xa4259182b4d8e0af21331fc5be2681f953400b6726fa4095e3b91ae8f005a836"}'   http://localhost:8555/get_unspent_coins
+
+# Connect to introducer.beta.chia.net
+curl -d '{"host":"introducer.beta.chia.net","port":"8444"}' -H "Content-Type: application/json" -X POST http://localhost:8555/open_connection
 ```
 
 The endpoints currently supported in Node:
