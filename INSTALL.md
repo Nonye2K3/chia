@@ -189,6 +189,9 @@ sudo yum update -y
 # Compiling python 3.7 is generally required on CentOS 7.7 and newer
 sudo yum install gcc openssl-devel bzip2-devel libffi libffi-devel -y
 sudo yum install libsqlite3x-devel -y
+# possible that on some RHEL based you also need to install
+sudo yum groupinstall "Development Tools" -y
+sudo yum install python3-devel gmp-devel  boost-devel libsodium-devel -y
 
 wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
 tar -zxvf Python-3.7.7.tgz ; cd Python-3.7.7
