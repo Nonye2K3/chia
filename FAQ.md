@@ -33,24 +33,40 @@ A VDF, also known as a proof of time, is a sequential operation that takes a pre
 
 If you see plots in the Plots section of the Farm page in the GUI - your plots are being farmed. You will see challenges as they come through in the Challenges section however you usually will not have a proof worth sending to the network. You can additionally check the tooltip on the top right of the "Total size of local plots" on the Farm view and it will tell you how much space is being farmed and statistically how long it should take - on average - to win a block.
 
+# Does it matter how fast my internet connection is?
+
+No. You have at least 20 seconds and often more time to respond to challenges.
+
+# Is there any advantage in plotting larger k sizes?
+
+No. As long as you plot at least k=32, those plots will be eligible to win on mainnet. In a decade or more, k=32 may become too small, but that's speculative. Usually the only reason to plot larger than k=32 is to optimize using all of the space on a given drive. For example, it may make sense to have two k=33's and the rest k=32 so that you only leave 10 GB free on a given drive.
+
+# Is the final size of the plotted space the only variable in how often I can win block rewards?
+
+Yes. 
+
 # How do I know if my plots are OK?
 
 Run `chia plots check -n 100` to try 100 sample challenges for each plot. Each of your plots should return a number around 100, which means it found 100 proofs of space. If some of your plots are missing for some reason you may need to add the directory they are in to your config.yaml file. That can be done in the GUI with the MANAGE PLOT DIRECTORIES button or on the command line with `chia plots add -d [directory]`.
+
+# I have only 10 TB, will I ever win XCH on mainnet?
+
+Starting with the new consensus algorithm in Beta 18, there are 4608 chances per day to win 1 TXCH (and thus XCH on mainnet.) If you have 10TB and there are 30PB of total storage on mainnet then you would expect to win ~1.5 TXCH per day on average. The math is .010 PB/30 PB * 4608 = 1.536.
 
 # How do I send or receive a transaction?
 
 The wallet will show you your address and provide an interface for you to spend your chia funds.
 Read about how to build and start the wallet GUI in our [quickstart guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#run-a-full-node--farmer--harvester--wallet). There is now some wallet functionality available on the command line. Try `chia show -w`.
 
-The wallet software also provides features related to coloured coins, and trade offers.
+The wallet software also provides features related to coloured coins, and trade offers. Support for signing and sending transactions from the command line will likely come in Beta 18.
 
 # Why is it recommended that a winning plot be deleted on mainnet?
 
-There is a possible attack where an attacker who can co-ordinate N deep from the tip of the chain can try to coerce a winning farmer to re-write a historical transaction block. Additionally, having more than one set of rewards go to the same plot and farmer lowers the farmer's pseudonymity. We expect that by mainnet, plotting will both be much faster and most farmers will have large enough farms that re-plotting the space opened up by a winning plot will be quick enough. We plan to have the software automate the process up to and including kicking off a remote plotting process if the current hardware that a farmer or harvester are on is not up to the task of re-plotting.
+There is a possible attack where an attacker who can co-ordinate N deep from the tip of the chain can try to coerce a winning farmer to re-write a historical transaction block. This attack is much more difficult and thus less of a risk in new consensus. Additionally, having more than one set of rewards go to the same plot and farmer lowers the farmer's pseudonymity. We expect that by mainnet, plotting will both be much faster and most farmers will have large enough farms that re-plotting the space opened up by a winning plot will be quick enough. We plan to have the software automate the process up to and including kicking off a remote plotting process if the current hardware that a farmer or harvester are on is not up to the task of re-plotting. But to repeat, deleting winning plots is, and will always be, totally optional.
 
 # What are the next milestones?
 
-We are now in the Beta testnet blockchain phase. During Beta you should expect continued improvements in ease of install, and support for and user interface for our reference smart transactions. We will have some over the wire protocol changes that will require hard forks but should migrate your existing plots and installations easily to the newer chain. Starting with Beta 8, the new plot format is intended to be the same as mainnet so you will be able to get your plots in order before mainnet launch. We expect to launch mainnet at the end of 2020. We also plan to have an 4-6 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
+We are about to complete the Beta testnet blockchain phase. During Beta you should expect continued improvements in ease of install, and support for and user interface for our reference smart transactions. We will have some over the wire protocol changes that will require hard forks but should migrate your existing plots and installations easily to the newer chain. Starting with Beta 8, the new plot format is intended to be the same as mainnet so you will be able to get your plots in order before mainnet launch. After a short period of testing of the new consensus algorithm we will leave the Beta phase and enter the Release Candidate phase. These are releases that we believe are consensus critical feature complete but that we may need to add minor functionality to and fix bugs found. We expect to launch mainnet at the end of 2020. We also plan to have an 4-6 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
 
 # How can I contribute?
 
@@ -79,6 +95,10 @@ UPnP is an optional setting that allows users to open a port in their router and
 For some routers, UPnP is enabled automatically, but for others, you might have to go into your router settings and enable UPnP manually. Sometimes restarting the router is also necessary.
 
 Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 to your machine.
+
+# Why does my other node on my local network not connect to anything?
+
+You can only run UPnP for one host behind one router. If you disable UPnP on all but one of your nodes then your local router will forward inbound 8444 traffic to the one node and the rest will now be able to connect to the network but just will not accept inbound connections from the network.
 
 # How do I rotate logs?
 
