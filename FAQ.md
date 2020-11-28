@@ -12,7 +12,7 @@ A proof of space is a proof that a farmer has allocated a portion of their stora
 
 # How big are plot sizes (k)?
 
-You can see some example plot sizes, times to plot, and working space needed based on various k's in these [k size tables](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes).
+You can see some example plot sizes, times to plot, and working space needed based on various k's in these [k size tables](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes). Current working space needed for the default plotting options of a k=32 is 331GiB.
 
 # What k-size should you plot?
 
