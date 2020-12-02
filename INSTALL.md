@@ -197,10 +197,6 @@ wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
 tar -zxvf Python-3.7.7.tgz ; cd Python-3.7.7
 ./configure --enable-optimizations; sudo make -j$(nproc) altinstall; cd ..
 
-# Install Node.js and NPM
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
-sudo yum install nodejs -y
-
 # Download and install the source version
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
