@@ -1,3 +1,5 @@
+NOTE: The core consensus components of Chia are changing to version 1.1 as documented in our [new consensus working doc](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit).
+
 The Chia blockchain and consensus algorithm aims to provide a more environmentally friendly,
 decentralized, and secure alternative to proof of work or proof of stake, while
 maintaing some of the key properties that make Nakamoto consensus desirable. The full
