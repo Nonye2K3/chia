@@ -13,7 +13,7 @@
 > ```
 > If you are using Beta 16 you would change the `Chia-Blockchain\app-0.1.16\resources\` section to `Chia-Blockchain\app-0.1.16\resources\` in the command above.
 
-2. Windows and Python do not get along regarding reporting CPU % so you have to ignore it on Windows.
+2. Windows and Python used to not get along regarding reporting CPU % on Windows but starting with Beta 18 this has been fixed.
 
 3. You configuration and logs are found in `~\.chia\VERSION\`. You can tail your logs with `Get-Content ~\.chia\VERSION\log\debug.log -wait`. To see more of what is going on, set your log level in `conf\config.yaml` to INFO from WARNING and restart.
 
