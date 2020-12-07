@@ -51,14 +51,14 @@ Run `chia plots check -n 100` to try 100 sample challenges for each plot. Each o
 
 # I have only 10 TB, will I ever win XCH on mainnet?
 
-Starting with the new consensus algorithm in Beta 18, there are 4608 chances per day to win 1 TXCH (and thus XCH on mainnet.) If you have 10TB and there are 30PB of total storage on mainnet then you would expect to win ~1.5 TXCH per day on average. The math is .010 PB/30 PB * 4608 = 1.536.
+Starting with the new consensus algorithm in Beta 19, there are 4608 chances per day to win 1 TXCH (and thus XCH on mainnet.) If you have 10TB and there are 30PB of total storage on mainnet then you would expect to win ~1.5 TXCH per day on average. The math is .010 PB/30 PB * 4608 = 1.536.
 
 # How do I send or receive a transaction?
 
 The wallet will show you your address and provide an interface for you to spend your chia funds.
 Read about how to build and start the wallet GUI in our [quickstart guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#run-a-full-node--farmer--harvester--wallet). There is now some wallet functionality available on the command line. Try `chia show -w`.
 
-The wallet software also provides features related to coloured coins, and trade offers. Support for signing and sending transactions from the command line will likely come in Beta 18.
+The wallet software also provides features related to coloured coins, and trade offers. Support for signing and sending transactions from the command line will likely come in Beta 19.
 
 # Why is it recommended that a winning plot be deleted on mainnet?
 
