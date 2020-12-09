@@ -55,6 +55,8 @@ Command: `chia plots create [add flags and parameters]`
 
 `-u` [number of buckets]
 
+`-s` [stripe size]: This is the amount of data handed off to each thread, when doing parallel workloads during phase 1. The default 64K seems to be overall the best choice. 32K tends to be a small loss, and 128K is a small loss as well.
+
 **Example**
 
 Example below will create a k30 plot and use 4GB (note - not GiB) of memory.
