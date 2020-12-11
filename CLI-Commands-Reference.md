@@ -51,7 +51,7 @@ Command: `chia plots create [add flags and parameters]`
 
 `-d` [final dir]: Define the final location for plot(s). Of course, `-d` should have enough free space as the final size of the plot. This directory is automatically added to your `~/.chia/VERSION/config/config.yaml` file. You can use `chia plots remove -d` to remove a final directory from the configuration.
 
-`-r` [number of threads] 2 is usual optimal. Multithreading is only in phase 1 currently.
+`-r` [number of threads] 2 is usually optimal. Multithreading is only in phase 1 currently.
 
 `-u` [number of buckets] More buckets require less RAM but more random seeks to disk. With spinning disks you want less buckets and with NVMe more buckets. Generally you will want one of 32, 64, or 128 buckets.
 
