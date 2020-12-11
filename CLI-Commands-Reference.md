@@ -59,9 +59,9 @@ Command: `chia plots create [add flags and parameters]`
 
 **Example**
 
-Example below will create a k30 plot and use 4GB (note - not GiB) of memory.
+Example below will create a k32 plot and use 4GB (note - not GiB) of memory.
 
-`chia plots create -k 30 -b 4000 -t /path/to/temporary/directory -d /path/to/final/directory`
+`chia plots create -k 32 -b 4000 -t /path/to/temporary/directory -d /path/to/final/directory`
 
 **Additional Plotting Notes**
 
