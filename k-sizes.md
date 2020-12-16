@@ -8,6 +8,10 @@ One exception is the final .plot size of k values. To get some insight into the 
 
 There was an oversight in Beta 14. For plots larger than k=32 the default buffer will not be enough to complete a plot. For k=33 a `-b 3077` is the absolute minimum needed with the rest of the defaults. A `-b 3139` will have better results by completing far more sorts in memory. More recommendations for 34-36 coming soon.
 
+## k=37
+
+There has been at least one k=37 plotted using the Beta 17 plotter. It required temporary space of 9.9 TiB of temp space, used 130TB of total IO, and took 404.5 hours (16.9 hours.)
+
 * [Pre Beta 8](#Pre-Beta-8)  
 * [Beta 8 thru Beta 13](#Beta-8-thru-Beta-13)
 * [Beta 14 Data](#Beta-14-Data) 
