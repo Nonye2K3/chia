@@ -44,7 +44,7 @@ curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8
 
 # Harvester RPC
 ```
-# See the most recent challenges
+# See the current plots farming
 
 curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8560/get_plots
 ```
