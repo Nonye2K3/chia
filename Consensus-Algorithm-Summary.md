@@ -16,7 +16,7 @@ Plots are lookup tables filled with
 hashes and pointers, which allow farmers to efficiently look up and find proofs of space, cryptographic
 proofs of storage of data. Farmers can create plots through the plotting process, which can take
 days of intesive CPU and disk usage, but after that, they can farm with almost no cpu or electricity
-usage. More information on proofs of space and the exact construction can be found [here](https://www.chia.net/assets/proof_of_space.pdf) and the running source code is in the [chiapos repository](https://github.com/Chia-Network/chiapos).
+usage. More information on proofs of space and the exact construction can be found [here](https://www.chia.net/assets/Chia_Proof_of_Space_Construction_v1.1.pdf) and the running source code is in the [chiapos repository](https://github.com/Chia-Network/chiapos).
 
 Whenever a new block is propagated through the network, all farmers check their hard drives to
 see if they have any very good proofs of space (analogous to someone checking their bingo card to
