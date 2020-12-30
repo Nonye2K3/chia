@@ -8,7 +8,7 @@ All keys and plots from version prior to Beta 1.8 are deprecated and can be dele
 
 ## Drive format support
 
-Chia plot files are at least 108GB in size (for K32). To plot successfully requires drives formatted to support large files; e.g. NTFS, APFS, ext4, etc. Drives with FAT formatting (FAT12, FAT16, or FAT32) will fail plotting midway through. Future versions of Chia will check for unsupported drives, but for now it's up to each user to check their drive format.
+Chia plot files are at least 108GB in size (for K32). To plot successfully requires drives formatted to support large files; e.g. NTFS, APFS, exFAT, ext4, etc. Drives with FAT formatting (FAT12, FAT16, or FAT32) will fail plotting midway through. Future versions of Chia will check for unsupported drives, but for now it's up to each user to check their drive format.
 
 ## Updating from 1.8 - 1.17:
 
