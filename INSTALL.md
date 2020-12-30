@@ -6,6 +6,10 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
  
 All keys and plots from version prior to Beta 1.8 are deprecated and can be deleted. Plots from both Beta 1.8 and newer should work on mainnet. 
 
+## New Users:
+
+Chia plot files are at least 108GB in size (for K32). To plot successfully requires drives formatted to support large files; e.g. NTFS, APFS, etc. Drives formatted in FAT12, FAT16, or FAT32 will fail plotting midway through. Future versions of Chia will check for unsupported drives, but for now it's up to each user to check their drive format.
+
 ## Updating from 1.8 - 1.17:
 
 Keys and configs from 1.8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Beta 12/13's blockchain is new and does not bring forward previous test chia.**
