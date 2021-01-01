@@ -43,6 +43,10 @@ If you see plots in the Plots section of the Farm page in the GUI - your plots a
 
 No. You have at least 20 seconds and often more time to respond to challenges.
 
+# Do I have to be connected to the internet or synced to the blockchain to plot?
+
+No. Plotting can be done entirely offline and needs nothing from the blockchain to complete. The only time you have to be online and synced is when you're farming so that you receive new challenges for the next sub blocks and transactions to include in a transaction block if you're lucky enough to win one of them and get the transaction fees.
+
 # Is there any advantage in plotting larger k sizes?
 
 No. As long as you plot at least k=32, those plots will be eligible to win on mainnet. In a decade or more, k=32 may become too small, but that's speculative. Usually the only reason to plot larger than k=32 is to optimize using all of the space on a given drive. For example, it may make sense to have two k=33's and the rest k=32 so that you only leave 10 GB free on a given drive.
