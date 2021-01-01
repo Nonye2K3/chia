@@ -51,14 +51,6 @@ pkg install git gmake cmake node npm py37-sqlite3-3.7.7_7
 ```
 Note: If a more recent version of Python is already installed, the py37-sqlite3-3.7.7_7 package should be replaced with the version matching the installed version of Python 3.x (which can be found by executing the `pkg search py3.*sqlite3` command).
 
-## Python Cryptography
-
-On FreeBSD 11.3, OpenSSL is too old for the current 3.x versions of Python cryptography. You will need to install [cryptography 2.9.2 from freshports](https://www.freshports.org/security/py-cryptography) before attempting to build chia-blockchian.
-
-```bash
-pkg install py37-cryptography
-```
-
 ## Fetch source code
 
 Then, as any user, use git to fetch the chia-blockchain source code, using SSH or HTTPS:
@@ -69,6 +61,15 @@ git clone git@github.com:Chia-Network/chia-blockchain.git
 # OR
 # clone via HTTPS
 git clone https://github.com/Chia-Network/chia-blockchain.git
+```
+
+## Python Cryptography
+
+On FreeBSD 11.3, OpenSSL is too old for the current 3.x versions of Python cryptography. You will need to install [cryptography 2.9.2 from freshports](https://www.freshports.org/security/py-cryptography) before attempting to build chia-blockchian. You will also have to edit setup.py and change the version of cryptography from e.g. `"cryptography==3.3.1"` to `"cryptography==2.9.2"`.
+
+```bash
+pkg install py37-cryptography
+vi chia-blockchain/setup.py
 ```
 
 ## Build
