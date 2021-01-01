@@ -27,6 +27,10 @@ The Chia dev team will continue to enhance the plotter though most of the theore
 We think you will want to use Data Center grade NVMe SSD drives to create your plots. Regular consumer NVMe SSD generally has too low of a TBW rating. One of our community members keeps this handy [SSD Endurance document](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) up to date so you can compare various SSDs. You should never use your root/OS SSD to plot as it can lead to drive failure and loss of booting. Also, you can plot directly to hard drives and get good results, especially if you plot in parallel to different drives. If you use non-root SSD then you migrate your plots off to whatever storage you want to keep them on long term. You could even load them on a Raspberry Pi 3 or 4 with outdated USB 2.0 drives attached and they will Harvest and Farm just fine. PC World offers this great [background on current storage technologies](https://www.pcworld.com/article/2899351/everything-you-need-to-know-about-nvme.html) but this graph gives you a quick view of why we recommend NVMe SSD:
 ![NVMe SSD vs SATA](images/plotting-nvme-ssd.png "NVMe SSD is 5.5 times faster than SATA SSD")
 
+# My computer/drive went into power save mode or rebooted due to updates while plotting - now what?
+
+Unfortunately, resuming a plot is not yet supported but likely will be later in 2021. We suggest that you disable power saving mode - especially for external drives - and try to limit other possible causes of interruptions. Plotting a k=32 is going to take between 7 and 20 hours, depending on your hardware, so these interruptions can be painful. There are also a part of why we don't recommend plotting plots larger than k=32 as each increment in k generally doubles the time to complete a single plot.
+
 # What are the plans for the project and what are its tokenomics?
 
 This is the Repository FAQ which focuses on how to use the software. For lots more on the reasons, technology, and plans for the project we suggest you read over the [Project FAQ](https://www.chia.net/faq/).
