@@ -10,6 +10,10 @@ All keys and plots from version prior to Beta 1.8 are deprecated and can be dele
 
 Chia plot files are at least 108GB in size (for K32). To plot successfully requires drives formatted to support large files; e.g. NTFS, APFS, exFAT, ext4, etc. Drives with FAT formatting (FAT12, FAT16, or FAT32) will fail plotting midway through. Future versions of Chia will check for unsupported drives, but for now it's up to each user to check their drive format.
 
+## Sleep kills plots
+
+The Chia plotting process takes multiple of hours to complete. If the computer or hard drives goes to sleep during the plotting process, the plotting fails and you will need to start over. Please ensure all sleep, hibernate and power saving modes for your computer and hard drives are disabled before starting the Chia plotting process. In the future, Chia will have resume plot feature. In the meantime, if you do get a failed plot, delete all `*.tmp` files before starting a new plot.
+
 ## Updating from 1.8 - 1.17:
 
 Keys and configs from 1.8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Beta 12/13's blockchain is new and does not bring forward previous test chia.**
