@@ -29,13 +29,13 @@ We think you will want to use Data Center grade NVMe SSD drives to create your p
 
 # Can I plot more than one plot at a time?
 
-Yes but until Beta 19 you will need to use the command line of your operating system with or instead of the GUI. There are [tips for Windows users](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and Mac users can find their CLI commands in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#macos).
+Yes but until Beta 19 you will need to use the command line of your operating system with or instead of the GUI. There are [tips for Windows users](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and Mac users can find their CLI commands in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#macos). You may have better results if your stagger the start time of parallel plotting processes depending on your hardware setup.
 
 # My plotting attempt got "Caught plotting error: Not enough memory..." - now what?
 
 If you see something like `Caught plotting error: Not enough memory for sort in memory.  Need to sort X.XXGiB` then you need to either select more memory buffer or more buckets. More buckets require less memory but will create more temp files and more sporadic disk writing. Try 128 buckets or try increasing the RAM max usage/`-b` to 4096MiB.
 
-# My computer/drive went into power save mode or rebooted due to updates while plotting - now what?
+# My computer/drive went into power save mode or rebooted due to updates while plotting?
 
 Unfortunately, resuming a plot is not yet supported but likely will be later in 2021. We suggest that you disable power saving mode - especially for external drives - and try to limit other possible causes of interruptions. Plotting a k=32 is going to take between 7 and 20 hours, depending on your hardware, so these interruptions can be painful. There are also a part of why we don't recommend plotting plots larger than k=32 as each increment in k generally doubles the time to complete a single plot.
 
