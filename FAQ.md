@@ -69,7 +69,7 @@ Yes.
 
 # How do I know if my plots are OK?
 
-Run `chia plots check -n 100` to try 100 sample challenges for each plot. Each of your plots should return a number around 100, which means it found 100 proofs of space. If some of your plots are missing for some reason you may need to add the directory they are in to your config.yaml file. That can be done in the GUI with the MANAGE PLOT DIRECTORIES button or on the command line with `chia plots add -d [directory]`.
+Run `chia plots check -n 100` to try 100 sample challenges for each plot. Each of your plots should return a number around 100, which means it found 100 proofs of space. If you're still worried try `-n 1000` as more random attempts will give you a more valid assessment that the plots is fine. It really is ok if your plot is within 90-110 or 900 to 1100 - depending on your `-n`. If some of your plots are missing for some reason you may need to add the directory they are in to your config.yaml file. That can be done in the GUI with the MANAGE PLOT DIRECTORIES button or on the command line with `chia plots add -d [directory]`.
 
 # I have only 10 TB, will I ever win XCH on mainnet?
 
