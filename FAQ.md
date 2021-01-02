@@ -31,11 +31,11 @@ We think you will want to use Data Center grade NVMe SSD drives to create your p
 
 Yes but until Beta 19 you will need to use the command line of your operating system with or instead of the GUI. There are [tips for Windows users](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and Mac users can find their CLI commands in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#macos). You may have better results if your stagger the start time of parallel plotting processes depending on your hardware setup.
 
-# My plotting attempt got "Caught plotting error: Not enough memory..." - now what?
+# My plotting attempt got "Caught plotting error: Not enough memory..."?
 
 If you see something like `Caught plotting error: Not enough memory for sort in memory.  Need to sort X.XXGiB` then you need to either select more memory buffer or more buckets. More buckets require less memory but will create more temp files and more sporadic disk writing. Try 128 buckets or try increasing the RAM max usage/`-b` to 4096MiB.
 
-# My computer/drive went into power save mode or rebooted due to updates while plotting?
+# My computer/drive went into power save or rebooted while plotting?
 
 Unfortunately, resuming a plot is not yet supported but likely will be later in 2021. We suggest that you disable power saving mode - especially for external drives - and try to limit other possible causes of interruptions. Plotting a k=32 is going to take between 7 and 20 hours, depending on your hardware, so these interruptions can be painful. There are also a part of why we don't recommend plotting plots larger than k=32 as each increment in k generally doubles the time to complete a single plot.
 
@@ -55,7 +55,7 @@ If you see plots in the Plots section of the Farm page in the GUI - your plots a
 
 No. You have at least 20 seconds and often more time to respond to challenges.
 
-# Do I have to be connected to the internet or synced to the blockchain to plot?
+# Do I have to be connected to the internet or synced to plot?
 
 No. Plotting can be done entirely offline and needs nothing from the blockchain to complete. The only time you have to be online and synced is when you're farming so that you receive new challenges for the next sub blocks and transactions to include in a transaction block if you're lucky enough to win one of them and get the transaction fees.
 
@@ -108,7 +108,7 @@ If you use the GUI, it will migrate from release to release for you. For both th
 
 # Can I run this on a Raspberry Pi 3 or 4?
 
-Yes, and here are the [instructions](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi). This project requires a 64 bit OS. Pi 3 and Pi 4. One can install and run harvesters, farmers, and full nodes on the Pi. Plotting on a Pi is feasible now with Chacha8 instead of AES but the Pi isn't quick. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. Pi is also not a candidate for Timelords or VDF clients... We have not tested Pi 3 yet so any feedback would be welcomed.
+Yes, and here are the [instructions](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi). This project requires a 64 bit OS. Pi 3 and Pi 4. One can install and run harvesters, farmers, and full nodes on the Pi. Plotting on a Pi is feasible now with Chacha8 instead of AES but the Pi isn't quick. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. Pi is also not a candidate for Timelords or VDF clients...
 
 # Why won't the GUI start on my linux distribution?
 
