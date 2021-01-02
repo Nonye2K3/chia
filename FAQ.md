@@ -31,6 +31,10 @@ We think you will want to use Data Center grade NVMe SSD drives to create your p
 
 Yes but until Beta 19 you will need to use the command line of your operating system with or instead of the GUI. There are [tips for Windows users](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and Mac users can find their CLI commands in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#macos). You may have better results if your stagger the start time of parallel plotting processes depending on your hardware setup.
 
+# Can I move my plot files around?
+
+Yes. The [Moving plots](https://github.com/Chia-Network/chia-blockchain/wiki/Moving-plots) topic here on the wiki gives you the details. You may also want to consider running a [remote harvester](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines).
+
 # My plotting attempt got "Caught plotting error: Not enough memory..."?
 
 If you see something like `Caught plotting error: Not enough memory for sort in memory.  Need to sort X.XXGiB` then you need to either select more memory buffer or more buckets. More buckets require less memory but will create more temp files and more sporadic disk writing. Try 128 buckets or try increasing the RAM max usage/`-b` to 4096MiB.
