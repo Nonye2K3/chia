@@ -75,6 +75,10 @@ Run `chia plots check -n 100` to try 100 sample challenges for each plot. Each o
 
 Starting with the new consensus algorithm in Beta 19, there are 4608 chances per day to win 1 TXCH (and thus XCH on mainnet.) If you have 10TB and there are 30PB of total storage on mainnet then you would expect to win ~1.5 TXCH per day on average. The math is .010 PB/30 PB * 4608 = 1.536.
 
+# Can I join a farming pool?
+
+Not yet. Currently the plots you generate are plotted to your own self pool key. Bram has much more on our [plans around pooling](https://www.chia.net/2020/11/10/pools-in-chia.html) and pool support will become high priority as soon as mainnet is released. You will not be able to change the pool of your current plots so you can just continue to farm them or slowly replace them over time with new plots using one of the upcoming pooling methods.
+
 # How do I send or receive a transaction?
 
 The wallet will show you your address and provide an interface for you to spend your chia funds.
