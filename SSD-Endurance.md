@@ -1,11 +1,15 @@
 ## Estimated SSD wear out, endurance table
 
-working model can be found here
-https://drive.google.com/file/d/1mNUYRWeJUaijEZXupwP5k6IuATZGj1FB/view?usp=sharing
+There are various approaches to picking a great plotting SSD, and a lot will depend on the physical system it is going into for form factor and interface compatibility (NVMe/PCIe, SATA, or SAS). The one thing in common will be that you need high endurance, due to the fact that it take almost ~1.8TB of writes to create a single K=32 plot.
 
-overview of SSD endurance testing from JEDEC industry standard here
-https://www.jedec.org/sites/default/files/Alvin_Cox%20%5BCompatibility%20Mode%5D_0.pdf
+Endurance is how much data can be written to the SSD before it wears out. In Chia this is important because a plotting SSD will generally be at 100% duty cycle and writing all day. 
 
+A mixed use or high endurance data center or enterprise SSD is the best choice for plotting. Used SSDs with plenty of endurance can be found for a good value on eBay, Craigslist, or similar.
+
+Consumer NVMe SSDs are generally not recommended due to the lower endurance, and they often employ caching algorithms to faster media (SLC, or single level cell) for great bursty performance. They do not perform well under heavy workload sustained IO.
+There are very high performance consumer NVMe SSDs that will offer great plotting performance, but the lower rated endurance in TBW will result in a faster wearout.
+
+working model can be found [here](https://drive.google.com/file/d/1mNUYRWeJUaijEZXupwP5k6IuATZGj1FB/view?usp=sharing)
 
 | Vendor  | Model                  | Form Factor | Interface  | Class                | $ASP      | $/GB  | User Capacity (GB): | usable GiB in OS | Raw Capacity (GiB) | Raw Capacity (GB) | Overprovisioning / Spare area | NAND P/E Cycles | Write Amplification Factor (WAF) | rated life in years | estimated NAND endurance (TBW, WAF=1) | Calculated Endurance (TBW) | Spec sheet rated TBW | DWPD over 5 years (calculated) |  | GiB/min | Num concurrent k=32 | User write bandwidth (MB/s) | SSD NAND write bandwidth (MB/s) | days to wear out (drive full, worst case) | years to wear out (drive full, worst case) | days to wear out (WAF=1) | years to wear out (WAF=1) | total amount plotted before wear out worse case (TiB) | total amount plotted before wear out best case (TiB) | $/TiB plotted worst case (high WAF) | $/TiB plotted best case (WAF=1) |
 |---------|------------------------|-------------|------------|----------------------|-----------|-------|---------------------|------------------|--------------------|-------------------|-------------------------------|-----------------|----------------------------------|---------------------|---------------------------------------|----------------------------|----------------------|--------------------------------|--|---------|---------------------|-----------------------------|---------------------------------|-------------------------------------------|--------------------------------------------|--------------------------|---------------------------|-------------------------------------------------------|------------------------------------------------------|-------------------------------------|---------------------------------|
@@ -107,5 +111,10 @@ look for
 
 ```Percentage used endurance indicator: 0%```
 
+
+overview of SSD endurance testing from JEDEC industry standard here
+https://www.jedec.org/sites/default/files/Alvin_Cox%20%5BCompatibility%20Mode%5D_0.pdf
+
 ## Adding new models
 Please add your model string below if you want me to put it into my calculator and add to the list!
+
