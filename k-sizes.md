@@ -10,7 +10,7 @@ There was an oversight in Beta 14. For plots larger than k=32 the default buffer
 
 ## k=37
 
-There has been at least one k=37 plotted using the Beta 17 plotter. It required temporary space of 9.9 TiB of temp space, used 130TB of total IO, and took 404.5 hours (16.9 days.)
+There has been at least one k=37 plotted using the Beta 17 plotter. It required 9.9 TiB of temp space, used 130TB of total IO, and took 404.5 hours (16.9 days.)
 
 * [Pre Beta 8](#Pre-Beta-8)  
 * [Beta 8 thru Beta 13](#Beta-8-thru-Beta-13)
