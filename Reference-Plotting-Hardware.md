@@ -4,7 +4,9 @@ These are machines that work well to quickly create plots in parallel. These ser
 
 Plotting can be done on consumer systems (laptops), but is much faster done on high-end desktops, workstations, and servers. Plotting takes scaling for CPU cores to improve the parallelism (this is -r number of threads, or number of parallel processes), scaling in DRAM per process, and fast SSDs or many small 10k hard drives for temporary storage space.
 
-DRAM scaling table here for quicksort
+each K=32 will require approximately 330GiB of temporary space, a minimum of 4500MB of DRAM, and at least a single CPU thread. For instance, a 1.6TB SSD would have 1.46TiB usable in the OS, could fit 4 k=32 in parallel (4*330 < 1490GiB), and would require 18GB of DDR4.
+
+The goal of a plotting machine is to create the highest TiB per day of plots, with the lowest system cost. There are many unique combinations of consumer, data center, and enterprise hardware at many different price points that are adequate for plotting. For SSDs, please see the https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance page
 
 this is a spreadsheet of the community systems to compare against
 https://docs.google.com/spreadsheets/d/14Iw5drdvNJuKTSh6CQpTwnMM5855MQ46/
