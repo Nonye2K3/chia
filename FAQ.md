@@ -37,7 +37,7 @@ Yes. The [Moving plots](https://github.com/Chia-Network/chia-blockchain/wiki/Mov
 
 # My plotting attempt got "Caught plotting error: Not enough memory..."?
 
-If you see something like `Caught plotting error: Not enough memory for sort in memory.  Need to sort X.XXGiB` then you need to either select more memory buffer or more buckets. More buckets require less memory but will create more temp files and more sporadic disk writing. Try 128 buckets or try increasing the RAM max usage/`-b` to 4096MiB.
+If you see something like `Caught plotting error: Not enough memory for sort in memory.  Need to sort X.XXGiB` then you need to either select more memory buffer or more buckets. More buckets require less memory but will create more temp files and more sporadic disk writing. Try 128 buckets or try increasing the RAM max usage/`-b` to 4608MiB.
 
 # My computer/drive went into power save or rebooted while plotting?
 
