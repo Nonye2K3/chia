@@ -14,13 +14,13 @@ Chia plot files are at least 108GB in size (for K32). To plot successfully requi
 
 The Chia plotting process takes multiple of hours to complete. If the computer or hard drives goes to sleep during the plotting process, the plotting fails and you will need to start over. Please ensure all sleep, hibernate and power saving modes for your computer and hard drives are disabled before starting the Chia plotting process. In the future, Chia will have resume plot feature. In the meantime, if you do get a failed plot, delete all `*.tmp` files before starting a new plot.
 
-## Updating from 1.8 - 1.17:
+## Updating from 1.8 - 1.18:
 
-Keys and configs from 1.8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Beta 12/13's blockchain is new and does not bring forward previous test chia.**
+Keys and configs from 1.8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Beta 19's blockchain is new and does not bring forward previous test chia.**
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.18-win64/ChiaSetup-0.1.18.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.19-win64/ChiaSetup-0.1.19.exe)
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
@@ -31,7 +31,7 @@ You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/c
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.18-macos/Chia-0.1.18.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.19-macos/Chia-0.1.19.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
