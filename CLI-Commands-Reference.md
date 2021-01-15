@@ -174,6 +174,4 @@ Check harvester and farmer: `grep ~/.chia/beta-1.0b20/log/debug.log -e harvester
 17:08:03.227 harvester src.plotting.plot_tools : INFO     Loaded a total of 1 plots of size 0.09895819725716137 TiB
 ```
 
-Maybe follow logs: `tail -f ~/.chia/beta-1.0b20/log/debug.log`. **Take care** to rotate logs
-etc lest you may find yourself out of disk space. I've no idea if =chia= is nice enough to
-clean up every now and then.
+Maybe follow logs: `tail -f ~/.chia/beta-1.0b20/log/debug.log`. Chia is nice enough to [rotate logs](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-rotate-logs) for you.
