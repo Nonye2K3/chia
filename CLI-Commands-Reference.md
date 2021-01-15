@@ -115,3 +115,65 @@ For more detail, you can read about the DiskProver commands in [chiapos](https:/
     * This shouldn't really concern you unless your ratio is <0.70
 
 In theory, a plot with a ratio >> 1 would be more likely to win challenges on the blockchain. Likewise, a plot with a ratio << 1 would be less likely to win. However, in practice, this isn't actually going to be noticeable. "Number of plots" and "k-size" are much more influential factors at winning blocks than "proofs produced per challenge". Therefore, don't worry if your plot check ratios are less than 1, unless they're _significantly_ less than 1.
+
+
+# Other commands (not yet documented)
+
+   TODO
+
+```sh
+  chia plots check
+  # is a quick way to check if your plots are found
+
+  chia plots add -d dir/with/plots
+  # to add dir with plots
+
+  chia start node wallet harvester farmer
+  # to start
+
+  chia start -r node ...
+  # to restart select services
+```
+
+If you have a blockchain db file that's pre-synced you can drop it to
+`~/.chia/beta-1.0b20/db/` so e.g. for `blockchain_v22.db`:
+`~/.chia/beta-1.0b20/db/blockchain_v22.db`
+
+To check where you stand `chia show -s` and you'll see smth like this. To figure how close
+you are look at SB Height, not Height! Once fully synced it'll say `Fully Synced` at the
+top (or smth like that):
+```
+  Current Blockchain Status: Full Node syncing to sub block 97634 
+  Currently synced to block: 26888
+        Time: Thu Jan 14 2021 06:32:38 EST Height:   26888 SB height:    91101
+
+  Estimated network space: 23.025PiB
+  Current difficulty: 7249904795648
+  Current VDF sub_slot_iters: 113049600
+  Total iterations since the start of the blockchain: 262271690387
+
+  SB Height |   Height  | Hash:
+     91101  |   26888   | 39502a638b7869277ba12ee4ea58e03f346e26b4f8b9f455c95052e816559757
+```
+
+You can check contents of your wallet with: `chia wallet`.
+
+The only way to see if harvester and farmer are running is to have logs at INFO level:
+```sh
+  chia configure --set-log-level INFO
+  # restart any running services
+  chia start -r node harvester farmer wallet
+```
+
+Check harvester and farmer: `grep ~/.chia/beta-1.0b20/log/debug.log -e harvester`
+```
+17:08:03.191 harvester harvester_server        : INFO     <- harvester_handshake from peer 214b269a425b8223cb50fbd458dab056599348e255f07a018c13ea9efb509ee5 127.0.0.1
+17:08:03.194 farmer farmer_server              : INFO     -> harvester_handshake to peer 127.0.0.1 65f3fa0b0407a07da8ccf04dfa0f64c28f714726312aa051d3a8529390db4d7a
+17:08:03.218 harvester src.plotting.plot_tools : INFO     Searching directories ['/home/user/slab1/plots']
+17:08:03.227 harvester src.plotting.plot_tools : INFO     Found plot /home/user/slab1/plots/plot-k32-2021-01-11-17-26-bf2363828e469a3417b89eb98cfa9d694809e1ce8bef0ffd1d12853d4227aa0a.plot of size 32
+17:08:03.227 harvester src.plotting.plot_tools : INFO     Loaded a total of 1 plots of size 0.09895819725716137 TiB
+```
+
+Maybe follow logs: `tail -f ~/.chia/beta-1.0b20/log/debug.log`. **Take care** to rotate logs
+etc lest you may find yourself out of disk space. I've no idea if =chia= is nice enough to
+clean up every now and then.
