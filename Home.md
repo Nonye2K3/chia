@@ -5,6 +5,9 @@
 * [Repository FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ)
 * [Chia Project FAQ](https://www.chia.net/faq/)
 * [k and plot sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
+* [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips)
+* [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) Important notes on using SSD to plot.
+* [Reference Plotting Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Plotting-Hardware)
 * [Chialisp Documentation](https://chialisp.com/)
 * [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
 * [Release and notes](https://www.chia.net/releases/)
