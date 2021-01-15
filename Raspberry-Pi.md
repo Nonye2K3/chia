@@ -25,7 +25,15 @@ cd chia-blockchain
 
 sh install.sh
 . ./activate
+chia init
+
+# Optionally generate keys
+chia keys generate
+
+# Or you can import from 24 words
+chia keys -m [24 words]
 ```
+
 There is one piece of magic. You don't need this magic anymore now that chiavdf comes from a binary wheel on PyPi but we're leaving this here for people trying to build in other environments. This environment variable is set so that chiavdf doesn't attempt to compile Timelord components. The Pi isn't cut out to be a Timelord and the Timelord requirements are very x86-64 specific currently.
 ```bash
 export BUILD_VDF_CLIENT=N
