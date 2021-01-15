@@ -15,7 +15,6 @@ Install build prerequisites:
 ```bash
 sudo apt-get update; sudo apt-get upgrade -y
 sudo apt-get install build-essential cmake libgmp-dev libffi-dev libssl-dev -y
-sudo apt-get install libxss1 npm nodejs -y
 sudo apt-get install python3-venv libboost-python-dev -y
 ```
 Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS ships with a perfectly adequate CMake version 3.16.3. Compiling third party dependencies - especially pycryptography - can take a while.
@@ -27,7 +26,7 @@ cd chia-blockchain
 sh install.sh
 . ./activate
 ```
-There is one piece of magic. You don't need this magic in general anymore now that chiavdf comes from a binary wheel on PyPi but we're leaving this here for people trying to build in other environments. This environment variable is set so that chiavdf doesn't attempt to compile Timelord components. The Pi isn't cut out to be a Timelord and the Timelord requirements are very x86-64 specific currently.
+There is one piece of magic. You don't need this magic anymore now that chiavdf comes from a binary wheel on PyPi but we're leaving this here for people trying to build in other environments. This environment variable is set so that chiavdf doesn't attempt to compile Timelord components. The Pi isn't cut out to be a Timelord and the Timelord requirements are very x86-64 specific currently.
 ```bash
 export BUILD_VDF_CLIENT=N
 ```
