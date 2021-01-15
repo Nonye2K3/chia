@@ -78,8 +78,7 @@ Change directory into the chia-blockchain directory, and run the main install sc
 ```bash
 cd chia-blockchain
 
-# for now, build using the dev branch (current master branch has build issues)
-git checkout dev
+git checkout main
 
 sh install.sh
 ```
