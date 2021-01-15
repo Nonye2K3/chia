@@ -20,7 +20,7 @@ Keys and configs from Beta 8 and newer should automatically migrate. For more de
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.19-win64/ChiaSetup-0.1.19.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.20-win64/ChiaSetup-0.1.20.exe)
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
 
@@ -31,7 +31,7 @@ You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/c
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.19-macos/Chia-0.1.19.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.20-macos/Chia-0.1.20.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
@@ -186,7 +186,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2
 
-pip install chia-blockchain==1.0b18
+pip install chia-blockchain==1.0b20
 ```
 
 # CentOS/RHEL 7.7 or newer
@@ -227,7 +227,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2
 
-pip install chia-blockchain==1.0b18
+pip install chia-blockchain==1.0b20
 ```
 # Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
@@ -263,7 +263,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0b18
+pip install chia-blockchain==1.0b20
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
