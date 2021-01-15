@@ -16,7 +16,7 @@ You can see some example plot sizes, times to plot, and working space needed bas
 
 # What k-size should you plot?
 
-Plots created with Beta 1.8 and newer versions of the Chia software will work on mainnet at launch. The minimum plot size is k=32. The original design assumed that k=30 would be the minimum plot size but recent testing has ruled it and k=31 out.
+Plots created with Beta 8 and newer versions of the Chia software will work on mainnet at launch. The minimum plot size is k=32. The original design assumed that k=30 would be the minimum plot size but recent testing has ruled it and k=31 out.
 
 There is only one reason why you might want to plot larger than k=32 and that is to optimize the total utilization of a given drive or space. A couple of k=33 plots with a majority of k=32 plots can bring down the leftover unused space on a drive. There is also a possible, though theoretical at this point, value in larger plots as they may be accessed less often due to the plot filter. That could lead to being able to spin the drives down but there is debate about whether that can be done or lead to savings in practice versus shortening drive life.
 
@@ -108,7 +108,7 @@ You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-bloc
 
 # How do I upgrade and keep my keys and plots?
 
-If you use the GUI, it will migrate from release to release for you. For both the GUI and the command line, your keys are stored on OS specific keychains. If running services from the command line only, `chia init` will migrate your config.yaml and dbs if appropriate to the new version. Keys and plots made before Beta 1.8 are deprecated and useless.
+If you use the GUI, it will migrate from release to release for you. For both the GUI and the command line, your keys are stored on OS specific keychains. If running services from the command line only, `chia init` will migrate your config.yaml and dbs if appropriate to the new version. Keys and plots made before Beta 8 are deprecated and useless.
 
 # Can I run this on a Raspberry Pi 3 or 4?
 
@@ -128,7 +128,7 @@ UPnP is an optional setting that allows users to open a port in their router and
 
 For some routers, UPnP is enabled automatically, but for others, you might have to go into your router settings and enable UPnP manually. Sometimes restarting the router is also necessary.
 
-Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 to your machine.
+Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 or 5844 for testnet to your machine.
 
 # Why does my other node on my local network not connect to anything?
 
