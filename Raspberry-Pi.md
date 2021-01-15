@@ -39,10 +39,9 @@ As noted above the Raspberry Pi is not cut out to be a Timelord. With our switch
 ## Installing and running the GUI
 
 ```
+sh install-gui.sh
 cd electron-react
-npm install
-npm run build
-npm run electron
+npm run electron &
 ```
 
 ## Headless
