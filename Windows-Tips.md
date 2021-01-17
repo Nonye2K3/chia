@@ -23,7 +23,7 @@ If you are using Beta 16 you would change the `Chia-Blockchain\app-0.1.21\resour
 5. If you attempt to run more than one node on your local network, having uPnP on on both will cause both nodes significant confusion. You will need to use powershell to disable uPnP on all but one. An example for Beta 21:
 ```
 cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.1.21\resources\app.asar.unpacked\daemon\
-./chia.exe --upnp-enable False
+./chia.exe configure --upnp-enable False
 ```
 
 6. Sometimes your wallet database can get corrupted. If you get stuck on the "Connecting to wallet" spinner for more than 60 seconds, you will probably want to exit the app, delete your wallet database with powershell, and then start the app again.
