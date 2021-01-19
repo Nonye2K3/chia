@@ -1,23 +1,21 @@
 The following recipe was tested on a Pi 4 running Ubuntu Server 20.04 LTS 64 bit. 64 bit OSes and python 3.7+ are required but helpfully Ubuntu 20.04 has python 3.8 out of the box.
 
-This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_. We now make available manylinux2014 ARM64 binary wheels for the main chia dependencies.
+This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_. We now make available manylinux2014 ARM64 binary wheels for the main chia dependencies. We have also tested on Raspbian 64 bit using the 2020-08-20-raspios-buster-arm64.zip image.
 
-Make sure you have some swap space, 2048MB is suggested:
+Make sure you have some swap space, 1024 is suggested for Ubuntu 20.04 LTS. [1000/1024 for Raspbian 64](https://pimylifeup.com/raspberry-pi-swap-file/):
 ```bash
-sudo dd if=/dev/zero of=/swap bs=1M count=2048
+sudo dd if=/dev/zero of=/swap bs=1M count=1024
 sudo chmod 600 /swap ; sudo mkswap /swap ; sudo swapon /swap
 ```
-Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy. However, if you plan to run Ubuntu Desktop and the GUI, you will need the swap space on subsequent reboots.
+
+For Ubuntu - Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy. However, if you plan to run Ubuntu Desktop and the GUI, you will need the swap space on subsequent reboots.
+
 ```bash
 /swap swap swap defaults 0 0
 ```
-Install build prerequisites:
-```bash
-sudo apt-get update; sudo apt-get upgrade -y
-sudo apt-get install build-essential cmake libgmp-dev libffi-dev libssl-dev -y
-sudo apt-get install python3-venv libboost-python-dev -y
+
 ```
-Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS ships with a perfectly adequate CMake version 3.16.3. Compiling third party dependencies - especially pycryptography - can take a while.
+Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS and Raspbian 64 bit ship with a perfectly adequate CMake version.
 
 ```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
@@ -43,7 +41,7 @@ This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please upda
 
 As noted above the Raspberry Pi is not cut out to be a Timelord. With our switch from AES to Chacha8 it is feasible to plot with the Pi but it's slow. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. [Plotting times for Pi 4](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes#raspberry-pi-4) and other machines are available. Pi makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
 
-## Installing and running the GUI
+## Installing and running the GUI on Ubuntu 20.04 or Raspbian 64 bit
 
 ```
 sh install-gui.sh
