@@ -18,7 +18,7 @@ Add this line to /etc/fstab so that swap available on reboot. If you plan to run
 
 For Raspbian 64:
 
-You need 1000/1024MiB of swap space. Here is an excellent [walk through of increasing swap space]((https://pimylifeup.com/raspberry-pi-swap-file/)) on Raspbian 64.
+You need 1000/1024MiB of swap space. Here is an excellent [walk through of increasing swap space](https://pimylifeup.com/raspberry-pi-swap-file/) on Raspbian 64.
 
 Now:
 
