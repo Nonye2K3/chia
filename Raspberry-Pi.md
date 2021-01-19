@@ -2,7 +2,7 @@ The following recipe was tested on a Pi 4 (4GiB RAM) running both Ubuntu Server 
 
 This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/), using image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_, and Raspbian 64 bit using the _2020-08-20-raspios-buster-arm64.zip_ image. We make available manylinux2014 ARM64 binary wheels for the main chia dependencies which makes installing on Raspberry Pi pretty easy. 
 
-You will need to set up or adjust swap space.
+You will need to set up or adjust swap space if you want to build or run the GUI. If you just want to run headless you can skip the swap steps.
 
 For Ubuntu 20.04 LTS, 1024 is suggested:
 ```bash
@@ -10,18 +10,17 @@ sudo dd if=/dev/zero of=/swap bs=1M count=1024
 sudo chmod 600 /swap ; sudo mkswap /swap ; sudo swapon /swap
 ```
 
-Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy. However, if you plan to run Ubuntu Desktop and the GUI, you will need the swap space on subsequent reboots. Add the following to /etc/fstab.
+Add this line to /etc/fstab so that swap available on reboot. If you plan to run Ubuntu Desktop and the GUI, you will need the swap space on subsequent reboots.
 
 ```bash
 /swap swap swap defaults 0 0
 ```
 
-
 For Raspbian 64:
 
 You need 1000/1024MiB of swap space. Here is an excellent [walk through of increasing swap space]((https://pimylifeup.com/raspberry-pi-swap-file/)) on Raspbian 64.
 
-Starting with vBeta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS and Raspbian 64 bit both ship with a perfectly adequate CMake version.
+Now:
 
 ```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
@@ -45,7 +44,7 @@ export BUILD_VDF_CLIENT=N
 
 This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please update this if that changes.
 
-As noted above the Raspberry Pi is not cut out to be a Timelord. With our switch from AES to Chacha8 it is feasible to plot with the Pi but it's slow. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. [Plotting times for Pi 4](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes#raspberry-pi-4) and other machines are available. Pi makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
+The Raspberry Pi is not cut out to be a Timelord. With our switch from AES to Chacha8 it is feasible to plot with the Pi but it's slow. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. [Plotting times for Pi 4](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes#raspberry-pi-4) and other machines are available. Pi makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
 
 ## Installing and running the GUI on Ubuntu 20.04 or Raspbian 64 bit
 
@@ -57,4 +56,4 @@ npm run electron &
 
 ## Headless
 
-You can run without the GUI using commands like `chia init` and `chia start farmer`. Be sure to check out `chia show -h` if you do.
+You can run without the GUI using commands like `chia init`, `chia start farmer`, and `watch 'chia show -s -c'`. Be sure to check out `chia show -h` if you do.
