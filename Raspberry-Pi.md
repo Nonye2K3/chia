@@ -49,6 +49,10 @@ This should work on Pi 3 with 64 bit Ubuntu but has not been tested. Please upda
 
 It is feasible to plot with the Pi but it's slow. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. [Plotting times for Pi 4](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes#raspberry-pi-4) and other machines are available. Pi makes an excellent node/farmer/harvester however and is an economical machine to run and farm plots made on faster plotting machines and then transferred to it to harvest/farm.
 
+## Headless
+
+You can run without the GUI using commands like `chia init`, `chia start farmer`, and `watch 'chia show -s -c'`. Be sure to check out `chia show -h` if you do.
+
 ## Installing and running the GUI on Ubuntu 20.04 or Raspbian 64 bit
 
 ```
@@ -56,7 +60,3 @@ sh install-gui.sh
 cd electron-react
 npm run electron &
 ```
-
-## Headless
-
-You can run without the GUI using commands like `chia init`, `chia start farmer`, and `watch 'chia show -s -c'`. Be sure to check out `chia show -h` if you do.
