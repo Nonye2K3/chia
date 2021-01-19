@@ -4,7 +4,7 @@ This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads
 
 You will need to set up or adjust swap space if you want to build or run the GUI. If you just want to run headless you can skip the swap steps.
 
-For Ubuntu 20.04 LTS, 1024 is suggested:
+For Ubuntu 20.04 LTS, 1024MiB is suggested:
 ```bash
 sudo dd if=/dev/zero of=/swap bs=1M count=1024
 sudo chmod 600 /swap ; sudo mkswap /swap ; sudo swapon /swap
