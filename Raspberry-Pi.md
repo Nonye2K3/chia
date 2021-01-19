@@ -1,21 +1,27 @@
-The following recipe was tested on a Pi 4 running boht Ubuntu Server 20.04 LTS 64 bit and Raspbian 64 bit. 64 bit OSes and python 3.7+ are required but helpfully Ubuntu 20.04 has python 3.8 out of the box and Rasbian ships with python 3.7.
+The following recipe was tested on a Pi 4 running both Ubuntu Server 20.04 LTS 64 bit and Raspbian 64 bit. 64 bit OSes and python 3.7+ are required but helpfully Ubuntu 20.04 has python 3.8 out of the box and Raspbian ships with python 3.7.
 
-This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_. We now make available manylinux2014 ARM64 binary wheels for the main chia dependencies. We have also tested on Raspbian 64 bit using the _2020-08-20-raspios-buster-arm64.zip_ image.
+This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_. We now make available manylinux2014 ARM64 binary wheels for the main chia dependencies. We have also tested on Raspbian 64 bit using the _2020-08-20-raspios-buster-arm64.zip_ Image.
 
-Make sure you have some swap space, 1024 is suggested for Ubuntu 20.04 LTS. [1000/1024 for Raspbian 64](https://pimylifeup.com/raspberry-pi-swap-file/):
+You will need to set up or adjust swap space.
+
+For Ubuntu 20.04 LTS, 1024 is suggested:
 ```bash
 sudo dd if=/dev/zero of=/swap bs=1M count=1024
 sudo chmod 600 /swap ; sudo mkswap /swap ; sudo swapon /swap
 ```
 
-For Ubuntu - Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy. However, if you plan to run Ubuntu Desktop and the GUI, you will need the swap space on subsequent reboots.
+Add this line to /etc/fstab if you want swap available on reboot. This is less necessary as swap is only required during the building of chiapos, chiavdf, and blspy. However, if you plan to run Ubuntu Desktop and the GUI, you will need the swap space on subsequent reboots. Add the following to /etc/fstab.
 
 ```bash
 /swap swap swap defaults 0 0
 ```
 
-```
-Starting with version 1.0 beta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS and Raspbian 64 bit ship with a perfectly adequate CMake version.
+
+For Raspbian 64:
+
+You need 1000/1024MiB of swap space. Here is an excellent [walk through of increasing swap space]((https://pimylifeup.com/raspberry-pi-swap-file/)) on Raspbian 64.
+
+Starting with vBeta 6 you will need a cmake version of 3.14 or newer. Ubuntu 20.04LTS and Raspbian 64 bit both ship with a perfectly adequate CMake version.
 
 ```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
@@ -25,7 +31,7 @@ sh install.sh
 . ./activate
 chia init
 
-# Optionally generate keys
+# Optionally generate keys - can be done in the GUI later
 chia keys generate
 
 # Or you can import from 24 words
