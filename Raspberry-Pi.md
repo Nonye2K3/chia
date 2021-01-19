@@ -1,6 +1,6 @@
-The following recipe was tested on a Pi 4 running Ubuntu Server 20.04 LTS 64 bit. 64 bit OSes and python 3.7+ are required but helpfully Ubuntu 20.04 has python 3.8 out of the box.
+The following recipe was tested on a Pi 4 running boht Ubuntu Server 20.04 LTS 64 bit and Raspbian 64 bit. 64 bit OSes and python 3.7+ are required but helpfully Ubuntu 20.04 has python 3.8 out of the box and Rasbian ships with python 3.7.
 
-This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_. We now make available manylinux2014 ARM64 binary wheels for the main chia dependencies. We have also tested on Raspbian 64 bit using the 2020-08-20-raspios-buster-arm64.zip image.
+This was tested with [Raspberry Pi Imager](https://www.raspberrypi.org/downloads/) and Image _Ubuntu Server 20.04 LTS (Pi 3/4) 64 bit_. We now make available manylinux2014 ARM64 binary wheels for the main chia dependencies. We have also tested on Raspbian 64 bit using the _2020-08-20-raspios-buster-arm64.zip_ image.
 
 Make sure you have some swap space, 1024 is suggested for Ubuntu 20.04 LTS. [1000/1024 for Raspbian 64](https://pimylifeup.com/raspberry-pi-swap-file/):
 ```bash
