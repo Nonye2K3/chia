@@ -4,7 +4,7 @@ You can read about each of them and the architecture in the [network architectur
 
 # What is a proof of space?
 
-A proof of space is a proof that a farmer has allocated a portion of their storage in a way that is very difficult to create in real time but efficient to pre-compute and store on a hard drive. The [Chia Proof of Space Construction document](https://www.chia.net/assets/Chia_Proof_of_Space_Construction_v1.1.pdf) goes deeply into the math and implementation considerations. A plot is a large set of proofs of space. A harvester can harvest multiple plots on the same machine. A farmer can then control multiple harvesters across many machines to manage the whole "farm."
+A proof of space is a proof that a farmer has allocated a portion of their storage in a way that is very difficult to create in real time but efficient to pre-compute and store on a hard drive. The [Chia Proof of Space Construction document](https://www.chia.net/assets/Chia_Proof_of_Space_Construction_v1.1.pdf) goes deeply into the math and implementation considerations. A plot is a large set of proofs of space. A harvester can harvest multiple plots on the same machine. A farmer can then control [multiple harvesters across many machines](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines) to manage the whole "farm."
 
 # What is k?
 
@@ -20,16 +20,16 @@ Plots created with Beta 8 and newer versions of the Chia software will work on m
 
 There is only one reason why you might want to plot larger than k=32 and that is to optimize the total utilization of a given drive or space. A couple of k=33 plots with a majority of k=32 plots can bring down the leftover unused space on a drive. There is also a possible, though theoretical at this point, value in larger plots as they may be accessed less often due to the plot filter. That could lead to being able to spin the drives down but there is debate about whether that can be done or lead to savings in practice versus shortening drive life.
 
-The Chia dev team will continue to enhance the plotter though most of the theoretical methods to speed up plotting have been implemented. The goal is to keep it so that the top-of-the-line hardware takes at least 1 hour to plot the minimum k-size, and there's no way to cheat the system.
+The Chia dev team will continue to enhance the plotter though many of the theoretical methods to speed up plotting have been implemented. Bram believes we may be able to cut plot time in half once more - but that's likely the maximum improvement in plotting time remaining. The goal is to keep it so that the top-of-the-line hardware takes at least 1 hour to plot the minimum k-size, and Phase 1 takes at least ~10 minutes so there is no way to cheat the system.
 
 # What is recommended for plotting?
 
-We think you will want to use Data Center grade NVMe SSD drives to create your plots. Regular consumer NVMe SSD generally has too low of a TBW rating. One of our community members keeps this handy [SSD Endurance document](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) up to date so you can compare various SSDs. You should never use your root/OS SSD to plot as it can lead to drive failure and loss of booting. Also, you can plot directly to hard drives and get good results, especially if you plot in parallel to different drives. If you use non-root SSD then you migrate your plots off to whatever storage you want to keep them on long term. You could even load them on a Raspberry Pi 3 or 4 with outdated USB 2.0 drives attached and they will Harvest and Farm just fine. PC World offers this great [background on current storage technologies](https://www.pcworld.com/article/2899351/everything-you-need-to-know-about-nvme.html) but this graph gives you a quick view of why we recommend NVMe SSD:
+We think you will want to use Data Center grade NVMe SSD drives to create your plots. Regular consumer NVMe SSD generally has too low of a TBW rating. One of our community members keeps this handy [SSD Endurance document](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) up to date so you can compare various SSDs. You should never use your root/OS SSD to plot as it can lead to drive failure and loss of booting. Also, you can plot directly to hard drives and get good results, especially if you plot in parallel to different drives. You use non-root SSD over Thunderbolt 3 and migrate your plots off to whatever storage you want to keep them on long term. You could even load them on a Raspberry Pi 3 or 4 with outdated USB 2.0 drives attached and they will Harvest and Farm just fine. PC World offers this great [background on current storage technologies](https://www.pcworld.com/article/2899351/everything-you-need-to-know-about-nvme.html) but this graph gives you a quick view of why we recommend NVMe SSD:
 ![NVMe SSD vs SATA](images/plotting-nvme-ssd.png "NVMe SSD is 5.5 times faster than SATA SSD")
 
 # Can I plot more than one plot at a time?
 
-Yes but until Beta 19 you will need to use the command line of your operating system with or instead of the GUI. There are [tips for Windows users](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and Mac users can find their CLI commands in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#macos). You may have better results if your stagger the start time of parallel plotting processes depending on your hardware setup.
+Yes and starting with Beta 19 you can either use the GUI or CLI. Over the short run you have a bit more control of plotting using the CLI. There are [tips for Windows users](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and Mac users can find their CLI commands in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#macos). You may have better results if you stagger the start time of parallel plotting processes depending on your hardware setup.
 
 # Can I move my plot files around?
 
@@ -41,15 +41,15 @@ If you see something like `Caught plotting error: Not enough memory for sort in 
 
 # My computer/drive went into power save or rebooted while plotting?
 
-Unfortunately, resuming a plot is not yet supported but likely will be later in 2021. We suggest that you disable power saving mode - especially for external drives - and try to limit other possible causes of interruptions. Plotting a k=32 is going to take between 7 and 20 hours, depending on your hardware, so these interruptions can be painful. They are also a part of why we don't recommend plotting plots larger than k=32 as each increment in k generally doubles the time to complete a single plot.
+Unfortunately, resuming a plot is not yet supported but likely will be later in 2021. We suggest that you disable power saving mode - especially for external drives - and try to limit other possible causes of interruptions. Plotting a k=32 is going to take between 6 and 20 hours, depending on your hardware, so these interruptions can be painful. They are also a part of why we don't recommend plotting plots larger than k=32 as each increment in k generally doubles the time to complete a single plot.
 
 # What are the plans for the project and what are its tokenomics?
 
-This is the Repository FAQ which focuses on how to use the software. For lots more on the reasons, technology, and plans for the project we suggest you read over the [Project FAQ](https://www.chia.net/faq/).
+This is the Repository FAQ which focuses on how to use the software. For lots more on the motivations, technology, and plans for the project we suggest you read the [Project FAQ](https://www.chia.net/faq/).
 
 # What is a VDF/proof of time?
 
-A VDF, also known as a proof of time, is a sequential operation that takes a prescribed amount of time to compute (and which cannot be accelerated by parallelism) and which produces an accompanying proof by which the result may be quickly verified. This must be done in a group, for which Chia uses ideal class groups, which are explained in this [class group document](https://github.com/Chia-Network/oldvdf-competition/blob/master/classgroups.pdf).
+A VDF, also known as a proof of time, is a sequential operation that takes a prescribed amount of time to compute (and which cannot be accelerated by parallelism) and which produces an accompanying proof whose result may be quickly verified. This must be done in a group, for which Chia uses ideal class groups. You can learn about them in our [class group document](https://github.com/Chia-Network/oldvdf-competition/blob/master/classgroups.pdf).
 
 # How do I tell if I'm farming correctly?
 
@@ -57,7 +57,7 @@ If you see plots in the Plots section of the Farm page in the GUI - your plots a
 
 # Does it matter how fast my internet connection is?
 
-No. You have at least 30 seconds and often more time to respond to challenges.
+No. You have at least 30 seconds to respond to challenges.
 
 # Do I have to be connected to the internet or synced to plot?
 
@@ -73,7 +73,7 @@ Yes.
 
 # How do I know if my plots are OK?
 
-Run `chia plots check -n 100` to try 100 sample challenges for each plot. Each of your plots should return a number around 100, which means it found 100 proofs of space. If you're still worried try `-n 1000` as more random attempts will give you a more valid assessment that the plots is fine. It really is ok if your plot is within 90-110 or 900 to 1100 - depending on your `-n`. If some of your plots are missing for some reason you may need to add the directory they are in to your config.yaml file. That can be done in the GUI with the MANAGE PLOT DIRECTORIES button or on the command line with `chia plots add -d [directory]`.
+Run `chia plots check -n 30` to try 30 sample challenges for each plot. Each of your plots should return a number around 100, which means it found around 100% of the attempted proofs of space. If you're still worried try `-n 100` as more random attempts will give you a more valid assessment that the plots is fine. It really is ok if your plot is within 90%-110%. If some of your plots are missing for some reason you may need to add the directory they are in to your config.yaml file. That can be done in the GUI with the MANAGE PLOT DIRECTORIES button or on the command line with `chia plots add -d [directory]`.
 
 # I have only 10 TB, will I ever win XCH on mainnet?
 
@@ -88,7 +88,7 @@ Not yet. Currently the plots you generate are plotted to your own self pool key.
 The wallet will show you your address and provide an interface for you to spend your chia funds.
 Read about how to build and start the wallet GUI in our [quickstart guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#run-a-full-node--farmer--harvester--wallet). There is now some wallet functionality available on the command line. Try `chia show -w`.
 
-The wallet software also provides features related to coloured coins, and trade offers. Support for signing and sending transactions from the command line will likely come in Beta 19.
+The wallet software also provides features related to coloured coins, and trade offers. Support for signing and sending transactions from the command line will be available soon.
 
 # Why is it recommended that a winning plot be deleted on mainnet?
 
@@ -96,7 +96,7 @@ There is a possible attack where an attacker who can co-ordinate N deep from the
 
 # What are the next milestones?
 
-We are about to complete the Beta testnet blockchain phase. During Beta you should expect continued improvements in ease of install, and support for and user interface for our reference smart transactions. We will have some over the wire protocol changes that will require hard forks but should migrate your existing plots and installations easily to the newer chain. Starting with Beta 8, the new plot format is intended to be the same as mainnet so you will be able to get your plots in order before mainnet launch. After a short period of testing of the new consensus algorithm we will leave the Beta phase and enter the Release Candidate phase. These are releases that we believe are consensus critical feature complete but that we may need to add minor functionality to and fix bugs found. We expect to launch mainnet at the end of 2020 (but see below.) We also plan to have an 4-6 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
+We are about to complete the Beta testnet blockchain phase. During Beta you should expect continued improvements in ease of install, and support for and user interface for our reference smart transactions. We will have some over the wire protocol changes that will require hard forks but should migrate your existing plots and installations easily to the newer chain. Starting with Beta 8, the new plot format is the same as mainnet so you will be able to get your plots in order before mainnet launch. After a short period of testing of the new consensus algorithm we will leave the Beta phase and enter the Release Candidate phase. These are releases that we believe are consensus critical feature complete but that we may need to add minor functionality to and fix bugs found. We expect to launch mainnet at the end of 2020 (but see below.) We also plan to have a 4-6 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
 
 # When mainnet?
 
@@ -124,11 +124,15 @@ The codebase takes advantage of the newest async generators, especially async/aw
 
 # What is this UPnP Error?
 
-UPnP is an optional setting that allows users to open a port in their router and therefore allow other nodes to connect to them. This is not required, since your node can still make outgoing connections without UPnP.
+[UPnP](ttps://www.homenethowto.com/ports-and-nat/upnp-automatic-port-forward/) is an optional setting that allows users to open a port in their router and therefore allow other nodes to connect to them. This is not required, since your node can still make outgoing connections without UPnP.
 
 For some routers, UPnP is enabled automatically, but for others, you might have to go into your router settings and enable UPnP manually. Sometimes restarting the router is also necessary.
 
 Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 or 5844 for testnet to your machine.
+
+# Why should I not run more than one node on a home network and what's this about UPnP?
+
+First, running more than one node on your home network is wasting bandwidth by syncing two copies of the blockchain over your download link. You can get the same results by running one node and [using multiple harvesters](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines) on multiple computers. Second, if you have [uPnP](https://www.homenethowto.com/ports-and-nat/upnp-automatic-port-forward/) enabled on both nodes and your home router supports uPnP (and most do) it will cause both of your nodes to not sync the blockchain. You need to disable uPnP on all or all but one node behind a uPnP enabled router. The CLI command `chia configure --enable-upnp False` will turn uPnP off on a node. It requires a restart of the node to take effect.
 
 # Why does my other node on my local network not connect to anything?
 
