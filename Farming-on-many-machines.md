@@ -17,4 +17,9 @@ other network peers  --------   Main machine ------  Harvester 2
 7. To stop the harvester, you run CLI `chia stop harvester`
 
 Note:
-Currently (beta17), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `INFO` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/beta-1.0bx/log/debug.log` and see if you get messages like `[time stamp] harvester src.harvester           : WARNING  KeyError plot [directory of your harvester + plot file name] does not exist.` That means it knows you have a plot that has a proof that can solve the challenge hash, but it can't find the file locally. This shows it's reading the information from your harvesters properly, knowing the file exists somewhere in your harvester network.
+Currently (beta22), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `INFO` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/beta-1.0bx/log/debug.log` and see if you get messages like the following:
+```
+[time stamp] farmer farmer_server              : INFO     -> new_signage_point to peer [harvester IP address] 12754e9059ea260cec737389b5e7ec14232d4ddb3730e520ed5f6d3b30d511c4
+[time stamp] farmer farmer_server              : INFO     <- new_proof_of_space from peer 12754e9059ea260cec737389b5e7ec14232d4ddb3730e520ed5f6d3b30d511c4 [harvester IP address]
+```
+The new_signage_point message states the farmer sent a challenge to your harvester. The new_proof_of_space message states the harvester found a proof for the challenge. You will get more new_signage_point messages than new_proof_of_space messages.
