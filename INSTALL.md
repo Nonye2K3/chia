@@ -14,24 +14,22 @@ Chia plot files are at least 108GB in size (for K32). To plot successfully requi
 
 The Chia plotting process takes multiple of hours to complete. If the computer or hard drives goes to sleep during the plotting process, the plotting fails and you will need to start over. Please ensure all sleep, hibernate and power saving modes for your computer and hard drives are disabled before starting the Chia plotting process. In the future, Chia will have resume plot feature. In the meantime, if you do get a failed plot, delete all `*.tmp` files before starting a new plot.
 
-## Updating from Beta 8 - 20:
+## Updating from Beta 8 - 21:
 
-Keys and configs from Beta 8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Beta 19/20/21's blockchain is new and does not bring forward previous test chia.**
+Keys and configs from Beta 8 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Beta 19/20/21/22's blockchain is new and does not bring forward previous test chia.**
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.21-win64/ChiaSetup-0.1.21.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/beta-1.22-win64/ChiaSetup-0.1.22.exe)
 
-As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line.
-
-If you have previously installed Chia, you should use Windows Add/Remove to uninstall earlier versions of Chia though the installer will automatically uninstall the previous version.
+As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line. Some Windows anti-virus applications are seeing the download as a false positive. You can see the entire source code and build method here so we think it's safe for you to ask those tools to ignore it.
 
 You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.21-macos/Chia-0.1.21.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/beta-1.22-macos/Chia-0.1.22.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
@@ -79,6 +77,7 @@ deactivate
 
 #Upgrading from Beta 15 to Beta 16 or 17 requires a switch from master to main
 
+chia stop -d all
 git fetch
 git checkout main
 git pull
@@ -186,7 +185,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2
 
-pip install chia-blockchain==1.0b21
+pip install chia-blockchain==1.0b22
 ```
 
 # CentOS/RHEL 7.7 or newer
@@ -227,7 +226,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10 cbor2
 
-pip install chia-blockchain==1.0b21
+pip install chia-blockchain==1.0b22
 ```
 # Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
@@ -263,7 +262,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0b21
+pip install chia-blockchain==1.0b22
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
