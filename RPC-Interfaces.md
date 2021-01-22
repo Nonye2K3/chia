@@ -8,7 +8,7 @@ Some examples:
 curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_blockchain_state
 
 # Get blockchain state in Beta 19 and beyond.
-curl --insecure --cert ~/.chia/VERSION/config/trusted.crt --key ~/.chia/VERSION/config/trusted.key\
+curl --insecure --cert ~/.chia/VERSION/config/trusted.crt --key ~/.chia/VERSION/config/trusted.key \
  -d '{"":""}' -H "Content-Type: application/json" -X POST https://localhost:8555/get_blockchain_state
 
 # Get block header by header hash
