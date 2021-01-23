@@ -4,7 +4,7 @@ These are machines that work well to quickly create plots in parallel. These ser
 
 Plotting can be done on consumer systems (laptops), but is much faster done on high-end desktops, workstations, and servers. Plotting takes scaling for CPU cores to improve the parallelism (this is -r number of threads, or number of parallel processes), scaling in DRAM per process, and fast SSDs or many small 10k hard drives for temporary storage space.
 
-each K=32 will require approximately 330GiB of temporary space, a minimum of 4500MB of DRAM, and at least a single CPU thread. For instance, a 1.6TB SSD would have 1.46TiB usable in the OS, could fit 4 k=32 in parallel (4*330 < 1490GiB), and would require 18GB of DDR4.
+each K=32 will require approximately 332GiB of temporary space, a minimum of 4500MB of DRAM, and at least a single CPU thread. For instance, a 1.6TB SSD would have 1.46TiB usable in the OS, could fit 4 k=32 in parallel (4*330 < 1490GiB), and would require 18GB of DDR4.
 
 the actual amount of DRAM needed per K value and U value (buckets) based on b17 plotting in MB
 | U/K | 128    | 64     | 32     | 16      |
