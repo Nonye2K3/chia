@@ -12,7 +12,7 @@ We believe that plots created with Beta 8 and newer version of the chia software
 There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.1.22\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`. You can also checkout these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips).
 
 ## MacOS
-There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `.chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`.
+There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `./chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`.
 
 
 ## Development/source builds
