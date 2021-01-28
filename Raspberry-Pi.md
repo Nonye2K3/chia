@@ -37,6 +37,8 @@ chia keys generate
 chia keys add -m [24 words]
 ```
 
+But you got are getting an error related to not being able to find a blspy version that satisfies 0.3.1 you say? You're probably trying to install on 32 bit Raspbian. You can check by running `uname -a` and if it says arm7l you need a 64 bit version of your favorite OS. 
+
 The Pi isn't cut out to be a Timelord and the Timelord requirements are very x86-64 specific currently and there is one piece of magic. You don't need this magic anymore now that chiavdf comes from a binary wheel on PyPi but we're leaving this here for people trying to build in other environments. This environment variable is set so that chiavdf doesn't attempt to compile Timelord components.
 
 ```bash
