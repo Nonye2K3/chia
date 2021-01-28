@@ -67,7 +67,7 @@ Example below will create a k32 plot and use 4GB (note - not GiB) of memory.
 
 Example 2 below will create a k34 plot and use 8GB of memory, 2 threads and 64 buckets
 
-`chia plots create -k 34 -b 8000 -r 2 -u 64 -t /path/to/temporary/directory -d /path/to/final/directory`
+`chia plots create -k 34 -e -b 8000 -r 2 -u 64 -t /path/to/temporary/directory -d /path/to/final/directory`
 
 **Additional Plotting Notes**
 
