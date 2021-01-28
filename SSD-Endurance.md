@@ -1,6 +1,6 @@
 ## Estimated SSD wear out, endurance table
 
-There are various approaches to picking a great plotting SSD, and a lot will depend on the physical system it is going into for form factor and interface compatibility (NVMe/PCIe, SATA, or SAS). The one thing in common will be that you need high endurance, due to the fact that it take almost ~1.8TB of writes to create a single K=32 plot.
+There are various approaches to picking a great plotting SSD, and a lot will depend on the physical system it is going into for form factor and interface compatibility (NVMe/PCIe, SATA, or SAS). The one thing in common will be that you need high endurance, due to the fact that it take almost ~1.8TB of writes using the `-e` flag or 1.6TB without that option to create a single K=32 plot.
 
 Endurance is how much data can be written to the SSD before it wears out. In Chia this is important because a plotting SSD will generally be at 100% duty cycle and writing all day. 
 
