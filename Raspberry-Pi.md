@@ -23,6 +23,9 @@ You need 1000/1024MiB of swap space. Here is an excellent [walk through of incre
 Now:
 
 ```bash
+# Make sure you have a couple requirements to compile items that aren't in binary form
+sudo apt-get update -y build-essential python3-dev
+
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
 
