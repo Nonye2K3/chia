@@ -24,7 +24,7 @@ Now:
 
 ```bash
 # Make sure you have a couple requirements to compile items that aren't in binary form
-sudo apt-get update -y build-essential python3-dev
+sudo apt-get install -y build-essential python3-dev
 
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
