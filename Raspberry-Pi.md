@@ -27,7 +27,7 @@ First some setup:
 sudo apt-get install -y build-essential python3-dev
 
 # If you're not using Raspbian add this
-export PIP_EXTRA_INDEX_URL=https://www.piwheels.org/
+export PIP_EXTRA_INDEX_URL=https://www.piwheels.org/simple/
 ```
 
 Then proceed with a relative usual install process:
