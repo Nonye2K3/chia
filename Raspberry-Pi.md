@@ -20,12 +20,19 @@ For Raspbian 64:
 
 You need 1000/1024MiB of swap space. Here is an excellent [walk through of increasing swap space](https://pimylifeup.com/raspberry-pi-swap-file/) on Raspbian 64.
 
-Now:
+First some setup:
 
 ```bash
 # Make sure you have a couple requirements to compile items that aren't in binary form
 sudo apt-get install -y build-essential python3-dev
 
+# If you're not using Raspbian add this
+export PIP_EXTRA_INDEX_URL=https://www.piwheels.org/
+```
+
+Then proceed with a relative usual install process:
+
+```bash
 git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
 
