@@ -26,7 +26,7 @@ First some setup:
 # Make sure you have a couple requirements to compile items that aren't in binary form
 sudo apt-get install -y build-essential python3-dev
 
-# If you're not using Raspbian add this
+# If you are not using Raspbian 64 (it pre-specifies it) add this
 export PIP_EXTRA_INDEX_URL=https://www.piwheels.org/simple/
 ```
 
