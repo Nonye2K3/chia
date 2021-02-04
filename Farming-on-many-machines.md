@@ -1,3 +1,6 @@
+**`As of beta 26 release, this process needs additional updating - you can no longer remote connect harverster as described below, they need ssl certificates generated from the farmers CA. This is after the introduction of ssl to the connections.`**
+
+
 This guide allows you to run a harvester on each machine, without having to run a full node, wallet, and farmer on each one. This keeps your system simpler, uses less bandwidth, space, CPU, and also keeps your keys safer.
 
 The architecture is composed of one machine which runs the farmer, full node, and wallet, and other machines which run only the harvester. Only your main machine will connect to the Chia network.
