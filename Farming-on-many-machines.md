@@ -1,4 +1,4 @@
-**`As of beta 26 release, this process needs additional updating - you can no longer remote connect harverster as described below, they need ssl certificates generated from the farmers CA. This is after the introduction of ssl to the connections.`**
+**`This feature is not supported in beta 26 release. A fix is available for those who know how to use dev builds. Otherwise please wait for beta 27 for support again. This wiki will be updated once beta 27 releases. Any questions on this can go to @efishcent on Keybase`**
 
 
 This guide allows you to run a harvester on each machine, without having to run a full node, wallet, and farmer on each one. This keeps your system simpler, uses less bandwidth, space, CPU, and also keeps your keys safer.
