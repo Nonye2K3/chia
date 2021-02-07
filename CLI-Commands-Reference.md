@@ -96,7 +96,7 @@ Examples for using `-g`
 * Check only k33 plots can use `chia plots check -g k33`
 * Check plots created on October 31, 2020 can use `chia plots check -g 2020-10-31`
 
-`-l` allows you to find duplicate plots by ID. It checks all plot directories listed in config.yaml and lists out any plot filenames with the same filename ending; `*-[64 Char Plots ID].plot`. You should use `-l -n 0` if you only want to check for duplicates.
+`-l` allows you to find duplicate plots by ID. It checks all plot directories listed in config.yaml and lists out any plot filenames with the same filename ending; `*-[64 char plot ID].plot`. You should use `-l -n 0` if you only want to check for duplicates.
 
 `-n` represents the number of challenges given. If you don't include an `-n` integer, the default is 30. For instance, if `-n` is 30, then 30 challenges will be given to each plot. The challenges count from 5 (minimum) to `-n`, and are not random.
 
