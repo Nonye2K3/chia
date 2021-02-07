@@ -45,6 +45,8 @@ Command: `chia plots create [add flags and parameters]`
 
 `-p` [pool pk]: This is your "Pool Public Key". Utilise this when you want to create plots on other machines for which you do not want to give full chia account access. To find your Chia Pool Public Key use the following command: `chia keys show`
 
+`-a` [fingerprint]: This is the key Fingerprint used to select both the Farmer and Pool Public Keys to use. Utilise this when you want to create plots on other machines for which you do not want to give full chia account access, or when you want to select one key out of several in your keychain. To find your Chia Key Fingerprint use the following command: `chia keys show`
+
 `-t` [tmp dir]: Define the temporary directory for plot creation. This is where Plotting Phase 1 (Forward Propagation) and Phase 2 (Backpropagation) both occur. The `-t` dir requires the largest working space: normally about 4 times the size of the final plot.
 
 `-2` [tmp dir 2]: Define a secondary temporary directory for plot creation. This is where Plotting Phase 3 (Compression) and Phase 4 (Checkpoints) occur. Depending on your OS, `-2` might default to either `-t` or `-d`. Therefore, if either `-t` or `-d` are running low on space, it's recommended to set `-2` manually. The `-2` dir requires an equal amount of working space as the final size of the plot.
