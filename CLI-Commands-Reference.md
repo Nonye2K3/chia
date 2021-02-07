@@ -83,7 +83,7 @@ Example 2 below will create a k34 plot and use 8GB of memory, 2 threads and 64 b
 
 ## [check](https://github.com/Chia-Network/chia-blockchain/blob/master/src/plotting/check_plots.py)
 
-Command: `chia plots check -n [num checks] -g [substring]`
+Command: `chia plots check -n [num checks] -l -g [substring]`
 
 First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`.
 
