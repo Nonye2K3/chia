@@ -96,7 +96,9 @@ Examples for using `-g`
 * Check only k33 plots can use `chia plots check -g k33`
 * Check plots created on October 31, 2020 can use `chia plots check -g 2020-10-31`
 
-`-n` represents the number of challenges given. If you don't include an `-n` integer, the default is 20. For instance, if `-n` is 20, then 20 challenges will be given to each plot. The challenges count from 0 to `-n`, and are not random.
+`-l` allows you to find duplicate plots by ID. It checks all plot directories listed in config.yaml and lists out any plot filenames with the same filename ending; `*-[64 Char Plots ID].plot`. You should use `-l -n 0` if you only want to check for duplicates.
+
+`-n` represents the number of challenges given. If you don't include an `-n` integer, the default is 30. For instance, if `-n` is 30, then 30 challenges will be given to each plot. The challenges count from 5 (minimum) to `-n`, and are not random.
 
 Each plot will take each challenge and:
 * Get the quality for the challenge (Is there a proof of space? You should expect 1 proof per challenge, but there may be 0 or more than 1.)
@@ -109,7 +111,7 @@ Therefore, if `-n` is 20, you would expect 20 proofs, but your plot may have mor
 
 Running the command with `-n 10` or `-n 20` is good for a very minor check, but won't actually give you much information about if the plots are actually high-quality or not.
 
-Consider using `-n 1000` to get a better idea, but be warned that this will take a fairly long time if you're scanning multiple plots.
+Consider using `-n 30` to get a statistically better idea.
 
 For more detail, you can read about the DiskProver commands in [chiapos](https://github.com/Chia-Network/chiapos/blob/master/src/prover_disk.hpp)
 
