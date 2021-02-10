@@ -49,7 +49,7 @@ Unfortunately, resuming a plot is not yet supported but likely will be later in 
 
 # What are the plans for the project and what are its tokenomics?
 
-This is the Repository FAQ which focuses on how to use the software. For lots more on the motivations, technology, and plans for the project we suggest you read the [Project FAQ](https://www.chia.net/faq/).
+This is the Repository FAQ which focuses on how to use the software. For lots more on the motivations, technology, and plans for the project we suggest you read the [Project FAQ](https://www.chia.net/faq/). We have also released our [Business Whitepaper](I'm pleased to present Version 1 of the Chia Business Whitepaper) that goes into details of both the tokenomics, the pre-farm, and our go to market strategy.
 
 # What is a VDF/proof of time?
 
@@ -108,11 +108,11 @@ We are about to complete the Beta testnet blockchain phase. During Beta you shou
 
 # When mainnet?
 
-The original plan was for December 2020 or January 2021 and our development of our original consensus met our expected timeline. However, in February of 2020 we were introduced to some new ideas at the Stanford Blockchain 2020 event that lead to our [new consensus algorithm](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit) - which is a significant upgrade in security and usability of our chain. Implementing that has set us back a few weeks and now we are targeting the second half of January 2021 - February 2021 though there remains some timing uncertainty in the order of a few more weeks as we work out bugs in the new consensus. Our intent is to not have to hard fork once mainnet is started so we have to be very certain that consensus critical items are complete and our first security audits are complete. Our community members warn that each time you ask in [Keybase](https://keybase.io/team/chia_network.public) it gets moved back a week.
+The original plan was for December 2020 or January 2021 and our development of our original consensus met our expected timeline. However, in February of 2020 we were introduced to some new ideas at the Stanford Blockchain 2020 event that lead to our [new consensus algorithm](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit) - which is a significant upgrade in security and usability of our chain. Implementing that has set us back a few weeks and now we are targeting a date on or before March 17, 2020 though there remains some timing uncertainty in the order of a week or two as we complete consensus critical items. Our intent is to not have to hard fork once mainnet is started so we have to be very certain that consensus critical items are complete and our first security audits are complete. Our community members warn that each time you ask in [Keybase](https://keybase.io/team/chia_network.public) it gets moved back a week.
 
 # How can I contribute?
 
-You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-blockchain/blob/master/CONTRIBUTING.md) in the repository but the quick answer is to please base your pull requests off the dev branch. The dev branch will only accept rebase merges or squash merges.
+You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-blockchain/blob/master/CONTRIBUTING.md) in the repository but the quick answer is to please base your pull requests off the dev branch. The dev branch will only accept rebase merges or squash merges. You can help [translate the application](https://crowdin.com/project/chia-blockchain/) as well.
 
 # How do I upgrade and keep my keys and plots?
 
