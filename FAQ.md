@@ -94,7 +94,7 @@ Not yet. Currently the plots you generate are plotted to your own self pool key.
 # How do I send or receive a transaction?
 
 The wallet will show you your address and provide an interface for you to spend your chia funds.
-Read about how to build and start the wallet GUI in our [quickstart guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#run-a-full-node--farmer--harvester--wallet). There is now some wallet functionality available on the command line. Try `chia show -w`.
+Read about how to build and start the wallet GUI in our [quickstart guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#run-a-full-node--farmer--harvester--wallet). There is now some wallet functionality available on the command line. Try `chia wallet -h`.
 
 The wallet software also provides features related to coloured coins, and trade offers. Support for signing and sending transactions from the command line will be available soon.
 
