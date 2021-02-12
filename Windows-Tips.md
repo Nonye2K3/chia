@@ -29,6 +29,6 @@ cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.1.27\resources\app.
 6. Sometimes your wallet database can get corrupted. If you get stuck on the "Connecting to wallet" spinner for more than 60 seconds, you will probably want to exit the app, delete your wallet database with powershell, and then start the app again.
 ```
 # For Beta 27:
-cd ~\.chia\beta-1.0b27\wallet\db
+cd ~\.chia\beta-0.1.27\wallet\db
 del *.db
 ```
