@@ -64,7 +64,7 @@ pkg_add -i electron
 cd chia-blockchain
 . ./activate
 
-cd electron-react
+cd chia-blockchain-gui
 
 # build / set up GUI
 npm run build
