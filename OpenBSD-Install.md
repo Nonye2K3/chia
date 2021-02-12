@@ -86,6 +86,6 @@ The GUI can now be launched using the following commands:
 cd chia-blockchain
 . ./activate
 
-cd electron-react
+cd chia-blockchain-gui
 npm run electron
 ```
