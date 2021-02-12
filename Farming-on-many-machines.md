@@ -12,17 +12,17 @@ To secure communication between your harvester and main machine, TLS is used whe
 other network peers  --------   Main machine (CA) ------  Harvester 2 (certificate B)
                                       \_____  Harvester 3 (certificate C)
 ```
-1. First, make sure Chia is installed on all machines. Ensure you have private keys by running CLI `chia keys show`. 
-2. When creating plots on the other harvesters, use `chia plots create -f farmer_key -p pool_key`, inserting the farmer and pool keys from your main machine. Alternatively, you could copy your private keys over by using `chia keys add -m 24words`, but this is less secure. After creating a plot, run `chia plots check` to ensure everything is working correctly.
-3. Make a copy of your **main** machine CA directory located in `~/.chia/beta-1.0bx/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester.
+* First, make sure Chia is installed on all machines. Ensure you have private keys by running CLI `chia keys show`. 
+* When creating plots on the other harvesters, use `chia plots create -f farmer_key -p pool_key`, inserting the farmer and pool keys from your main machine. Alternatively, you could copy your private keys over by using `chia keys add -m 24words`, but this is less secure. After creating a plot, run `chia plots check` to ensure everything is working correctly.
+* Make a copy of your **main** machine CA directory located in `~/.chia/beta-1.0bx/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester.
 
 Then for each harvester, follow these steps:
-4. Make sure your **main** machines IP address on port 8447 is accessible by your harvester machines
-5. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote harvester's farmer_peer section
-6. Shut down all chia daemon processes with `chia stop all -d`
-7. Run `chia init -c [directory]` on your remote harvester, where `[directory]` is the the copy of your **main** machine CA directory
-8. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine in your INFO level logs.
-7. To stop the harvester, you run CLI `chia stop harvester`
+1. Make sure your **main** machines IP address on port 8447 is accessible by your harvester machines
+2. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote harvester's farmer_peer section
+3. Shut down all chia daemon processes with `chia stop all -d`
+4. Run `chia init -c [directory]` on your remote harvester, where `[directory]` is the the copy of your **main** machine CA directory
+5. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine in your INFO level logs.
+6. To stop the harvester, you run CLI `chia stop harvester`
 
 Warning:
 You cannot copy the entire `config/ssl` directory from one machine to another. Each machine must have different TLS certificates for your **main** machine to recognize it as different harvesters. Unintended bugs can occur, including harvesters failing to work properly when the **same** certificates are shared among different machines.
