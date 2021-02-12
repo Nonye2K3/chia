@@ -39,7 +39,7 @@ To run a full node on port 8444, and connect to the testnet, run the following c
 
 ```bash
 sh install-gui.sh
-cd electron-react
+cd chia-blockchain-gui
 npm run electron &
 ```
 
