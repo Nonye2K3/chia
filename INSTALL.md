@@ -66,7 +66,7 @@ sh install.sh
 
 sh install-gui.sh
 
-cd electron-react
+cd chia-blockchain-gui
 npm run electron &
 
 #Update from previous version
