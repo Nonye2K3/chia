@@ -45,7 +45,7 @@ sh install.sh
 
 sh install-gui.sh
 
-cd electron-react
+cd chia-blockchain-gui
 npm run electron &
 ```
 
@@ -171,7 +171,7 @@ sh install.sh
 . ./activate
 
 # gui
-cd electron-react
+cd chia-blockchain-gui
 npm run build
 npm run electron
 
@@ -212,7 +212,7 @@ sh install.sh
 . ./activate
 
 # gui
-cd electron-react
+cd chia-blockchain-gui
 npm run build
 npm run electron
 
