@@ -12,7 +12,7 @@ To secure communication between your harvester and main machine, TLS is used whe
 other network peers  --------   Main machine (CA) ------  Harvester 2 (certificate B)
                                       \_____  Harvester 3 (certificate C)
 ```
-* First, make sure Chia is installed on all machines. Ensure you have private keys by running CLI `chia keys show`. 
+* First, make sure Chia is installed on all machines and initialized by running the CLI `chia init`. 
 * When creating plots on the other harvesters, use `chia plots create -f farmer_key -p pool_key`, inserting the farmer and pool keys from your main machine. Alternatively, you could copy your private keys over by using `chia keys add -m 24words`, but this is less secure. After creating a plot, run `chia plots check` to ensure everything is working correctly.
 * Make a copy of your **main** machine CA directory located in `~/.chia/beta-1.0bx/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester.
 
