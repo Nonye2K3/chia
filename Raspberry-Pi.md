@@ -67,6 +67,6 @@ You can run without the GUI using commands like `chia init`, `chia start farmer`
 
 ```
 sh install-gui.sh
-cd electron-react
+cd chia-blockchain-gui
 npm run electron &
 ```
