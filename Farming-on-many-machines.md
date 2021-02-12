@@ -1,4 +1,4 @@
-**`Updated for beta 27 release to support TLS`**
+_Updated for beta 27 release to support TLS_
 
 This guide allows you to run a harvester on each machine, without having to run a full node, wallet, and farmer on each one. This keeps your system simpler, uses less bandwidth, space, CPU, and also keeps your keys safer.
 
