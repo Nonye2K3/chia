@@ -32,3 +32,5 @@ cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.1.27\resources\app.
 cd ~\.chia\beta-0.1.27\wallet\db
 del *.db
 ```
+
+7. If your Powershell plotting processes seem to pause you should disable Quick Edit. Powershell -> Properties -> Options: Disable quick edit.
