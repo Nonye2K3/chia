@@ -49,7 +49,7 @@ Unfortunately, resuming a plot is not yet supported but likely will be later in 
 
 # What are the plans for the project and what are its tokenomics?
 
-This is the Repository FAQ which focuses on how to use the software. For lots more on the motivations, technology, and plans for the project we suggest you read the [Project FAQ](https://www.chia.net/faq/). We have also released our [Business Whitepaper](I'm pleased to present Version 1 of the Chia Business Whitepaper) that goes into details of both the tokenomics, the pre-farm, and our go to market strategy.
+This is the Repository FAQ which focuses on how to use the software. For lots more on the motivations, technology, and plans for the project we suggest you read the [Project FAQ](https://www.chia.net/faq/). We have also released our [Business Whitepaper](https://www.chia.net/2021/02/10/chia-businesss-whitepaper.html) that goes into details of both the tokenomics, the pre-farm, and our go to market strategy.
 
 # What is a VDF/proof of time?
 
