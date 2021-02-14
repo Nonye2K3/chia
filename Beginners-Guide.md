@@ -51,6 +51,7 @@ On for a basic computer  it takes about 10-25 hours to create 1 plot of 101 gigs
 Once plotting start it will show on the **Plot Tab** page in an area called “Local Harvester Plots”
 
  As it creates the plots -- on the right side **Under Status column—**there are 3 dots – click on logs to see the status of that plot.   Look below on this sheet and it explains the steps the plotting process got thru to be created.
+
 **How Plots are created and steps it goes thru**
 
 Creating a plot is time consuming.  Average 10-20 hours.  Here are the approx. 7 steps/ tables are created to create a plot.  
