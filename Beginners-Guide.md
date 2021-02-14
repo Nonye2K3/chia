@@ -46,7 +46,7 @@ The plot will be created in the temp storage folder- lots of them labled .tmp- o
 
 **Plotting time**
 
-On for a basic computer  it takes about 10 hours to create 1 plot of 101 gigs. Newer computers create plots much faster.
+On for a basic computer  it takes about 10-25 hours to create 1 plot of 101 gigs. Newer computers create plots much faster.
 
 Once plotting start it will show on the **Plot Tab** page in an area called “Local Harvester Plots”
 
@@ -56,31 +56,20 @@ Notes-
 If using a Mac -- the suggestion is to use an Added SSD or NVME storage to create plots and not the primary hard drive.
 The Chia software is evolving-- if for some reason a plot has to be deleted-- under status it does allow to delete the plot.  It may stop all the plotting and software to restart and all new plots created. That component is evolving with revisions
 
-**Word definitions**
+**Word definitions and Explanations**
 
-Proof in the Last Attempted Proof box — that is a Proof of Space and that is what is inside the PLOT.  Millions of "excel blocks" with formulas called proofs of space.
-
-The chia software gets a proof number lets say 2021.  It’s going to look thru people that have the most plots first to find the closest to 2021 and this is where the time comes into play-- that is within 2-3 seconds to do the calculations.   If another block is 2025- but has a time calculation of 5 hours it skips it over.
-
+"Proof"  is what is inside the PLOT.  Millions of "excel blocks" with formulas called proofs of space.
 The chia software is designed to work on a lottery system.  A key element to winning the lottery of earning coins is that the software wants a “winner” to have a lot of plots made so it can go thru all the data quickly to answer the proof.  Proofs are the acceptance of the transaction and then move on.
 
-When Chia is first loaded
+The chia software gets a proof number lets say 2021.  It’s going to look thru lookup tables on the front of the plots.  Find the closest to 2021 and this is where the time comes into play-- That proof (excel block hash) comes with a time calculator and the computer figures out to run this transaction with that proof takes 2-3 seconds to do the calculations.   If another block is 2025- but has a time calculation of 5 hours it skips it over. The first one won the transaction.
 
-The software will sync with everyone found on the Full node tab—takes about 4-6 hrs. to sync.
-
-When you create a plot—it’s very RAM intensive and uses the hard drive— A windows PC with 16 gigs of RAM and normal hard drive --- each 101 gig plot taking around 24-30  hrs. to create.  I now upgraded my pc to 64 gigs and plot time takes 10 hrs. Est.
-
-When a chia transaction occurs – its time stamped  in the front– the software goes and looks for a farmed plot with lot of formulated cells—the larger and more plots available on a computer allows it to process the transaction with all the formulas from the cells.  Once all the verifications are done, another computer called a “timelord” puts another time stamp on it at the end and checks the transaction and sends it to its destination.  
-
- What makes Chia different from block chain— is the verification called proof of space and proof of time.  Basically as the block chain is going to the transaction process the timestamp in the beginning- time codes it.  Then another computer called a timelord—goes and puts a proof stamp on the transaction to say—every digit that passed thru—was all within this time slot, and similar to a gps location stamp also—so its verified and then the computer puts another time stamp on the end.  So each transaction has 3 verifications—making it extremely hard to crack or make changes, making it very secure
+What makes Chia different from block chain— is the verification called proof of space and proof of time.  Basically as the transaction first goes to the block chain the  transaction gets a timestamp in the beginning- time codes it.  Then another computer called a timelord—goes and puts a proof stamp on the transaction to say—every digit that passed thru—was all within this time slot, and similar to a gps location stamp also—so its verified and then the computer puts another time stamp on the end.  So each transaction has 3 verifications—making it extremely hard to crack or make changes, making it very secure
 
 As a transaction goes to a computer with lot of plots—since all the plots have all the calculation formulas already done—the entire transaction is done quickly and moves on.
 
-The chia software gets a proof number let’s say 2021.  It’s going to look thru people that have the most plots first to find the closest to 2021 and this is where the time comes into play--  that is within  2-3 seconds to do the calculations.   If another block is 2025- but has a time calculation of 5 hours it skips it over.
+Bitcoin on the other hand- goes to a winning computer—and it stops and does all the transactions—using a lot of electricity and computer resources.  Here is the green part of the Chia network.  No more 1000 computers to process 1 transaction.
 
-Bitcoin on the other hand- goes to a winning computer—and it stops and does all the transactions—using a lot of electricity and computer resources.
-
-**How Plots are created**
+**How Plots are created and steps it goes thru**
 
 Creating a plot is time consuming.  Average 10-20 hours.  Here are the approx. 7 steps/ tables are created to create a plot.  
 Table 1 is quickly created within 2 minutes.
@@ -98,23 +87,15 @@ Then it shows it’s completed- 101 gigs but nothing happens.  At this stage it 
 
 SSD drivers—many people are using SSD drives to create plots— or NVME drives.  Minimum of 1 Tb each is recommend if you want to plot more than 1 plot at a time
 
-I now use a pcie card- with NVME attached as my temp folder.
+On an older computer you can purchase a pcie adapter card-to take NVME/SSD drive as the new temp folder.   This is internal to the PC.  Some have tried to use a usb or firewire attached NVME/ SSD with some success.  The first plot is sometimes created with 6 hrs each, but doing multiple plots slows to 8 hrs each.
 
-I had a remote SSD drive as the temp folder drive and the PC did not like it(too slow for Chia).  So I added a PCIE adapter card with NVME drive it now works. I use an old pc.
+One item to plan for is storage of plots as they fill storage quickly.  As more  plots are created, the discussions start to turn to terabytes of data storage not gigs of storage
 
-One item to plan for is storage of plots as they fill storage quickly.  As more are created, the discussions start to turn to terabytes of data storage not gigs of storage
-
-Sync Issues – look on Full Node tab
+**Sync Issues – look on Full Node tab**
 
 Look at the date/time indicated compared to your PC.  If there is a 30 min difference and it has not caught up—on the windows menu—click View/Force reload.   It will take 5 minutes and should restart the cynic mode.  It will make you click your key code button again to get in.  It does not affect the plotting you are doing.
 
-It’s different that bitcoin.  I am a beginner -- from what I see-- 70% of Chia work is ram from the temp storage and 30% is CPU.  The plots are very large-- think of them with millions of excel sheets and every block has a formula or "proof"  Each proof needed to be calculated and then put in the cell.  Right now running 16 gig ram-- 1 --32k plot takes 25 hrs.   Upgraded ram to 24 gigs and now plot is 10 hrs.
-
-1/15/2021:
-
-Your PC should have some decent ram.  I am using 24 gig.   Your temp storage should be at least 1tb.     Have a very old pc--  bought for $100.   So what I did was get a PCIE  card that accepts NVME card- Got the PCIE on ebay  $14 and  bought NVME at best buy for $120 and that is my temp storage.  I have a 2tb drive that filled quickly, now on 8tb drive that I should fill in next few days.   so that is why I say storage becomes expensive. 
- 
-Groups to join on chat
+**Groups to join on Keybase chat**
 \# announcements   -- most important as it tells you of new versions
 \# beginner  -- read this one from the start -- many questions are answered
 \# farming hardware
