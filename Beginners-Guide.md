@@ -44,15 +44,7 @@ Click on green button- top right “Add a Plot”
 **When a plot is created.   There are 2 directories.  Temp storage and then permanent file.**
 Over 100 files will be created all labled.tmp-. (example  agjpgoeporig.tmp file).  The temp storage will grow to approx size 340 gigs per created plot.    Once the plot is created, software creates (1) file with 101 gigs with a name and end will say .plot (example agljglhjaw[jufpoierh[wjrgpoeiwh.plot )- the software will transfer it to the permanent file and its size will be 101 gigs.  This is what will be farmed to earn chia coins. Chia software then erases all the temporary files and starts over for next plot.
 
-**Plotting time**
-
-On for a basic computer  it takes about 10-25 hours to create 1 plot of 101 gigs. Newer computers create plots much faster.
-
-Once plotting start it will show on the **Plot Tab** page in an area called “Local Harvester Plots”
-
- As it creates the plots -- on the right side **Under Status column—**there are 3 dots – click on logs to see the status of that plot.   Look below on this sheet and it explains the steps the plotting process got thru to be created.
-
-**How Plots are created and steps it goes thru**
+**How Plots are created and 7 steps Process**
 
 Creating a plot is time consuming.  Average 10-20 hours.  Here are the approx. 7 steps/ tables are created to create a plot.  
 Table 1 is quickly created within 2 minutes.
