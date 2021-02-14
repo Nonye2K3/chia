@@ -42,15 +42,19 @@ Click on green button- top right “Add a Plot”
 - Click create plot to start process
 
 **When a plot is created.   There are 2 directories.  Temp storage and then permanent file.**
-The plot will be created in the temp storage folder- lots of them labled .tmp- over 100 files will be created all labled.tmp-. The temp storage will grow to use a minimum to be created 340 gigs per created plot.    Once the plot is created, software creates (1) file with 101 gigs with a name and end will say .plot (example agljglhjaw[jufpoierh[wjrgpoeiwh.plot )- the software will transfer it to the permanent file and its size will be 101 gigs.  This is what will be farmed to earn chia coins.
+The plot will be created in the temp storage folder- lots of them labled .tmp- over 100 files will be created all labled.tmp-. (example  agjpgoeporig.tmp file).  The temp storage will grow to approx size 340 gigs per created plot.    Once the plot is created, software creates (1) file with 101 gigs with a name and end will say .plot (example agljglhjaw[jufpoierh[wjrgpoeiwh.plot )- the software will transfer it to the permanent file and its size will be 101 gigs.  This is what will be farmed to earn chia coins. Chia software then erases all the temporary files and starts over for next plot.
 
 **Plotting time**
 
-On for a basic computer like mine- it takes about 10 hours to create 1 plot of 101 gigs.
+On for a basic computer  it takes about 10 hours to create 1 plot of 101 gigs. Newer computers create plots much faster.
 
-Once plotting start it will show on the Plot page in an area called “Local Harvester Plots”
+Once plotting start it will show on the **Plot Tab** page in an area called “Local Harvester Plots”
 
-Under status—there are 3 dots – click on logs to see the status of that plot.   Look below on this sheet and it explains the steps the plotting process got thru to be created.
+ As it creates the plots -- on the right side **Under Status column—**there are 3 dots – click on logs to see the status of that plot.   Look below on this sheet and it explains the steps the plotting process got thru to be created.
+
+Notes-
+If using a Mac -- the suggestion is to use an Added SSD or NVME storage to create plots and not the primary hard drive.
+The Chia software is evolving-- if for some reason a plot has to be deleted-- under status it does allow to delete the plot.  It may stop all the plotting and software to restart and all new plots created. That component is evolving with revisions
 
 **Word definitions**
 
