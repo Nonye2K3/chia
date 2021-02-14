@@ -1,6 +1,8 @@
 # Basic information about Chia to get started
 
-Chia is a new type of crypto currency—basic information to get started.   The software is still in development so is evolving
+Chia is a new type of crypto currency—basic information to get started.   
+
+A concept that is repeated a few times below-- Chia is based on capacity of pre-stored hash formulas  the user creates and stores--making blockchain process extremely fast/green.  It is not the same as blockchain design on fast graphic cards doing millions of calculations to process 1 transaction.
 
 ## How it works
 
