@@ -12,6 +12,12 @@ Cons – need to build yourself and source
 
 [Source for pic](https://www.reddit.com/r/DataHoarder/comments/lhp1g7/first_nas_build_update_corsair_750d/)
 
+## DIY farms
+There are many unique DIY builds in the farming hardware channel that find unique uses for repurposing existing hardware to mount drives.
+Here a build from user @xorinox that houses 32 drives farming off a Rock Pi and USB hubs for an average power consumption of 75W & 1.79kWh per day - easily making it one of the most power-efficient farms built!
+
+<img src="https://user-images.githubusercontent.com/61642896/103497288-0d53be00-4e0f-11eb-98b6-c9bffe57d3f3.jpg" width="700">
+
 ## JBOD, DAS (direct-attached storage)
 A JBOD, or “Just a bunch of disks” is a device dedicated to housing a large number of hard disk drives, and does not contain any integrated compute resources. A JBOD is typically made up of an enclosure, enclosure slots that identify each drive individually, a SAS expander and backplane, fans, and power supplies. All the disks in a JBOD can be accessed by a single SAS cable connected to a host server or desktop through a HBA (host bus adapter) which converts a PCIe slot to SAS.
 
@@ -45,5 +51,3 @@ A NAS, or networked attached storage, is a device dedicated to having hard drive
 **Pros** – high number of drives in small space, extremely power efficient
 
 **Cons** – expensive compared to other options, plugin required for farmer or harvester (not complete yet), typically setup with redundancy for data protection which is not required for farming. SATA drives only (which is fine for most)
-
-# DIY builds
