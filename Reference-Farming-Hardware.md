@@ -5,6 +5,8 @@ The farming process is very lightweight and can be run with minimal CPU and DRAM
 ## JBOD, DAS (direct-attached storage)
 A JBOD, or “Just a bunch of disks” is a device dedicated to housing a large number of hard disk drives, and does not contain any integrated compute resources. A JBOD is typically made up of an enclosure, enclosure slots that identify each drive individually, a SAS expander and backplane, fans, and power supplies. All the disks in a JBOD can be accessed by a single SAS cable connected to a host server or desktop through a HBA (host bus adapter) which converts a PCIe slot to SAS.
 
+![SM45](https://www.supermicro.com/a_images/products/Chassis/4U/SC847-RJBOD_spec.jpg)
+
 ### Example
 Mainstream JBOD – 45 disks in 4U chassis. Referred to in the farming channel as the SM45, this can be found on eBay for $300-400 making it very cost-efficient for medium to large size farms
 https://www.supermicro.com/en/products/chassis/4U/847/SC847E16-RJBOD1
@@ -12,8 +14,9 @@ https://www.supermicro.com/en/products/chassis/4U/847/SC847E16-RJBOD1
 Recommended HBAs to attach to host - LSI 9200-8e, 9200-16e along with SFF-8088 to SFF-8088 1M External SAS Cable, or 9300 or 9400-8e with SAS SFF-8644 to SFF-8088 cable
 
 High drive count – 90 disks in 4U chassis. highest density on the market, but typically goes for $1200-2000 used.
+https://www.supermicro.com/en/products/chassis/4U/946/SC946ED-R2KJBOD
 
-https://www.supermicro.com/en/products/chassis/4U/946/SC946ED-R2KJBOD 
+<img src="https://www.supermicro.com/CDS_Image/uploads/chassis/sc946ed_ad_pull-out_new_20150727.jpg" width="300">
 
 **Pros**
 High number of slots. Fully integrated power supplies and fans. Uses SAS enclosure management to identify slots in software and identify a failed device with an LED locate function. Can use SAS or SATA drives.
@@ -29,11 +32,15 @@ Cons – need to build yourself and source
 ### Examples
 https://www.corsair.com/us/en/Categories/Products/Cases/Obsidian-Series%E2%84%A2-750D-Full-Tower-ATX-Case/p/CC-9011035-WW
 
+<img src="https://preview.redd.it/xd8bgja34vg61.png?width=960&crop=smart&auto=webp&s=b4879c70c0afc1a79a0157b9d1f3abbc61e3c590" width="300">
+
 ## NAS farming
 A NAS, or networked attached storage, is a device dedicated to having hard drives included in a backplane and a lightweight CPU and DRAM. NAS serves storage through the network (as opposed to DAS, or direct-attached storage)
 
 ### Examples
 https://www.synology.com/en-us/products/DS1821+
+
+<img src="https://www.synology.com/img/products/detail/DS1821plus/heading@2x.png" width="300">
 
 **Pros** – high number of drives in small space, extremely power efficient
 
