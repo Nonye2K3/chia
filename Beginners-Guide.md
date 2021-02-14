@@ -42,7 +42,7 @@ Click on green button- top right “Add a Plot”
 - Click create plot to start process
 
 **When a plot is created.   There are 2 directories.  Temp storage and then permanent file.**
-The plot will be created in the temp storage folder- lots of them labled .tmp- over 100 files will be created all labled.tmp-. (example  agjpgoeporig.tmp file).  The temp storage will grow to approx size 340 gigs per created plot.    Once the plot is created, software creates (1) file with 101 gigs with a name and end will say .plot (example agljglhjaw[jufpoierh[wjrgpoeiwh.plot )- the software will transfer it to the permanent file and its size will be 101 gigs.  This is what will be farmed to earn chia coins. Chia software then erases all the temporary files and starts over for next plot.
+Over 100 files will be created all labled.tmp-. (example  agjpgoeporig.tmp file).  The temp storage will grow to approx size 340 gigs per created plot.    Once the plot is created, software creates (1) file with 101 gigs with a name and end will say .plot (example agljglhjaw[jufpoierh[wjrgpoeiwh.plot )- the software will transfer it to the permanent file and its size will be 101 gigs.  This is what will be farmed to earn chia coins. Chia software then erases all the temporary files and starts over for next plot.
 
 **Plotting time**
 
@@ -51,6 +51,20 @@ On for a basic computer  it takes about 10-25 hours to create 1 plot of 101 gigs
 Once plotting start it will show on the **Plot Tab** page in an area called “Local Harvester Plots”
 
  As it creates the plots -- on the right side **Under Status column—**there are 3 dots – click on logs to see the status of that plot.   Look below on this sheet and it explains the steps the plotting process got thru to be created.
+**How Plots are created and steps it goes thru**
+
+Creating a plot is time consuming.  Average 10-20 hours.  Here are the approx. 7 steps/ tables are created to create a plot.  
+Table 1 is quickly created within 2 minutes.
+
+On table 2 you will start to see it create the buckets.    Most of the programmers are telling us to select 128 buckets as it uses the least amount of ram.  Plot size is still 101 gigs.   I have noticed it also helps create the plot faster, then selecting 32 buckets or leaving the selection at 0.
+
+Table 4 takes some time.
+
+After 7 tables are created it starts to “backpropogate” again tables 1-7.  I think this is a double check
+Then it start a compression stage of each table manually 1-7
+
+Then it shows it’s completed- 101 gigs but nothing happens.  At this stage it is transferring your 101 gigs of plot to your permanent drive area—takes a few minutes 5-10 minutes.   It will delete all the files in your temp storage and there you go- 10 hrs. later.
+
 
 Notes-
 If using a Mac -- the suggestion is to use an Added SSD or NVME storage to create plots and not the primary hard drive.
@@ -69,19 +83,6 @@ As a transaction goes to a computer with lot of plots—since all the plots have
 
 Bitcoin on the other hand- goes to a winning computer—and it stops and does all the transactions—using a lot of electricity and computer resources.  Here is the green part of the Chia network.  No more 1000 computers to process 1 transaction.
 
-**How Plots are created and steps it goes thru**
-
-Creating a plot is time consuming.  Average 10-20 hours.  Here are the approx. 7 steps/ tables are created to create a plot.  
-Table 1 is quickly created within 2 minutes.
-
-On table 2 you will start to see it create the buckets.    Most of the programmers are telling us to select 128 buckets as it uses the least amount of ram.  Plot size is still 101 gigs.   I have noticed it also helps create the plot faster, then selecting 32 buckets or leaving the selection at 0.
-
-Table 4 takes some time.
-
-After 7 tables are created it starts to “backpropogate” again tables 1-7.  I think this is a double check
-Then it start a compression stage of each table manually 1-7
-
-Then it shows it’s completed- 101 gigs but nothing happens.  At this stage it is transferring your 101 gigs of plot to your permanent drive area—takes a few minutes 5-10 minutes.   It will delete all the files in your temp storage and there you go- 10 hrs. later.
 
 **Computer Hardware**
 
