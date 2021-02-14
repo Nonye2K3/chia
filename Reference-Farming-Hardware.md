@@ -10,7 +10,7 @@ https://www.corsair.com/us/en/Categories/Products/Cases/Obsidian-Series%E2%84%A2
 
 <img src="https://preview.redd.it/xd8bgja34vg61.png?width=960&crop=smart&auto=webp&s=b4879c70c0afc1a79a0157b9d1f3abbc61e3c590" width="300">
 
-Source for pic: https://www.reddit.com/r/DataHoarder/comments/lhp1g7/first_nas_build_update_corsair_750d/
+[Source for pic](https://www.reddit.com/r/DataHoarder/comments/lhp1g7/first_nas_build_update_corsair_750d/)
 
 ## JBOD, DAS (direct-attached storage)
 A JBOD, or “Just a bunch of disks” is a device dedicated to housing a large number of hard disk drives, and does not contain any integrated compute resources. A JBOD is typically made up of an enclosure, enclosure slots that identify each drive individually, a SAS expander and backplane, fans, and power supplies. All the disks in a JBOD can be accessed by a single SAS cable connected to a host server or desktop through a HBA (host bus adapter) which converts a PCIe slot to SAS.
