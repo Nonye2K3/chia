@@ -7,7 +7,8 @@ A JBOD, or “Just a bunch of disks” is a device dedicated to housing a large 
 
 ### Example
 Mainstream JBOD – 45 disks in 4U chassis. Referred to in the farming channel as the SM45, this can be found on eBay for $300-400 making it very cost-efficient for medium to large size farms
-https://www.supermicro.com/en/products/chassis/4U/847/SC847E16-RJBOD1 
+https://www.supermicro.com/en/products/chassis/4U/847/SC847E16-RJBOD1
+
 Recommended HBAs to attach to host - LSI 9200-8e, 9200-16e along with SFF-8088 to SFF-8088 1M External SAS Cable, or 9300 or 9400-8e with SAS SFF-8644 to SFF-8088 cable
 
 High drive count – 90 disks in 4U chassis. highest density on the market, but typically goes for $1200-2000 used.
