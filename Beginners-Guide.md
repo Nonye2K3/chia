@@ -34,7 +34,7 @@ Click on green button- top right “Add a Plot”
 - “ Plot to Queue” means if (5) is selected it will plot #1, then when finished will start #2
 - Plot in Parallel—means running multiple plots at same time.  Make sure you have enough temp storage for combined total.
 - Under “number of plots” – click drop down.  One item to change is “buckets” select qty-128 manually.  It makes the process run slightly faster by about 20 minutes.
-- #3 Select Temp Directory—select your temporary directory.  This is where plots are created.  They will go to 330 gigs in size and then when finished will erase all files. They were temp files
+- #3 Select Temp Directory—select your temporary directory.  This is where plots are created. About 100 temp files will be created, then compacted to 1 plot file.    This creation grows to 330 gigs in size and then when finished will erase all files. They were temp files.  1 Plot file is created at 101 gigs.
 
 - Its recommend to use a SSD drive or NVME drive for this work but make sure you are aware of [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance).
 
