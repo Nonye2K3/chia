@@ -44,6 +44,6 @@ https://www.synology.com/en-us/products/DS1821+
 
 **Pros** – high number of drives in small space, extremely power efficient
 
-**Cons** – expensive compared to other options, plugin required for farmer or harvested (not complete yet), typically setup with redundancy for data protection which is not required for farming. SATA drives only (which is fine for most)
+**Cons** – expensive compared to other options, plugin required for farmer or harvester (not complete yet), typically setup with redundancy for data protection which is not required for farming. SATA drives only (which is fine for most)
 
 # DIY builds
