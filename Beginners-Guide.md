@@ -124,11 +124,5 @@ Groups to join on chat
 
 When first plotting --   and your first plot is created and now being farmed for chia.  On the farming tab—“Time to Win a coin”— it may say 2 days.   It may take really upto 5 days to earn the first coin or partial coin.  Its normal.  Your computer is being linked up to all the other pc’s.   As you add more plots—especially after about 50 plots, then the “time to Win” gets a little closer to estimated time
 
-Hope this is helpful
-
-Lon Isaacson- beginner user
-
-Lon.isaacson1@gmail.com
-
-Just curious how you found out about chia and where you are located.  I am in Connecticut USA
+Everyone is very helpful to answer questions.  The group does ask for questions to be in the selected chat room.  Beginner questions in Beginner etc
 
