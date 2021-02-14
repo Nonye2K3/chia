@@ -6,7 +6,7 @@ Pros – cheap, easy to configure and customize
 Cons – need to build yourself and source 
 
 ### Examples
-https://www.corsair.com/us/en/Categories/Products/Cases/Obsidian-Series%E2%84%A2-750D-Full-Tower-ATX-Case/p/CC-9011035-WW
+[Obsidian Series™ 750D Full Tower ATX Case](https://www.corsair.com/us/en/Categories/Products/Cases/Obsidian-Series%E2%84%A2-750D-Full-Tower-ATX-Case/p/CC-9011035-WW)
 
 <img src="https://preview.redd.it/xd8bgja34vg61.png?width=960&crop=smart&auto=webp&s=b4879c70c0afc1a79a0157b9d1f3abbc61e3c590" width="300">
 
@@ -19,12 +19,12 @@ A JBOD, or “Just a bunch of disks” is a device dedicated to housing a large 
 
 ### Example
 Mainstream JBOD – 45 disks in 4U chassis. Referred to in the farming channel as the SM45, this can be found on eBay for $300-400 making it very cost-efficient for medium to large size farms
-https://www.supermicro.com/en/products/chassis/4U/847/SC847E16-RJBOD1
+[Supermicro SuperChassis 847E16-RJBOD1](https://www.supermicro.com/en/products/chassis/4U/847/SC847E16-RJBOD1)
 
 Recommended HBAs to attach to host - LSI 9200-8e [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=LSI+9200-8e&_sacat=0), 9200-16e [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311&_nkw=lsi+sas9200-16e&_sacat=0) along with SFF-8088 to SFF-8088 1M External SAS Cable, or 9300 [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311&_nkw=lsi+9300&_sacat=0) or 9400-8e [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311&_nkw=9400-8e&_sacat=0) with SAS SFF-8644 to SFF-8088 cable
 
 High drive count – 90 disks in 4U chassis. highest density on the market, but typically goes for $1200-2000 used.
-https://www.supermicro.com/en/products/chassis/4U/946/SC946ED-R2KJBOD
+[Supermicro SuperChassis 946ED-R2KJBOD](https://www.supermicro.com/en/products/chassis/4U/946/SC946ED-R2KJBOD)
 
 <img src="https://www.supermicro.com/CDS_Image/uploads/chassis/sc946ed_ad_pull-out_new_20150727.jpg" width="300">
 
@@ -38,7 +38,7 @@ Fans can be loud. Heavy. Requires data center rack to be mounted correctly.
 A NAS, or networked attached storage, is a device dedicated to having hard drives included in a backplane and a lightweight CPU and DRAM. NAS serves storage through the network (as opposed to DAS, or direct-attached storage)
 
 ### Examples
-https://www.synology.com/en-us/products/DS1821+
+[Synology DiskStation DS1821+](https://www.synology.com/en-us/products/DS1821+)
 
 <img src="https://www.synology.com/img/products/detail/DS1821plus/heading@2x.png" width="300">
 
