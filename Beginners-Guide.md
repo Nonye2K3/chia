@@ -25,10 +25,6 @@ You can load Chia software on Windows or Mac. The Windows version automatically 
 
 \* Note
 
-**When a plot is created.   There are 2 directories.  Temp storage and then permanent file.**
-
-The plot will be created in the temp storage folder.  Each plot will use a minimum to be created 340 gigs.  Once the plot is created- the software will transfer it to the permanent file and its size will be 101 gigs.
-
 **Create a plot**
 
 Click on green button- top right “Add a Plot”
@@ -44,6 +40,9 @@ Click on green button- top right “Add a Plot”
 
 - #3 Select Permanent directory—once the plot is created—it will go to this location to be farmed to earn chia coins.    Storage will fill quickly due to size of plot. Storage can be internal or usb connected drives.  Plan ahead—storage fills quickly
 - Click create plot to start process
+
+**When a plot is created.   There are 2 directories.  Temp storage and then permanent file.**
+The plot will be created in the temp storage folder- lots of them labled .tmp- over 100 files will be created all labled.tmp-. The temp storage will grow to use a minimum to be created 340 gigs per created plot.    Once the plot is created, software creates (1) file with 101 gigs with a name and end will say .plot (example agljglhjaw[jufpoierh[wjrgpoeiwh.plot )- the software will transfer it to the permanent file and its size will be 101 gigs.  This is what will be farmed to earn chia coins.
 
 **Plotting time**
 
