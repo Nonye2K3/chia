@@ -21,7 +21,7 @@ A JBOD, or “Just a bunch of disks” is a device dedicated to housing a large 
 Mainstream JBOD – 45 disks in 4U chassis. Referred to in the farming channel as the SM45, this can be found on eBay for $300-400 making it very cost-efficient for medium to large size farms
 https://www.supermicro.com/en/products/chassis/4U/847/SC847E16-RJBOD1
 
-Recommended HBAs to attach to host - LSI 9200-8e [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=LSI+9200-8e&_sacat=0), 9200-16e [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311&_nkw=lsi+sas9200-16e&_sacat=0) along with SFF-8088 to SFF-8088 1M External SAS Cable, or 9300 or 9400-8e with SAS SFF-8644 to SFF-8088 cable
+Recommended HBAs to attach to host - LSI 9200-8e [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313&_nkw=LSI+9200-8e&_sacat=0), 9200-16e [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311&_nkw=lsi+sas9200-16e&_sacat=0) along with SFF-8088 to SFF-8088 1M External SAS Cable, or 9300 [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311&_nkw=lsi+9300&_sacat=0) or 9400-8e [(ebay)](https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1311&_nkw=9400-8e&_sacat=0) with SAS SFF-8644 to SFF-8088 cable
 
 High drive count – 90 disks in 4U chassis. highest density on the market, but typically goes for $1200-2000 used.
 https://www.supermicro.com/en/products/chassis/4U/946/SC946ED-R2KJBOD
