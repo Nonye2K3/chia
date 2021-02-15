@@ -1,28 +1,33 @@
 # Basic information about Chia to get started
 
-Chia is a new type of crypto currency—basic information to get started.   
+Chia is a new type of crypto currency. Here is some basic information to get started.   
 
-A concept that is repeated a few times below-- Chia is based on capacity of pre-stored hash formulas  the user creates and stores--making blockchain process extremely fast/green.  It is not the same as blockchain design on fast graphic cards doing millions of calculations to process 1 transaction.
+A concept that is repeated a few times below-- Chia is based on capacity of pre-stored random looking data that the user creates and stores--making the blockchain consensus extremely fast/green.  It an improvement over proof of work blockchains, which rely on fast graphic cards and custum machines doing millions of calculations per second, and wasting a lot of electricity.
 
 ## How it works
 
-You can load Chia software on Windows or Mac. The Windows version automatically starts on installation and the Mac just needs to be opened from the Applications directory - it loads and start to sync with rest of network and blockchain. Fully syncing takes 4-6 hrs.     Basically you are syncing with everyone on the network.  The chia blockchain database will be stored on your pc also
+You can load Chia software on Windows, Mac or Linux. The Windows version automatically starts on installation and the Mac just needs to be opened from the Applications directory - it loads and starts to sync with rest of network and blockchain. Fully syncing takes 4-6 hrs, although this increases over time. Basically you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The chia blockchain database will be stored on your PC.
 
-**Full Node Tab**—this shows the block chain movement.  It shows that you are sync with the block chain.  A copy of the block chain is stored on your pc.  You have a live copy that is in sync with everyone else.
+**Full Node Tab**—this shows the blockchain movement.  It shows that you are sync with the blockchain.  A copy of the blockchain is stored on your pc.  You have a live copy that is in sync with everyone else.
 
-- Blocks—that is the block chain working
-- Connections—those are the connections to you and other users--  those connections make Chia much faster to process transactions—part of the design
+- Blocks — that is the blockchain working
+- Connections—those are the connections to you and other users--  those connections make Chia much faster to process transactions—part of the design, and make it more secure
 
 **Wallet tab** – you will see your Chia coins as they are won-- this area is still under development
 
 * History—you can see the time/date you earned coins or partial coins
 
-**Plots tab**-- This is where you create plots.   The accepted plot size starts at 101 gigs each.  Called a 32 k- 101 gig plot.    When you plot—your computer goes and creates these large 101 gig  files.  Inside are excel sheets and each cell has a “hash” formula called transaction proof.  This is what the computer is doing, why it takes so long.  It’s running formula calculations and putting the “answers” in these millions of cells.   That is why it is 101 gigs.  The expected life for a k32 plot to be eligible on mainnet is about 7 to 15 years of usage, for now.
+**Plots tab**-- This is where you create plots.   The accepted plot size starts at 101 GiB each.  Called a 32 k- 101 gig plot.    When you plot—your computer goes and creates these large 101 gig  files.  Inside are large tables (kind of like excel sheets) where each cell has a random pointer to another cell in the table. This is what the computer is doing, why it takes so long to create the plot.  It’s running formula calculations and putting the “answers” in these millions of cells.   That is why it is 101 gigs.  The expected life for a k32 plot to be eligible on mainnet is about 7 to 15 years of usage, for now. You can think of each plot as a collection of many lottery tickets, which have a chance of winning blocks.
 
-**Farm tab**- this will show you how many plots you have created.  On the top it will show how many Chias have been farmed.  It also shows how much gigs of formulas you have on the network.  If you have 2 plots of 101 gig created. Then it shows on Top left “ Total size of Plots”  .2 TIB, means you offer this much storage of formulas to the chia network.  Means you have 101 gigs x 2 = 202 gigs.  The counts are in terabytes so you need at least 10 plots to pass 1 terabyte to equal 1TIB
+**Farm tab**- this will show you how many plots you have created.  On the top it will show how many Chias have been farmed.  It also shows how much gigs of plots you have on the network.  If you have 2 plots of 101 gig created. Then it shows on Top left “ Total size of Plots”  .2 TIB, means you offer this much storage of formulas to the chia network.  Means you have 101 gigs x 2 = 202 gigs.  The counts are in terabytes so you need at least 10 plots to pass 1 terabyte to equal 1TIB
 
-* Latest Block Challenges—this shows block chain and order
-* “ Last Attempted Proof”_ — ok this is important.    There are 5 lines.  Currently I have 157 plots – so each of the lines read  0/157.   If a plot is selected  or a 2nd plot is selected that is good news and the number change to 1/157 or 2/157 maybe 3/157.   It just means that plot was a close fit and the software is deciding if your hash formulas inside are a match for Chia to process the transaction and have the account earn chia.  A match does not mean money.  Once that match shows on the first line--  it will move down to lines 2-5 , as the block chain moves.   If for some reason those lines top moving--- that is another indication you are not in sync with database and need to resync—see below
+* Latest Block Challenges—this shows the latest challenges and signage points, which can be thought of as mini lotteries. Every 9 seconds, there is a new signage point, which means there is a new opportunity for you to check your plots and see if you've won. 
+
+* “ Last Attempted Proof”_ — ok this is important.    There are 5 lines.  Currently I have 157 plots – so each of the lines read  0/157.
+On every signage point (9 seconds), all of your plots are checked to see which ones passes the plot filter. Approximately 1/512 of all plots will pass the plot filter, so here you can see how many of your plots passed. If a plot is selected  or a 2nd plot is selected that is good news and the number changes to 1/157 or 2/157 maybe 3/157.  
+
+It just means that plot was a close fit and the software is deciding if your hash formulas inside are a match for Chia to process the transaction and have the account earn chia.  A match does not mean money.  Once that match shows on the first line--  it will move down to lines 2-5 , as the block chain moves.   If for some reason those lines top moving--- that is another indication you are not in sync with database and need to resync—see below
+
 
 
 \* Note
