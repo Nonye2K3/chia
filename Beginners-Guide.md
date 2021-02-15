@@ -78,10 +78,8 @@ The chia farming software gets a challenge, lets say 2021.  It’s going to look
 
 What makes Chia different from proof of work blockchains— is the consensus algorithm called proof of space and proof of time.  Basically as after the farmer creates a proof of space and a block,  other computers called timelords add proofs of time to the block, which is a cryptographic proof that says that a certain amount of time (like 30 seconds) has passed. So instead of the whole world mining at the same time, only a few computers are "mining" for each proof of space that won.  Since these are all cryptographic proofs, they cannot be forged or broken, making the consensus extremely secure.
 
-As a transaction goes to a computer with lot of plots—since all the plots have all the calculation formulas already done—the entire transaction is done quickly and moves on.
 
-Bitcoin on the other hand- goes to a winning computer—and it stops and does all the transactions—using a lot of electricity and computer resources.  Here is the green part of the Chia network.  No more 1000 computers to process 1 transaction.
-
+In Chia, the only electricity required is the electricity to create the plots, and to run the hard drives. However a hard drive can take 10 watts to power, compared to 300W for a GPU, or much more for ASICs. Therefore Chia will use vastly less electricity that proof of work blockchains like Bitcoin and Ethereum.
 
 **Computer Hardware**
 
