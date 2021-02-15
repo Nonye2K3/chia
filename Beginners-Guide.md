@@ -29,7 +29,6 @@ On every signage point (9 seconds), all of your plots are checked to see which o
 Once that match shows on the first line--  it will move down to lines 2-5 , as the blockchain moves.   If for some reason those lines stop moving--- that is another indication you are not in sync with database and need to resync—see below.
 
 
-
 \* Note
 
 **Create a plot**
@@ -37,10 +36,10 @@ Once that match shows on the first line--  it will move down to lines 2-5 , as t
 Click on green button- top right “Add a Plot”
 
 - Starting size plot is 101 gigs.  You need a temp storage location of at least 340 gigs to create the plot.
-- Chose number of plots—you can select qty to create
+- Chose number of plots—you can select quantity to create
 - “ Plot to Queue” means if (5) is selected it will plot #1, then when finished will start #2
 - Plot in Parallel—means running multiple plots at same time.  Make sure you have enough temp storage for combined total.
-- Under “number of plots” – click drop down.  One item to change is “buckets” select qty-128 manually.  It makes the process run slightly faster by about 20 minutes.
+- Under “number of plots” – click drop down.  One item to change is “buckets” select 128 manually.  It decreases the amount of RAM required and increases the speed.
 - #3 Select Temp Directory—select your temporary directory.  This is where plots are created. About 100 temp files will be created, then compacted to 1 plot file.    This creation grows to 330 gigs in size and then when finished will erase all files. They were temp files.  1 Plot file is created at 101 gigs.
 
 - Its recommend to use a SSD drive or NVME drive for this work but make sure you are aware of [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance).
@@ -53,15 +52,15 @@ Over 100 files will be created all labled.tmp-. (example  agjpgoeporig.tmp file)
 
 **How Plots are created and 7 steps Process**
 
-Creating a plot is time consuming.  Average 10-20 hours.  Here are the approx. 7 steps/ tables are created to create a plot.  
+Creating a plot is time consuming.  Average 10-20 hours on a normal computer, and 4-8 hours on a high end machine.  Here are the approx. 7 steps/ tables are created to create a plot.  
 Table 1 is quickly created within 2 minutes.
 
-On table 2 you will start to see it create the buckets.    Most of the programmers are telling us to select 128 buckets as it uses the least amount of ram.  Plot size is still 101 gigs.   I have noticed it also helps create the plot faster, then selecting 32 buckets or leaving the selection at 0.
+On table 2 you will start to see it create the buckets.    Select 128 buckets as it uses the least amount of ram.  Plot size is still 101 gigs.   I have noticed it also helps create the plot faster, then selecting 32 buckets or leaving the selection at 0.
 
 Table 4 takes some time.
 
-After 7 tables are created it starts to “backpropogate” again tables 1-7.  I think this is a double check
-Then it start a compression stage of each table manually 1-7
+After 7 tables are created it starts to “backpropagate” again tables 1-7. This sets it up for the final phase, which is compression.
+Then it starts a compression stage of each table manually 1-7
 
 Then it shows it’s completed- 101 gigs but nothing happens.  At this stage it is transferring your 101 gigs of plot to your permanent drive area—takes a few minutes 5-10 minutes.   It will delete all the files in your temp storage and there you go- 10 hrs. later.
 
@@ -73,11 +72,11 @@ The Chia software is evolving-- if for some reason a plot has to be deleted-- un
 **Word definitions and Explanations**
 
 "Proof"  is what is inside the PLOT.  Millions of "excel blocks" with formulas called proofs of space.
-The chia software is designed to work on a lottery system.  A key element to winning the lottery of earning coins is that the software wants a “winner” to have a lot of plots made so it can go thru all the data quickly to answer the proof.  Proofs are the acceptance of the transaction and then move on.
+The chia software is designed to work on a lottery system.  A key element to winning the lottery of earning coins is that the more plots you have, the more proofs you have, and therefore the higher chances of winning.  Someone with 1% of all the plotted space, will win about 1% of all the blocks. There are about 4608 blocks per day, each with 2 chia, so 9216 chia created per day.
 
-The chia software gets a proof number lets say 2021.  It’s going to look thru lookup tables on the front of the plots.  Find the closest to 2021 and this is where the time comes into play-- That proof (excel block hash) comes with a time calculator and the computer figures out to run this transaction with that proof takes 2-3 seconds to do the calculations.   If another block is 2025- but has a time calculation of 5 hours it skips it over. The first one won the transaction.
+The chia farming software gets a challenge, lets say 2021.  It’s going to look through lookup tables on the front of the plots.  Find the closest to 2021 and this is where the time comes into play-- That proof (excel block hash) has a certain quality, and only proofs that are of a certain quality or better are eligible for winning.
 
-What makes Chia different from block chain— is the verification called proof of space and proof of time.  Basically as the transaction first goes to the block chain the  transaction gets a timestamp in the beginning- time codes it.  Then another computer called a timelord—goes and puts a proof stamp on the transaction to say—every digit that passed thru—was all within this time slot, and similar to a gps location stamp also—so its verified and then the computer puts another time stamp on the end.  So each transaction has 3 verifications—making it extremely hard to crack or make changes, making it very secure
+What makes Chia different from proof of work blockchains— is the consensus algorithm called proof of space and proof of time.  Basically as after the farmer creates a proof of space and a block,  other computers called timelords add proofs of time to the block, which is a cryptographic proof that says that a certain amount of time (like 30 seconds) has passed. So instead of the whole world mining at the same time, only a few computers are "mining" for each proof of space that won.  Since these are all cryptographic proofs, they cannot be forged or broken, making the consensus extremely secure.
 
 As a transaction goes to a computer with lot of plots—since all the plots have all the calculation formulas already done—the entire transaction is done quickly and moves on.
 
