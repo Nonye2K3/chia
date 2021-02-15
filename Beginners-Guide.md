@@ -24,9 +24,9 @@ You can load Chia software on Windows, Mac or Linux. The Windows version automat
 * Latest Block Challenges—this shows the latest challenges and signage points, which can be thought of as mini lotteries. Every 9 seconds, there is a new signage point, which means there is a new opportunity for you to check your plots and see if you've won. 
 
 * “ Last Attempted Proof”_ — ok this is important.    There are 5 lines.  Currently I have 157 plots – so each of the lines read  0/157.
-On every signage point (9 seconds), all of your plots are checked to see which ones passes the plot filter. Approximately 1/512 of all plots will pass the plot filter, so here you can see how many of your plots passed. If a plot is selected  or a 2nd plot is selected that is good news and the number changes to 1/157 or 2/157 maybe 3/157.  
+On every signage point (9 seconds), all of your plots are checked to see which ones passes the plot filter. Approximately 1/512 of all plots will pass the plot filter, so here you can see how many of your plots passed. If a plot is selected  or a 2nd plot is selected that is good news and the number changes to 1/157 or 2/157 maybe 3/157. However a plot passing the plot filter does not mean that you have won a block. After passing the filter, each plot will go through a "quality lookup", which does approximately 7 reads on your plot, and tells you whether the plots have won. Winning is very rare, and on average one person wins in the whole world, every 18 seconds. If you won, the whole plot is looked up on disk, and you will see the chia farmed on the Wallet screen.
 
-It just means that plot was a close fit and the software is deciding if your hash formulas inside are a match for Chia to process the transaction and have the account earn chia.  A match does not mean money.  Once that match shows on the first line--  it will move down to lines 2-5 , as the block chain moves.   If for some reason those lines top moving--- that is another indication you are not in sync with database and need to resync—see below
+Once that match shows on the first line--  it will move down to lines 2-5 , as the blockchain moves.   If for some reason those lines stop moving--- that is another indication you are not in sync with database and need to resync—see below.
 
 
 
