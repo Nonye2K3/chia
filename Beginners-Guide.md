@@ -111,5 +111,6 @@ If power goes out what happens.   Answer-  In the chia software, the plots that 
 
 Can I use USB 3.0  cable connected to SSD/NVME running the Temp files.  Answer- On Windows - it has not worked well- the communication speed is not fast enough, sometimes the usb turns off, then the plot is not useable. Its possible to run 1 plot, but limiting when trying to process multiple plots.  Most are installing pcie adapters to SSC/NVME and that solves the issue.  The mac has very fast communication to do the first plot, - many others are saying that they can do 2 plots but process time increases dramatically.  Technology is constantly changing so continue to do research and ask in the chat rooms
 
+
 Everyone is very helpful to answer questions.  The group does ask for questions to be in the selected chat room.  Beginner questions in Beginner etc
 
