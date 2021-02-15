@@ -12,6 +12,9 @@ Cons – need to build yourself and source
 
 [Source for pic](https://www.reddit.com/r/DataHoarder/comments/lhp1g7/first_nas_build_update_corsair_750d/)
 
+A desktop board can be put into an easily obtainable [Rosewill 4U Server Chassis Case](https://www.amazon.com/dp/B0091IZ1ZG/ref=cm_sw_em_r_mt_dp_RQRJF9S2PHGBPC6DQ90D). This case features up to 16 drives and 7 fans included, and just needs a standard desktop PSU to get going.
+
+
 ## DIY farms
 There are many unique DIY builds in the farming hardware channel that find unique uses for repurposing existing hardware to mount drives.
 Here a build from user @xorinox that houses 32 drives farming off a Rock Pi and USB hubs for an average power consumption of 75W & 1.79kWh per day - easily making it one of the most power-efficient farms built!
