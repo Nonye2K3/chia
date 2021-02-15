@@ -104,5 +104,10 @@ Look at the date/time indicated compared to your PC.  If there is a 30 min diffe
 
 When first plotting --   and your first plot is created and now being farmed for chia.  On the farming tab—“Time to Win a coin”— it may say 2 days.   It may take really upto 5 days to earn the first coin or partial coin.  Its normal.  Your computer is being linked up to all the other pc’s.   As you add more plots—especially after about 50 plots, then the “time to Win” gets a little closer to estimated time
 
+Common Answers to Questions
+If power goes out what happens.   Answer-  In the chia software, the plots that currently being built  are now non operational.  When you start Chia they will be gone and need to be restarted.  One item to do is go into your temporary storage and delete all those .tmp files it created.  This is the one time it will not self delete those files if a new plot is started.  Not deleting them may cause that storage device to run out of room when it starts 1 or multiple plots.   All your existing plots are "safe" in their existing storage. 
+
+Can I use USB 3.0  cable connected to SSD/NVME running the Temp files.  Answer- On Windows - it has not worked well- the communication speed is not fast enough, sometimes the usb turns off, then the plot is not useable. Its possible to run 1 plot, but limiting when trying to process multiple plots.  Most are installing pcie adapters to SSC/NVME and that solves the issue.  The mac has very fast communication to do the first plot, - many others are saying that they can do 2 plots but process time increases dramatically.  Technology is constantly changing so continue to do research and ask in the chat rooms
+
 Everyone is very helpful to answer questions.  The group does ask for questions to be in the selected chat room.  Beginner questions in Beginner etc
 
