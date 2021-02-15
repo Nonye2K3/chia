@@ -17,7 +17,7 @@ A desktop board can be put into an easily obtainable [Rosewill 4U Server Chassis
 
 ## DIY farms
 There are many unique DIY builds in the farming hardware channel that find unique uses for repurposing existing hardware to mount drives.
-Here a build from user @xorinox that houses 32 drives farming off a Rock Pi and USB hubs for an average power consumption of 75W & 1.79kWh per day - easily making it one of the most power-efficient farms built!
+Here a build from user @xorinox that houses 32 drives farming off a [Rock Pi 4](https://rockpi.org/rockpi4) and USB hubs for an average power consumption of 75W & 1.79kWh per day - easily making it one of the most power-efficient farms built!
 
 <img src="https://user-images.githubusercontent.com/61642896/103497288-0d53be00-4e0f-11eb-98b6-c9bffe57d3f3.jpg" width="700">
 
