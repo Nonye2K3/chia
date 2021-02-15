@@ -8,6 +8,7 @@
 * [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips)
 * [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) - Important notes on using SSD to plot.
 * [Reference Plotting Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Plotting-Hardware)
+* [Reference Farming Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Farming-Hardware)
 * [Chialisp Documentation](https://chialisp.com/)
 * [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
 * [Release and notes](https://www.chia.net/releases/)
