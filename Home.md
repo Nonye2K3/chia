@@ -11,7 +11,7 @@
 * [Reference Farming Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Farming-Hardware)
 * [Chialisp Documentation](https://chialisp.com/)
 * [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
-* [Release and notes](https://www.chia.net/releases/)
+* [Release Notes](https://www.chia.net/releases/)
 
 
 The following series of documents describes the Chia Network Trunk (or consensus layer),
