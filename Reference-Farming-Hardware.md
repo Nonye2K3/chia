@@ -3,7 +3,7 @@ The farming process is very lightweight and can be run with minimal CPU and DRAM
 ## DIY Farms
 
 There are many unique DIY builds in the farming hardware channel that find unique uses for repurposing existing hardware to mount drives.
-Here a build from user @xorinox that houses 32 drives farming off a [Rock Pi 4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of 75W & 1.79kWh per day - easily making it one of the most power-efficient farms built!
+Here a build from user @xorinox that houses 32 drives farming off a [Rock Pi 4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of 260W & 4.3kWh per day - easily making it one of the most power-efficient farms built!
 
 <img src="https://user-images.githubusercontent.com/61642896/103497288-0d53be00-4e0f-11eb-98b6-c9bffe57d3f3.jpg" width="700">
 
