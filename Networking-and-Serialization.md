@@ -2,7 +2,7 @@
 
 The Chia protocol is an asynchronous peer to peer protocol running on top of Websockets on port 8444, where all nodes act as both clients and servers, and can maintain long term connections with other peers.
 
-Every message in the Chia protocol is composed of bytes, using the Serialized format. Each message is composed of three part: a 1 byte type which represent the type of message being transmitted, and how to decode the data. The data, which is a Streamable encoded representation of one of the protocol messages, and the id, which is a 2 byte identifier which is used per connection to keep track of requests and responses.
+Every message in the Chia protocol is  composed of bytes, using the Serialized format, and sent as a Websocket message. Each message is composed of three parts: a 1 byte type which represent the type of message being transmitted, and how to decode the data. The data, which is a Streamable encoded representation of one of the protocol messages, and the id, which is a 2 byte identifier which is used per connection to keep track of requests and responses.
 
 
 ```python
