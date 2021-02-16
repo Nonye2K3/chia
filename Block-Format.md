@@ -1,3 +1,5 @@
+[This is outdated due to new consensus: see [this document](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit)]
+
 ![block-format](images/chia-block-format2.png)
 
 ## Trunk and Foliage
