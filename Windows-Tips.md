@@ -33,4 +33,4 @@ cd ~\.chia\beta-0.1.27\wallet\db
 del *.db
 ```
 
-7. If your Powershell plotting processes seem to pause you should disable Quick Edit. Powershell -> Properties -> Options: Disable quick edit.
+7. If your Powershell plotting processes seem to pause you should disable Quick Edit. Powershell -> Properties -> Options: Disable quick edit. If you are still seeing this symptom it is almost always a [problem with your RAM](https://www.tomshardware.com/how-to/how-to-test-ram).
