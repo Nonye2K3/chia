@@ -12,6 +12,9 @@ Here a build from user @xorinox that houses 32 drives farming off a [Rock Pi 4](
 
 <img src="https://user-images.githubusercontent.com/61642896/108285566-59f02000-7155-11eb-83eb-29aea9fa023e.PNG" width="700">
 
+Plots with proofs for submission are found on a regular basis with over 2250x K32, providing the proof still no more than one second, with currently 22 PiB of total netspace.
+
+
 ## Desktop Farming
 
 A desktop in a full tower can house between 12-16 drives. This is a great setup for small farmers as desktops are the easiest to build and manage for PC enthusiasts. A full tower case that houses many drives can be found from many different vendors at a low cost. Typical desktop motherboards contain between 6-10 SATA ports, so expanding past that will also require a SAS HBA.
