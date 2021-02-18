@@ -14,6 +14,7 @@ Here a build from user @xorinox that houses 32 drives farming off a [Rock Pi 4](
 
 Plots with proofs for submission are found on a regular basis with over 2250x K32, providing the proof still no more than one second, with currently 22 PiB of total netspace.
 
+<img src="https://user-images.githubusercontent.com/61642896/108290839-2c0fd900-715f-11eb-9067-9d8c885a73f0.PNG" widt="700">
 
 ## Desktop Farming
 
