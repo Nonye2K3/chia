@@ -1,7 +1,7 @@
 The farming process is very lightweight and can be run with minimal CPU and DRAM resources. The goal of a good farming platform is to have the maximum amount of capacity in the least amount of space, using as little power as possible. In other words, the priority for a farming platform, independent of obtaining storage for the lowest cost possible, is to have the highest amount of TB/W in a small space.
 
 ## DIY Farms
-`Building your own rig as illustrated next requires solid IT skills and knowledge on handling electrical components. In some areas such constructions are not lawful without being licensed at handling electricity. Redo on your own risk!`
+**Building your own rig as illustrated next requires solid IT skills and knowledge on handling electrical components. In some areas such constructions are not lawful without being licensed at handling electricity. Redo on your own risk!**
 
 There are many unique DIY builds in the farming hardware channel that find unique uses for repurposing existing hardware to mount drives.
 Here a build from early community user that houses 32 drives farming off a [RockPi4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of 260W & 4.3kWh per day - easily making it one of the most power-efficient farms built!
