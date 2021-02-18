@@ -6,6 +6,7 @@ There are many unique DIY builds in the farming hardware channel that find uniqu
 Here a build from user @xorinox that houses 32 drives farming off a [Rock Pi 4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of 260W & 4.3kWh per day - easily making it one of the most power-efficient farms built!
 
 <img src="https://user-images.githubusercontent.com/61642896/108285617-7db36600-7155-11eb-82bb-34c0665d45a2.jpg" width="700">
+<img src="https://user-images.githubusercontent.com/61642896/108290337-2a91e100-715e-11eb-9aab-8216c1760966.jpg" width="700">
 
 ## Desktop Farming
 
