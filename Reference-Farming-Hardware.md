@@ -9,7 +9,7 @@ Here a build from user @xorinox that houses 32 drives farming off a [Rock Pi 4](
 <img src="https://user-images.githubusercontent.com/61642896/108290337-2a91e100-715e-11eb-9aab-8216c1760966.jpg" width="700">
 
 ### Farming over 2200 x K32 plots in mostly under 1 second..
-With the new consensus plots are probed very regularly. No issue for the Rockpi4 to keep up with.
+With the new consensus plots are probed very regularly. No issue for the RockPi4 to keep up with.
 
 <img src="https://user-images.githubusercontent.com/61642896/108285566-59f02000-7155-11eb-83eb-29aea9fa023e.PNG" width="900">
 
