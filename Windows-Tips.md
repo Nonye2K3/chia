@@ -1,6 +1,6 @@
-1. To plot parallel in Windows you will need to use powershell. A generic example for Release Candidate 1:
+1. To plot parallel in Windows you will need to use powershell. A generic example for Release Candidate 2:
 ```
-cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.1\resources\app.asar.unpacked\daemon\
+cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.2\resources\app.asar.unpacked\daemon\
 start-process ./chia.exe -argumentlist "plots create yourParametersGoHere"
 start-process ....
 ....
@@ -9,10 +9,10 @@ start-process ....
 A specific example, again using Release Candidate 1:
 
 ```
-cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.1\resources\app.asar.unpacked\daemon\
+cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.2\resources\app.asar.unpacked\daemon\
 start-process ./chia.exe -argumentlist "plots create -k 32 -b 4000 -u 128 -r 4 -t d:\tempdrive1 -2 e:\tempdrive2 -d F:\plots -n 1"
 ```
-If you are using Beta 16 you would change the `Chia-Blockchain\app-0.2.1\resources\` section to `Chia-Blockchain\app-0.1.16\resources\` in the command above.
+If you are using Beta 16 you would change the `Chia-Blockchain\app-0.2.2\resources\` section to `Chia-Blockchain\app-0.1.16\resources\` in the command above.
 
 2. Windows and Python used to not get along regarding reporting CPU % on Windows but starting with Beta 18 this has been fixed.
 
@@ -22,7 +22,7 @@ If you are using Beta 16 you would change the `Chia-Blockchain\app-0.2.1\resourc
 
 5. If you attempt to run more than one node on your local network, having uPnP on on both will cause both nodes significant confusion. You will need to use powershell to disable uPnP on all but one. An example for Beta 27:
 ```
-cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.1\resources\app.asar.unpacked\daemon\
+cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.2\resources\app.asar.unpacked\daemon\
 ./chia.exe configure --upnp-enable False
 ```
 
