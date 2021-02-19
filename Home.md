@@ -14,15 +14,15 @@
 * [Release Notes](https://www.chia.net/releases/)
 
 
-The following series of documents describes the Chia Network Trunk (or consensus layer),
+The items below remain useful but we have implemented a significant revision to the consensus algorithm. We invite your comments and questions on our **[working draft of new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit)**.
+
+These documents describe the original Chia Network Trunk (or consensus layer),
 which is separate from the Foliage layer, which deals with coins, scripting,
 and mempools.
 
 Familiarity with either the Bitcoin or Ethereum protocols is assumed for this documentation.
 The codebase is written in python, with several performance sensitive components (signatures, proof of space,
 and proof of time), written in C++ and the clvm in Rust and Python.
-
-The items below remain useful but we have implemented a significant revision to the consensus algorithm. We invite your comments and questions on our **[working draft of new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit)**.
 
 1. [Consensus algorithm summary](https://github.com/Chia-Network/chia-blockchain/wiki/Consensus-Algorithm-Summary)
 2. [Block format](https://github.com/Chia-Network/chia-blockchain/wiki/Block-Format)
