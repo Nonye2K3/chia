@@ -90,6 +90,14 @@ Farmers compute a plot filter based on the signage point, their plot id, and the
 # Can I join a farming pool?
 
 Not yet. Currently the plots you generate are plotted to your own self pool key. Bram has much more on our [plans around pooling](https://www.chia.net/2020/11/10/pools-in-chia.html) and pool support will become high priority as soon as mainnet is released. You will not be able to change the pool of your current plots so you can just continue to farm them or slowly replace them over time with new plots using one of the upcoming pooling methods.
+2.2 I didn't get any blocks.
+👍
+🎉
+😂
+😎
+🌱
+bilai
+00:12
 
 # How do I send or receive a transaction?
 
@@ -145,3 +153,7 @@ First, running more than one node with the same private keys on your home networ
 # How do I rotate logs?
 
 In the past we recommended using logrotate but python did not interact nicely with it. Starting with 1.0 beta 6, chia-blockchain will automatically rotate every 20MB and save 7 previous log segments before deleting the oldest so you don't have to do anything.
+
+# Why does my node have no connections?
+
+If your node has no connections, it could be one of many reasons. You might need to disable upnp in the config file (~/.chia/config/config.log). You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
