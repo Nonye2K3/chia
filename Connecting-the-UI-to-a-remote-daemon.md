@@ -1,4 +1,3 @@
-# Connecting the UI to a Remote Daemon
 
 ## On the daemon host
 
