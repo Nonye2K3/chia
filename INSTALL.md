@@ -80,6 +80,7 @@ deactivate
 chia stop -d all
 git fetch
 git checkout main
+git pull
 git pull --tags
 sh install.sh
 
