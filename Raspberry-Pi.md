@@ -28,6 +28,9 @@ sudo apt-get install -y build-essential python3-dev
 
 # If you are not using Raspbian 64 (it pre-specifies it) add this
 export PIP_EXTRA_INDEX_URL=https://www.piwheels.org/simple/
+
+# Make sure you have 64 bit Python 3
+python3 -c 'import platform; print(platform.architecture())'
 ```
 
 Then proceed with a relative usual install process:
