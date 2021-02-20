@@ -119,5 +119,8 @@ Can I use USB 3.0  cable connected to SSD/NVME running the Temp files.  Answer- 
 
 Once a hash is used from a plot-- does it need to be deleted.  Answer-- no-- an example is , a plot has 300,000 hashes that the user created.  If one is used, there are enough to last an estimated 5 years. 
 
+New version
+The new RC2 version is a new blockchain-- prior coins are erased.  Its all test chia coins right now anyway.   It may take 4-10 hrs to sync-- just let it run--  there may be multiple other revisions coming example 1 per week until final.
+
 Everyone is very helpful to answer questions.  The group does ask for questions to be in the selected chat room.  Beginner questions in Beginner etc
 
