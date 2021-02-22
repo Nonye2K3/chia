@@ -61,7 +61,7 @@ If you see plots in the Plots section of the Farm page in the GUI - your plots a
 
 # Does it matter how fast my internet connection is?
 
-No. You have at least 30 seconds to respond to challenges.
+No. You have 30 seconds to respond to challenges.
 
 # Do I have to be connected to the internet or synced to plot?
 
