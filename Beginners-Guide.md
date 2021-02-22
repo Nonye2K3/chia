@@ -97,13 +97,14 @@ One item to plan for is storage of plots as they fill storage quickly.  As more 
 Look at the date/time indicated compared to your computer.  If there is a 30 min difference and it has not caught up—on the windows menu—click View/Force reload.   It will take 5 minutes and should restart the sync mode.  It will make you click your key code button again to get in.  It does not affect the plotting you are doing.
 
 **Groups to join on Keybase chat**
-/# announcements   -- most important as it tells you of new versions
-/# beginner  -- read this one from the start -- many questions are answered
-/# farming hardware
-/# general
-/# plotting-hardware
-/# random 
-/# testnet 
+
+* /# announcements   -- most important as it tells you of new versions
+* /# beginner  -- read this one from the start -- many questions are answered
+* /# farming hardware
+* /# general
+* /# plotting-hardware
+* /# random 
+* /# testnet 
 
 *\* Important*
 
