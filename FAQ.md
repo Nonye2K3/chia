@@ -31,7 +31,7 @@ We think you will want to use used Data Center grade NVMe SSD drives to create y
 
 Yes and starting with Beta 19 you can either use the GUI or CLI. Over the short run you have a bit more control of plotting using the CLI. There are [tips for Windows users](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and Mac users can find their CLI commands in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide#macos). You may have better results if you stagger the start time of parallel plotting processes depending on your hardware setup.
 
-# Can I make plots on one machine and move them to another machine?
+# Can I make plots on one machine and move it to another machine?
 
 Yes. The [Moving plots](https://github.com/Chia-Network/chia-blockchain/wiki/Moving-plots) topic here on the wiki gives you the details. You may also want to consider running a [remote harvester](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines).
 
@@ -97,13 +97,9 @@ The Wallets page in the GUI will show you your receive address and provide an in
 
 There is growing wallet functionality available on the command line. Try `chia wallet -h`. Wallet software also provides features related to coloured coins, and trade offers. You can get a receive address on the cli with `chia keys show`.
 
-# Why is it recommended that a winning plot be deleted on mainnet?
+# I have heard that it's recommended that a winning plot be deleted on mainnet?
 
 There is a possible attack where an attacker who can co-ordinate N deep from the tip of the chain can try to coerce a winning farmer to re-write a historical transaction block. This attack is much more difficult and thus less of a risk in new consensus and thus we only recommend deleting and re-plotting a plot to farmers with in excess of 1PB of farm size. Anyone smaller than that would be difficult for an attacker to locate and can more safely continue to farm plots that have already won. We plan to have the software automate the process up to and including kicking off a remote plotting process if the current hardware that a farmer or harvester are on is not up to the task of re-plotting. But to repeat, deleting winning plots is, and will always be, totally optional.
-
-# What are the next milestones?
-
-Starting with Beta 8 and continuing through the release candidates, the new plot format is the same as mainnet so you will be able to get your plots in order before mainnet launch. We are now in the release candidate phase. There are releases that we believe are consensus critical feature complete but that we may need to add minor functionality to, test especially the mainnet launch process, and fix bugs found. We expect to launch mainnet in March 2021 (see below.) We also plan to have a 6 week period after mainnet launch when no transactions are allowed but farming rewards will be occurring. This is to help the storage network stabilize and to reward our space farmers first.
 
 # When mainnet?
 
@@ -120,14 +116,6 @@ If you use the GUI, it will migrate from release to release for you. For both th
 # Can I run this on a Raspberry Pi 3 or 4?
 
 Yes, and here are the [instructions](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi). This project requires a 64 bit OS so a Pi 3 or Pi 4. One can install and run harvesters, farmers, and full nodes on the Pi. Plotting on a Pi is feasible now with Chacha8 instead of AES but the Pi isn't quick. Modern desktops and laptops plot in the 0.07 - 0.10 GiB/minute range and the Pi 4 plots at 0.025 GiB/minute. Pi is also not a candidate for Timelords or VDF clients...
-
-# Why won't the GUI start on my linux distribution?
-
-Some linux distros don't allow Electron to install correctly. The error is some variant of `The SUID sandbox helper binary was found, but is not configured correctly`. Details and fixes are in [Electron Issue 17972](https://github.com/electron/electron/issues/17972). Thanks [@kargakis](https://github.com/kargakis). If you use the `sysctl` workaround it does not persist so you'll want to see how to change that [here](https://unix.stackexchange.com/questions/25382/make-changes-to-sys-persistent-between-boots).
-
-# Why does chia-blockchain require python 3.7 or greater?
-
-The codebase takes advantage of the newest async generators, especially async/await, which requires 3.7 or better. Python has a [walk through of Async IO](https://realpython.com/async-io-python/) and the related python 3.7 requirements. We are now primarily targeting python 3.8 but 3.7 remains tested and in use in certain places.
 
 # What is this UPnP Error?
 
