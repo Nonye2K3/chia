@@ -30,3 +30,4 @@ and proof of time), written in C++ and the clvm in Rust and Python.
 4. [Networking and Serialization](https://github.com/Chia-Network/chia-blockchain/wiki/Networking-and-Serialization)
 5. [Protocols](https://github.com/Chia-Network/chia-blockchain/wiki/Protocols)
 6. [Codebase and Testing](https://github.com/Chia-Network/chia-blockchain/wiki/Codebase-and-Testing)
+7. [Keys in Chia](https://github.com/Chia-Network/chia-blockchain/wiki/Chia-Keys-Architecture)
