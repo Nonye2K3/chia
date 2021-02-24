@@ -1,7 +1,7 @@
 1. To plot parallel in Windows you will need to use powershell. A generic example for Release Candidate 2:
 ```
 cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.2\resources\app.asar.unpacked\daemon\
-start-process ./chia.exe -argumentlist "plots create yourParametersGoHere"
+start-process .\chia.exe -argumentlist "plots create yourParametersGoHere"
 start-process ....
 ....
 ```
