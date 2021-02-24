@@ -69,7 +69,7 @@ The plot format depends on whether farm to public key or farm to contract addres
 address, the puzzle hash (address) is directly encoded into the plot. Otherwise, the pool public key is directly encoded into the plot.
 Note that this is not the exact plot format, there are a few more details that are left out here.
 
-<img src="images/plot_format.png" alt="drawing" width="150"/>
+<img src="images/plot_format.png" alt="drawing" width="450"/>
 
 The important thing is that the harvester is only storing their local key in the plot, but no other keys are required
 from the harvester. This key alone is not enough to do anything, since it must be combined with the farmer's key. 
