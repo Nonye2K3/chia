@@ -26,6 +26,12 @@ Command: `chia start {service}`
 
 * Service `node` will start only the full node.
 * Service `farmer` will start the farmer, harvester, a full node, and the wallet.
+* positional arguments:
+  {all,node,harvester,farmer,farmer-no-wallet,farmer-only,timelord,timelord-only,timelord-launcher-only,wallet,wallet-only,introducer,simulator}
+
+**Flags**
+
+`-r, --restart`: Restart of running processes 
 
 # plots
 
