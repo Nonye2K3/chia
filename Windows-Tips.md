@@ -1,36 +1,34 @@
-1. To plot parallel in Windows you will need to use powershell. A generic example for Release Candidate 2:
+1. To plot parallel in Windows you will need to use powershell. A generic example for Release Candidate 3:
 ```
-cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.2\resources\app.asar.unpacked\daemon\
+cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.3\resources\app.asar.unpacked\daemon\
 start-process .\chia.exe -argumentlist "plots create yourParametersGoHere"
 start-process ....
 ....
 ```
 
-A specific example, again using Release Candidate 1:
+A specific example, again using Release Candidate 3:
 
 ```
-cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.2\resources\app.asar.unpacked\daemon\
+cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.3\resources\app.asar.unpacked\daemon\
 start-process ./chia.exe -argumentlist "plots create -k 32 -b 4000 -u 128 -r 4 -t d:\tempdrive1 -2 e:\tempdrive2 -d F:\plots -n 1"
 ```
-If you are using Beta 16 you would change the `Chia-Blockchain\app-0.2.2\resources\` section to `Chia-Blockchain\app-0.1.16\resources\` in the command above.
+If you were using Beta 16 you would change the `Chia-Blockchain\app-0.2.3\resources\` section to `Chia-Blockchain\app-0.1.16\resources\` in the command above.
 
-2. Windows and Python used to not get along regarding reporting CPU % on Windows but starting with Beta 18 this has been fixed.
+2. You configuration and logs are found in `~\.chia\VERSION\log` and `~\.chia\VERSION\config` so `~\.chia\1.0rc3\log` in Release Candidate 3. You can tail your logs with `Get-Content ~\.chia\VERSION\log\debug.log -wait`. To see more of what is going on, set your log level in `conf\config.yaml` to INFO from WARNING and restart. You can also use `\.chia.exe configure --set-log-level INFO from the app directory outlined above and then restart for the changes to take effect.
 
-3. You configuration and logs are found in `~\.chia\VERSION\log` and `~\.chia\VERSION\config` so `~\.chia\1.0rc1\log` in Release Candidate 1. You can tail your logs with `Get-Content ~\.chia\VERSION\log\debug.log -wait`. To see more of what is going on, set your log level in `conf\config.yaml` to INFO from WARNING and restart. You can also use `\.chia.exe configure --set-log-level INFO from the app directory outlined above and then restart for the changes to take effect.
+3. Consider going through a Windows Update check and install updates prior to starting a plot process. It can take a while, and updates might initiate a reboot.
 
-4. Consider going through a Windows Update check and install updates prior to starting a plot process. It can take a while, and updates might initiate a reboot.
-
-5. If you attempt to run more than one node on your local network, having uPnP on on both will cause both nodes significant confusion. You will need to use powershell to disable uPnP on all but one. An example for Beta 27:
+4. If you attempt to run more than one node on your local network, having uPnP on on both will cause both nodes significant confusion. You will need to use powershell to disable uPnP on all but one. An example for RC 3:
 ```
-cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.2\resources\app.asar.unpacked\daemon\
+cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.3\resources\app.asar.unpacked\daemon\
 ./chia.exe configure --upnp-enable False
 ```
 
-6. Sometimes your wallet database can get corrupted. If you get stuck on the "Connecting to wallet" spinner for more than 60 seconds, you will probably want to exit the app, delete your wallet database with powershell, and then start the app again.
+5. Sometimes your wallet database can get corrupted. If you get stuck on the "Connecting to wallet" spinner for more than 60 seconds, you will probably want to exit the app, delete your wallet database with powershell, and then start the app again.
 ```
-# For RC 1:
-cd ~\.chia\1.0rc1\wallet\db
+# For RC 3:
+cd ~\.chia\1.0rc3\wallet\db
 del *.db
 ```
 
-7. If your Powershell plotting processes seem to pause you should disable Quick Edit. Powershell -> Properties -> Options: Disable quick edit. If you are still seeing this symptom it is almost always a [problem with your RAM](https://www.tomshardware.com/how-to/how-to-test-ram).
+6. If your Powershell plotting processes seem to pause you should disable Quick Edit. Powershell -> Properties -> Options: Disable quick edit. If you are still seeing this symptom it is almost always a [problem with your RAM](https://www.tomshardware.com/how-to/how-to-test-ram).
