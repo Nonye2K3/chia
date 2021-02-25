@@ -4,12 +4,12 @@ To install chia-blockchain, follow [these install instructions](https://github.c
 All configuration data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/VERSION-DIR/. You can find databases, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots. If you set $CHIA_ROOT you will have to migrate configuration items by hand or unset the variable for `chia init` to work with `unset CHIA_ROOT`.
 
 If you are using the MacOS or Windows builds, your keys are created during the first run. We recommend saving the mnemonic. If you intend to use these plots on mainnet you should securely store the 24 words. You can start plotting a plot file using the Plot tab or the command line. This can take a long time depending on the [size of the plots](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
-(the k variable). To be competitive on the current network you will probably have to have a few k=32 or larger plots but a k=32 plot currently takes about 12 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 332 GiB of temporary working space to create a final plot file of 101.3 GiB. Your likelihood of winning a given plot is only driven by the final size of files.
+(the k variable). To be competitive on the current network you will probably have to have a few k=32 or larger plots but a k=32 plot currently takes about 10 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 332 GiB of temporary working space to create a final plot file of 101.3 GiB. Your likelihood of winning a given plot is only driven by the final size of files.
 
-We believe that plots created with Beta 8 and newer version of the chia software will work on mainnet at launch. The minimum plot size will be k=32. The original design assumed that k=30 will be the minimum plot size but testing on faster plotting algorithms has ruled it and k=31 out. We are speeding up the time it takes to plot (especially so in release Beta 14) and have significantly decreased the temporary space needed starting in Beta 12.
+Plots created with Beta 8 and newer version of the chia software will work on mainnet at launch. The minimum plot size will be k=32.
 
 ## Windows
-There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.2.2\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`. You can also checkout these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips).
+There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.2.3\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\VERSION\log\debug.log -wait`. You can also checkout these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips).
 
 ## MacOS
 There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `./chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`.
@@ -80,14 +80,6 @@ UPnP is enabled by default to open port 8444 for incoming connections.
 If this causes issues, you can disable it in config.yaml.
 Some routers may require port forwarding, or enabling UPnP
 in the router's configuration.
-
-## uvloop
-
-For potentially increased networking performance on non Windows platforms using development installs,
-install uvloop:
-```bash
-pip install -e ".[uvloop]"
-```
 
 # RPC Interface
 
