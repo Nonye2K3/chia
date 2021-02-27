@@ -69,19 +69,14 @@ sh install-gui.sh
 cd chia-blockchain-gui
 npm run electron &
 
-#Update from previous version
+# Update/Upgrade from previous version
 
 cd chia-blockchain
-chia stop all -d
-deactivate
-
-#Upgrading
-
 chia stop -d all
+deactivate
 git fetch
-git checkout main
+git checkout 1.0rc4
 git pull
-git pull --tags
 sh install.sh
 
 . ./activate
