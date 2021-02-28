@@ -105,6 +105,11 @@ There is a possible attack where an attacker who can co-ordinate N deep from the
 
 The original plan was for December 2020 or January 2021 and our development of our original consensus met our expected timeline. However, in February of 2020 we were introduced to some [new ideas](https://arxiv.org/abs/1910.02218) at the Stanford Blockchain 2020 event that lead to our [new consensus algorithm](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit) - which is a significant upgrade in security and usability of our chain. Implementing that has set us back a few weeks and now we are targeting a date on or before March 17, 2021 though there remains some timing uncertainty in the order of a week or two as we complete consensus critical items. Our intent is to not have to hard fork once mainnet is started so we have to be very certain that consensus critical items are complete and our first security audits are complete. Our community members warn that each time you ask in [Keybase](https://keybase.io/team/chia_network.public) it gets moved back a week.
 
+# What is XCH, TXCH, and mojos?
+
+XCH is the currency symbol for Chia. TXCH is the currency symbol currently being used for testnet chias. TXCH has no value and is only used for testing purposes. Chias and testnet chias can be divided up to 12 decimal places (trillionths). The smallest unit of chia, a trillionth of a chia, is called a mojo, as a tribute to Mojo Nation, a decentralized file storage platform created in the early 2000s by Zooko Wilcox, Bram Cohen, and others.
+
+
 # How can I contribute?
 
 You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-blockchain/blob/master/CONTRIBUTING.md) in the repository but the quick answer is to please base your pull requests off the dev branch. The dev branch will only accept rebase merges or squash merges. You can help [translate the application](https://crowdin.com/project/chia-blockchain/) as well. Translating the GUI is especially useful and pretty easy to do with our Crowdin [Chia-Blockchain-GUI](https://crowdin.com/project/chia-blockchain) tool.
