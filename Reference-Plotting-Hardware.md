@@ -2,6 +2,7 @@
 These are machines that work well to quickly create plots in parallel. These serve as starting points to think about acquiring or modifying existing systems to be good plotting machines on a TBs of plots created per day basis. You don't need this level of hardware to then farm plots that have been generated however. For that a [Raspberry Pi](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi) is enough.
 
 NEW
+
 [Chia budget plotting desktop guide](https://docs.google.com/document/d/18a5_MO88hv_DL_644OGFoCiKnpR9udl-PAWKlyIqqQU/edit?usp=sharing)
 
 [Chia plotting basics](https://www.chia.net/2021/02/22/plotting-basics.html)
