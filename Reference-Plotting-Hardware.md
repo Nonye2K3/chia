@@ -1,6 +1,11 @@
 
 These are machines that work well to quickly create plots in parallel. These serve as starting points to think about acquiring or modifying existing systems to be good plotting machines on a TBs of plots created per day basis. You don't need this level of hardware to then farm plots that have been generated however. For that a [Raspberry Pi](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi) is enough.
 
+NEW
+[Chia budget plotting desktop guide](https://docs.google.com/document/d/18a5_MO88hv_DL_644OGFoCiKnpR9udl-PAWKlyIqqQU/edit?usp=sharing)
+
+[Chia plotting basics](https://www.chia.net/2021/02/22/plotting-basics.html)
+
 Plotting can be done on consumer systems (laptops), but is much faster done on high-end desktops, workstations, and servers. Plotting takes scaling for CPU cores to improve the parallelism (this is -r number of threads, or number of parallel processes), scaling in DRAM per process, and fast SSDs or many small 10k hard drives for temporary storage space.
 
 each K=32 will require approximately 332GiB of temporary space, a minimum of 4500MB of DRAM, and at least a single CPU thread. For instance, a 1.6TB SSD would have 1.46TiB usable in the OS, could fit 4 k=32 in parallel (4*330 < 1490GiB), and would require 18GB of DDR4.
