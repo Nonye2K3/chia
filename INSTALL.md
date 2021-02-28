@@ -81,6 +81,8 @@ sh install.sh
 
 . ./activate
 
+chia init
+
 sh install-gui.sh
 
 cd chia-blockchain-gui
