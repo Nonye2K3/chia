@@ -120,8 +120,8 @@ Can I use USB 3.0  cable connected to SSD/NVME running the Temp files.  Answer- 
 
 Once a hash is used from a plot-- does it need to be deleted.  Answer-- no-- an example is , a plot has 300,000 hashes that the user created.  If one is used, there are enough to last an estimated 5 years. 
 
-New version RC2
-The new RC2 version is a new blockchain-- prior coins are erased.  Its all test chia coins right now anyway.   It may take 4-10 hrs to sync-- just let it run--  there may be multiple other revisions coming example 1 per week until final.
+New version RC4
+The new RC4 version is a new blockchain-- prior coins are erased.  Its all test chia coins right now anyway.   It may take 4-10 hrs to sync-- just let it run--  there may be multiple other revisions coming example 1 per week until final.  When RC4 is loaded-- a new feature is it waits to download a large file from other PC's then starts to sync-- so that is why the sync will take some time.
 
 Peak Blockchain and checking if Chia is in sync
 The chia blockchain software -- every user has copy of the blockchain on their pc and the goal is that everyone is in sync or very close.   Click on the Full Mode tab.  If the time and date is off by  30 minutes then the software is not synced to blockchain or others.  Multiple ways to check-- on Full node --  look at peak height and date/time--- then go below and look at connections and your peak should match the other computers.   Also the peak should be close when you click on wallet tab with that wallet peak number.   The wallet peak number sometimes is off by 10 numbers.  If off by several hundred its not in sync.  On the GUI-- on the top menu bar -- click on View then Force Reload.  It will take about 5-10 minutes.  It will not affect your plotting.
