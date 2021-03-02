@@ -18,9 +18,10 @@ other network peers  --------   Main machine (CA) ------  Harvester 2 (certifica
 
 Then for each harvester, follow these steps:
 1. Make sure your **main** machines IP address on port 8447 is accessible by your harvester machines
-2. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote harvester's farmer_peer section
-3. Shut down all chia daemon processes with `chia stop all -d`
-4. Run `chia init -c [directory]` on your remote harvester, where `[directory]` is the copy of your **main** machine CA directory. This command creates a new certificate signed by your **main** machine's CA.
+2. Shut down all chia daemon processes with `chia stop all -d`
+3. Make a backup of any settings in your 
+3. Run `chia init -c [directory]` on your remote harvester, where `[directory]` is the copy of your **main** machine CA directory. This command creates a new certificate signed by your **main** machine's CA.
+4. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote harvester's farmer_peer section
 5. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine in your INFO level logs.
 6. To stop the harvester, you run CLI `chia stop harvester`
 
@@ -28,7 +29,7 @@ Warning:
 You cannot copy the entire `config/ssl` directory from one machine to another. Each harvester must have a different set of TLS certificates for your **main** machine to recognize it as different harvesters. Unintended bugs can occur, including harvesters failing to work properly when the **same** certificates are shared among different machines.
 
 Security Concern:
-In beta27, the CA files are copied to each harvester. This is not ideal, and a new way to distribute certificates will be implemented in a subsequent release. In the meantime, if you want to have a more secure remote harvester, you should delete `private_ca.crt` and `private_ca.key` files located in `[directory]` and in `~/.chia/beta-1.0bx/config/ssl/ca`
+Since beta27, the CA files are copied to each harvester, as the daemon currently needs it to startup correctly. This is not ideal, and a new way to distribute certificates will be implemented in a subsequent release post mainnet launch. Please be careful when running your harvester that is accessible from the open internet.
 
 Note:
 Currently (beta27), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `INFO` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/beta-1.0bx/log/debug.log` and see if you get messages like the following:
