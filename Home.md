@@ -2,8 +2,9 @@
 
 * [Install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL)
 * [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
-* [Repository FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ)
+* [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ) for running Chia
 * [Chia Project FAQ](https://www.chia.net/faq/)
+* [Plotting Basics](https://www.chia.net/2021/02/22/plotting-basics.html)
 * [k and plot sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 * [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips)
 * [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) - Important notes on using SSD to plot.
