@@ -128,7 +128,7 @@ Yes, and here are the [instructions](https://github.com/Chia-Network/chia-blockc
 
 For some routers, UPnP is enabled automatically, but for others, you might have to go into your router settings and enable UPnP manually. Sometimes restarting the router is also necessary.
 
-Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 or 5844 for testnet to your machine.
+Another option is port forwarding, where you tell your router/NAT to forward requests on port 8444 or 58444 for testnet to your machine.
 
 # Why should I not run more than one node on a home network and what's this about UPnP?
 
