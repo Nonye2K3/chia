@@ -1,6 +1,6 @@
 # Types of Timelords
 
-There are two primary types of Timelords.
+There are two primary types of Timelords: Regular and Blueboxes.
 
 The first is the core Timelord that takes in Proofs of Space and then uses a single fastest core to doing squaring in a class group of unknown order as fast as possible. Beside each running VDF (referred to as a vdf_client in the application and source) is a set of proof generation threads that accumulate the proof that the time calculation's number of iterations was done correctly.
 
