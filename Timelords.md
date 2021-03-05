@@ -1,4 +1,4 @@
-# Types of Timelords
+## Types of Timelords
 
 There are two primary types of Timelords: Regular and Blueboxes.
 
@@ -6,11 +6,11 @@ The first is the core Timelord that takes in Proofs of Space and then uses a sin
 
 The second are Bluebox Timelords. Blueboxes are most any machine - especially things like old servers or gaming machines - that scour the historical chain looking for uncompressed proofs of time. So that the chain moves quickly, the regular Timelords use a faster method of generating proofs of time but those proofs are larger and take your Raspberry Pi that you're trying to sync up a lot more time and effort to sync the change. A Bluebox picks off an uncompressed proof of time and recreates it, but this time with the slower and more compact proofs generated at the end. Those are then gossiped around to everyone so they can replace the large and slow to verify Proofs of Time with the compact and much quicker to validate version of exactly the same thing.
 
-# The Fastest Timelords
+## The Fastest Timelords
 
 There are three known fastest Timelords seen so far. The fastest known and seen on the testnet blockchain was in approximately September of 2020 where it was generating VDF iterations at about 360,000 iterations per second (or ips.) It disappeared after a few weeks. We speculate that it was an Intel cloud customer playing with pre-release Rocket Lake CPUs that have two channels of [AVX-512 IFMA](https://en.wikipedia.org/wiki/AVX-512#IFMA) support. The Timelord source has an implementation of IFMA but it's not enabled by default as the very few CPUs with one channel of IFMA don't gain much speed from it - especially because they're mostly for power savings on laptops. The second "known" fast Timelord is an [academic research project](https://ieeexplore.ieee.org/abstract/document/9301680). They and we speculate that it may be in the 400k-500k ips range once modified to run our 1024 bit width version. They used the [TSMC](https://www.tsmc.com/english) 28-nm CMOS technology for their prototype. Until Rocket Lake is generally available (which is soon as of this writing in early March) the fastest Timelord is a water cooled Intel Core i9-10900K running un-overclocked with 16MiB or RAM. Sooner or later we will overclock it... It maintains about 200k-210k ips.
 
-# Running a Timelord
+## Running a Timelord
 
 First of all, the network only requires one running Timelord to keep moving (liveness.) The way Timelords race is like they are on a series of 50 yard dashes. Each one takes off with the last good Proof of Space and tries to get to the total number of iterations required to complete a given Proof of Space. Better Proofs of Space require less iterations to prove. When the fastest Timelord announces the Proof of Time for this Proof of Space all of the other Timelords stop racing and are magically teleported to the starting line of the next 50 yard dash to start it all over again.
 
@@ -18,20 +18,20 @@ It's good to have a few Timelords out there. There can be things like routing fl
 
 The Company plans to run a few Timelords around the world and some backups too - just to make sure that all Farmers and nodes can hear the beat that the Timelords are calling.
 
-# Installing a Timelord
+## Installing a Timelord
 
-## Regular Timelords
+### Regular Timelords
 
 Due to restrictions on how [MSVC](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B) and how Python relies upon MSVC, it is not possible to build and run Timelords of all types on Windows - yet. We have a plan to use GCC and some tools to enable vdf_client on Windows in a way that will be compatible with a Windows install of chia-blockchain. On MacOS x86_64 and all Linux distributions, building a Timelord is as easy as running `sh install-timelord.sh` in the venv of a `git clone` style chia-blockchain install. Try `./vdf_bench square_asm 400000` to give you a sense of your optimal and unloaded ips. Each run can be surprisingly variable and, in production, the actual ips you will obtain will usually be about 20% lower. The default configuration for Timelords is good enough to just let you start it up. Set your log level to INFO and then grep for "Estimated IPS:" to get a sense of what actual ips your Timelord is achieving. We will shortly modify the Timelord build process to support MacOS ARM64 as well.
 
-## Bluebox Timelords
+### Bluebox Timelords
 
 For now, Blueboxes are also restricted to basically anything but Windows. Our plans to port to Windows will make Blueboxes available as well though. Once you build the Timelord with `sh install-timelord.sh` in the venv, you will need to make two changes to `~/.chia/VERSION/config.yanml`. In the `timelord:` section you will want to set `sanitizer_mode:` to `True`. Then you need to proceed to the `full_node:` section and set `send_uncompact_interval:` to something greater than 0. We recommend `300` seconds there so that your Bluebox has some time to prove through a lot of the un-compacted Proofs of Time before the node drops more into its lap. The default settings may otherwise work but if the total effort is a little too much for whatever machine you are on you can also lower the `process_count:` from 3 to 2 or even 1 in the `timelord_launcher:` section.
 
-# The Future of Timelords
+## The Future of Timelords
 
 Having an open source ASIC Timelord that everyone can buy one inexpensively is the Company's goal. We had originally expected that we would proceed from general purpose CPUs to FPGAs and then ASICs. It turns out that squaring in class groups of unknown order at 1024 bit widths is both FPGA hard and slightly ASIC hard. It also was a pleasant surprise that AVX-512 IFMA was almost perfectly created for this application. As such we will be fostering ASIC efforts and are happy to lose money on the project to create an open source PCI card that would be available for say $250 for anyone who wishes to run the fastest Timelords in the world too.
 
-# Timelords and Attacks
+## Timelords and Attacks
 
 One of the things that is great about the [Chia new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit) is that it makes it almost impossible for a Farmer with a maliciously faster Timelord to selfishly Farm. Due to the way new consensus works, a Farmer with a faster Timelord is basically compelled to prove time for all the farmers winning blocks around him too. Having an evil faster Timelord can give a benefit when attempting to 51% attack the network, so it is still important that over time we push the Timelord speeds as close to the maximum speeds of the silicon processes available. We expect to have the time and the resources to do that right and make open source hardware available widely.
