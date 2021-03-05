@@ -1,45 +1,37 @@
-# Alpha testnet Timelords
+# Types of Timelords
 
-Initially, the fastest timelord we've see so far is Chia's own twin Intel machines running Ubuntu on an Intel(R) Xeon(R) W-2155 CPU @ 3.30GHz with 10 cores and  64 GB PC4-21300 DDR4-2666V-R REGISTERED ECC. These machines get about 145,000 ips (iterations per second using alpha 1.3/1.4.) The fastest we've run is on a z1d instance at EC2 which gets about 166,000 ips. We have seen (approximately 2/17/20) a VDF server capable of ~200,000 ips.
+There are two primary types of Timelords.
 
-It looks like it takes two full cores (usually looks like 4 in the OS) to both run the squarings and run the proofs and it takes about 8GB of RAM per VDF - though that may now be down to 6GB or even 4GB with some changes implemented right at testnet launch.
+The first is the core Timelord that takes in Proofs of Space and then uses a single fastest core to doing squaring in a class group of unknown order as fast as possible. Beside each running VDF (referred to as a vdf_client in the application and source) is a set of proof generation threads that accumulate the proof that the time calculation's number of iterations was done correctly.
 
-Chia Network has four timelords running:
+The second are Bluebox Timelords. Blueboxes are most any machine - especially things like old servers or gaming machines - that scour the historical chain looking for uncompressed proofs of time. So that the chain moves quickly, the regular Timelords use a faster method of generating proofs of time but those proofs are larger and take your Raspberry Pi that you're trying to sync up a lot more time and effort to sync the change. A Bluebox picks off an uncompressed proof of time and recreates it, but this time with the slower and more compact proofs generated at the end. Those are then gossiped around to everyone so they can replace the large and slow to verify Proofs of Time with the compact and much quicker to validate version of exactly the same thing.
 
-*   Two twins are each a timelord with two VDF's each
-    *   [Intel(R) Xeon(R) W-2155](https://ark.intel.com/content/www/us/en/ark/products/125042/intel-xeon-w-2155-processor-13-75m-cache-3-30-ghz.html) CPU @ 3.30GHz with 10 cores
-    *   64 GB PC4-21300 DDR4-2666V-R REGISTERED ECC
-    *   ~145,000 ips
+# The fastest Timelords
 
-*   Older large instance with 21 cores (42 reported) that has 6 VDF's running on it
-    *   [Intel(R) Xeon(R) CPU E7-L8867](https://ark.intel.com/content/www/us/en/ark/products/53577/intel-xeon-processor-e7-8867l-30m-cache-2-13-ghz-6-40-gt-s-intel-qpi.html)  @ 2.13GHz
-    *   63G RAM
-    *   ~57,000 ips
-    *   It tends to garbage collect if the twins both choose the same possible proofs of space to run a VDF on
+There are three known fastest Timelords seen so far. The fastest known and seen on the testnet blockchain was in approximately September of 2020 where it was generating VDF iterations at about 360,000 iterations per second (or ips.) It disappeared after a few weeks. We speculate that it was an Intel cloud customer playing with pre-release Rocket Lake CPUs that have two channels of [AVX-512 IFMA](https://en.wikipedia.org/wiki/AVX-512#IFMA) support. The Timelord source has an implementation of IFMA but it's not enabled by default as the very few CPUs with one channel of IFMA don't gain much speed from it - especially because they're mostly for power savings on laptops. The second "known" fast Timelord is an [academic research project](https://ieeexplore.ieee.org/abstract/document/9301680). They and we speculate that it may be in the 400k-500k ips range once modified to run our 1024 bit width version. They used the [TSMC](https://www.tsmc.com/english) 28-nm CMOS technology for their prototype. Until Rocket Lake is generally available (which is soon as of this writing in early March) the fastest Timelord is a water cooled Intel Core i9-10900K running un-overclocked with 16MiB or RAM. Sooner or later we will overclock it... It maintains about 200k-210k ips.
 
-*   Expiremental cluster timelord
-    *   [AWS t3small](https://aws.amazon.com/ec2/instance-types/t3/) as timelord
-    *   3 VDFs on 3 AWS c5n.xlarge instances
-    *   [Intel(R) Xeon(R) Platinum 8124M](https://en.wikichip.org/wiki/intel/xeon_platinum/8124m) CPU @ 3.00GHz
-    *   10 GB RAM
-    *   ~110,000 ips
-    *   Still optimizing this
+# Running a Timelord
 
-*   AWS EC2 z1d.6xlarge 24 vCPU's reported
-    *   [AWS z1d.6xlarge](https://aws.amazon.com/ec2/instance-types/z1d/) as timelord
-    *   8 VDFs
-    *   [Intel(R) Xeon(R) Platinum 8151](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Xeon+Platinum+8151+%40+3.40GHz&id=3458) CPU @ 3.40GHz - turbo 4.00GHz
-    *   192 GB RAM
-    *   ~166,000 ips
+First of all, the network only requires one running Timelord to keep moving (liveness.) The way Timelords race is like they are on a series of 50 yard dashes. Each one takes off with the last good Proof of Space and tries to get to the total number of iterations required to complete a given Proof of Space. Better Proofs of Space require less iterations to prove. When the fastest Timelord announces the Proof of Time for this Proof of Space all of the other Timelords stop racing and are magically teleported to the starting line of the next 50 yard dash to start it all over again.
 
-# Cluster Timelord
+It's good to have a few Timelords out there. There can be things like routing flaps or the overzealous backhoe that takes large swaths of the internet off. If the fastest Timelord was just about to win the current dash when its internet blinked off in a fury of construction misadventure, then the second fastest will win that dash and the next dashes - until the fastest returns. One of the key neat things about Proofs of Time is that given the same Proof of Space, their output and proof are always the same (though the proofs can be larger or smaller and harder or easier to validate - but they all end up with the same outcome.)
 
-*Note: Out of date for Beta - will update soon*
+The Company plans to run a few Timelords around the world and some backups too - just to make sure that all Farmers and nodes can hear the beat that the Timelords are calling.
 
-The default distribution in alpha 1.5 will now launch 2 VDF instances on the current machine from the `run_all.sh` startup script. However one can have each VDF or couple of VDFs on different machines. We tend run a cluster in AWS with the fullnode and timelord running on a t3.small and then a single VDF on a group of e.g. c5.xlarge instances.
+# Installing a Timelord
 
-On the Timelord server you will need to edit the `scripts/run_timelord.sh` script and comment out `_run_bg_cmd python -m src.timelord_launcher`. In `config/config.yaml` you will add the IP address of each client machine under `vdf_clients` and enter an `ips_estimate` for each VDF client machine. VDF client machines must be able to see the port in `vdf_server: port:`. The default config has chosen port 8000. Additionally you will need to set the `vdf_server: host:` to either the IP that you want your clients to reach or leave the entry blank for all of your configured IP interfaces.
+## Regular Timelords
 
-You can test your server configuration and port availability by running `nmap -Pn -p 8000 TIMELORD_SERVER` on the client machines where TIMELORD_SERVER is the hostname or IP address of the Timelord.
+Due to restrictions on how [MSVC](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B) and how Python relies upon MSVC, it is not possible to build and run Timelords of all types on Windows - yet. We have a plan to use GCC and some tools to enable vdf_client on Windows in a way that will be compatible with a Windows install of chia-blockchain. On MacOS x86_64 and all Linux distributions, building a Timelord is as easy as running `sh install-timelord.sh` in the venv of a `git clone` style chia-blockchain install. Try `./vdf_bench square_asm 400000` to give you a sense of your optimal and unloaded ips. Each run can be surprisingly variable and, in production, the actual ips you will obtain will usually be about 20% lower. The default configuration for Timelords is good enough to just let you start it up. Set your log level to INFO and then grep for "Estimated IPS:" to get a sense of what actual ips your Timelord is achieving. We will shortly modify the Timelord build process to support MacOS ARM64 as well.
 
-On each client, you place the IP of the Timelord server in the `timelord_launcher: host:` section of `config_yaml` on the client machine. Note that the `port:` here must match what you choose on the Timelord server. Also you can choose how many VDFs run on the client by setting `timelord_launcher: process_count` to 1 to only run one VDF on the client machine. The default is set at 2. Once the Timelord server is started you can start the VDF client(s) by issuing `python -m src.timelord_launcher &` from the Python virtual environment.
+## Bluebox Timelords
+
+For now, Blueboxes are also restricted to basically anything but Windows. Our plans to port to Windows will make Blueboxes available as well though. Once you build the Timelord with `sh install-timelord.sh` in the venv, you will need to make two changes to `~/.chia/VERSION/config.yanml`. In the `timelord:` section you will want to set `sanitizer_mode:` to `True`. Then you need to proceed to the `full_node:` section and set `send_uncompact_interval:` to something greater than 0. We recommend `300` seconds there so that your Bluebox has some time to prove through a lot of the un-compacted Proofs of Time before the node drops more into its lap. The default settings may otherwise work but if the total effort is a little too much for whatever machine you are on you can also lower the `process_count:` from 3 to 2 or even 1 in the `timelord_launcher:` section.
+
+# The Future of Timelords
+
+Having an open source ASIC Timelord that everyone can buy one inexpensively is the Company's goal. We had originally expected that we would proceed from general purpose CPUs to FPGAs and then ASICs. It turns out that squaring in class groups of unknown order at 1024 bit widths is both FPGA hard and slightly ASIC hard. It also was a pleasant surprise that AVX-512 IFMA was almost perfectly created for this application. As such we will be fostering ASIC efforts and are happy to lose money on the project to create an open source PCI card that would be available for say $250 for anyone who wishes to run the fastest Timelords in the world too.
+
+# Timelords and Attacks
+
+One of the things that is great about the [Chia new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit) is that it makes it almost impossible for a Farmer with a maliciously faster Timelord to selfishly Farm. Due to the way new consensus works, a Farmer with a faster Timelord is basically compelled to prove time for all the farmers winning blocks around him too. Having an evil faster Timelord can give a benefit when attempting to 51% attack the network, so it is still important that over time we push the Timelord speeds as close to the maximum speeds of the silicon processes available. We expect to have the time and the resources to do that right and make open source hardware available widely.
