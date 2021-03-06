@@ -6,6 +6,18 @@ The farming process is very lightweight and can be run with minimal CPU and DRAM
 There are many unique DIY builds in the farming hardware channel that find unique uses for repurposing existing hardware to mount drives.
 Here a build from early community user that houses 32 drives farming off a [RockPi4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of 260W & 4.3kWh per day - easily making it one of the most power-efficient farms built so far!
 
+Parts list:
+* 1x [MEAN WELL RSP-500-12 DC Power Supply 500W/12V/42A](https://www.amazon.com/gp/product/B085G65K3Y), $85
+* 1x [Replacement Power Cable, 3 Pin Connector](https://www.amazon.com/gp/product/B0000510ZO), $4
+* 2x [Sabrent 16-Port USB 3.0 Data HUB](https://www.amazon.com/gp/product/B07KHRLSTT), $69
+* 1x [SMAKN 4 USB Car Charger Power Supply Step Down Module DC 9-40V to 5V 6A](https://www.amazon.com/gp/product/B01HQ9ENJG), $10
+* 0.1x [8 AWG Copper Wire](https://www.amazon.com/GS-Power-Aluminum-Primary-Trailer/dp/B088QG9WG3/), $34
+* 2x [Single Shelf Upright](https://www.homedepot.com/p/Rubbermaid-68-in-Single-Track-Upright-for-Wood-or-Wire-Shelving-FG4A7501UTLTY/100133076), $8
+* 1x [Rock Pi 4A 4GB](https://shop.allnetchina.cn/products/rock-pi-4-model-a-board-only-no-wlan-bluetooth-poe?variant=15971694084198), $65
+* 1x [Aluminum Heat Sink for Rock Pi 4](), aprox. $8 (May 2020)
+(I paid 179.02$ for 2 Rock PI & matching heat sink tax/shipping included)
+Total: ~ $350 US (Hard drives not included : -) 
+
 <img src="https://user-images.githubusercontent.com/61642896/108285617-7db36600-7155-11eb-82bb-34c0665d45a2.jpg" width="700">
 <img src="https://user-images.githubusercontent.com/61642896/108290337-2a91e100-715e-11eb-9aab-8216c1760966.jpg" width="700">
 
