@@ -8,7 +8,7 @@ Here a build from early community user that houses 32 drives farming off a [Rock
 
 Parts list (pricing changes constantly):
 * 1x [MEAN WELL RSP-500-12 DC Power Supply 500W/12V/42A](https://www.amazon.com/gp/product/B085G65K3Y), $85
-* 1x [Replacement Power Cable, 3 Pin Connector](https://www.amazon.com/gp/product/B0000510ZO), $4 (PSU does not come with it, you need to wire the PSU with the cable load, neutral and ground)
+* 1x [Replacement Power Cable, 3 Pin Connector](https://www.amazon.com/gp/product/B0000510ZO), $4 (PSU does not come with it)
 * 2x [Sabrent 16-Port USB 3.0 Data HUB](https://www.amazon.com/gp/product/B07KHRLSTT), $69
 * 1x [SMAKN 4 USB Car Charger Power Supply Step Down Module DC 9-40V to 5V 6A](https://www.amazon.com/gp/product/B01HQ9ENJG), $10
 * 0.1x [8 AWG Copper Wire](https://www.amazon.com/GS-Power-Aluminum-Primary-Trailer/dp/B088QG9WG3/), $34 (this wire is used to connect power dist.  bank with power supply)
