@@ -12,7 +12,7 @@ Parts list (pricing changes constantly):
 * 2x [Sabrent 16-Port USB 3.0 Data HUB](https://www.amazon.com/gp/product/B07KHRLSTT), $69
 * 1x [SMAKN 4 USB Car Charger Power Supply Step Down Module DC 9-40V to 5V 6A](https://www.amazon.com/gp/product/B01HQ9ENJG), $10
 * 0.1x [8 AWG Copper Wire](https://www.amazon.com/GS-Power-Aluminum-Primary-Trailer/dp/B088QG9WG3/), $34 (this wire is used to connect power dist.  bank with power supply)
-* 2x [Power Distribution Banks](https://www.adafruit.com/product/737)
+* 2x [Power Distribution Banks](https://www.adafruit.com/product/737), $2
 * 2x [Single Shelf Upright](https://www.homedepot.com/p/Rubbermaid-68-in-Single-Track-Upright-for-Wood-or-Wire-Shelving-FG4A7501UTLTY/100133076), $8
 * a handful of metal screws and nuts
 * 1x [Rock Pi 4A 4GB](https://shop.allnetchina.cn/products/rock-pi-4-model-a-board-only-no-wlan-bluetooth-poe?variant=15971694084198), $65
