@@ -17,6 +17,7 @@ Parts list (pricing changes constantly):
 * a handful of metal screws and nuts
 * 1x [Rock Pi 4A 4GB](https://shop.allnetchina.cn/products/rock-pi-4-model-a-board-only-no-wlan-bluetooth-poe?variant=15971694084198), $65
 * 1x [Aluminum Heat Sink for Rock Pi 4](), $8
+* 1x and optional [Kasa Smart HS300 Plug Power Strip](https://www.amazon.com/gp/product/B07G95FFN3), $69 (this can be used to monitor power consumption and control power remotely via smart phone)
 
 (approx. $179.02 US for 2 Rock PI 4 & matching heat sink tax/shipping included)
 Total: ~ $350 US (hard drives not included : -) 
