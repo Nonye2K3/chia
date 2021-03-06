@@ -13,6 +13,7 @@ Parts list (pricing constantly changes):
 * 1x [SMAKN 4 USB Car Charger Power Supply Step Down Module DC 9-40V to 5V 6A](https://www.amazon.com/gp/product/B01HQ9ENJG), $10
 * 0.1x [8 AWG Copper Wire](https://www.amazon.com/GS-Power-Aluminum-Primary-Trailer/dp/B088QG9WG3/), $34
 * 2x [Single Shelf Upright](https://www.homedepot.com/p/Rubbermaid-68-in-Single-Track-Upright-for-Wood-or-Wire-Shelving-FG4A7501UTLTY/100133076), $8
+* a handful of meta screws and nuts
 * 1x [Rock Pi 4A 4GB](https://shop.allnetchina.cn/products/rock-pi-4-model-a-board-only-no-wlan-bluetooth-poe?variant=15971694084198), $65
 * 1x [Aluminum Heat Sink for Rock Pi 4](), approx. $8 (May 2020)
 
