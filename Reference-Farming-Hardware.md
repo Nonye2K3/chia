@@ -16,8 +16,10 @@ Parts list:
 * 1x [Rock Pi 4A 4GB](https://shop.allnetchina.cn/products/rock-pi-4-model-a-board-only-no-wlan-bluetooth-poe?variant=15971694084198), $65
 * 1x [Aluminum Heat Sink for Rock Pi 4](), aprox. $8 (May 2020)
 
-(approx 179.02$ for 2 Rock PI & matching heat sink tax/shipping included)
+(approx $179.02 US for 2 Rock PI 4 & matching heat sink tax/shipping included)
 Total: ~ $350 US (Hard drives not included : -) 
+
+(approx 240W for 16x 3T HDD + 16x 10-16T HDD, less than 1W per TB, can be much improved when 3T HDD are replaced with larger drives)
 
 <img src="https://user-images.githubusercontent.com/61642896/108285617-7db36600-7155-11eb-82bb-34c0665d45a2.jpg" width="700">
 <img src="https://user-images.githubusercontent.com/61642896/108290337-2a91e100-715e-11eb-9aab-8216c1760966.jpg" width="700">
