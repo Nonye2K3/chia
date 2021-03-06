@@ -1,7 +1,7 @@
 ## Introduction
 
 In this post, I will explain the different types of keys in the Chia network, how they are generated, stored, and used.
-These systems are designed to be flexible enough to suppport many different configurations and pooling setups and to be resilient to various attacks.
+These systems are designed to be flexible enough to support many different configurations and pooling setups and to be resilient to various attacks.
 
 ## BLS keys
 
