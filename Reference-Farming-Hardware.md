@@ -15,7 +15,8 @@ Parts list:
 * 2x [Single Shelf Upright](https://www.homedepot.com/p/Rubbermaid-68-in-Single-Track-Upright-for-Wood-or-Wire-Shelving-FG4A7501UTLTY/100133076), $8
 * 1x [Rock Pi 4A 4GB](https://shop.allnetchina.cn/products/rock-pi-4-model-a-board-only-no-wlan-bluetooth-poe?variant=15971694084198), $65
 * 1x [Aluminum Heat Sink for Rock Pi 4](), aprox. $8 (May 2020)
-(I paid 179.02$ for 2 Rock PI & matching heat sink tax/shipping included)
+
+(approx 179.02$ for 2 Rock PI & matching heat sink tax/shipping included)
 Total: ~ $350 US (Hard drives not included : -) 
 
 <img src="https://user-images.githubusercontent.com/61642896/108285617-7db36600-7155-11eb-82bb-34c0665d45a2.jpg" width="700">
