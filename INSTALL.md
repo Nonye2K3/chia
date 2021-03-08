@@ -20,7 +20,7 @@ Keys and configs from Beta 19 and newer should automatically migrate. For more d
 
 # Windows
 
-Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/release-candidate/ChiaSetup-0.2.5.exe)
+Install the Windows installer - [Chia Blockchain Windows](https://download.chia.net/latest/Setup-Win64.exe)
 
 As the Chia code signing certificate is new you will likely have to ask to keep the download and when you run the installer, you will have to choose "More Info" and "Run Anyway" to be able to run the installer. There is no need to use the command line. Some Windows anti-virus applications are seeing the download as a false positive. You can see the entire source code and build method here so we think it's safe for you to ask those tools to ignore it.
 
@@ -29,7 +29,7 @@ You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/c
 # MacOS
 MacOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/release-candidate/Chia-0.2.5.dmg)
+Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/latest/Setup-MacOS.dmg)
 
 When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
