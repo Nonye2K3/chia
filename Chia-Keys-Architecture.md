@@ -20,7 +20,7 @@ BLS public keys can be combined to form a new public key, which can be used to v
 Each time the wallet generates a new address to receive funds, it makes a new bls private key.
 The farmer and pool only use the first key in the current codebase, but they can be updated to generate a new key every time a block is won, for additional privacy.
 pk stands for public key, and sk stands for private (secret) key.
-When it comes to getting paid, a chialisp program is created that uses one of the wallet BLS public keys, and this program, called a puzzle, is hashed to generate a puzzle hash. 
+When it comes to getting paid, a [chialisp](https://chialisp.com) program is created that uses one of the wallet BLS public keys, and this program, called a puzzle, is hashed to generate a puzzle hash. 
 The puzzle hash is then converted to an address in bech32m format, for easy error correction and usability. 
 So an address is analogous to a wallet child BLS public key, the private key which can be derived from the master seed.
 
