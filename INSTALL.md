@@ -16,7 +16,7 @@ The Chia plotting process takes multiple of hours to complete. If the computer o
 
 ## Updating from RC1/2/3/4/5:
 
-Keys and configs from Beta 19 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Release Candidate 6's blockchain is new and does not bring forward previous test chia.** **If you install before the green flag is dropped, you will be in wait mode where you can plot and connect to peers but will start farming automatically when the test launch happens ~9AM PST 3/12/21.**
+Keys and configs from RC3 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Release Candidate 6's blockchain is new and does not bring forward previous test chia.** **Please see #announcements in Keybase for an important work around**
 
 # Windows
 
