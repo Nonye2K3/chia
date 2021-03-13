@@ -59,13 +59,13 @@ Command: `chia plots create [add flags and parameters]`
 
 `-d` [final dir]: Define the final location for plot(s). Of course, `-d` should have enough free space as the final size of the plot. This directory is automatically added to your `~/.chia/VERSION/config/config.yaml` file. You can use `chia plots remove -d` to remove a final directory from the configuration.
 
-`-r` [number of threads] 2 is usually optimal. Multithreading is only in phase 1 currently.
+`-r` [number of threads]: 2 is usually optimal. Multithreading is only in phase 1 currently.
 
-`-u` [number of buckets] More buckets require less RAM but more random seeks to disk. With spinning disks you want less buckets and with NVMe more buckets. Generally you will want one of 32, 64, or 128 buckets.
+`-u` [number of buckets]: More buckets require less RAM but more random seeks to disk. With spinning disks you want less buckets and with NVMe more buckets. Generally you will want one of 32, 64, or 128 buckets.
 
 `-s` [stripe size]: This is the amount of data handed off to each thread, when doing parallel workloads during phase 1. The default 64K seems to be overall the best choice. 32K tends to be a small loss, and 128K is a small loss as well.
 
-`-e` : Using the `-e` flag will disable the bitfield plotting algorithm, and revert back to the older b17 plotting style. It lowers memory requirement, but also writes about 12% more data during creation of the plot. It's generally thought of as a faster option for faster drives, such as SSD's.
+`-e` [bitfield plotting]: Using the `-e` flag will disable the bitfield plotting algorithm, and revert back to the older b17 plotting style. It lowers memory requirement, but also writes about 12% more data during creation of the plot. It's generally thought of as a faster option for faster drives, such as SSD's.
 
 **Example**
 
