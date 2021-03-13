@@ -17,6 +17,7 @@ other network peers  --------   Main machine (CA) ------  Harvester 2 (certifica
 * Make a copy of your **main** machine CA directory located in `~/.chia/beta-1.0bx/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester.
 
 Then for each harvester, follow these steps:
+
 1. Make sure your **main** machines IP address on port 8447 is accessible by your harvester machines
 2. Shut down all chia daemon processes with `chia stop all -d`
 3. Make a backup of any settings in your harvester
@@ -25,13 +26,16 @@ Then for each harvester, follow these steps:
 5. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine in your INFO level logs.
 6. To stop the harvester, you run CLI `chia stop harvester`
 
-Warning:
+*Warning:*
+
 You cannot copy the entire `config/ssl` directory from one machine to another. Each harvester must have a different set of TLS certificates for your **main** machine to recognize it as different harvesters. Unintended bugs can occur, including harvesters failing to work properly when the **same** certificates are shared among different machines.
 
-Security Concern:
+*Security Concern:*
+
 Since beta27, the CA files are copied to each harvester, as the daemon currently needs it to startup correctly. This is not ideal, and a new way to distribute certificates will be implemented in a subsequent release post mainnet launch. Please be careful when running your harvester that is accessible from the open internet.
 
-Note:
+*Note:*
+
 Currently (beta27), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `INFO` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/beta-1.0bx/log/debug.log` and see if you get messages like the following:
 ```
 [time stamp] farmer farmer_server   : INFO   -> new_signage_point to peer [harvester IP address] [peer id - 64 char hexadecimal]
