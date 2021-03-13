@@ -14,6 +14,8 @@ There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.2.6\resou
 ## MacOS
 There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `./chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/VERSION/log/debug.log`.
 
+A handy trick is to add that directory to your path - `export PATH=/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon:$PATH`. To make it persistent add the same line to your .bashrc or .zshrc
+
 
 ## Development/source builds
 
