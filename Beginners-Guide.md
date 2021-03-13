@@ -8,62 +8,71 @@ A concept that is repeated a few times below-- Chia is based on capacity of pre-
 
 You can load Chia software on Windows, Mac or Linux. The Windows version automatically starts on installation and the Mac just needs to be opened from the Applications directory - it loads and starts to sync with rest of network and blockchain. Fully syncing can take 4-6 hrs, although this increases over time. Basically you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The chia blockchain database will be stored on your computer.
 
-**Full Node Tab**—this shows the blockchain movement.  It shows that you are sync with the blockchain.  A copy of the blockchain is stored on your pc.  You have a live copy that is in sync with everyone else.
+### Full Node Tab
 
-- Blocks — that is the blockchain working
-- Connections—those are the connections to you and other users--  those connections make Chia much faster to process transactions—part of the design, and make it more secure
+This shows the blockchain movement.  It shows that you are sync with the blockchain.  A copy of the blockchain is stored on your pc.  You have a live copy that is in sync with everyone else.
 
-**Wallet tab** – you will see your Chia coins as they are won-- this area is still under development
+- *Blocks* : This is the blockchain working
+- *Connections* : Those are the connections to you and other users--  those connections make Chia much faster to process transactions—part of the design, and make it more secure
 
-* History—you can see the time/date you earned coins or partial coins
+### Wallet tab
 
-**Plots tab**-- This is where you create plots.   The accepted plot size starts at 101 GiB each.  Called a k 32 - 101 GiB/109 GB plot.
+You will see your Chia coins as they are won-- this area is still under development
 
-GiB is gibibytes and the old school way computers measured space. The new hotness - especially from hard drive manufacturers - is to measure in gigabytes. Since gigabytes are based on 1000 and gibibytes are based on 1024, GB is always 1.074 times larger than GiB.
+- *History* : you can see the time/date you earned coins or partial coins
 
-When you plot—your computer goes and creates these large 101 gig files.  Inside are large tables (kind of like excel sheets) where each cell has a random pointer to another cell in the table. This is what the computer is doing, and why it takes so long to create the plot.  It’s running formula calculations and putting the “answers” in these millions of cells.   That is why it is 101 gigs.  The expected life for a k32 plot to be eligible on mainnet is about 7 to 15 years, for now. You can think of each plot as a collection of many lottery tickets, which have a chance of winning blocks.
+### Plots tab
 
-**Farm tab**- this will show you how many plots you have created.  On the top it will show how many Chias have been farmed.  It also shows how many gigs of plots you have on the network.  If you have 2 plots of 101 gig created. Then it shows on Top left “ Total size of Plots”  .2 TIB, means you offer this much storage of formulas to the chia network.  It is calculated as you have 101 gigs x 2 = 202 gigs. 
+This is where you create plots.   The accepted plot size starts at 101 GiB each.  Called a k 32 - 101 GiB/109 GB plot.
 
-* Latest Block Challenges—this shows the latest challenges and signage points, which can be thought of as mini lotteries. Every 9 seconds, there is a new signage point, which means there is a new opportunity for you to check your plots and see if you've won. Every other signage point will be a winner for someone on the network so there is a new block created about every 18 seconds.
+- *GiB* : is gibibytes and the old school way computers measured space. The new hotness - especially from hard drive manufacturers - is to measure in gigabytes. Since gigabytes are based on 1000 and gibibytes are based on 1024, GB is always 1.074 times larger than GiB.
 
-* “ Last Attempted Proof”_ — ok this is important.    There are 5 lines.  Currently I have 157 plots – so each of the lines read  0/157.
+- *When you plot* : Your computer goes and creates these large 101 gig files.  Inside are large tables (kind of like excel sheets) where each cell has a random pointer to another cell in the table. This is what the computer is doing, and why it takes so long to create the plot. It is running formula calculations and putting the “answers” in these millions of cells. That is why it is 101 gigs. The expected life for a k32 plot to be eligible on mainnet is about 7 to 15 years, for now. You can think of each plot as a collection of many lottery tickets, which have a chance of winning blocks.
+
+### Farm tab
+
+This will show you how many plots you have created.  On the top it will show how many Chias have been farmed.  It also shows how many gigs of plots you have on the network.  If you have 2 plots of 101 gig created. Then it shows on Top left “ Total size of Plots” .2 TIB, means you offer this much storage of formulas to the chia network.  It is calculated as you have 101 gigs x 2 = 202 gigs. 
+
+- *Latest Block Challenges* : This shows the latest challenges and signage points, which can be thought of as mini lotteries. Every 9 seconds, there is a new signage point, which means there is a new opportunity for you to check your plots and see if you've won. Every other signage point will be a winner for someone on the network so there is a new block created about every 18 seconds.
+
+- *Last Attempted Proof* : This is important. There are 5 lines. Currently I have 157 plots – so each of the lines read  0/157.
 On every signage point (9 seconds), all of your plots are checked to see which ones passes the [plot filter](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Approximately 1/512 of all plots will pass the plot filter for each challenge, so here you can see how many of your plots passed. If a plot is selected  or a 2nd plot is selected that is good news and the number changes to 1/157 or 2/157 maybe 3/157. However a plot passing the plot filter does not mean that you have won a block. After passing the filter, each plot will go through a "quality lookup", which does approximately 7 reads on your plot, and tells you whether the plots have won. Winning is very rare, and on average one person wins in the whole world, every 18 seconds. If you won, the whole plot is looked up on disk, and you will see the chia farmed on the Wallet screen. However there are 4608 chances to win 2 chia every day.
 
-Once that match shows on the first line--  it will move down to lines 2-5 , as the blockchain moves.   If for some reason those lines stop moving--- that is another indication you are not in sync with database and need to resync—see below.
-
-
-\* Note
+Once that match shows on the first line--  it will move down to lines 2-5 , as the blockchain moves. If for some reason those lines stop moving--- that is another indication you are not in sync with database and need to resync—see below.
 
 **Create a plot**
 
-Click on green button- top right “Add a Plot”
+1. Click on green button- top right “Add a Plot”
 
-- Starting size plot is 101 gigs.  You need a temp storage location of at least 332 GiB (which is 357 GB) to create the plot.
-- Chose number of plots — you can select quantity to create.
-- “ Plot to Queue” means if (5) is selected it will plot #1, then when finished will start #2
-- Plot in Parallel—means running multiple plots at same time.  Make sure you have enough temp storage for combined total.
-- Under “number of plots” – click drop down.  You want to see that “buckets” has 128 selected.  More buckets decreases the amount of RAM required and usually increases the speed of plotting.
-- #3 Select Temp Directory—select your temporary directory.  This is where plots are created. About 100 temp files will be created, then compacted to 1 plot file.    This creation grows to 332 GiB - 357 GB - in size and when finished will erase all of the temp files.  1 Plot file is created at 101.4 GiB.
+2. Starting size plot is 101 gigs.  You need a temp storage location of at least 332 GiB (which is 357 GB) to create the plot.
 
-- Its recommend to use a SSD drive or NVME drive for this work but make sure you are aware of [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance).
+3. Chose number of plots — you can select quantity to create.
+    1. *Plot to Queue* : Means if (5) is selected it will plot #1, then when finished will start #2
+    1. *Plot in Parallel* : means running multiple plots at same time.  Make sure you have enough temp storage for combined total.
+    1. Under *number of plots* – click drop down.  You want to see that “buckets” has 128 selected.  More buckets decreases the amount of RAM required and usually increases the speed of plotting.
 
-- #3 Select Permanent directory—once the plot is created—it will go to this location to be farmed to earn chia coins.    Storage will fill quickly due to size of plot. Storage can be internal or usb connected drives. Networked drives can be work but can be slow.  Plan ahead—storage fills quickly.
-- Click create plot to start process.
+4. Select Temp Directory—select your temporary directory.  This is where plots are created. About 100 temp files will be created, then compacted to 1 plot file.    This creation grows to 332 GiB - 357 GB - in size and when finished will erase all of the temp files.  1 Plot file is created at 101.4 GiB.
+    1. Its recommend to use a SSD drive or NVME drive for this work but make sure you are aware of [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance).
+
+5. Select Permanent directory—once the plot is created—it will go to this location to be farmed to earn chia coins.    Storage will fill quickly due to size of plot. Storage can be internal or usb connected drives. Networked drives can be work but can be slow.  Plan ahead—storage fills quickly.
+
+6. Click create plot to start process.
 
 **When a plot is created.   There are 2 directories.  Temp storage and then permanent file.**
 Over 100 files will be created all labled.tmp-. (example  agjpgoeporig.tmp file).  The temp storage will grow to an approximate size of 357 GB per created plot.    The software creates (1) file with 109 GB with a name and end will say .plot (example agljglhjaw[jufpoierh[wjrgpoeiwh.plot )- the software will transfer it to the permanent directory and its size will be 109 GB.  This is what will be farmed to earn chia coins. Chia software then erases all the temporary files and starts over for next plot.
 
 **How Plots are created and 7 steps Process**
 
-Creating a plot is time consuming.  Average 9-20 hours on a normal computer, and 4-8 hours on a high end machine.  Here are the approx. 7 steps/ tables are created to create a plot.  
-Table 1 is quickly created within 2 minutes.
+Creating a plot is time consuming.  Average 9-20 hours on a normal computer, and 4-8 hours on a high end machine.  Here are the approx. 7 steps/ tables are created to create a plot.
+ 
+*Table 1* : Is quickly created within 2 minutes.
 
-On table 2 you will start to see it create the buckets.    Select 128 buckets as it uses the least amount of ram.  Plot size is still 101 gigs.   I have noticed it also helps create the plot faster, then selecting 32 buckets or leaving the selection at 0.
+*Table 2* : You will start to see it create the buckets.    Select 128 buckets as it uses the least amount of ram.  Plot size is still 101 gigs.   I have noticed it also helps create the plot faster, then selecting 32 buckets or leaving the selection at 0.
 
-Table 4 takes some time.
+*Table 4* : Takes some time.
 
-After 7 tables are created it starts to “backpropagate” again tables 1-7. This sets it up for the final phase, which is compression.
+*After 7 tables are created* : It starts to “backpropagate” again tables 1-7. This sets it up for the final phase, which is compression.
+
 Then it starts a compression stage of each table manually 1-7
 
 Then it shows it’s completed- 101 gigs but nothing happens.  At this stage it is transferring your 101 gigs of plot to your permanent drive area—takes a few minutes 5-10 minutes.   It will delete all the files in your temp storage and there you go- 10 hrs. later.
@@ -75,7 +84,7 @@ The Chia software is evolving-- if for some reason a plot fails to complete it h
 
 **Word definitions and Explanations**
 
-"Proof"  is what is inside the PLOT.  Millions of "excel blocks" with formulas called proofs of space.
+*Proof* : It is found inside the PLOT.  Millions of "excel blocks" with formulas called proofs of space.
 The chia software is designed to work on a lottery system.  A key element to winning the lottery of earning coins is that the more plots you have, the more proofs you have, and therefore the higher chances of winning.  Someone with 1% of all the plotted space, will win about 1% of all the blocks. There are about 4608 blocks per day, each with 2 chia, so 9216 chia are created per day.
 
 The chia farming software gets a challenge, lets say 2021.  It’s going to look through lookup tables on the front of the plots.  Find the closest to 2021 and this is where the time comes into play-- That proof (excel block hash) has a certain quality, and only proofs that are of a certain quality or better are eligible for winning.
@@ -86,7 +95,7 @@ In Chia, the only electricity required is the electricity to create the plots, a
 
 **Computer Hardware**
 
-SSD drivers—many people are using SSD drives to create plots— or NVME drives.  Minimum of 1 Tb each is recommend if you want to plot more than 1 plot at a time
+*SSD drivers* : Many people are using SSD drives to create plots— or NVME drives.  Minimum of 1 Tb each is recommend if you want to plot more than 1 plot at a time
 
 On an older computer you can purchase a pcie adapter card-to take NVME/SSD drive as the new temp folder.   This is internal to the PC.  Some have tried to use a usb or firewire attached NVME/ SSD with some success.  The first plot is sometimes created with 6 hrs each, but doing multiple plots slows to 8 hrs each. This pertains to creating the temp files.
 
@@ -108,9 +117,9 @@ Look at the date/time indicated compared to your computer.  If there is a 30 min
 
 *\* Important*
 
-When first plotting --   and your first plot is created and now being farmed for chia.  On the farming tab—“Time to Win a coin”— it may say 2 days.   It may take really upto 5 days to earn the first coin or partial coin.  It is normal as luck plays a role over the short run.  Your computer is being linked up to all the other pc’s.   As you add more plots—especially after about 50 plots, then the “time to Win” gets a little closer to estimated time
+When first plotting --   and your first plot is created and now being farmed for chia.  On the farming tab—“Time to Win a coin”— it may say 2 days.   It may take really upto 5 days to earn the first coin or partial coin.  It is normal as luck plays a role over the short run. Your computer is being linked up to all the other pc’s.   As you add more plots—especially after about 50 plots, then the “time to Win” gets a little closer to estimated time
 
-Common Answers to Questions
+## Frequently Asked Questions
 
 First there is a [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ).
 
@@ -120,11 +129,13 @@ Can I use USB 3.0  cable connected to SSD/NVME running the Temp files.  Answer- 
 
 Once a hash is used from a plot-- does it need to be deleted.  Answer-- no-- an example is , a plot has 300,000 hashes that the user created.  If one is used, there are enough to last an estimated 5 years. 
 
-New version RC4
-The new RC4 version is a new blockchain-- prior coins are erased.  Its all test chia coins right now anyway.   It may take 4-10 hrs to sync-- just let it run--  there may be multiple other revisions coming example 1 per week until final.  When RC4 is loaded-- a new feature is it waits to download a large file from other PC's then starts to sync-- so that is why the sync will take some time.
+### New version RC4
 
-Peak Blockchain and checking if Chia is in sync
-The chia blockchain software -- every user has copy of the blockchain on their pc and the goal is that everyone is in sync or very close.   Click on the Full Mode tab.  If the time and date is off by  30 minutes then the software is not synced to blockchain or others.  Multiple ways to check-- on Full node --  look at peak height and date/time--- then go below and look at connections and your peak should match the other computers.   Also the peak should be close when you click on wallet tab with that wallet peak number.   The wallet peak number sometimes is off by 10 numbers.  If off by several hundred its not in sync.  On the GUI-- on the top menu bar -- click on View then Force Reload.  It will take about 5-10 minutes.  It will not affect your plotting.
+The new RC4 version is a new blockchain-- prior coins are erased.  Its all test chia coins right now anyway.   It may take 4-10 hrs to sync-- just let it run-- there may be multiple other revisions coming example 1 per week until final.  When RC4 is loaded-- a new feature is it waits to download a large file from other PC's then starts to sync-- so that is why the sync will take some time.
 
-Everyone is very helpful to answer questions.  The group does ask for questions to be in the selected chat room.  Beginner questions in Beginner etc
+### Peak Blockchain and checking if Chia is in sync
+
+*The chia blockchain software* : Every user has copy of the blockchain on their pc and the goal is that everyone is in sync or very close. Click on the Full Mode tab. If the time and date is off by 30 minutes then the software is not synced to blockchain or others.  Multiple ways to check-- on Full node -- look at peak height and date/time--- then go below and look at connections and your peak should match the other computers.   Also the peak should be close when you click on wallet tab with that wallet peak number. The wallet peak number sometimes is off by 10 numbers. If off by several hundred its not in sync.  On the GUI-- on the top menu bar -- click on View then Force Reload. It will take about 5-10 minutes.  It will not affect your plotting.
+
+Everyone is very helpful to answer questions. The group does ask for questions to be in the selected chat room.  Beginner questions in Beginner etc
 
