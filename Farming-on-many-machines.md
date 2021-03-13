@@ -13,7 +13,7 @@ other network peers  --------   Main machine (CA) ------  Harvester 2 (certifica
                                       \_____  Harvester 3 (certificate C)
 ```
 * First, make sure Chia is installed on all machines and initialized by running the CLI `chia init`. 
-* When creating plots on the other harvesters, use `chia plots create -f farmer_key -p pool_key`, inserting the farmer and pool keys from your main machine. Alternatively, you could copy your private keys over by using `chia keys add -m 24words`, but this is less secure. After creating a plot, run `chia plots check` to ensure everything is working correctly.
+* When creating plots on the other harvesters, use `chia plots create -f farmer_key -p pool_key`, inserting the farmer and pool keys from your main machine. Alternatively, you could copy your private keys over by using `chia keys add -m`, but this is less secure. After creating a plot, run `chia plots check` to ensure everything is working correctly.
 * Make a copy of your **main** machine CA directory located in `~/.chia/beta-1.0bx/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester.
 
 Then for each harvester, follow these steps:
