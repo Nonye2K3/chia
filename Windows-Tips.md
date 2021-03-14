@@ -1,13 +1,13 @@
 1. To plot in parallel in Windows you will need to use powershell. A generic example for Release Candidate 5:
     ```
-    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.6\resources\app.asar.unpacked\daemon\
+    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.7\resources\app.asar.unpacked\daemon\
     start-process .\chia.exe -argumentlist "plots create yourParametersGoHere"
     start-process ....
     ....
     ```
     A specific example, again using Release Candidate 5:
     ```
-    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.6\resources\app.asar.unpacked\daemon\
+    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.7\resources\app.asar.unpacked\daemon\
     start-process ./chia.exe -argumentlist "plots create -k 32 -b 4000 -u 128 -r 4 -t d:\tempdrive1 -2 e:\tempdrive2 -d F:\plots -n 1"
     ```
     The command above makes one plot (specified by `-n 1`), to plot in parallel you need to open a new powershell and repeat the command (without closing the first one). If you were using Beta 16 you would change the `Chia-Blockchain\app-0.2.4\resources\` section to `Chia-Blockchain\app-0.1.16\resources\` in the command above.
@@ -18,7 +18,7 @@
 
 4. If you attempt to run more than one node on your local network, having uPnP on on both will cause both nodes significant confusion. You will need to use powershell to disable uPnP on all but one. An example for RC 5:
     ```
-    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.6\resources\app.asar.unpacked\daemon\
+    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-0.2.7\resources\app.asar.unpacked\daemon\
     ./chia.exe configure --upnp-enable False
     ```
 
