@@ -20,6 +20,8 @@ To secure their connection, the UI will need the daemon's certificates. Copy the
 
 ## On the UI host
 
+_right now (03/31/2021) this only works when the *CHIA_ROOT* environment variable is set to the correct location of `~/.chia/<currentvesion>/`_
+
 Place the daemon's cert files, copied earlier, in the following location:
 
 ````bash
