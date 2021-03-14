@@ -14,9 +14,9 @@ Chia plot files are at least 108GB in size (for K32). To plot successfully requi
 
 The Chia plotting process takes multiple of hours to complete. If the computer or hard drives goes to sleep during the plotting process, the plotting fails and you will need to start over. Please ensure all sleep, hibernate and power saving modes for your computer and hard drives are disabled before starting the Chia plotting process. In the future, Chia will have resume plot feature. In the meantime, if you do get a failed plot, delete all `*.tmp` files before starting a new plot.
 
-## Updating from RC1/2/3/4/5:
+## Updating from RC3/4/5/6:
 
-Keys and configs from RC3 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Release Candidate 6's blockchain is new and does not bring forward previous test chia.** **Please see #announcements in Keybase for an important work around**
+Keys and configs from RC3 and newer should automatically migrate. For more details, read the [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-upgrade-and-keep-my-keys-and-plots). **Release Candidate 6/7's blockchain is new and does not bring forward previous test chia.**
 
 # Windows
 
@@ -75,7 +75,7 @@ cd chia-blockchain
 chia stop -d all
 deactivate
 git fetch
-git checkout 1.0rc6
+git checkout 1.0rc7
 
 # If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
 
@@ -185,7 +185,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.0rc6
+pip install chia-blockchain==1.0rc7
 ```
 
 # CentOS/RHEL 7.7 or newer
@@ -226,7 +226,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.0rc6
+pip install chia-blockchain==1.0rc7
 
 ```
 # Other install methods and environments
@@ -263,7 +263,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0rc6
+pip install chia-blockchain==1.0rc7
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
