@@ -8,7 +8,7 @@ A trick is to rename a plot file from *.plot to *.plot-mv, copy/move it, and ren
 If you want to move plots to a different machine:
 1. Install chia on the new machine
 2. Find your private keys using `chia keys show` on the old machine, or on the UI by clicking on "Keys".
-3. Copy the 24 words (this is your private key) and add them to the new machine using `chia keys add -m`
+3. Copy the 24 words (this is your private key) and add them to the new machine using `chia keys add`
 4. Move the plot file
 5. Add the new plot directory. If you use command line, do `chia plots add -d '/Users/example/folder'`. If you use the UI, go to the Farmer tab and click "Add plots", and select the new directory.
 
