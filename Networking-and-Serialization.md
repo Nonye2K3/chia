@@ -8,10 +8,11 @@ Every message in the Chia protocol is  composed of bytes, using the Serialized f
 ```python
 class Message(Streamable):
     type: uint8  # one of ProtocolMessageTypes
-    # Message data for that type
-    data: bytes
     # message id
     id: Optional[uint16]
+    # Message data for that type
+    data: bytes
+
 ```
 
 Chia protocol messages have a max length of `(4 + 2^32 - 1) = 4294967299` bytes, or around 4GB.
