@@ -75,7 +75,7 @@ cd chia-blockchain
 chia stop -d all
 deactivate
 git fetch
-git checkout 1.0rc7
+git checkout 1.0rc8
 
 # If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
 
