@@ -26,7 +26,6 @@ The 'pkg', 'portsnap' and port build are to be run as root. Everything else can 
 ```
 # Update your packages and ports; if ports are already installed as part of your fresh install run portsnap update instead of fetch/extract.
 pkg update
-pkg install portsnap
 portsnap fetch && portsnap extract
 
 # Install bash and zsh if you have not; the default csh will not suffice for the build scripts.
