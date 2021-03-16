@@ -1,4 +1,9 @@
-# Building the Chia (CLI) from Source - Tested on FreeBSD 11.3- and 11.4-RELEASE
+# Building Chia from Source for FreeBSD 11
+
+_**Tested on FreeBSD 11.3- and 11.4-RELEASE**_
+
+***
+
 
 Currently, the only way to ensure a FreeBSD build is to do it from source. By following these instructions to the letter, you should have no problem building the latest Chia from source on a FreeBSD 11.3 or 11.4. This should also work on FreeBSD 12, possibly with some modifications - for instance if the ports py-cryptography version is newer than 3.3.2, simply edit as needed - or if your preferred Python version is 3.8 or 3.9 I believe it should all still work considering you modify the package names as necessary.
 
