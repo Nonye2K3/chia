@@ -12,9 +12,11 @@ These instructions will have you building both chia-blockchain and clvm_rs from 
 
 These instructions assume a fresh FreeBSD installation!
 
-```
-# The 'pkg', 'portsnap' and port build are to be run as root. Everything else can be run from a normal non-root user.
+### Pre-requisite package installation
 
+The 'pkg', 'portsnap' and port build are to be run as root. Everything else can be run from a normal non-root user.
+
+```
 # Update your packages and ports; if ports are already installed as part of your fresh install run portsnap update instead of fetch/extract.
 pkg update
 pkg install portsnap
@@ -30,7 +32,9 @@ chsh -s /usr/local/bin/bash
 # Install necessary development tools 
 pkg install lang/gcc9 gcc gmake cmake
 
-## gcc notes
+```
+
+### gcc notes
 
 After installing gcc9, this message appears:
 
@@ -41,8 +45,9 @@ of the necessary run-time libraries, you may want to link using
   -Wl,-rpath=/usr/local/lib/gcc9
 ```
 
-So it's probably possible to build the libraries in a way that doesn't require `export LD_LIBRARY_PATH=/usr/local/lib/gcc9`. If you know how click "edit" and dish.
+It's probably possible to build the libraries in a way that doesn't require `export LD_LIBRARY_PATH=/usr/local/lib/gcc9`. If you know how click "edit" and dish.
 
+```
 # Install rust (for clvm_rs etc)
 pkg install lang/rust
 
@@ -54,68 +59,121 @@ pkg install node npm git openssl
 
 # if you are sshing into the machine you might want to use 'screen' so that processes will continue even if you logout. For more information: https://www.freebsd.org/cgi/man.cgi?query=screen
 pkg install screen
+```
 
-# From here you may run as a normal user with any exceptions noted.
+From here you may run as a normal user with any exceptions noted.
 
+### Repo Cloning and Virtual Environment (venv) Activation
+
+```
 # Clone the latest chia-blockchain repository; via HTTP/HTTP/S:
 git clone http://github.com/Chia-Network/chia-blockchain.git
 # Via SSH:
 git clone git@github.com:Chia-Network/chia-blockchain.git
 # Note: you can specify the branch by adding "--branch <version>" like: git clone http://github.com/Chia-Network/chia-blockchain.git --branch 1.0rc9
 
-# Create a virtual environment directory 'venv' from *within* the 'chia-blockchain' directory and activate it before proceeding
+```
+
+Create a virtual environment directory 'venv' from *within* the 'chia-blockchain' directory and activate it before proceeding
+```
 cd chia-blockchain
 python3 -m venv venv
 source venv/bin/activate 
-# You are now in the virtual environment that Python (and so chia) will use. You should have a "(venv)" prefix to your terminal prompt to confirm the venv is working.
+```
 
-# Upgrade pip
+You are now in the virtual environment that Python (and so chia) will use. You should have a "(venv)" prefix to your terminal prompt to confirm the venv is working.
+
+Upgrade pip:
+```
 pip install --upgrade pip
+```
 
-# Clone and build clvm_rs 0.1.4 from source
+### Building clvm_rs 0.1.4
+
+```
 git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.4
 cd clvm_rs
 pip install maturin
 maturin develop --release
 pip install git+https://github.com/Chia-Network/clvm@use_clvm_rs
-# clvm_rs==0.1.4 is now installed in your virtual environment.
+```
 
-# Build cryptography==3.3.2 from ports. *You'll need to switch back to root for this*. As root, do the following.
+clvm_rs 0.1.4 is now installed in your virtual environment.
+
+### Building py-cryptography from ports
+
+You'll need to switch to root for this part.
+
+```
+cd /usr/ports/security/py-cryptography
+
 # Instruct 'make' that the SSL library is openssl.
 echo "DEFAULT_VERSIONS+=ssl=openssl" >> /etc/make.conf
-cd /usr/ports/security/py-cryptography
-make
-# You'll probably see a bunch of warnings and notices; these are not errors and it will build.
 
-# NOTE: *Switch back to your non-root user*, if you optioned so, and make sure you're in the venv.
-# We're going to do our own py-cryptography install since 'make install' does not copy to our venv. (If you know how to change this, please edit).
-# Copy py-cryptography and its meta-data from the staging directory to your virtual environment.
+make
+```
+
+You'll probably see a bunch of warnings and notices; these are not errors and it will build. After it is done building, switch back to your non-root user (if you optioned so). Ensure you are in your venv after switching!
+
+We're going to do our own py-cryptography install since 'make install' does not copy to our venv. (If you know how to change this, please edit).
+
+Copy py-cryptography and its meta-data from the staging directory to your virtual environment.
+
+```
 cp -R /usr/ports/security/py-cryptography/work-py37/stage/usr/local/lib/python3.7/site-packages/cryptography ${VIRTUAL_ENV}/lib/python3.7/site-packages/cryptography
 cp -R /usr/ports/security/py-cryptography/work-py37/stage/usr/local/lib/python3.7/site-packages/ ${VIRTUAL_ENV}/lib/python3.7/site-packages/cryptography-3.3.2-py3.7.egg-info
-# Clear any Python byte-code cache files that may contain the old path. These should be re-built by the interpreter but we like a clean environment.
+```
+
+Clear any Python byte-code cache files that may contain the old path. These should be re-built by the interpreter but we like a clean environment.
+```
 find ${VIRTUAL_ENV}/lib/python3.7/site-packages/cryptography -name __pycache__ | xargs -I{} rm -rf "{}"
+```
 
-# Now back to your chia-blockchain directory to compile Chia!
-# Using your favorite text editor, modify setup.py to edit the cryptography package version to 3.3.2.
-`Change "cryptography==3.4.6" to "cryptography==3.3.2"`
+### Chia modifications and Building Chia Itself
 
-# Modify src/util/keychain.py to provide a static key when using the Python keyring. This is mandatory otherwise everytime the keyring is accessed your passphrase will need to be entered on the command line, and for a daemon this will not do.
-## On line 25 of src/util/keychain.py, change:
-`elif platform=="linux"`
+Switch to your chia-blockchain clone directory. You will need to edit two files.
+
+Using your favorite text editor, modify setup.py to edit the cryptography package version to 3.3.2.
+```
+"cryptography==3.4.6" --> to --> "cryptography==3.3.2"
+```
+
+Now you must modify src/util/keychain.py to provide a static key when using the Python keyring. This is mandatory otherwise every time the keyring is accessed your passphrase will need to be entered on the command line, and for the CLI daemon this will not do.
+
+On line 25 of src/util/keychain.py, change:
+
+```
+elif platform=="linux":
+```
 to:
-`elif platform=="linux" or platform.startswith("freebsd"):`
+```
+elif platform=="linux" or platform.startswith("freebsd"):
+```
 
-# On line 27 of the same file, change the passphrase from "your keyring password" to whatever you wish your passphrase to be. This is intended to be fixed in future versions but, for the time being, Linux and FreeBSD must have the keyphrase provided statically.
-`keyring.keyring_key = "your keyring password"  # type: ignore`
+On line 27 of the same file, change the passphrase from "your keyring password" to whatever you wish your passphrase to be. This is intended to be fixed in future versions but, for the time being, Linux and FreeBSD must have the keyphrase provided statically.
+```
+keyring.keyring_key = "your keyring password"  # type: ignore
+```
+can be changed like so:
+```
+keyring.keyring_key = "Too Many Secrets"
+```
 
-# Now, build Chia!
+Build Chia!
+
+```
 sh install.sh
+```
+Once done, run:
 
-# Now that Chia is built, initialize chia:
+```
 chia init
+```
 
-# If needing to disable UPnP, set "enable_upnp: False" in config.yaml.
-`sed -i .bak 's/enable_upnp: True/enable_upnp: False' ~/.chia/testnet/config/config.yaml`
+If needing to disable UPnP, set "enable_upnp: False" in config.yaml.
+
+```
+sed -i .bak 's/enable_upnp: True/enable_upnp: False' ~/.chia/testnet/config/config.yaml
 ```
 
 That's it! Provided the instructions were followed to the T, and the build is a fresh FreeBSD 11.3 or 11.4, either hardware or FreeNAS jailed, you should be good to go! Now go to town with `chia start node` or whatever.
