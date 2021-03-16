@@ -2,15 +2,17 @@
 
 Currently, the only way to ensure a FreeBSD build is to do it from source. By following these instructions to the letter, you should have no problem building the latest Chia from source on a FreeBSD 11.3 or 11.4. This should also work on FreeBSD 12, possibly with some modifications - for instance if the ports py-cryptography version is newer than 3.3.2, simply edit as needed - or if your preferred Python version is 3.8 or 3.9 I believe it should all still work considering you modify the package names as necessary.
 
-FreeNAS / TrueNAS Users: if you had been using NFS or Samba sharing to expose your plots to a harvester on another OS, such as Linux, you can instead build Chia within a jail (see the FreeNAS manual for 'jails'), expose your plot directories to it and run the harvester within. In my experience, it provides lower-latency and more reliable access to the plots since the disks are direct-attached and not being provided through an extra few layers of network protocols.
+## FreeNAS / TrueNAS
+
+If you had been using NFS or Samba sharing to expose your plots to a harvester on another OS, such as Linux, you can instead build Chia within a jail (see the FreeNAS manual for 'jails'), expose your plot directories to it and run the harvester within. In my experience, it provides lower-latency and more reliable access to the plots since the disks are direct-attached and not being provided through an extra few layers of network protocols.
 
 If you are using a fresh jail created by the FreeNAS web GUI you may need to install openssh and setup a ssh key to login as root because by default it appears PAM password logins do not work. The jail shell CLI provided by the FreeNAS GUI allows copy and pasting so you can easily paste your public-key into /root/.ssh/authorized_keys && chmod -R 700 /root/.ssh.
 
-NOTE: these instruction result in the current dev version showing up in "chia version"; e.g. branch 1.0rc9 -> "1.0rc10.dev0". If someone knows how to keep it in the current release/stable build, please edit this.
+## Other Notes
 
-These instructions will have you building both chia-blockchain and clvm_rs from github's source, and python-cryptography from FreeBSD's ports. This works on vanilla FreeBSD 11.3 and .4 installations and FreeNAS (TrueNAS) jails.
+These instruction result in the current dev version showing up in "chia version"; e.g. branch 1.0rc9 -> "1.0rc10.dev0". If someone knows how to keep it in the current release/stable build, please edit this. These instructions will have you building both chia-blockchain and clvm_rs from github's source, and python-cryptography from FreeBSD's ports. This works on vanilla FreeBSD 11.3 and .4 installations and FreeNAS (TrueNAS) jails.
 
-These instructions assume a fresh FreeBSD installation!
+**These instructions assume a fresh FreeBSD installation!**
 
 ### Pre-requisite package installation
 
