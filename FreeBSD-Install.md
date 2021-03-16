@@ -49,21 +49,21 @@ of the necessary run-time libraries, you may want to link using
 
 It's probably possible to build the libraries in a way that doesn't require `export LD_LIBRARY_PATH=/usr/local/lib/gcc9`. If you know how click "edit" and dish.
 
+### Install rust, Python, and everything else.
+
 ```
-# Install rust (for clvm_rs etc)
 pkg install lang/rust
-
-# Install Python 3.7 and a few mandatory system-wide Python packages.
 pkg install lang/py37 py37-pip py37-setuptools py37-wheel py37-sqlite3 py37-cffi py37-virtualenv python
-
-# Install other necessary tools
 pkg install node npm git openssl
-
-# if you are sshing into the machine you might want to use 'screen' so that processes will continue even if you logout. For more information: https://www.freebsd.org/cgi/man.cgi?query=screen
-pkg install screen
 ```
 
-From here you may run as a normal user with any exceptions noted.
+If you are sshing into the machine you might want to use 'screen' so that processes will continue even if you logout. For more information: https://www.freebsd.org/cgi/man.cgi?query=screen. 'tmux' is also a great alternative especially if you use iTerm2 on macOS as it supports native tabs and windows with the '-CC' CLI option.
+
+```
+pkg install screen tmux
+```
+
+**From here you may run as a normal user with any exceptions noted.**
 
 ### Repo Cloning and Virtual Environment (venv) Activation
 
