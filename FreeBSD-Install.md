@@ -13,11 +13,13 @@ If you had been using NFS or Samba sharing to expose your plots to a harvester o
 
 If you are using a fresh jail created by the FreeNAS web GUI you may need to install openssh and setup a ssh key to login as root because by default it appears PAM password logins do not work. The jail shell CLI provided by the FreeNAS GUI allows copy and pasting so you can easily paste your public-key into /root/.ssh/authorized_keys && chmod -R 700 /root/.ssh.
 
+These instructions would be applicable to 11.3 and 11.4 jails created within FreeNAS 11 only. Version 12 (FreeBSD 12) has not yet been tested.
+
 ## Other Notes
 
-These instruction result in the current dev version showing up in "chia version"; e.g. branch 1.0rc9 -> "1.0rc10.dev0". If someone knows how to keep it in the current release/stable build, please edit this. These instructions will have you building both chia-blockchain and clvm_rs from github's source, and python-cryptography from FreeBSD's ports. This works on vanilla FreeBSD 11.3 and .4 installations and FreeNAS (TrueNAS) jails.
+These instruction result in the current dev version showing up in "chia version"; e.g. branch 1.0rc9 -> "1.0rc10.dev0". If someone knows how to keep it in the current release/stable build, please edit this. These instructions will have you building both chia-blockchain and clvm_rs from github source, and python-cryptography from FreeBSD's ports.
 
-**These instructions assume a fresh FreeBSD installation!**
+**These instructions assume a fresh FreeBSD 11 installation!**
 
 ### Pre-requisite package installation
 
