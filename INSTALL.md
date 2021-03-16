@@ -71,8 +71,8 @@ npm run electron &
 
 # Update/Upgrade from previous version
 
-cd chia-blockchain/venv/bin
-./chia stop -d all
+cd chia-blockchain
+chia stop -d all
 deactivate
 git fetch
 git checkout 1.0rc8
