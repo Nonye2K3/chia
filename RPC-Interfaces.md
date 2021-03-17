@@ -1,16 +1,27 @@
-# Full node
-Full node has an [HTTP JSON-RPC](https://github.com/Chia-Network/chia-blockchain/wiki/Networking-and-Serialization#rpc)
-api to access information and control the full node:
+# RPCs
+The chia node and services come with a JSON rpc api server that allows you to access information and control the services. These are accessible via HTTP, WebSockets, or a python client. The ports can be configured in ~/.chia/mainnet/config/config.yaml. The rpc ports should not be exposed to the internet. 
+
+## Default Ports:
+- Daemon: 55400
+- Full Node: 8555
+- Farmer: 8559
+- Havester: 8560
+- Wallet: 9256
+
+If you are using the Websockets API, you can go directly through the daemon.
+The certificates must be used when calling the RPCs from the command line, make sure to use the correct certificates for the services you are calling.
+
+All methods are POST requests with JSON data. The response is a JSON dictionary with a success field, which can be true or false. 
+
 
 Some examples:
 ```bash
 # Get blockchain state
-curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_blockchain_state
-
-# Get blockchain state in 1.0rc5 and beyond.
-curl --insecure --cert ~/.chia/1.0rc5/config/ssl/fullnode/private_full_node.crt \
---key ~/.chia/1.0rc5/config/ssl/fullnode/private_full_node.key \
+```bash
+curl --insecure --cert ~/.chia/mainnet/config/ssl/fullnode/private_full_node.crt \
+--key ~/.chia/mainnet/config/ssl/fullnode/private_full_node.key \
 -d '{"":""}' -H "Content-Type: application/json" -X POST https://localhost:8555/get_blockchain_state
+```
 
 # Get block header by header hash
 curl -d '{"header_hash":"4ba1f698836798bda170364d3b3e8bb9fe1134eb1af8260ab1319d3ede52555e"}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_header
