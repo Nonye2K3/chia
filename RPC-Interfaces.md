@@ -16,14 +16,14 @@ All endpoints are made with POST with JSON data. The response is a JSON dictiona
 If you are using the Websockets API, you can go directly through the daemon, which routes requsts. Each WebSocket message contains the following fields:
 
 ```json
-    message = {
-        "command": "get_blockchain_state",
-        "ack": false,
-        "data": {},
-        "request_id": "123456",
-        "destination": "wallet",
-        "origin": "ui",
-    }
+{
+    "command": "get_blockchain_state",
+    "ack": false,
+    "data": {},
+    "request_id": "123456",
+    "destination": "wallet",
+    "origin": "ui",
+}
 ```
 
 
@@ -142,19 +142,146 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 > ```
 
 ### get_block_record
+> Retrieves a block record by header hash.
+> Params
+> ```
+> header_hash: the block's header_hash
+> ```
+> Response
+> ```json
+> {"block_record": [...]}
+> ```
 
 ### get_block_records
+> Retrieves block records in a range.
+> Params
+> ```
+> start: the start height
+> end: the end height (non-inclusive)
+> ```
+> Response
+> ```json
+> {"block_records": [...]}
+> ```
+
 ### get_unfinished_block_headers
+> Retrieves recent unfinished header blocks.
+> 
+> Response
+> ```json
+> {"headers": [...]}
+> ```
+
 ### get_network_space
+> Retrieves an estimate of the total plotted space of all farmers, in bytes.
+>
+> Params
+> ```
+> older_block_header_hash: the start header hash
+> newer_block_headre_hash: the end header hash
+> ```
+> Response
+> ```json
+> {"space": 100000000000000000}
+> ```
+
 ### get_additions_and_removals
+> Retrieves the additions and removals (state transitions) for a certain block. 
+> Returns coin records for each addition and removal.
+>
+> Params
+> ```
+> header_hash: header hash of the block
+> newer_block_headre_hash: the end header hash
+> ```
+> Response
+> ```json
+> {"additions": [...], "removals": [...]}
+> ```
+
 ### get_initial_freeze_period
+> Retrieves the initial freeze period for the blockchain (no transactions allowed).
+>
+> Response
+> ```json
+> {"INITIAL_FREEZE_PERIOD": 193536}
+> ```
+
 ### get_network_info
+> Retrieves some information about the current network.
+>
+> Response
+> ```json
+> {"network_name": "mainnet", "network_prefix":  "xch"}
+> ```
+
 ### get_coin_records_by_puzzle_hash
+> Retrieves a list of coin records with a certain puzzle hash.
+>
+> Params
+> ```
+> puzzle_hash: puzzle hash to search for
+> start_height (optional): confirmation start height for search
+> end_height (optional): confirmation end height for search
+> include_spend_coins: whether to include spent coins too, instead of just unspent
+> ```
+> Response
+> ```json
+> {"coin_records": [...]}
+> ```
+
 ### get_coin_record_by_name
+> Retrieves a coin record by its name/id.
+>
+> Params
+> ```
+> name: coin name
+> ```
+> Response
+> ```json
+> {"coin_record": {...}}
+> ```
+
 ### push_tx
+> Pushes a transaction / spend bundle to the mempool and blockchain.
+> Returns whether the spend bundle was successfully included into the mempool.
+>
+> Params
+> ```
+> spend_bundle: spend bundle to submit, in JSON
+> ```
+> Response
+> ```json
+> {"status": "SUCCESS"}
+> ```
+
 ### get_all_mempool_tx_ids
+> Returns a list of all transaction IDs (spend bundle hashes) in the mempool.
+>
+> Response
+> ```json
+> {"tx_ids":  [...]}
+> ```
+
 ### get_all_mempool_items
+> Returns all items in the mempool.
+>
+> Response
+> ```json
+> {"mempool_items":  [...]}
+> ```
+
 ### get_mempool_item_by_tx_id
+> Gets a mempool item by tx id.
+>
+> Params
+> ```
+> tx_id: spend bundle hash
+> ```
+> Response
+> ```json
+> {"mempool_item": {...}}
+> ```
 
 ## Wallet
 ### log_in
