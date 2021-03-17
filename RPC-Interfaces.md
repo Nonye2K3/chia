@@ -119,6 +119,28 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 ### get_mempool_item_by_tx_id
 
 ## Wallet
+### log_in
+### get_public_keys
+### get_private_key
+### generate_mnemonic
+### add_key
+### delete_key
+### delete_all_keys
+### get_sync_status
+### get_height_info
+### farm_block
+### get_initial_freeze_period
+### get_network_info
+### get_wallets
+### create_new_wallet
+### get_wallet_balance
+### get_transaction
+### get_transactions
+### get_next_address
+### send_transaction
+### create_backup
+### get_transaction_count
+### get_farmed_amount
 
 ## Harvester
 ### get_plots
@@ -129,5 +151,13 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 ### remove_plot_directory
 
 ## Farmer
+### get_signage_point
+### get_signage_points
+### get_reward_targets
+### set_reward_targets
 
 ## Shared
+### get_connections
+### open_connection
+### close_connection
+### stop_node
