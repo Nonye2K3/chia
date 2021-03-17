@@ -69,7 +69,12 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 
 # Response
 
-curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_next_address | python -m json.tool
+{
+    "address": "xch1d67xq5ed99l4fk2cr33xlq7sj705amnjz9ymc68kw68x3m9qa69sk3ngur",
+    "success": true,
+    "wallet_id": 1
+}
+
 ```
 ### Get Wallet Balance
 ```bash
@@ -95,34 +100,24 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 # Full Api Reference
 
 The endpoints currently supported in Node:
-```
-/get_blockchain_state
-/get_block
-/get_header_by_height
-/get_header
-/get_unfinished_block_headers
-/get_connections
-/open_connection
-/close_connection
-/stop_node
-/get_unspent_coins
-/get_heaviest_block_seen
-```
-Documentation is limited but one can get a sense for parameters and actions from the [Node RPC server source](https://github.com/Chia-Network/chia-blockchain/blob/274f88ba144f18e27a2f8868c3c2d9035c2df66b/src/rpc/full_node_rpc_server.py#L366).
+            # Blockchain
+            "/get_blockchain_state": self.get_blockchain_state,
+            "/get_block": self.get_block,
+            "/get_blocks": self.get_blocks,
+            "/get_block_record_by_height": self.get_block_record_by_height,
+            "/get_block_record": self.get_block_record,
+            "/get_block_records": self.get_block_records,
+            "/get_unfinished_block_headers": self.get_unfinished_block_headers,
+            "/get_network_space": self.get_network_space,
+            "/get_additions_and_removals": self.get_additions_and_removals,
+            "/get_initial_freeze_period": self.get_initial_freeze_period,
+            "/get_network_info": self.get_network_info,
+            # Coins
+            "/get_coin_records_by_puzzle_hash": self.get_coin_records_by_puzzle_hash,
+            "/get_coin_record_by_name": self.get_coin_record_by_name,
+            "/push_tx": self.push_tx,
+            # Mempool
+            "/get_all_mempool_tx_ids": self.get_all_mempool_tx_ids,
+            "/get_all_mempool_items": self.get_all_mempool_items,
+            "/get_mempool_item_by_tx_id": self.get_mempool_item_by_tx_id,
 
-`chia show` [implements](https://github.com/Chia-Network/chia-blockchain/blob/master/src/cmds/show.py) most of the RPC functionality on the command line.
-
-# Farmer RPC
-```
-# See the most recent challenges
-
-curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8559/get_latest_challenges
-```
-
-# Harvester RPC
-```
-# See the current plots farming
-
-curl -d '{"":""}' -H "Content-Type: application/json" -X POST http://localhost:8560/get_plots
-```
-You can refer to the [harvester rpc client source](https://github.com/Chia-Network/chia-blockchain/blob/main/src/rpc/harvester_rpc_client.py#L14) to see the additional endpoints available.
