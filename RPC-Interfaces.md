@@ -60,15 +60,39 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/fullnode/private_full_node.crt
 
 ```
 
-### Get block header by header hash
-curl -d '{"header_hash":"4ba1f698836798bda170364d3b3e8bb9fe1134eb1af8260ab1319d3ede52555e"}' -H "Content-Type: application/json" -X POST http://localhost:8555/get_header
+### Get next address
 
-### Get all unspent coins by puzzle hash
-curl -X POST --data '{"puzzle_hash":"0xa4259182b4d8e0af21331fc5be2681f953400b6726fa4095e3b91ae8f005a836"}'   http://localhost:8555/get_unspent_coins
+```bash
+# Request
 
-# Connect to introducer.beta.chia.net
-curl -d '{"host":"introducer.beta.chia.net","port":"8444"}' -H "Content-Type: application/json" -X POST http://localhost:8555/open_connection
+curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_next_address | python -m json.tool
+
+# Response
+
+curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_next_address | python -m json.tool
 ```
+### Get Wallet Balance
+```bash
+# Request
+
+curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_wallet_balance | python -m json.tool
+
+# Response
+{
+    "success": true,
+    "wallet_balance": {
+        "confirmed_wallet_balance": 0,
+        "max_send_amount": 0,
+        "pending_change": 0,
+        "spendable_balance": 0,
+        "unconfirmed_wallet_balance": 0,
+        "wallet_id": 1
+    }
+}
+(v
+```
+
+# Full Api Reference
 
 The endpoints currently supported in Node:
 ```
