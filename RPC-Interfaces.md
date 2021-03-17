@@ -1,4 +1,3 @@
-# RPCs
 The chia node and services come with a JSON rpc api server that allows you to access information and control the services. These are accessible via HTTP, WebSockets, or a python client. The ports can be configured in ~/.chia/mainnet/config/config.yaml. The rpc ports should not be exposed to the internet. 
 TLS certificates are used to secure the communitation.
 
