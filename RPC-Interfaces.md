@@ -99,25 +99,21 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 
 # Full Api Reference
 
-The endpoints currently supported in Node:
-            # Blockchain
-            "/get_blockchain_state": self.get_blockchain_state,
-            "/get_block": self.get_block,
-            "/get_blocks": self.get_blocks,
-            "/get_block_record_by_height": self.get_block_record_by_height,
-            "/get_block_record": self.get_block_record,
-            "/get_block_records": self.get_block_records,
-            "/get_unfinished_block_headers": self.get_unfinished_block_headers,
-            "/get_network_space": self.get_network_space,
-            "/get_additions_and_removals": self.get_additions_and_removals,
-            "/get_initial_freeze_period": self.get_initial_freeze_period,
-            "/get_network_info": self.get_network_info,
-            # Coins
-            "/get_coin_records_by_puzzle_hash": self.get_coin_records_by_puzzle_hash,
-            "/get_coin_record_by_name": self.get_coin_record_by_name,
-            "/push_tx": self.push_tx,
-            # Mempool
-            "/get_all_mempool_tx_ids": self.get_all_mempool_tx_ids,
-            "/get_all_mempool_items": self.get_all_mempool_items,
-            "/get_mempool_item_by_tx_id": self.get_mempool_item_by_tx_id,
-
+## Full Node
+### get_blockchain_state
+### get_block": self.get_block,
+### get_blocks
+### get_block_record_by_height
+### get_block_record
+### get_block_records
+### get_unfinished_block_headers
+### get_network_space
+### get_additions_and_removals
+### get_initial_freeze_period
+### get_network_info
+### get_coin_records_by_puzzle_hash
+### get_coin_record_by_name
+### push_tx
+### get_all_mempool_tx_ids
+### get_all_mempool_items
+### get_mempool_item_by_tx_id
