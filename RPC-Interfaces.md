@@ -101,9 +101,46 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 
 ## Full Node
 ### get_blockchain_state
+Returns current information about the blockchain, including the peak, sync information, difficulty, mempool size, etc.
+Response
+```json
+{"blockchain_state": {...}}
+```
 ### get_block
+Gets a full block by header hash.
+Params
+```
+header_hash: the header hash of the block to get
+```
+Response
+```json
+{"block": {...}}
+```
+
 ### get_blocks
+Gets a list of full blocks.
+Params
+```
+start: the start height
+end: the end height (non-inclusive)
+exclude_header_hash: whether to exclude the header hash in the response (default false)
+```
+Response
+```json
+{"blocks": [...]}
+```
+
 ### get_block_record_by_height
+Retrieves a block record by height (assuming the height <= peak height).
+Params
+```
+height: the height to get
+```
+Response
+```json
+{"block_record": [...]}
+```
+
 ### get_block_record
 ### get_block_records
 ### get_unfinished_block_headers
