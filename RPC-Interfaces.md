@@ -105,7 +105,7 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
         "wallet_id": 1
     }
 }
-(v
+(
 ```
 
 # Full Api Reference
@@ -296,27 +296,60 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
 
 ## Wallet
 ### log_in
+> Sets a key to active.
 ### get_public_keys
+> Get all root public keys accessible by the wallet.
 ### get_private_key
+> Get all root private keys accessible by the wallet.
 ### generate_mnemonic
+> Generate a 24 word mnemonic phrase, used to derive a private key.
 ### add_key
+> Add a private key to the keychain
 ### delete_key
+> Delete a private key from the keychain
 ### delete_all_keys
+> Delete all private keys from the keychain
 ### get_sync_status
+> Gets the sync status of the wallet.
 ### get_height_info
+> Gets information about the current height of the wallet.
 ### farm_block
+> Farms a block, only available with the simulator.
 ### get_initial_freeze_period
+> Retrieves the initial freeze period for the blockchain (no transactions allowed).
+>
+> Response
+> ```json
+> {"INITIAL_FREEZE_PERIOD": 193536}
+> ```
+
 ### get_network_info
+> Retrieves some information about the current network.
+>
+> Response
+> ```json
+> {"network_name": "mainnet", "network_prefix":  "xch"}
+> ```
 ### get_wallets
+> Gets a list of wallets for this key.
 ### create_new_wallet
+> Creates a new wallet for this key.
 ### get_wallet_balance
+> Retrieves balances for a wallet
 ### get_transaction
+> Gets a transaction record by transaction id
 ### get_transactions
+> Gets transaction records
 ### get_next_address
+> Gets a new (or not new) address
 ### send_transaction
+> Sends a standard transaction to a target puzzle_hash.
 ### create_backup
+> Creates a backup for this wallet.
 ### get_transaction_count
+> Gets the number of transactions in this wallet.
 ### get_farmed_amount
+> Gets information about farming rewards for this wallet.
 
 ## Harvester
 ### get_plots
@@ -422,5 +455,22 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
 
 
 ### open_connection
+> Opens a connection to another peer.
+> 
+> Params
+> ```
+> host: ip or dns name of the peer
+> port: port of the peer
+> ```
+
+
 ### close_connection
+> Closes a connection with a peer.
+> 
+> Params
+> ```
+> node_id: node id of the peer
+> ```
+
 ### stop_node
+> Stops the node
