@@ -65,7 +65,9 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/fullnode/private_full_node.crt
 ```bash
 # Request
 
-curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_next_address | python -m json.tool
+curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
+--key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}'\
+-H "Content-Type: application/json" -X POST https://localhost:9256/get_next_address | python -m json.tool
 
 # Response
 
@@ -80,7 +82,9 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 ```bash
 # Request
 
-curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_wallet_balance | python -m json.tool
+curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
+--key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1}' \
+-H "Content-Type: application/json" -X POST https://localhost:9256/get_wallet_balance | python -m json.tool
 
 # Response
 {
