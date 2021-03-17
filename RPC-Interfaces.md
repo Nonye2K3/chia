@@ -8,19 +8,56 @@ The chia node and services come with a JSON rpc api server that allows you to ac
 - Havester: 8560
 - Wallet: 9256
 
-If you are using the Websockets API, you can go directly through the daemon.
+## HTTP/JSON
 The certificates must be used when calling the RPCs from the command line, make sure to use the correct certificates for the services you are calling.
+All endpoints are made with POST with JSON data. The response is a JSON dictionary with a success field, which can be true or false. 
 
-All methods are POST requests with JSON data. The response is a JSON dictionary with a success field, which can be true or false. 
+## WebSockets
+If you are using the Websockets API, you can go directly through the daemon, which routes requsts. Each WebSocket message contains the following fields:
+
+```json
+    message = {
+        "command": "get_blockchain_state",
+        "ack": false,
+        "data": {},
+        "request_id": "123456",
+        "destination": "wallet",
+        "origin": "ui",
+    }
+```
 
 
-Some examples:
+# Some examples:
 
 ### Get blockchain state
 ```bash
+# Request
+
 curl --insecure --cert ~/.chia/mainnet/config/ssl/fullnode/private_full_node.crt \
 --key ~/.chia/mainnet/config/ssl/fullnode/private_full_node.key \
 -d '{"":""}' -H "Content-Type: application/json" -X POST https://localhost:8555/get_blockchain_state
+
+# Response:
+
+{
+    "blockchain_state": {
+        "difficulty": 7,
+        "genesis_challenge_initialized": true,
+        "mempool_size": 0,
+        "peak": {... },
+        "space": 73659118,
+        "sub_slot_iters": 134217728,
+        "sync": {
+            "sync_mode": false,
+            "sync_progress_height": 0,
+            "sync_tip_height": 0,
+            "synced": false
+        }
+    },
+    "success": true
+}
+
+
 ```
 
 ### Get block header by header hash
