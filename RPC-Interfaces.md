@@ -1,18 +1,19 @@
 # RPCs
 The chia node and services come with a JSON rpc api server that allows you to access information and control the services. These are accessible via HTTP, WebSockets, or a python client. The ports can be configured in ~/.chia/mainnet/config/config.yaml. The rpc ports should not be exposed to the internet. 
+TLS certificates are used to secure the communitation.
 
-## Default Ports:
+### Default Ports:
 - Daemon: 55400
 - Full Node: 8555
 - Farmer: 8559
 - Havester: 8560
 - Wallet: 9256
 
-## HTTP/JSON
+### HTTP/JSON
 The certificates must be used when calling the RPCs from the command line, make sure to use the correct certificates for the services you are calling.
 All endpoints are made with POST with JSON data. The response is a JSON dictionary with a success field, which can be true or false. 
 
-## WebSockets
+### WebSockets
 If you are using the Websockets API, you can go directly through the daemon, which routes requsts. Each WebSocket message contains the following fields:
 
 ```json
@@ -26,6 +27,12 @@ If you are using the Websockets API, you can go directly through the daemon, whi
 }
 ```
 
+### Python
+Most of the rpc methods are accessible through the different client objects in src/rpc.
+For examples of usage, see the command line implementation (chia wallet, chia show, etc).
+
+### Javascript
+A javascript client can be found here: https://github.com/freddiecoleman/chia-client.
 
 # Some examples:
 
