@@ -101,7 +101,7 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 
 ## Full Node
 ### get_blockchain_state
-### get_block": self.get_block,
+### get_block
 ### get_blocks
 ### get_block_record_by_height
 ### get_block_record
@@ -117,3 +117,17 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 ### get_all_mempool_tx_ids
 ### get_all_mempool_items
 ### get_mempool_item_by_tx_id
+
+## Wallet
+
+## Harvester
+### get_plots
+### refresh_plots
+### delete_plot
+### add_plot_directory
+### get_plot_directories
+### remove_plot_directory
+
+## Farmer
+
+## Shared
