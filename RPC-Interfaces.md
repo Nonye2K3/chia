@@ -309,20 +309,107 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt --ke
 
 ## Harvester
 ### get_plots
+> Gets a list of plots being farmed on this harvester.
+>
+> Response
+> ```json
+> {"plots": [...], "failed_to_open_filenames": [...], "not_found_filenames": [...]}
+> ```
+
 ### refresh_plots
+> Refreshes the plots, forces the harvester to search for and load new plots.
+
 ### delete_plot
+> Deletes a plot file and removes it from the harvester.
+>
+> Params
+> ```
+> filename: name of the file to delete
+> ```
+
 ### add_plot_directory
+> Adds a plot directory (not including sub-directories) to the harvester and configuration.
+> Plots will be loaded and farmed eventually.
+>
+> Params
+> ```
+> dirname: absolute path of the directory to add
+> ```
+
 ### get_plot_directories
+> Returns all of the plot directoried being farmed.
+>
+> Response
+> ```json
+> {"directories": []}
+> ```
+
 ### remove_plot_directory
+> Removes a plot directory from the config, does not actually delete the directory.
+>
+> Params
+> ```
+> dirname: absolute path of the directory to remove
+> ```
 
 ## Farmer
 ### get_signage_point
+> Gets a signage point by signage point hash, as well as any winning proofs.
+>
+> Params
+> ```
+> sp_hash: the hash of the challenge chain signage point
+> ```
+> Response
+> ```json
+> {"signage_point": {...}, "proofs": [...]}
+> ```
+
 ### get_signage_points
+> Gets a list of recent signage points as well as winning proofs.
+>
+> Response
+> ```json
+> {"signage_points": [...]}
+> ```
+
 ### get_reward_targets
+> Gets the addresses that the farmer is farming to.
+> 
+> Params
+> ```
+> search_for_private_key: whether to check if we own the private key 
+> for these addreses. Can take a long time{, and not guaranteed to return True.
+> ```
+> Response
+> ```json
+> {
+>   "farmer_target": "xch1..",
+>   "pool_target": "xch1..", 
+>   "have_farmer_sk": true,
+>   "have_pool_sk":  true
+> }
+> ```
+
 ### set_reward_targets
+> Sets the reward targets in the farmer and configuration file.
+> 
+> Params
+> ```
+> farmer_target: farmer target address
+> pool_target: pool target address
+> ```
 
 ## Shared
 ### get_connections
+> Returns a list of peers that we are currently connected to.
+> 
+> Response
+> ```json
+> {"connections": [...]}
+> ```
+
+
 ### open_connection
 ### close_connection
 ### stop_node
