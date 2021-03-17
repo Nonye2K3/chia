@@ -81,7 +81,7 @@ Run `chia plots check -n 30` to try 30 sample challenges for each plot. Each of 
 
 # I have only 10 TB, will I ever win XCH on mainnet?
 
-Starting with the new consensus algorithm and rewards schedule change in Beta 27, there are 4608 chances per day to win 2 TXCH (and thus XCH on mainnet.) If you have 10TB and there are 50PB of total storage on mainnet then you would expect to win ~1.8 TXCH per day on average. The math is .010 PB/50 PB * 4608 * 2 = 1.84. That means you'll generally win every other day.
+Starting with the new consensus algorithm and rewards schedule change in Beta 27, there are 4608 chances per day to win 2 TXCH (and thus XCH on mainnet.) If you have 10TB and there are 50PB of total storage on mainnet then you would expect to win ~1.8 TXCH per day on average. The math is .010 PB/50 PB * 4608 * 2 = 1.84. That means that over a long enough period of time you will expect to average out to generally winning every other day.
 
 # What is the plot filter and why didn't my plot pass it?
 
