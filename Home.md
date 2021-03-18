@@ -13,6 +13,7 @@
 * [Chialisp Documentation](https://chialisp.com/)
 * [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
 * [Release Notes](https://www.chia.net/releases/)
+* [RPC Interfaces](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces)
 
 
 The items below remain useful but we have implemented a significant revision to the consensus algorithm. We invite your comments and questions on our **[working draft of new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit)**.
