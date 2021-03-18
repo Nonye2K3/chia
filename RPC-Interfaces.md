@@ -5,7 +5,7 @@ TLS certificates are used to secure the communitation.
 - Daemon: 55400
 - Full Node: 8555
 - Farmer: 8559
-- Havester: 8560
+- Harvester: 8560
 - Wallet: 9256
 
 ### HTTP/JSON
