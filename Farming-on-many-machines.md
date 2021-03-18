@@ -14,7 +14,7 @@ other network peers  --------   Main machine (CA) ------  Harvester 2 (certifica
 ```
 * First, make sure Chia is installed on all machines and initialized by running the CLI `chia init`. 
 * When creating plots on the other harvesters, use `chia plots create -f farmer_key -p pool_key`, inserting the farmer and pool keys from your main machine. Alternatively, you could copy your private keys over by using `chia keys add`, but this is less secure. After creating a plot, run `chia plots check` to ensure everything is working correctly.
-* Make a copy of your **main** machine CA directory located in `~/.chia/mainnet/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester.
+* Make a copy of your **main** machine CA directory located in `~/.chia/mainnet/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester. You must copy the new `ssl/ca` directory with each version of `chia-blockchain`, so if you are upgrading from `beta` -> `mainnet` you must copy the new `ca` contents.
 
 Then for each harvester, follow these steps:
 
