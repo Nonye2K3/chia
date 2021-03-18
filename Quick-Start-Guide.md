@@ -3,16 +3,16 @@ To install chia-blockchain, follow [these install instructions](https://github.c
 
 All configuration data is stored in a directory structure at the $CHIA_ROOT environment variable or at ~/.chia/testnet/. You can find databases, and logs there. Optionally, you can set $CHIA_ROOT to the .chia directory in your home directory with `export CHIA_ROOT=~/.chia` and if you add it to your .bashrc or .zshrc to it will remain set across logouts and reboots. If you set $CHIA_ROOT you will have to migrate configuration items by hand or unset the variable for `chia init` to work with `unset CHIA_ROOT`.
 
-If you are using the MacOS or Windows builds, your keys are created during the first run. We recommend saving the mnemonic. If you intend to use these plots on mainnet you should securely store the 24 words. You can start plotting a plot file using the Plot tab or the command line. This can take a long time depending on the [size of the plots](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
-(the k variable). To be competitive on the current network you will probably have to have a few k=32 or larger plots but a k=32 plot currently takes about 10 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 332 GiB of temporary working space to create a final plot file of 101.3 GiB. Your likelihood of winning a given plot is only driven by the final size of files.
+If you are using the MacOS or Windows builds, your keys are created during the first run. We recommend saving the mnemonic. You can start plotting a plot file using the Plot tab or the command line. This can take a long time depending on the [size of the plots](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
+(the k variable). To be competitive on mainnet you will probably have to have a few k=32 or larger plots but a k=32 plot currently takes about 10 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 332 GiB of temporary working space to create a final plot file of 101.3 GiB. Your likelihood of winning a given plot is only driven by the final size of files.
 
-Plots created with Beta 8 and newer version of the chia software will work on mainnet at launch. The minimum plot size will be k=32.
+Plots created with Beta 8 and newer version of the chia software will work on mainnet. The minimum plot size will be k=32.
 
 ## Windows
-There are commands available in `~\AppData\Local\Chia-Blockchain\app-0.2.9\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\testnet\log\debug.log -wait`. You can also checkout these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips).
+There are commands available in `~\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\` Try `.\chia -h` or `.\chia plots -h` for example. Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\mainnet\log\debug.log -wait`. You can also checkout these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips).
 
 ## MacOS
-There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `./chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/testnet/log/debug.log`.
+There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `./chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/mainnet/log/debug.log`.
 
 A handy trick is to add that directory to your path - `export PATH=/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon:$PATH`. To make it persistent add the same line to your .bashrc or .zshrc
 
@@ -36,7 +36,7 @@ chia keys generate
 ```
 
 ### Run a full node + farmer + harvester + wallet
-To run a full node on port 8444, and connect to the testnet, run the following command. Logs are usually at ~/.chia/testnet/logs/debug.log or ~\.chia\testnet\logs\debug.log on Windows
+To run a full node on port 8444, and connect to the mainnet, run the following command. Logs are usually at ~/.chia/mainnet/logs/debug.log or ~\.chia\mainnet\logs\debug.log on Windows
 
 ```bash
 sh install-gui.sh
