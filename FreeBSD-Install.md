@@ -17,7 +17,7 @@ These instructions would be applicable to 11.3 and 11.4 jails created within Fre
 
 ## Other Notes
 
-These instruction result in the current dev version showing up in "chia version"; e.g. branch 1.0rc9 -> "1.0rc10.dev0". If someone knows how to keep it in the current release/stable build, please edit this. These instructions will have you building both chia-blockchain and clvm_rs from github source, and python-cryptography from FreeBSD's ports.
+These instruction result in the current dev version showing up in "chia version"; e.g. branch 1.0.0 -> "1.0.1.dev0". If someone knows how to keep it in the current release/stable build, please edit this. These instructions will have you building both chia-blockchain and clvm_rs from github source, and python-cryptography from FreeBSD's ports.
 
 **These instructions assume a fresh FreeBSD 11 installation!**
 
@@ -78,7 +78,7 @@ pkg install screen tmux
 git clone http://github.com/Chia-Network/chia-blockchain.git
 # Via SSH:
 git clone git@github.com:Chia-Network/chia-blockchain.git
-# Note: you can specify the branch by adding "--branch <version>" like: git clone http://github.com/Chia-Network/chia-blockchain.git --branch 1.0rc9
+# Note: you can specify the branch by adding "--branch <version>" like: git clone http://github.com/Chia-Network/chia-blockchain.git --branch 1.0.0
 
 ```
 
