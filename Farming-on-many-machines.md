@@ -1,4 +1,4 @@
-_Updated for beta 27 release to support TLS_
+_Updated for mainnet release to support TLS_
 
 This guide allows you to run a harvester on each machine, without having to run a full node, wallet, and farmer on each one. This keeps your system simpler, uses less bandwidth, space, CPU, and also keeps your keys safer. It also makes your overall farm quicker and more efficient when replying to challenges.
 
@@ -14,7 +14,7 @@ other network peers  --------   Main machine (CA) ------  Harvester 2 (certifica
 ```
 * First, make sure Chia is installed on all machines and initialized by running the CLI `chia init`. 
 * When creating plots on the other harvesters, use `chia plots create -f farmer_key -p pool_key`, inserting the farmer and pool keys from your main machine. Alternatively, you could copy your private keys over by using `chia keys add`, but this is less secure. After creating a plot, run `chia plots check` to ensure everything is working correctly.
-* Make a copy of your **main** machine CA directory located in `~/.chia/beta-1.0bx/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester.
+* Make a copy of your **main** machine CA directory located in `~/.chia/mainnet/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester.
 
 Then for each harvester, follow these steps:
 
@@ -22,7 +22,17 @@ Then for each harvester, follow these steps:
 2. Shut down all chia daemon processes with `chia stop all -d`
 3. Make a backup of any settings in your harvester
 3. Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory. This command creates a new certificate signed by your **main** machine's CA.
-4. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote harvester's farmer_peer section
+4. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote **`harvester`**'s farmer_peer section (NOT `full_node`).  
+EX:
+``` 
+harvester:
+  chia_ssl_ca:
+    crt: config/ssl/ca/chia_ca.crt
+    key: config/ssl/ca/chia_ca.key
+  farmer_peer:
+    host: Main.Machine.IP
+    port: 8447
+```
 5. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine in your INFO level logs.
 6. To stop the harvester, you run CLI `chia stop harvester`
 
@@ -36,7 +46,7 @@ Since beta27, the CA files are copied to each harvester, as the daemon currently
 
 *Note:*
 
-Currently (beta27), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `INFO` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/beta-1.0bx/log/debug.log` and see if you get messages like the following:
+Currently (mainnet), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `INFO` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/mainnet/log/debug.log` and see if you get messages like the following:
 ```
 [time stamp] farmer farmer_server   : INFO   -> new_signage_point to peer [harvester IP address] [peer id - 64 char hexadecimal]
 [time stamp] farmer farmer_server   : INFO   <- new_proof_of_space from peer [peer id - 64 char hexadecimal] [harvester IP address]
