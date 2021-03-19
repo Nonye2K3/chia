@@ -190,7 +190,7 @@ pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.
 pip install chia-blockchain==1.0.0
 ```
 
-# CentOS/RHEL 7.7 or newer
+# CentOS/RHEL/Fedora 7/33 and above
 
 ```bash
 sudo yum update -y
@@ -211,6 +211,7 @@ git clone https://github.com/Chia-Network/chia-blockchain.git
 cd chia-blockchain
 
 sh install.sh
+sh install-gui.sh
 . ./activate
 
 # gui
