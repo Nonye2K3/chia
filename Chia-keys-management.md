@@ -27,7 +27,7 @@ Configuration steps:
 * Remember the fingerprint for the next step
 * Find the "First wallet address": `chia keys show` and copy it
 * Open `~/.chia/mainnet/config/config.yaml`
-* Edit: `xch_target_address: XXX` replace it with the newly generated "First wallet address". There should be two occurrence of xch_target_address. One under the "farmer" section and the other one under the "pool" section.
+* Edit: `xch_target_address: XXX` replace it with the newly generated "First wallet address". There should be two occurrence of `xch_target_address`. One under the `farmer` section and the other one under the `pool` section.
 * Save the file and close it.
 * Delete the second key: `chia keys delete -f <fingerprint>` /!\ Caution: make sure you have a backup of the 24 works mnemonic or you will lose access to the key for ever.
 * It should prompt a WARNING message like
