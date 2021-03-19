@@ -202,8 +202,8 @@ sudo yum install libsqlite3x-devel -y
 sudo yum groupinstall "Development Tools" -y
 sudo yum install python3-devel gmp-devel  boost-devel libsodium-devel -y
 
-wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
-tar -zxvf Python-3.7.7.tgz ; cd Python-3.7.7
+sudo wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
+sudo tar -zxvf Python-3.7.7.tgz ; cd Python-3.7.7
 ./configure --enable-optimizations; sudo make -j$(nproc) altinstall; cd ..
 
 # Download and install the source version
