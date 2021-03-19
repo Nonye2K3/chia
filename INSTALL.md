@@ -68,17 +68,18 @@ sh install-gui.sh
 
 cd chia-blockchain-gui
 npm run electron &
+```
 
-# Update/Upgrade from previous version
-
+To Update/Upgrade from previous version
+```
 cd chia-blockchain
 chia stop -d all
 deactivate
 git fetch
 git checkout 1.0.0
-
-# If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
-
+```
+If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
+```
 sh install.sh
 
 . ./activate
@@ -91,6 +92,7 @@ cd chia-blockchain-gui
 npm run electron &
 
 ```
+
 # WSL2
 
 You can run chia-blockchain in Ubuntu 20.04 LTS via WSL2 on Windows.
