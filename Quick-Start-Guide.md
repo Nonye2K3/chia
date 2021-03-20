@@ -10,6 +10,8 @@ Plots created with Beta 8 and newer version of the chia software will work on ma
 
 ## Windows
 
+You can learn how to use the GUI in [Beginners Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide).
+
 There are commands available in `~\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\`. Try `.\chia -h` or `.\chia plots -h` for example:
 
 1. Open powershell by going to start menu and typing "powershell" and pressing enter.
