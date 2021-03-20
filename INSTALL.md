@@ -227,7 +227,7 @@ python3.7 -m venv venv
 ln -s venv/bin/activate
 . ./activate
 pip install --upgrade pip
-pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
+pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
 pip install chia-blockchain==1.0.0
 
