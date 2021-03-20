@@ -12,15 +12,23 @@ Plots created with Beta 8 and newer version of the chia software will work on ma
 
 You can learn how to use the Graphical User Interface (GUI) in [Beginners Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide).
 
-There are commands available in `~\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\`. Try `.\chia -h` or `.\chia plots -h` for example:
+You can start with the Command Line Interface (CLI) bye checking the commands available in `~\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\`. Try `.\chia -h` or `.\chia plots -h` for example:
 
-1. Open powershell by going to start menu and typing "powershell" and press enter.
-2. Change directory by typing `cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\` and press enter.
-3. Read Chia help by typing `.\chia -h` and press enter.
+1. Open *PowerShell* 
 
-You can check these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and read more about commands in general in [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference).
- 
-You can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\mainnet\log\debug.log -wait`.
+	On start menu type "powershell" and press the enter key.
+
+2. Change Directory `cd` 
+
+	On *PowerShell* type `cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\` and press the enter key.
+
+3. Read Chia help
+
+	On *PowerShell* type `.\chia -h` and press the enter key.
+
+For more information about *Windows* you can check these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips) and read more about commands in general in [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference).
+
+You can view your logs by opening "\.chia\mainnet\log\debug.log" with a text editor like *notepad* or see it as it runs in *PowerShell* by using Get-Content, `Get-Content ~\.chia\mainnet\log\debug.log -wait`.
 
 ## MacOS
 There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `./chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/mainnet/log/debug.log`.
