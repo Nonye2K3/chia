@@ -12,7 +12,7 @@ Plots created with Beta 8 and newer version of the chia software will work on ma
 
 There are commands available in `~\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\`. Try `.\chia -h` or `.\chia plots -h` for example:
 
-1. Open powershell by going to start menu and typing powershell and pressing enter.
+1. Open powershell by going to start menu and typing "powershell" and pressing enter.
 2. Change directory by typing `cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\` and pressing enter.
 3. Read Chia help by typing `.\chia -h` and pressing enter.
 
