@@ -18,9 +18,11 @@ There are commands available in `~\AppData\Local\Chia-Blockchain\app-1.0.0\resou
 2. Change directory by typing `cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\` and pressing enter.
 3. Read Chia help by typing `.\chia -h` and pressing enter.
 
+You can also checkout these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips).
+
 You can read more about commands at [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference).
  
-Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\mainnet\log\debug.log -wait`. You can also checkout these [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips).
+Also, you can view your debug.log as it runs in PowerShell using Get-Content, `Get-Content ~\.chia\mainnet\log\debug.log -wait`.
 
 ## MacOS
 There are commands available in `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon` Try `./chia -h` or `./chia plots -h` for example. You can view your debug.log as it runs in from Terminal, `tail -f ~/.chia/mainnet/log/debug.log`.
