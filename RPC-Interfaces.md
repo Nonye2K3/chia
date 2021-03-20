@@ -13,7 +13,7 @@ The certificates must be used when calling the RPCs from the command line, make 
 All endpoints are made with POST with JSON data. The response is a JSON dictionary with a success field, which can be true or false. 
 
 ### WebSockets
-If you are using the Websockets API, you can go directly through the daemon, which routes requsts. Each WebSocket message contains the following fields:
+If you are using the Websockets API, you can go directly through the daemon, which routes requests. Each WebSocket message contains the following fields:
 
 ```json
 {
