@@ -1,7 +1,7 @@
 To install the chia-blockchain, follow the instructions according to your operating system.
 After installing, follow the remaining instructions in the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) to run the software. You should read the [release notes](https://github.com/Chia-Network/chia-blockchain/releases) and the wiki/repository [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ).
 
-| Jump to: | [Windows](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#Windows) |[MacOS](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#MacOS) | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [WSL2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#WSL2) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [CentOS/RHEL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#centosrhel-77-or-newer) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
+| Jump to: | [Windows](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#Windows) |[MacOS](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#MacOS) | [Ubuntu](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#ubuntudebian) | [CentOS / Redhat](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL/_edit#centos--redhat--fedora) | [WSL2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#WSL2) | [Amazon Linux 2](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#amazon-linux-2) | [Other platforms](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL#other-install-methods-and-environments) |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
  
 All keys and plots from version prior to Beta 8 (released July 16, 2020) are deprecated and can be deleted. Plots from both Beta 8 and newer should work on mainnet. 
@@ -102,6 +102,49 @@ But it doesn't hurt to double check using `ps -aux | grep chia` to make sure the
 
 If all else fails, rebooting the machine and restarting the chia daemon/processes usually does the trick.
 
+# CentOS / Redhat / Fedora
+
+```bash
+sudo yum update -y
+
+# Compiling python 3.7 is generally required on CentOS 7.7 and newer
+sudo yum install gcc openssl-devel bzip2-devel libffi libffi-devel -y
+sudo yum install libsqlite3x-devel -y
+# possible that on some RHEL based you also need to install
+sudo yum groupinstall "Development Tools" -y
+sudo yum install python3-devel gmp-devel  boost-devel libsodium-devel -y
+
+sudo wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
+sudo tar -zxvf Python-3.7.7.tgz ; cd Python-3.7.7
+./configure --enable-optimizations; sudo make -j$(nproc) altinstall; cd ..
+
+# Download and install the source version
+git clone https://github.com/Chia-Network/chia-blockchain.git
+cd chia-blockchain
+
+sh install.sh
+. ./activate
+
+# gui
+sh install-gui.sh
+cd chia-blockchain-gui
+npm run build
+npm run electron
+
+# Or install from binary wheels
+curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+sudo yum install -y nodejs
+
+python3.7 -m venv venv
+ln -s venv/bin/activate
+. ./activate
+pip install --upgrade pip
+pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
+
+pip install chia-blockchain==1.0.0
+
+```
+
 # WSL2
 
 You can run chia-blockchain in Ubuntu 20.04 LTS via WSL2 on Windows.
@@ -199,48 +242,6 @@ pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.
 pip install chia-blockchain==1.0.0
 ```
 
-# CentOS/RHEL/Fedora 7/33 and above
-
-```bash
-sudo yum update -y
-
-# Compiling python 3.7 is generally required on CentOS 7.7 and newer
-sudo yum install gcc openssl-devel bzip2-devel libffi libffi-devel -y
-sudo yum install libsqlite3x-devel -y
-# possible that on some RHEL based you also need to install
-sudo yum groupinstall "Development Tools" -y
-sudo yum install python3-devel gmp-devel  boost-devel libsodium-devel -y
-
-sudo wget https://www.python.org/ftp/python/3.7.7/Python-3.7.7.tgz
-sudo tar -zxvf Python-3.7.7.tgz ; cd Python-3.7.7
-./configure --enable-optimizations; sudo make -j$(nproc) altinstall; cd ..
-
-# Download and install the source version
-git clone https://github.com/Chia-Network/chia-blockchain.git
-cd chia-blockchain
-
-sh install.sh
-sh install-gui.sh
-. ./activate
-
-# gui
-cd chia-blockchain-gui
-npm run build
-npm run electron
-
-# Or install from binary wheels
-curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
-sudo yum install -y nodejs
-
-python3.7 -m venv venv
-ln -s venv/bin/activate
-. ./activate
-pip install --upgrade pip
-pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
-
-pip install chia-blockchain==1.0.0
-
-```
 # Other install methods and environments
 * [Raspberry Pi 3/4](https://github.com/Chia-Network/chia-blockchain/wiki/Raspberry-Pi)
 * [Docker](https://github.com/orgs/Chia-Network/packages/container/package/chia)
