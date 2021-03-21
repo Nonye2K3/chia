@@ -60,7 +60,7 @@ Double check that in the `ui` section the crt and key paths are correct. It _sho
 ## Connectivity
 
 ### Has the daemon been bound to a routable IP address?
-On the daemon host run `sudo netstat -tulpn | grep 55400` or your OS's equivalent. It should show something similar to `tcp        0      0 0.0.0.0:55400           0.0.0.0:*               LISTEN      2925/chia_daemon`.
+On the daemon host run `sudo netstat -tulpn | grep 55400` or your OS's equivalent. It should show something similar to `tcp        0    0 0.0.0.0:55400    0.0.0.0:*    LISTEN    2925/chia_daemon`.
 
 If you see `127.0.0.1` it means you haven't changed the daemon's bind IP address. The loopback address is not routable on the network. Double check that `self_hostname: 0.0.0.0` is correct in the config. Also make sure you have fully restarted the daemon:
 
