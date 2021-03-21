@@ -68,3 +68,7 @@ If you see `127.0.0.1` it means you haven't changed the daemon's bind IP address
 chia stop all -d
 chia start farmer
 ````
+
+### Is the daemon's port opened on the firewall?
+
+Run `sudo ufw status | grep 55400` or your OS and firewall equivalent. You should see something like `55400/tcp                  ALLOW`.
