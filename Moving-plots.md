@@ -1,4 +1,4 @@
-Plots are _just_ a static file. Plots can be moved from one folder/directory to another, and even to another machine. It may also be mounted from an external USB drive or over the network.
+Plots are _just_ a static file. Plots can be moved from one folder/directory to another, and even to another machine (of a different operating system). It may also be mounted from an external USB drive or over the network.
 
 # Moving plots within the same machine
 1. Move the plot file 
