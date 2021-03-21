@@ -2,7 +2,7 @@
 
 Chia is a new type of cryptocurrency. Here is some basic information to get started.   
 
-A concept that is repeated a few times below-- Chia is based on capacity of pre-stored random looking data that the user creates and stores in files called plots --making the blockchain consensus extremely fast/green.  It an improvement over proof of work blockchains, which rely on fast graphic cards and custom machines doing millions of calculations per second, and wasting a lot of electricity. Chia also has many improvements to scripting, scripting environment, cryptography, usability, and scalability, and aims to be a simple, secure, and powerful blockchain. 
+A concept that is repeated a few times below-- Chia is based on capacity of pre-stored random looking data that the user creates and stores in files called plots --making the blockchain consensus extremely fast/green.  It is an improvement over proof of work blockchains, which rely on fast graphic cards and custom machines doing millions of calculations per second, and wasting a lot of electricity. Chia also has many improvements to scripting, scripting environment, cryptography, usability, and scalability, and aims to be a simple, secure, and powerful blockchain. 
 
 ## How it works
 
@@ -10,7 +10,7 @@ You can load Chia software on Windows, Mac or Linux. The Windows version automat
 
 ### Full Node Tab
 
-This shows the blockchain movement.  It shows that you are sync with the blockchain.  A copy of the blockchain is stored on your pc.  You have a live copy that is in sync with everyone else.
+This shows the blockchain movement.  It shows that you are in sync with the blockchain.  A copy of the blockchain is stored on your pc.  You have a live copy that is in sync with everyone else.
 
 - *Blocks* : This is the blockchain working
 - *Connections* : Those are the connections to you and other users--  those connections make Chia much faster to process transactions—part of the design, and make it more secure
@@ -73,7 +73,7 @@ Creating a plot is time consuming.  Average 9-20 hours on a normal computer, and
 
 *After 7 tables are created* : It starts to “backpropagate” again tables 1-7. This sets it up for the final phase, which is compression.
 
-Then it starts a compression stage of each table manually 1-7
+Then it starts a compression stage of each table manually 1-7.
 
 Then it shows it’s completed- 101 gigs but nothing happens.  At this stage it is transferring your 101 gigs of plot to your permanent drive area—takes a few minutes 5-10 minutes.   It will delete all the files in your temp storage and there you go- 10 hrs. later.
 
@@ -95,7 +95,7 @@ In Chia, the only electricity required is the electricity to create the plots, a
 
 **Computer Hardware**
 
-*SSD drivers* : Many people are using SSD drives to create plots— or NVME drives.  Minimum of 1 Tb each is recommend if you want to plot more than 1 plot at a time
+*SSD drivers* : Many people are using SSD drives to create plots— or NVME drives.  Minimum of 1 Tb each is recommend if you want to plot more than 1 plot at a time.
 
 On an older computer you can purchase a pcie adapter card-to take NVME/SSD drive as the new temp folder.   This is internal to the PC.  Some have tried to use a usb or firewire attached NVME/ SSD with some success.  The first plot is sometimes created with 6 hrs each, but doing multiple plots slows to 8 hrs each. This pertains to creating the temp files.
 
@@ -117,25 +117,25 @@ Look at the date/time indicated compared to your computer.  If there is a 30 min
 
 *\* Important*
 
-When first plotting --   and your first plot is created and now being farmed for chia.  On the farming tab—“Time to Win a coin”— it may say 2 days.   It may take really upto 5 days to earn the first coin or partial coin.  It is normal as luck plays a role over the short run. Your computer is being linked up to all the other pc’s.   As you add more plots—especially after about 50 plots, then the “time to Win” gets a little closer to estimated time
+When first plotting --   and your first plot is created and now being farmed for chia.  On the farming tab—“Time to Win a coin”— it may say 2 days.   It may take really up to 5 days to earn the first coin or partial coin.  It is normal as luck plays a role over the short run. Your computer is being linked up to all the other pc’s.   As you add more plots—especially after about 50 plots, then the “time to Win” gets a little closer to estimated time.
 
 ## Frequently Asked Questions
 
 First there is a [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ).
 
-If power goes out what happens.   Answer-  In the chia software, the plots that currently being built  are now non operational.  When you start Chia they will be gone and need to be restarted.  One item to do is go into your temporary storage and delete all those .tmp files it created.  This is the one time it will not self delete those files if a new plot is started.  Not deleting them may cause that storage device to run out of room when it starts 1 or multiple plots.   All your existing plots are "safe" in their existing storage. 
+If power goes out what happens.   Answer-  In the chia software, the plots that currently being built  are now non operational.  When you start Chia they will be gone and need to be restarted.  One item to do is to go into your temporary storage and delete all those .tmp files it created.  This is the one time it will not self delete those files if a new plot is started.  Not deleting them may cause that storage device to run out of room when it starts 1 or multiple plots.   All your existing plots are "safe" in their existing storage. 
 
-Can I use USB 3.0  cable connected to SSD/NVME running the Temp files.  Answer- On Windows - it has not worked well- the communication speed is not fast enough, sometimes the usb turns off, then the plot is not useable. Its possible to run 1 plot, but limiting when trying to process multiple plots.  Most are installing pcie adapters to SSC/NVME and that solves the issue.  The mac has very fast communication to do the first plot, - many others are saying that they can do 2 plots but process time increases dramatically.  Technology is constantly changing so continue to do research and ask in the chat rooms
+Can I use USB 3.0  cable connected to SSD/NVME running the Temp files.  Answer- On Windows - it has not worked well- the communication speed is not fast enough, sometimes the usb turns off, then the plot is not useable. It's possible to run 1 plot, but limiting when trying to process multiple plots.  Most are installing PCIe adapters to SSC/NVME and that solves the issue.  The mac has very fast communication to do the first plot, - many others are saying that they can do 2 plots but process time increases dramatically.  Technology is constantly changing so continue to do research and ask in the chat rooms.
 
 Once a hash is used from a plot-- does it need to be deleted.  Answer-- no-- an example is , a plot has 300,000 hashes that the user created.  If one is used, there are enough to last an estimated 5 years. 
 
 ### New version RC4
 
-The new RC4 version is a new blockchain-- prior coins are erased.  Its all test chia coins right now anyway.   It may take 4-10 hrs to sync-- just let it run-- there may be multiple other revisions coming example 1 per week until final.  When RC4 is loaded-- a new feature is it waits to download a large file from other PC's then starts to sync-- so that is why the sync will take some time.
+The new RC4 version is a new blockchain-- prior coins are erased.  It's all test chia coins right now anyway.   It may take 4-10 hrs to sync-- just let it run-- there may be multiple other revisions coming example 1 per week until final.  When RC4 is loaded-- a new feature is that it waits to download a large file from other PC's then starts to sync-- so that is why the sync will take some time.
 
 ### Peak Blockchain and checking if Chia is in sync
 
-*The chia blockchain software* : Every user has copy of the blockchain on their pc and the goal is that everyone is in sync or very close. Click on the Full Mode tab. If the time and date is off by 30 minutes then the software is not synced to blockchain or others.  Multiple ways to check-- on Full node -- look at peak height and date/time--- then go below and look at connections and your peak should match the other computers.   Also the peak should be close when you click on wallet tab with that wallet peak number. The wallet peak number sometimes is off by 10 numbers. If off by several hundred its not in sync.  On the GUI-- on the top menu bar -- click on View then Force Reload. It will take about 5-10 minutes.  It will not affect your plotting.
+*The chia blockchain software* : Every user has copy of the blockchain on their PC and the goal is that everyone is in sync or very close. Click on the Full Mode tab. If the time and date is off by 30 minutes then the software is not synced to blockchain or others.  Multiple ways to check-- on Full node -- look at peak height and date/time--- then go below and look at connections and your peak should match the other computers.   Also the peak should be close when you click on wallet tab with that wallet peak number. The wallet peak number sometimes is off by 10 numbers. If off by several hundred its not in sync.  On the GUI-- on the top menu bar -- click on View then Force Reload. It will take about 5-10 minutes.  It will not affect your plotting.
 
-Everyone is very helpful to answer questions. The group does ask for questions to be in the selected chat room.  Beginner questions in Beginner etc
+Everyone is very helpful to answer questions. The group does ask for questions to be in the selected chat room.  Beginner questions in Beginner etc.
 
