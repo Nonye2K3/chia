@@ -131,28 +131,31 @@ In theory, a plot with a ratio >> 1 would be more likely to win challenges on th
 
 # Other commands (not yet documented)
 
-   TODO
-
 ```sh
-  chia plots check
-  # is a quick way to check if your plots are found
+$ chia
 
-  chia plots add -d dir/with/plots
-  # to add dir with plots
+Options:
+  --root-path PATH  Config file root  [default: /home/mariano/.chia/mainnet]
+  -h, --help        Show this message and exit.
 
-  chia start node wallet harvester farmer
-  # to start
+Commands:
+  configure   Modify configuration
+  farm        Manage your farm
+  init        Create or migrate the configuration
+  keys        Manage your keys
+  netspace    Estimate total farmed space on the network
+  plots       Manage your plots
+  run_daemon  Runs chia daemon
+  show        Show node information
+  start       Start service groups
+  stop        Stop services
+  version     Show chia version
+  wallet      Manage your wallet
 
-  chia start -r node ...
-  # to restart select services
 ```
 
-If you have a blockchain db file that's pre-synced you can drop it to
-`~/.chia/beta-1.0b20/db/` so e.g. for `blockchain_v22.db`:
-`~/.chia/beta-1.0b20/db/blockchain_v22.db`
-
-To check where you stand `chia show -s` and you'll see smth like this. To figure how close
-you are look at SB Height, not Height! Once fully synced it'll say `Fully Synced` at the
+To check where you stand `chia show -s` and you'll see something like this. To figure how close
+you are look at your height. Once fully synced it'll say `Fully Synced` at the
 top (or smth like that):
 ```
   Current Blockchain Status: Full Node syncing to sub block 97634 
