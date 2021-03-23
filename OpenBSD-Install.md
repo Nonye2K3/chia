@@ -80,12 +80,7 @@ chia keys generate
 # if you are going to setup port forwarding, disable upnp
 sed -i 's|enable_upnp: true|enable_upnp: false|' ~/.chia/mainnet/config/config.yaml
 
-# You can now run a full node. If you want to farm you must first create a
-# plot. Assuming you have 360 GB free in ~/plotstmp and 102 GB in ~/plots, you
-# can create your first plot as follows:
-mkdir ~/plotstmp ~/plots
-chia plots create -t ~/plotstmp -d ~/plots
-# Note that this may take more than 10 hours.
+chia start node harvester farmer wallet
 ```
 
 More details can be found in the [Chia Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide).
