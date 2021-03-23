@@ -21,7 +21,7 @@ Consider going through a Windows Update check and install updates prior to start
 # 4. Disable uPnP when running multiple nodes
 If you attempt to run more than one node on your local network, having uPnP on on both will cause both nodes significant confusion. You will need to use powershell to disable uPnP on all but one.
 
-### For version RC9:
+### For version 1.0:
 ```
     cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\
     ./chia.exe configure --upnp-enable False
