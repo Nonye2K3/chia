@@ -153,34 +153,33 @@ Commands:
   wallet      Manage your wallet
 
 ```
+To see what you can do with each of these commands, use the help flag -h. For example, `chia show -h`.
 
-To check where you stand `chia show -s` and you'll see something like this. To figure how close
-you are look at your height. Once fully synced it'll say `Fully Synced` at the
-top (or smth like that):
+To check your full node status, do `chia show -s` and you'll see something like this. To figure how close
+you are look at your height. Once fully synced it'll say `Full Node Synced` at the top.
+
 ```
-  Current Blockchain Status: Full Node syncing to sub block 97634 
-  Currently synced to block: 26888
-        Time: Thu Jan 14 2021 06:32:38 EST Height:   26888 SB height:    91101
+Current Blockchain Status: Full Node Synced
 
-  Estimated network space: 23.025PiB
-  Current difficulty: 7249904795648
-  Current VDF sub_slot_iters: 113049600
-  Total iterations since the start of the blockchain: 262271690387
+Peak: Hash: 34554a10aff6b52545623e18667c9487758fa93a3b2345974da0d263939189dc
+      Time: Tue Mar 23 2021 20:54:46 JST                  Height:      19882
 
-  SB Height |   Height  | Hash:
-     91101  |   26888   | 39502a638b7869277ba12ee4ea58e03f346e26b4f8b9f455c95052e816559757
-```
+Estimated network space: 136.225 PiB
+Current difficulty: 9
+Current VDF sub_slot_iters: 112197632
+Total iterations since the start of the blockchain: 63291534050
 
-You can check contents of your wallet with: `chia wallet`.
+  Height: |   Hash:
+    19882 | 34554a10aff6b52545623e18667c9487758fa93a3b2345974da0d263939189dc
+    19881 | f53c052cd7ac58539ff5c35cb9d515bc521308a49cec7566b23dba84f76009d8
+    19880 | 924d825a7fdbfd61e4582efbbe1d977bb554b368eea58c349a71e688e43fcc49
 
-The only way to see if harvester and farmer are running is to have logs at INFO level:
-```sh
-  chia configure --set-log-level INFO
-  # restart any running services
-  chia start -r node harvester farmer wallet
 ```
 
-Check harvester and farmer: `grep ~/.chia/beta-1.0b20/log/debug.log -e harvester`
+You can check contents of your wallet with: `chia wallet`, and status of your farmer with `chia farm summary`.
+
+Check harvester and farmer logs: `grep ~/.chia/mainnet/log/debug.log -e harvester`
+
 ```
 17:08:03.191 harvester harvester_server        : INFO     <- harvester_handshake from peer 214b269a425b8223cb50fbd458dab056599348e255f07a018c13ea9efb509ee5 127.0.0.1
 17:08:03.194 farmer farmer_server              : INFO     -> harvester_handshake to peer 127.0.0.1 65f3fa0b0407a07da8ccf04dfa0f64c28f714726312aa051d3a8529390db4d7a
@@ -189,4 +188,4 @@ Check harvester and farmer: `grep ~/.chia/beta-1.0b20/log/debug.log -e harvester
 17:08:03.227 harvester src.plotting.plot_tools : INFO     Loaded a total of 1 plots of size 0.09895819725716137 TiB
 ```
 
-Maybe follow logs: `tail -F ~/.chia/beta-1.0b20/log/debug.log`. Chia is nice enough to rotate logs for you.
+Maybe follow logs: `tail -F ~/.chia/mainnet/log/debug.log`. Chia is nice enough to rotate logs for you.
