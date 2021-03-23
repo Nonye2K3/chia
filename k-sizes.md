@@ -12,6 +12,10 @@ One exception is the final .plot size of k values. To get some insight into the 
 | K=34 | 1177 GiB (1263.8 GB) | 429.8 GiB (461.5 GB) |
 | K=35 | 2355 GiB (2528.7 GB) | 884.1 GiB (949.3 GB) |
 
+When planning on how much plotting space is required, only calculate the temporary disk size requirement.
+
+When stagger plotting, disk size requirement may change depending on which Phase the plotting is at.
+
 ## Plots larger than k=32
 
 There was an oversight in Beta 14. For plots larger than k=32 the default buffer will not be enough to complete a plot. For k=33 a `-b 3077` is the absolute minimum needed with the rest of the defaults. A `-b 3139` will have better results by completing far more sorts in memory. More recommendations for 34-36 coming soon.
