@@ -16,7 +16,7 @@ You can see some example plot sizes, times to plot, and working space needed bas
 
 # What k-size should you plot?
 
-Plots created with Beta 8 and newer versions of the Chia software will work on mainnet at launch. The minimum plot size is k=32. 
+Plots created with Beta 8 (July, 2020) and newer versions of the Chia software will work on mainnet at launch. The minimum plot size is k=32. 
 
 There is only one reason why you might want to plot larger than k=32 and that is to optimize the total utilization of a given drive or space. A couple of k=33 plots with a majority of k=32 plots can bring down the leftover unused space on a drive. 
 
