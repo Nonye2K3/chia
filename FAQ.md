@@ -31,7 +31,7 @@ We think you will want to use used Data Center grade NVMe SSD drives to create y
 
 * MacOS 10.14 Mojave
 * Windows 10
-* Ubuntu 18.04
+* Ubuntu 18.04 (20.04 highly recommended)
 * Raspbian Buster
 
 # Can I plot more than one plot at a time?
