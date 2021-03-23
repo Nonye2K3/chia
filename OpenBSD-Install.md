@@ -1,50 +1,98 @@
-The installation procedure below has been tested on OpenBSD 6.7, amd64.
+# Install Chia 1.0.0 CLI on OpenBSD 6.8 amd64
 
-# Command line tools
+```sh
+# install required packages
+doas pkg_add git python-3.8.6 rust cmake gmake gmpxx
 
-## Prerequisite package installation
+# create a new user with the login class "daemon" so that it can use all
+# available memory for plotting, then switch to that user
+doas useradd -m -Ldaemon chia
+doas -u chia ksh -l
+cd
 
-As root (or using doas / sudo), first install some prerequisite OpenBSD packages:
+# clone repos
+git clone https://github.com/Chia-Network/chia-blockchain.git --branch 1.0.0
+git clone https://github.com/Chia-Network/chiapos.git --branch byteswap # XXX might be merged into main
+git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd
 
-```bash
-pkg_add -i git python3 cmake gmake node gmpxx
-```
+# maturin with patches for openbsd (by octeep)
+git clone https://github.com/timkuijsten/maturin.git
 
-## Fetch source code
+git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.4
 
-Then, as any user (preferably not root), use git to fetch the chia-blockchain source code, using SSH or HTTPS:
+export BUILD_VDF_CLIENT=N
 
-```bash
-# clone via SSH
-git clone git@github.com:Chia-Network/chia-blockchain.git
-# OR
-# clone via HTTPS
-git clone https://github.com/Chia-Network/chia-blockchain.git
-```
+# create python virtual environment for Chia
+cd chia-blockchain/
+python3 -m venv venv
+. ./venv/bin/activate
+pip install --upgrade pip
 
-## Build
-Change directory into the chia-blockchain directory, and run the main install script. All programs will be installed into a Python virtual environment in the "venv" sub-directory:
+cd ../chiavdf/
+pip install .
 
-```bash
-cd chia-blockchain
+cd ../chiapos/
+pip install .
 
-git checkout main
+cd ../maturin/
+# don't pass static compiler flags to the rust linker because that would cause
+# a core dump, possibly because of resource limits
+sed -i 's|cargo_args.extend(\["--", "-C", "link-arg=-s"\])|#cargo_args.extend(\["--", "-C", "link-arg=-s"\])|' setup.py
+pip install .
+
+cd ../clvm_rs/
+maturin develop --release
+
+# XXX should be a more elegant way...
+cp target/x86_64-unknown-openbsd/release/libclvm_rs.so ../chia-blockchain/clvm_rs.so
+
+cd ../chia-blockchain/
+# use our previous compile results
+sed -i 's|"chiavdf==1.0.1"|"chiavdf==1.0.2.dev1"|' setup.py
+sed -i 's|"chiapos==0.9"|"chiapos==0.10.dev8"|' setup.py
+
+# use a hardcoded random secret so the software can run headless and without
+# user intervention
+sed -i 's|elif platform == "linux":|elif platform == "linux" or platform.startswith("openbsd"):|' src/util/keychain.py
+_keyring=$(dd status=none if=/dev/random bs=8 count=1 | od -H | tr -d ' ' | head -1 | cut -b8-25)
+sed -i 's|keyring.keyring_key = "your keyring password"|keyring.keyring_key = "'"$_keyring"'"|' src/util/keychain.py
+unset _keyring
+
+#### state before install.sh
+#$ pip list
+#Package    Version
+#---------- ----------
+#chiapos    0.10.dev8
+#chiavdf    1.0.2.dev1
+#clvm-rs    0.1.4
+#maturin    0.10.0b5
+#pip        21.0.1
+#setuptools 49.2.1
+#toml       0.10.2
 
 sh install.sh
-```
 
-*Note: During the install above an electron installation will fail. For CLI usage this can be ignored.*
+# DONE, Chia is installed now, start using it by creating a config and keys
 
-The command line tools should now be available for use in the created Python virtual environment, which can be activated using:
+chia init
+chia keys generate
 
-```bash
-cd chia-blockchain
-. ./activate
+# if you are going to setup port forwarding, disable upnp
+sed -i 's|enable_upnp: true|enable_upnp: false|' ~/.chia/mainnet/config/config.yaml
+
+# You can now run a full node. If you want to farm you must first create a
+# plot. Assuming you have 360 GB free in ~/plotstmp and 102 GB in ~/plots, you
+# can create your first plot as follows:
+mkdir ~/plotstmp ~/plots
+chia plots create -t ~/plotstmp -d ~/plots
+# Note that this may take more than 10 hours.
 ```
 
 More details can be found in the [Chia Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide).
 
 # GUI Build / Usage
+
+*WARNING: the following has not been tested on OpenBSD 6.8*
 
 The build instructions in the previous sections above must be completed successfully before attempting to build the GUI using the procedure below.
 
