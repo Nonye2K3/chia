@@ -6,7 +6,7 @@
 * [Chia Project FAQ](https://www.chia.net/faq/)
 * [Plotting Basics](https://www.chia.net/2021/02/22/plotting-basics.html)
 * [k and plot sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
-* [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips)
+* [Windows Tips](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips-&-Tricks)
 * [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) - Important notes on using SSD to plot.
 * [Reference Plotting Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Plotting-Hardware)
 * [Reference Farming Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Farming-Hardware)
