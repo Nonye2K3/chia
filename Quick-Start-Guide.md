@@ -35,6 +35,15 @@ There are commands available in `/Applications/Chia.app/Contents/Resources/app.a
 
 A handy trick is to add that directory to your path - `export PATH=/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon:$PATH`. To make it persistent add the same line to your .bashrc or .zshrc
 
+## Linux
+If you installed Chia with the linux installer files, your chia executable should be in one of the following locations:
+
+'/usr/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia'
+'/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia'
+
+If you installed from source, just activate and run `chia` directly. 
+
+
 ## Development/source builds
 
 If you've installed via the installers you can skip these steps.
