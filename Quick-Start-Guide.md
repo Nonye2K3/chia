@@ -42,7 +42,7 @@ If you installed Chia with the linux installer files, your chia executable shoul
 
 `/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia`
 
-If you installed from source, just activate and run `chia` directly. 
+If you installed from source (using git), just activate and run `chia` directly. 
 
 
 ## Development/source builds
