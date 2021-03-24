@@ -79,9 +79,9 @@ chia stop -d all
 deactivate
 git fetch
 git checkout 1.0.1
-```
-If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
-```
+
+# If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
+
 sh install.sh
 
 . ./activate
