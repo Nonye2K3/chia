@@ -39,6 +39,7 @@ A handy trick is to add that directory to your path - `export PATH=/Applications
 If you installed Chia with the linux installer files, your chia executable should be in one of the following locations:
 
 `/usr/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia`
+
 `/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia`
 
 If you installed from source, just activate and run `chia` directly. 
