@@ -51,6 +51,8 @@ npm run electron &
 
 # Ubuntu/Debian
 
+We have an [experimental GUI installer](https://download.chia.net/latest/x86_64-Ubuntu-gui) (x86_64) for Ubuntu 18.04 and newer and Debian Buster and newer. There is also an experimental [GUI installer for ARM64](https://download.chia.net/latest/ARM64-Ubuntu-gui) Ubuntu and Debian/Raspberry Pi OS 64.
+
 Install dependencies for Ubuntu 20.04 LTS. If you are installing on Ubuntu 18.04 LTS you should use Python 3.7 instead: `sudo apt-get install python3.7-venv python3.7-distutils git -y`
 ```bash
 sudo apt-get update
@@ -76,7 +78,7 @@ cd chia-blockchain
 chia stop -d all
 deactivate
 git fetch
-git checkout 1.0.0
+git checkout 1.0.1
 ```
 If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
 ```
@@ -103,6 +105,8 @@ But it doesn't hurt to double check using `ps -aux | grep chia` to make sure the
 If all else fails, rebooting the machine and restarting the chia daemon/processes usually does the trick.
 
 # CentOS / Redhat / Fedora
+
+We have an experimental [GUI installer](https://download.chia.net/latest/x86_64-Redhat-gui) for RH/CentOS 8.0 and Fedora 28 and newer.
 
 ```bash
 sudo yum update -y
@@ -141,7 +145,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.0.0
+pip install chia-blockchain==1.0.1
 
 ```
 
@@ -239,7 +243,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.0.0
+pip install chia-blockchain==1.0.1
 ```
 
 # Other install methods and environments
@@ -277,7 +281,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0.0
+pip install chia-blockchain==1.0.1
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
