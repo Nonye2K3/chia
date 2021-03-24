@@ -12,7 +12,7 @@ Plots created with Beta 8 and newer version of the chia software will work on ma
 
 You can learn how to use the Graphical User Interface (GUI) in [Beginners Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide).
 
-You can start with the Command Line Interface (CLI) bye checking the commands available in `~\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\`. Try `.\chia -h` or `.\chia plots -h` for example:
+You can start with the Command Line Interface (CLI) bye checking the commands available in `~\AppData\Local\Chia-Blockchain\app-1.0.1\resources\app.asar.unpacked\daemon\`. Try `.\chia -h` or `.\chia plots -h` for example:
 
 1. Open *PowerShell* 
 
@@ -20,7 +20,7 @@ You can start with the Command Line Interface (CLI) bye checking the commands av
 
 2. Change Directory `cd` 
 
-	On *PowerShell* type `cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.0\resources\app.asar.unpacked\daemon\` and press the enter key.
+	On *PowerShell* type `cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.1\resources\app.asar.unpacked\daemon\` and press the enter key.
 
 3. Read Chia help
 
