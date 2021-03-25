@@ -49,7 +49,9 @@ chia init
 chia keys generate
 
 # Or you can import from 24 words
-chia keys add -m [24 words]
+chia keys add
+
+# and then enter your 24 words
 ```
 
 But you are getting an error related to not being able to find a blspy version that satisfies 0.3.1 you say or `ERROR: Could not find a version that satisfies the requirement clvm-rs==0.1.3`? Frankly with any install error message, you're probably trying to install on 32 bit Raspbian. You can check by running `uname -a` and if it says arm7l you need a 64 bit version of your favorite OS. `uname -a` should end with `aarch64 GNU/Linux`.
