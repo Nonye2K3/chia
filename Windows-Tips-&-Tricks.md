@@ -10,7 +10,7 @@
     cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.1\resources\app.asar.unpacked\daemon\
     start-process ./chia.exe -argumentlist "plots create -k 32 -b 4000 -u 128 -r 4 -t d:\tempdrive1 -2 e:\tempdrive2 -d F:\plots -n 1"
 ```
-The command above makes one plot (specified by `-n 1`), to plot in parallel you need to open a new PowerShell and repeat the command (without closing the first one). Increase the `-n` value for sequential plotting, i.e. once the 1st plot is completed, the next is started.
+The command above makes one plot (specified by `-n 1`), to plot in parallel you need to repeat the command (without closing the first one). Increase the `-n` value for sequential plotting, i.e. once the 1st plot is completed, the next is started.
 
 # 2. Take a good look at log files
 Your configuration and logs are found in `~\.chia\mainnet\log` and `~\.chia\mainnet\config`. You can tail your logs with `Get-Content ~\.chia\mainnet\log\debug.log -wait`. To see more of what is going on, set your log level in `config\config.yaml` to INFO from WARNING and restart. You can also use `\.chia.exe configure --set-log-level INFO` from the app directory outlined above and then restart for the changes to take effect.
