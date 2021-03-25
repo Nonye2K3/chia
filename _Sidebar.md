@@ -1,3 +1,5 @@
+* [Home](https://github.com/Chia-Network/chia-blockchain/wiki)
+* [Beginners Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide)
 * [Install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL)
 * [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 * [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ) for running Chia
@@ -8,6 +10,7 @@
 * [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) - Important notes on using SSD to plot.
 * [Reference Plotting Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Plotting-Hardware)
 * [Reference Farming Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Farming-Hardware)
+* [Farming on Many Machines](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines)
 * [Chialisp Documentation](https://chialisp.com/)
 * [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
 * [Release Notes](https://www.chia.net/releases/)
