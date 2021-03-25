@@ -19,6 +19,12 @@ You need to download the software, make .plot files of size k32 to fill up any f
 Dont worry about other K sizes, K 32 is minimum, larger doesn't have an advantage.
 [k sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 
+Can I just buy chia? Until transactions start you can't securely spend chia. Any deals before then are off-chain and no guarantees about safety, just a person to person handshake worth of trust. 
+
+When will it be on exchanges? The people who run the Chia Networks company have said 
+"Please check out the Business Whitepaper and the Zooms - https://www.chia.net/2021/02/10/chia-businesss-whitepaper.html"
+Until transactions start, nobody can transfer any chia with the security of the blockchain and it can't be listed on exchanges.
+
 If you join KeyBase.io chia_network.public then don't @ people directly and join #general to talk about Chia, join #beginner for noob questions, join #support for problems with the software.
 
 Plot issues?
