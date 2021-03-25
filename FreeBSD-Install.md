@@ -17,34 +17,61 @@ These instructions would be applicable to 11.3 and 11.4 jails created within Fre
 
 ## Other Notes
 
-These instruction result in the current dev version showing up in "chia version"; e.g. branch 1.0.0 -> "1.0.1.dev0". If someone knows how to keep it in the current release/stable build, please edit this. These instructions will have you building both chia-blockchain and clvm_rs from github source, and python-cryptography from FreeBSD's ports.
+These instructions will have you building both chia-blockchain and clvm_rs from github source, and python-cryptography from FreeBSD's ports.
 
-**These instructions assume a fresh FreeBSD 11 installation!**
+The result of this build will be the "chia version" showing the current release branch ahead by 1 and in "dev0"; for instance building 1.0.1 results in "chia version" returning "1.0.2.dev0". If someone knows why this is and how to fix it, please, edit and correct this! It does not happen on Linux.
+
+_**These instructions assume a fresh FreeBSD 11 installation!**_
+
+## Discouraged?
+
+Following the instructions in this document will result in a working Chia CLI build on FreeBSD 11 if you follow step-by-step starting from a vanilla FreeBSD installation. Is something broken? Compare the commands you typed, accessible in your **bash** shell history, and match them with each command in this document. If you feel you've messed something up, do the following:
+
+```
+# if you have (venv) in your shell prompt, type deactivate
+deactivate
+# remove the chia-blockchain directory which will contain clvm_rs and the Python venv
+rm -rf chia-blockchain
+# ... now start again!
+```
 
 ### Pre-requisite package installation
 
+_If starting the build again after a failure and you have not re-installed FreeBSD, don't just skip this package installation section! You may have missed one or more software packages critical to the build._
+
 The 'pkg', 'portsnap' and port build are to be run as root. Everything else can be run from a normal non-root user.
+
+As root, update pkg and ports, and then install all packages as instructed below.
 
 ```
 # Update your packages and ports; if ports are already installed as part of your fresh install run portsnap update instead of fetch/extract.
 pkg update
 portsnap fetch && portsnap extract
 
-# Install bash and zsh if you have not; the default csh will not suffice for the build scripts.
-pkg install bash zsh
-# change your shell to bash (or zsh)
+# Install bash if you have not; the default csh will not suffice for the build scripts.
+pkg install bash
+# change your shell to bash
 chsh -s /usr/local/bin/bash
 # run bash
 /usr/local/bin/bash
+```
 
-# Install necessary development tools 
+Make sure you change the shell for your non-root chia-blockchain user. If you're opting to run Chia as root, you can skip this. If you are root, run this as it appears below; otherwise, you can omit the username because you are already that user.
+
+```
+chsh -s /usr/local/bin/bash NONROOT_USERNAME
+```
+
+Now proceed with installing the mandatory development tools.
+
+```
 pkg install lang/gcc9 gcc gmake cmake
 
 ```
 
 ### gcc notes
 
-After installing gcc9, this message appears:
+After installing gcc version 9.0, this message appears:
 
 ```
 To ensure binaries built with this toolchain find appropriate versions
@@ -63,22 +90,23 @@ pkg install lang/py37 py37-pip py37-setuptools py37-wheel py37-sqlite3 py37-cffi
 pkg install node npm git openssl
 ```
 
-If you are sshing into the machine you might want to use 'screen' so that processes will continue even if you logout. For more information: https://www.freebsd.org/cgi/man.cgi?query=screen. 'tmux' is also a great alternative especially if you use iTerm2 on macOS as it supports native tabs and windows with the '-CC' CLI option.
+If you are ssh'ing into the machine you might want to use 'screen' so that processes will continue even if you logout. For more information: https://www.freebsd.org/cgi/man.cgi?query=screen. 'tmux' is also a great alternative especially if you use iTerm2 on macOS as it supports native tabs and windows with the '-CC' CLI option.
 
 ```
+# optional packages
 pkg install screen tmux
 ```
 
-**From here you may run as a normal user with any exceptions noted.**
-
 ### Repo Cloning and Virtual Environment (venv) Activation
 
+**From this point on, with the exception of the security/py-cryptography port build process (and any other exceptions noted), you may proceed as a normal user.**
+
 ```
-# Clone the latest chia-blockchain repository; via HTTP/HTTP/S:
-git clone http://github.com/Chia-Network/chia-blockchain.git
-# Via SSH:
+# Clone the latest chia-blockchain repository, via HTTP:
+git clone https://github.com/Chia-Network/chia-blockchain.git
+# or with SSH:
 git clone git@github.com:Chia-Network/chia-blockchain.git
-# Note: you can specify the branch by adding "--branch <version>" like: git clone http://github.com/Chia-Network/chia-blockchain.git --branch 1.0.0
+# Note: you can specify the branch by adding "--branch <version>" like: git clone http://github.com/Chia-Network/chia-blockchain.git --branch 1.0.1
 
 ```
 
@@ -110,7 +138,7 @@ clvm_rs 0.1.4 is now installed in your virtual environment.
 
 ### Building py-cryptography from ports
 
-You'll need to switch to root for this part.
+_**You'll need to switch to root for this part.**_
 
 ```
 cd /usr/ports/security/py-cryptography
@@ -167,23 +195,30 @@ can be changed like so:
 keyring.keyring_key = "Too Many Secrets"
 ```
 
-Build Chia!
+Now, you will build Chia!
 
 ```
 sh install.sh
 ```
+
 Once done, run:
 
 ```
 chia init
 ```
 
-If needing to disable UPnP, set "enable_upnp: False" in config.yaml.
+NOTE: if you need to disable UPnP - a protocol which automatically sets up port-forwarding on routers using NAT which is a typical setup at any residence with broadband - set "enable_upnp: False" in config.yaml. You can use the one-liner below or do it yourself.
 
 ```
-sed -i .bak 's/enable_upnp: True/enable_upnp: False' ~/.chia/testnet/config/config.yaml
+sed -i .bak 's/enable_upnp: True/enable_upnp: False' ~/.chia/mainnet/config/config.yaml
 ```
 
-That's it! Provided the instructions were followed to the T, and the build is a fresh FreeBSD 11.3 or 11.4, either hardware or FreeNAS jailed, you should be good to go! Now go to town with `chia start node` or whatever.
+While you don't absolutely need port 8444 forwarded to your Chia node, it is advised that you do so that other peers may connect to you instead of you solely connecting to them. For the average at-home farmer it is advised you do not disable UPnP unless you absolutely know what you're doing or have another node on your local network already using the port and are planning to [Farm on Many Machines](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines)).
+
+***
+
+## Installed and Ready to Farm!
+
+That's it! Provided the instructions were followed to the T, and the build is a fresh FreeBSD 11.3 or 11.4, either hardware or FreeNAS jailed, you should be good to go! Now go to town with `chia start node` or whatever floats your boat.
 
 More details can be found in the [Chia Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide).
