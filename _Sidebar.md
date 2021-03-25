@@ -1,1 +1,14 @@
-https://github.com/Chia-Network/chia-blockchain.wiki.git
+* [Install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL)
+* [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
+* [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ) for running Chia
+* [Chia Project FAQ](https://www.chia.net/faq/)
+* [Plotting Basics](https://www.chia.net/2021/02/22/plotting-basics.html)
+* [k and plot sizes](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
+* [Windows Tips & Tricks](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips-&-Tricks)
+* [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) - Important notes on using SSD to plot.
+* [Reference Plotting Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Plotting-Hardware)
+* [Reference Farming Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Farming-Hardware)
+* [Chialisp Documentation](https://chialisp.com/)
+* [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
+* [Release Notes](https://www.chia.net/releases/)
+* [RPC Interfaces](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces)
