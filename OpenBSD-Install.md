@@ -78,7 +78,7 @@ chia init
 chia keys generate
 
 # if you are going to setup port forwarding, disable upnp
-sed -i 's|enable_upnp: true|enable_upnp: false|' ~/.chia/mainnet/config/config.yaml
+chia configure --enable-upnp false
 
 chia start node harvester farmer wallet
 ```
