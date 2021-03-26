@@ -21,8 +21,8 @@ Then for each harvester, follow these steps:
 1. Make sure your **main** machines IP address on port 8447 is accessible by your harvester machines
 2. Shut down all chia daemon processes with `chia stop all -d`
 3. Make a backup of any settings in your harvester
-3. Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory. This command creates a new certificate signed by your **main** machine's CA.
-4. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote **`harvester`**'s farmer_peer section (NOT `full_node`).  
+4. Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory. This command creates a new certificate signed by your **main** machine's CA.
+5. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote **`harvester`**'s farmer_peer section (NOT `full_node`).  
 EX:
 ``` 
 harvester:
@@ -33,8 +33,8 @@ harvester:
     host: Main.Machine.IP
     port: 8447
 ```
-5. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine in your INFO level logs.
-6. To stop the harvester, you run CLI `chia stop harvester`
+6. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine in your INFO level logs.
+7. To stop the harvester, you run CLI `chia stop harvester`
 
 *Warning:*
 
