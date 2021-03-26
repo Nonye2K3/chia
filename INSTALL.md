@@ -6,6 +6,12 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
  
 All keys and plots from version prior to Beta 8 (released July 16, 2020) are deprecated and can be deleted. Plots from both Beta 8 and newer should work on mainnet. 
 
+## Minimum Specs
+The minimum supported specs are that of the Rasperry Pi 4:
+* Quad core 1.5Ghz CPU
+* 2 GB Ram
+* Python 3.7 and above
+
 ## Drive format support
 
 Chia plot files are at least 108GB in size (for K32). To plot successfully requires drives formatted to support large files; e.g. NTFS, APFS, exFAT, ext4, etc. Drives with FAT formatting (FAT12, FAT16, or FAT32) will fail plotting midway through. Future versions of Chia will check for unsupported drives, but for now it's up to each user to check their drive format.
