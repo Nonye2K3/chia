@@ -121,7 +121,7 @@ There is a possible attack where an attacker who can co-ordinate N deep from the
 
 # When mainnet?
 
-The original plan was for December 2020 or January 2021 and our development of our original consensus met our expected timeline. However, in February of 2020 we were introduced to some [new ideas](https://arxiv.org/abs/1910.02218) at the Stanford Blockchain 2020 event that lead to our [new consensus algorithm](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit) - which is a significant upgrade in security and usability of our chain. Per our [recent blog post](https://www.chia.net/2021/03/15/mainnet-update.html), we currently expect to release 1.0 during the day of March 17, 2021. Mainnet green flag launch is planned for 7AM PDST (14:00 UTC) on Friday March 19, 2021. Our intent is to not have to hard fork once mainnet is started so we have to be very certain that consensus critical items are complete and our first security audits are complete. Our community members warn that each time you ask in [Keybase](https://keybase.io/team/chia_network.public) it gets moved back a week.
+Mainnet was started on March 19th, 2020. The first transaction launch is planned for block 193536, or roughly the start of May. Our community members warn that each time you ask in [Keybase](https://keybase.io/team/chia_network.public) it gets moved back a week.
 
 # What is XCH, TXCH, and mojos?
 
