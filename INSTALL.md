@@ -234,10 +234,6 @@ sh install.sh
 
 . ./activate
 
-# gui
-cd chia-blockchain-gui
-npm run build
-npm run electron
 
 # Or install chia-blockchain as a binary package
 curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
