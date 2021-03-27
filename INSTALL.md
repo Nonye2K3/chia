@@ -43,7 +43,7 @@ You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/c
 
 To build a development version, make sure [brew](https://brew.sh/) is available before starting the setup and that python 3.7 or newer is installed.
 ```bash
-git clone https://github.com/Chia-Network/chia-blockchain.git
+git clone https://github.com/Chia-Network/chia-blockchain.git -b latest
 cd chia-blockchain
 
 sh install.sh
@@ -65,7 +65,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # Checkout the source and install
-git clone https://github.com/Chia-Network/chia-blockchain.git
+git clone https://github.com/Chia-Network/chia-blockchain.git -b latest
 cd chia-blockchain
 
 sh install.sh
@@ -129,7 +129,7 @@ sudo tar -zxvf Python-3.7.7.tgz ; cd Python-3.7.7
 ./configure --enable-optimizations; sudo make -j$(nproc) altinstall; cd ..
 
 # Download and install the source version
-git clone https://github.com/Chia-Network/chia-blockchain.git
+git clone https://github.com/Chia-Network/chia-blockchain.git -b latest
 cd chia-blockchain
 
 sh install.sh
@@ -187,7 +187,7 @@ Then follow the steps below which are the same as the usual Ubuntu instructions 
 sudo apt-get update
 sudo apt-get upgrade -y
 
-git clone https://github.com/Chia-Network/chia-blockchain.git
+git clone https://github.com/Chia-Network/chia-blockchain.git -b latest
 cd chia-blockchain
 
 sh install.sh
@@ -227,7 +227,7 @@ For maximum speed, `-t` and `-2` should be inside the WSL2 filesystem. Something
 sudo yum update -y
 sudo yum install python3 git -y
 
-git clone https://github.com/Chia-Network/chia-blockchain.git
+git clone https://github.com/Chia-Network/chia-blockchain.git -b latest
 cd chia-blockchain
 
 sh install.sh
