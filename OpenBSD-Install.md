@@ -1,4 +1,4 @@
-# Install Chia 1.0.0 CLI on OpenBSD 6.8 amd64
+# Install Chia 1.0.1 on OpenBSD 6.8 amd64
 
 ```sh
 # install required packages
