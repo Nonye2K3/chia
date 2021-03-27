@@ -1,13 +1,13 @@
 
 ## Reference client networking
 
+Warning - a bit dated.
+
 The reference client can launch any one of the following servers:
 full node, timelord, farmer, harvester, or introducer.
 
 The `ChiaServer` class can be used to start a listening server, or to connect to other clients.
 Once running, each connection goes through an asynchronous pipeline in `server.py`, where connections are mapped to messages, which are handled by the correct function, and mapped to outbound messages.
-
-This mapping through multiple async generators is handled through the [aiter library](https://github.com/richardkiss/aiter), which is a utility for python asynchronous generators.
 
 When a protocol message arrives, it's function string is read, and the appropriate python function gets called.
 The api_request parses the function data into a python object (from CBOR/streamable format).
