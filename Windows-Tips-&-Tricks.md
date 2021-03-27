@@ -24,7 +24,7 @@ If you attempt to run more than one node on your local network, having uPnP on o
 ### For version 1.0:
 ```
     cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.1\resources\app.asar.unpacked\daemon\
-    ./chia.exe configure --upnp-enable False
+    ./chia.exe configure --enable-upnp false
 ```
 
 # 5. Forever "Connecting to wallet"
