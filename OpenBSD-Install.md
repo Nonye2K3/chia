@@ -11,7 +11,7 @@ doas -u chia ksh -l
 cd
 
 # clone repos
-git clone https://github.com/Chia-Network/chia-blockchain.git --branch 1.0.1
+git clone https://github.com/Chia-Network/chia-blockchain.git --branch latest
 git clone https://github.com/Chia-Network/chiapos.git --branch byteswap # XXX might be merged into main
 git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd
 
