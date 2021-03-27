@@ -1,5 +1,7 @@
 The farming process is very lightweight and can be run with minimal CPU and DRAM resources. The goal of a good farming platform is to have the maximum amount of capacity in the least amount of space, using as little power as possible. In other words, the priority for a farming platform, independent of obtaining storage for the lowest cost possible, is to have the highest amount of TB/W in a small space.
 
+Farmed blocks (03/19/2021 through 03/27/2021), 80 blocks / 160 XCH at network space 120 ~ 150 PiB.
+
 ## DIY Farms
 **Building your own rig as illustrated below requires solid IT skills and knowledge of how to safely handle electrical components. In some places these builds are not lawful without being a licensed electrician. Replicate at your own risk! Keep this far away from kids!**
 
