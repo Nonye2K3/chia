@@ -121,7 +121,7 @@ There is a possible attack where an attacker who can co-ordinate N deep from the
 
 # When mainnet?
 
-Mainnet was started on March 19th, 2020. The first transaction launch is planned for block 193536, or roughly the start of May. Our community members warn that each time you ask in [Keybase](https://keybase.io/team/chia_network.public) it gets moved back a week.
+Mainnet was started on March 19th, 2021. The first transaction launch is planned for block 193536, or roughly the start of May. Our community members warn that each time you ask in [Keybase](https://keybase.io/team/chia_network.public) it gets moved back a week.
 
 # What is XCH, TXCH, and mojos?
 
