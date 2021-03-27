@@ -103,9 +103,9 @@ pkg install screen tmux
 
 ```
 # Clone the latest chia-blockchain repository, via HTTP:
-git clone https://github.com/Chia-Network/chia-blockchain.git
+git clone https://github.com/Chia-Network/chia-blockchain.git -b latest
 # or with SSH:
-git clone git@github.com:Chia-Network/chia-blockchain.git
+git clone git@github.com:Chia-Network/chia-blockchain.git -b latest
 # Note: you can specify the branch by adding "--branch <version>" like: git clone http://github.com/Chia-Network/chia-blockchain.git --branch 1.0.1
 
 ```
