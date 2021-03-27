@@ -40,7 +40,7 @@ python3 -c 'import platform; print(platform.architecture())'
 Then proceed with a relative usual install process:
 
 ```bash
-git clone https://github.com/Chia-Network/chia-blockchain.git
+git clone https://github.com/Chia-Network/chia-blockchain.git -b latest
 cd chia-blockchain
 
 sh install.sh
