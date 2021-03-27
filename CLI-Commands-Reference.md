@@ -65,7 +65,7 @@ Command: `chia plots create [add flags and parameters]`
 
 `-s` [stripe size]: This is the amount of data handed off to each thread, when doing parallel workloads during phase 1. The default 64K seems to be overall the best choice. 32K tends to be a small loss, and 128K is a small loss as well.
 
-`-e` [bitfield plotting]: Using the `-e` flag will disable the bitfield plotting algorithm, and revert back to the older b17 plotting style. It lowers memory requirement, but also writes about 12% more data during creation of the plot. It's generally thought of as a faster option for faster drives, such as SSD's.
+`-e` [bitfield plotting]: Using the `-e` flag will disable the bitfield plotting algorithm, and revert back to the older b17 plotting style. Using `-e` lowers memory requirement, but also writes about 12% more data during creation of the plot. Not using `-e` is generally thought of as a faster option for faster drives, such as SSD's.
 
 **Example**
 
