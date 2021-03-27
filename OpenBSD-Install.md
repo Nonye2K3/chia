@@ -11,7 +11,7 @@ doas -u chia ksh -l
 cd
 
 # clone repos
-git clone https://github.com/Chia-Network/chia-blockchain.git --branch 1.0.0
+git clone https://github.com/Chia-Network/chia-blockchain.git --branch 1.0.1
 git clone https://github.com/Chia-Network/chiapos.git --branch byteswap # XXX might be merged into main
 git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd
 
@@ -58,18 +58,6 @@ _keyring=$(dd status=none if=/dev/random bs=8 count=1 | od -H | tr -d ' ' | head
 sed -i 's|keyring.keyring_key = "your keyring password"|keyring.keyring_key = "'"$_keyring"'"|' src/util/keychain.py
 unset _keyring
 
-#### state before install.sh
-#$ pip list
-#Package    Version
-#---------- ----------
-#chiapos    0.10.dev8
-#chiavdf    1.0.2.dev1
-#clvm-rs    0.1.4
-#maturin    0.10.0b5
-#pip        21.0.1
-#setuptools 49.2.1
-#toml       0.10.2
-
 sh install.sh
 
 # DONE, Chia is installed now, start using it by creating a config and keys
@@ -87,7 +75,7 @@ More details can be found in the [Chia Quick Start Guide](https://github.com/Chi
 
 # GUI Build / Usage
 
-*WARNING: the following has not been tested on OpenBSD 6.8*
+*WARNING: the following has only been tested with OpenBSD 6.7*
 
 The build instructions in the previous sections above must be completed successfully before attempting to build the GUI using the procedure below.
 
