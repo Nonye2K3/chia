@@ -61,9 +61,7 @@ Command: `chia plots create [add flags and parameters]`
 
 `-r` [number of threads]: 2 is usually optimal. Multithreading is only in phase 1 currently.
 
-`-u` [number of buckets]: More buckets require less RAM but more random seeks to disk. With spinning disks you want less buckets and with NVMe more buckets. Generally you will want one of 32, 64, or 128 buckets.
-
-`-s` [stripe size]: This is the amount of data handed off to each thread, when doing parallel workloads during phase 1. The default 64K seems to be overall the best choice. 32K tends to be a small loss, and 128K is a small loss as well.
+`-u` [number of buckets]: More buckets require less RAM but more random seeks to disk. With spinning disks you want less buckets and with NVMe more buckets. There is no significant benefit from using smaller buckets - just use 128.
 
 `-e` [bitfield plotting]: Using the `-e` flag will disable the bitfield plotting algorithm, and revert back to the older b17 plotting style. Using the `-e` flag (bitfield disabled) lowers memory requirement, but also writes about 12% more data during creation of the plot. **Not** using `-e` (bitfield enabled) is a better option for slower spinning disks, i.e SATA 5400/7200 rpm.
 
