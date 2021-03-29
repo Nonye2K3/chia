@@ -35,3 +35,9 @@ Having an open source ASIC Timelord that everyone can buy inexpensively is the C
 ## Timelords and Attacks
 
 One of the things that is great about the [Chia new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit) is that it makes it almost impossible for a Farmer with a maliciously faster Timelord to selfishly Farm. Due to the way new consensus works, a Farmer with a faster Timelord is basically compelled to prove time for all the farmers winning blocks around him also. Having an "evil" faster Timelord can give a benefit when attempting to 51% attack the network, so it is still important that over time we push the Timelord speeds as close to the maximum speeds of the silicon processes available. We expect to have the time and the resources to do that right and make open source hardware versions widely available.
+
+## Terminology
+* VDF: verifiable delay function, another way to say "proof of time"
+* Timelord launcher: a small program which launches "vdf client" processes over and over, to perform the actual vdf calculations.
+* VDF client: a c++ process which performs a VDF computation and then shuts down
+* Timelord: The timelord is communicates with the node, and is what decides which VDF tasks to assign to which clients. The vdf clients connect through HTTP to the timelord. So you can have the timelord in a separate machine as the timelord launcher
