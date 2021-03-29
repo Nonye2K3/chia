@@ -118,7 +118,7 @@ We have an experimental [GUI installer](https://download.chia.net/latest/x86_64-
 sudo yum update -y
 
 # Compiling python 3.7 is generally required on CentOS 7.7 and newer
-sudo yum install gcc openssl-devel bzip2-devel libffi libffi-devel -y
+sudo yum install gcc openssl-devel bzip2-devel zlib-devel libffi libffi-devel -y
 sudo yum install libsqlite3x-devel -y
 # possible that on some RHEL based you also need to install
 sudo yum groupinstall "Development Tools" -y
