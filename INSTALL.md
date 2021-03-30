@@ -84,7 +84,7 @@ cd chia-blockchain
 chia stop -d all
 deactivate
 git fetch
-git checkout 1.0.1
+git checkout latest
 
 # If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
 
@@ -151,7 +151,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.0.1
+pip install chia-blockchain==1.0.2
 
 ```
 
@@ -245,7 +245,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.0.1
+pip install chia-blockchain==1.0.2
 ```
 
 # Other install methods and environments
@@ -283,7 +283,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0.1
+pip install chia-blockchain==1.0.2
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
