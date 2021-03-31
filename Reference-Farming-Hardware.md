@@ -6,7 +6,7 @@ The farming process is very lightweight and can be run with minimal CPU and DRAM
 **Farming productively** (03/19/2021 through 03/31/2021), 118 blocks / 236 XCH at network space 120 ~ 180 PiB.
 
 There are many unique DIY builds in the farming hardware channel that find unique uses for repurposing existing hardware to mount drives.
-Here a build from early community user that houses 32 drives farming off a [RockPi4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of 260W & 4.3kWh per day - easily making it one of the most power-efficient farms built so far!
+Here a build from early community user that houses 32 drives farming off a [RockPi4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of ~250W & ~5.6kWh per day (last 30 days) - easily making it one of the most power-efficient farms built so far!
 
 Parts list (pricing changes constantly):
 * 1x [MEAN WELL RSP-500-12 DC Power Supply 500W/12V/42A](https://www.amazon.com/gp/product/B085G65K3Y), $85
