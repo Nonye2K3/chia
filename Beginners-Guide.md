@@ -40,7 +40,7 @@ On every signage point (9 seconds), all of your plots are checked to see which o
 
 Once that match shows on the first line--  it will move down to lines 2-5 , as the blockchain moves. If for some reason those lines stop moving--- that is another indication you are not in sync with database and need to resync—see below.
 
-**Create a plot**
+## Create a plot
 
 1. Click on green button- top right “Add a Plot”
 
@@ -48,8 +48,8 @@ Once that match shows on the first line--  it will move down to lines 2-5 , as t
 
 3. Chose number of plots — you can select quantity to create.
     1. *Plot to Queue* : Means if (5) is selected it will plot #1, then when finished will start #2
-    1. *Plot in Parallel* : means running multiple plots at same time.  Make sure you have enough temp storage for combined total.
-    1. Under *number of plots* – click drop down.  You want to see that “buckets” has 128 selected.  More buckets decreases the amount of RAM required and usually increases the speed of plotting.
+    2. *Plot in Parallel* : means running multiple plots at same time.  Make sure you have enough temp storage for combined total.
+    3. Under *number of plots* – click drop down.  You want to see that “buckets” has 128 selected.  More buckets decreases the amount of RAM required and usually increases the speed of plotting.
 
 4. Select Temp Directory—select your temporary directory.  This is where plots are created. About 100 temp files will be created, then compacted to 1 plot file.    This creation grows to 332 GiB - 357 GB - in size and when finished will erase all of the temp files.  1 Plot file is created at 101.4 GiB.
     1. Its recommend to use a SSD drive or NVME drive for this work but make sure you are aware of [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance).
@@ -61,28 +61,44 @@ Once that match shows on the first line--  it will move down to lines 2-5 , as t
 **When a plot is created.   There are 2 directories.  Temp storage and then permanent file.**
 Over 100 files will be created all labled.tmp-. (example  agjpgoeporig.tmp file).  The temp storage will grow to an approximate size of 357 GB per created plot.    The software creates (1) file with 109 GB with a name and end will say .plot (example agljglhjaw[jufpoierh[wjrgpoeiwh.plot )- the software will transfer it to the permanent directory and its size will be 109 GB.  This is what will be farmed to earn chia coins. Chia software then erases all the temporary files and starts over for next plot.
 
-**How Plots are created and 7 steps Process**
+#### How Plots are created and 7 steps Process
 
-Creating a plot is time consuming.  Average 9-20 hours on a normal computer, and 4-8 hours on a high end machine.  Here are the approx. 7 steps/ tables are created to create a plot.
- 
-*Table 1* : Is quickly created within 2 minutes.
+Creating a plot is time consuming.  Average 9-20 hours on a normal computer, and 4-8 hours on a high end machine. There are 4 phases that does operations in 7 tables.
 
-*Table 2* : You will start to see it create the buckets.    Select 128 buckets as it uses the least amount of ram.  Plot size is still 101 gigs.   I have noticed it also helps create the plot faster, then selecting 32 buckets or leaving the selection at 0.
+Phases:
+1. **Computing tables 1 to 7:** It creates the buckets (default: 128) as files on your temp directory, when the 7 tables are computed the plot time progress is about **42 %**
+2. **Back propagation tables 7 to 1:** When the 7 tables are back propagated the plot time progress is about **61 %**
+3. **Compression of tables 1 to 7 in pairs:** When the 7 tables are compressed the plot time progress is about **98 %**
+4. **Write checkpoint tables:** Transfers your plot to your permanent drive. It will delete all the files in your temp storage and this completes the progress to **100 %**
 
-*Table 4* : Takes some time.
-
-*After 7 tables are created* : It starts to “backpropagate” again tables 1-7. This sets it up for the final phase, which is compression.
-
-Then it starts a compression stage of each table manually 1-7.
-
-Then it shows it’s completed- 101 gigs but nothing happens.  At this stage it is transferring your 101 gigs of plot to your permanent drive area—takes a few minutes 5-10 minutes.   It will delete all the files in your temp storage and there you go- 10 hrs. later.
-
+| Phase | Step                       | % Progress |
+| :---: | :------------------------- | ---------: |
+| 1     | Computing table 1          |         1% |
+| 1     | Computing table 2          |         6% |
+| 1     | Computing table 3          |        12% |
+| 1     | Computing table 4          |        20% |
+| 1     | Computing table 5          |        28% |
+| 1     | Computing table 6          |        36% |
+| 1     | Computing table 7          |        42% |
+| 2     | Backpropagating on table 7 |        43% |
+| 2     | Backpropagating on table 6 |        48% |
+| 2     | Backpropagating on table 5 |        51% |
+| 2     | Backpropagating on table 4 |        55% |
+| 2     | Backpropagating on table 3 |        58% |
+| 2     | Backpropagating on table 2 |        61% |
+| 3     | Compressing tables 1 and 2 |        66% |
+| 3     | Compressing tables 2 and 3 |        73% |
+| 3     | Compressing tables 3 and 4 |        79% |
+| 3     | Compressing tables 4 and 5 |        85% |
+| 3     | Compressing tables 5 and 6 |        92% |
+| 3     | Compressing tables 6 and 7 |        98% |
+| 4     | Write checkpoint tables    |       100% |
 
 Notes-
 If using a Mac -- the suggestion is to use an Added SSD or NVME storage to create plots and not the primary hard drive.
 The Chia software is evolving-- if for some reason a plot fails to complete it has to be deleted by deleting all of it's temp files. Be careful that you don't delete the temp files of another plot that's being plotted.
 
-**Word definitions and Explanations**
+# Glossary
 
 *Proof* : It is found inside the PLOT.  Millions of "excel blocks" with formulas called proofs of space.
 The chia software is designed to work on a lottery system.  A key element to winning the lottery of earning coins is that the more plots you have, the more proofs you have, and therefore the higher chances of winning.  Someone with 1% of all the plotted space, will win about 1% of all the blocks. There are about 4608 blocks per day, each with 2 chia, so 9216 chia are created per day.
