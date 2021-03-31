@@ -3,7 +3,7 @@ The farming process is very lightweight and can be run with minimal CPU and DRAM
 ## DIY Farms
 **Building your own rig as illustrated below requires solid IT skills and knowledge of how to safely handle electrical components. In some places these builds are not lawful without being a licensed electrician. Replicate at your own risk! Keep this far away from kids!**
 
-**Farming productively** (03/19/2021 through 03/31/2021), 118 blocks / 236 XCH at network space 120 ~ 150 PiB.
+**Farming productively** (03/19/2021 through 03/31/2021), 118 blocks / 236 XCH at network space 120 ~ 180 PiB.
 
 There are many unique DIY builds in the farming hardware channel that find unique uses for repurposing existing hardware to mount drives.
 Here a build from early community user that houses 32 drives farming off a [RockPi4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of 260W & 4.3kWh per day - easily making it one of the most power-efficient farms built so far!
