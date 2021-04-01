@@ -69,10 +69,18 @@ To check wether you have already found proofs, you can run the same command as b
 `cat debug.log | grep "Found [1-9] proofs"`
 
 A possible result may look like this:
-`12:30:01.492 harvester src.harvester.harvester : INFO     1 plots were eligible for farming 23d3a7c90f... Found 1 proofs. Time: 0.57000 s. Total 100 plots`
+
+```
+12:30:01.492 harvester src.harvester.harvester : INFO     1 plots were eligible for farming 23d3a7c90f... Found 1 proofs. Time: 0.57000 s. Total 100 plots
+```
 
 If you do this for all your logfiles and get a result, **great!** This means your farm is 100% working as expected. You might not have won a block yet, but you already came very close once, or a few times!
 
 ## Can a Double NAT scenario impact my farms ability to send valid proofs to the network?
-Yes and no. Double NAT, while quirky, should work due to Chias uPnP support. You likely won't be able to seed blocks to other nodes this way though. Certain networking setups can impact the full nodes ability to participate in farming. As long as there aren't any telling signs in the logs that farming isn't working (namely logs with ERROR, WARNING tags that are network related) its unlikely that this is the case.
+Yes and no. Double NAT, while quirky, should work due to Chias uPnP support. You likely won't be able to seed blocks to other nodes this way though. A "Double NAT" scenario occurs, when a client (harvester or node) is inside a network that is NAT'ed two times.
+It usually involves a client being behind two routers, instead of one and looks like this:
+
+Internet --> Router --> Router --> Client
+
+Certain networking setups can impact the full nodes ability to participate in farming. As long as there aren't any telling signs in the logs that farming isn't working (namely logs with ERROR, WARNING tags that are network related) its unlikely that this is the case.
 
