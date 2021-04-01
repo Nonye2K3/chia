@@ -1,7 +1,7 @@
 # Is my farm healthy? (*NIX and Linux Headless Edition)
 
-Alot of smaller farmers are concerned about the health of their farm, when they can't find any proofs for days at a time.
-This document was created to provide metrics to smaller farmers, so they can ensure their farm is working, even without finding any proofs.
+Alot of smaller farmers are concerned about the health of their farm when they can't find any proofs for days at a time.
+This document was created to provide metrics to smaller farmers so they can ensure their farm is working, even without finding any proofs.
 
 ## Check if your farm thinks its farming
 Before going further, please make sure wether your farm actually considers itself to be farming. Theres a good chance that you might not since you are still syncing blocks.
@@ -12,6 +12,17 @@ To check the status of your farm,  `../activate` as usual and then type `chia fa
 Farming status: Farming
 ```
 ..then you know no broader errors have occured.
+
+## Change the log level ouput
+To get detailed information about how your farm operates, you need to set the log-level of your farmer to `INFO`. For this you need to edit the chia config under `~/.chia/mainnet/config`. You are looking for a part of the file that looks like this:
+```
+farmer:
+  logging: &id001
+    log_filename: log/debug.log
+    log_level: INFO
+    log_stdout: false
+```
+If `log_level` has any other value than `INFO`, change it to `INFO` accordingly and save the file.
 
 ## Check if your plots are passing the filter
 The most important metric to look out for is, wether your plots are passing the plot filter on your harvesting machines. In a usual setup, this involves checking the logs under `~/.chia/mainnet/log` to see if at least for some rounds, plots are marked as **eligible for farming** by the harvester.
@@ -57,6 +68,6 @@ To check wether you have already found proofs, you can run the same command as b
 
 `cat debug.log | grep "Found [1-9] proofs"`
 
-If you do this for all your logfiles and get a result, **great!** This means your farm is 100% working as expected. You might now have won a block yet, but you already came very close once, or a few times!
+If you do this for all your logfiles and get a result, **great!** This means your farm is 100% working as expected. You might not have won a block yet, but you already came very close once, or a few times!
 
 **Note:** The author would like to give example output, but as of writing of this doc has not yet found a proof.
