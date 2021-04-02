@@ -47,7 +47,7 @@ Once that match shows on the first line, it will move down to lines 2-5 , as the
 3. Chose number of plots — you can select quantity to create.
     1. *Plot to Queue* : Means if (5) is selected it will plot #1, then when finished will start #2
     2. *Plot in Parallel* : means running multiple plots at same time. Make sure you have enough temp storage for combined total.
-    3. *Advanced options* : The default values appear for your selected plot size
+    3. *Advanced options* : The default values appear for your selected plot size, as a beginner try to leave the defaults
 		1. *RAM Max Usage*: More memory slightly increases speed, if you assign too little (less than 4,000 for a k 32) or too much (more than you will have available) the plot might fail during the process.
 		2. *Number of Threads*: Default is 2.
 		3. *Buckets*: Default is 128, more buckets decreases the amount of RAM required and usually increases the speed of plotting.
