@@ -60,9 +60,9 @@ Once that match shows on the first line, it will move down to lines 2-5 , as the
 
 6. Click create plot to start process.
 
-#### How Plots are created and 7 steps Process
+#### How Plots are created
 
-Creating a plot is time consuming.  Average 9-20 hours on a normal computer, and 4-8 hours on a high end machine. There are 4 phases that does operations in 7 tables.
+Creating a plot is time consuming with an average of 9-20 hours on a normal computer and 4-8 hours on a high end machine. There are 4 phases that does operations in 7 tables.
 
 Phases:
 1. **Computing tables 1 to 7:** It creates the buckets (default: 128) as files on your temp directory, when the 7 tables are computed the plot time progress is about **42 %**
