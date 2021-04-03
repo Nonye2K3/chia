@@ -1,3 +1,5 @@
+In Windows, you can use the chia cli from powershell, allowing you more flexibility and control. Powershell is a program where you type commands, press enter, and do things like changing folders, moving files, or running programs, like chia.
+
 # 1. Parallel plotting using PowerShell
 ```
     cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.3\resources\app.asar.unpacked\daemon\
@@ -5,6 +7,9 @@
     start-process ....
     ....
 ```
+
+If start-process doesn't work, try `.\chia.exe plots create yourParametersGoHere` instead.
+
 ### A specific example:
 ```
     cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.3\resources\app.asar.unpacked\daemon\
