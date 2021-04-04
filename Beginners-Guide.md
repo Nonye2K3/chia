@@ -8,7 +8,7 @@ You can load Chia software on Windows, Mac or Linux. The Windows version automat
 
 Once chia is operational, its concept: Users create plots, (each 101 gigs in size), user stores these plots on computer equipment and then farms  the created plots for potential to earn coins. 
 
-Inside each plot are large number of pre-formulated calculations stored in excel sheet blocks called (hash) cells.  User wins potential coins by providing the winning pre-formulated (hash) code to allow the transaction to occur.  The winning transaction is very quickly done within 2-3 seconds and the user is compensated with coins to facilite the transaction.  Plots have many (hash) cells inside so if 1 is used there is still many left.  PLot is estimated to last over 5 years 
+Inside each plot are large number of pre-formulated calculations stored in excel sheet blocks called (hash) cells.  User wins potential coins by providing the winning pre-formulated (hash) code to allow the transaction to occur.  The winning transaction is very quickly done within 2-3 seconds and the user is compensated with coins to facilite the transaction.  Plots have many (hash) cells inside so if 1 is used there is still many left.  Plot is estimated to last over 5 years 
 
 ### Full Node Tab
 
