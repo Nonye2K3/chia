@@ -4,14 +4,18 @@ Chia is a new type of cryptocurrency that is based on capacity of pre-stored ran
 
 ## How it works
 
-You can load Chia software on Windows, Mac or Linux. The Windows version automatically starts on installation and the Mac just needs to be opened from the Applications directory - it loads and starts to sync with rest of network and blockchain. Fully syncing can take 4-6 hrs, although this increases over time. Basically you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The chia blockchain database will be stored on your computer.
+You can load Chia software on Windows, Mac or Linux. The Windows version automatically starts on installation and the Mac just needs to be opened from the Applications directory - it loads and starts to sync with rest of network  and blockchain. Fully syncing can take 4-6 hrs, although this increases over time. Basically you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The chia blockchain database copy will be stored on your computer. Everyone else has a copy.
+
+Once chia is operational, its concept: Users create plots, (each 101 gigs in size), user stores these plots on computer equipment and then farms  the created plots for potential to earn coins. 
+
+Inside each plot are large number of pre-formulated calculations stored in excel sheet blocks called (hash) cells.  User wins potential coins by providing the winning pre-formulated (hash) code to allow the transaction to occur.  The winning transaction is very quickly done within 2-3 seconds and the user is compensated with coins to facilite the transaction.  Plots have many (hash) cells inside so if 1 is used there is still many left.  PLot is estimated to last over 5 years 
 
 ### Full Node Tab
 
 This shows the blockchain movement. It shows that you are in sync with the blockchain. A copy of the blockchain is stored on your pc. You have a live copy that is in sync with everyone else.
 
 - *Blocks* : This is the blockchain working
-- *Connections* : Those are the connections to you and other users
+- *Connections* : Those are the connections to you and other users and their PC(nodes)
 
 ### Wallet tab
 
@@ -25,7 +29,9 @@ This is where you create plots. The accepted plot size starts at 101 GiB each. C
 
 - *GiB* : is gibibytes and the old school way computers measured space. The new hotness - especially from hard drive manufacturers - is to measure in gigabytes. Since gigabytes are based on 1000 and gibibytes are based on 1024, GB is always 1.074 times larger than GiB.
 
-- *When you plot* : Your computer creates these large 101 GiB files. Inside are large tables (kind of like excel sheets) where each cell has a random pointer to another cell in the table. This is what the computer is doing, and why it takes so long to create the plot. It is running calculations and putting the “answers” in these millions of cells. The expected life for a k32 plot to be eligible on mainnet is about 7 to 15 years, for now. You can think of each plot as a collection of bingo cards, which have a chance of winning blocks.
+- *When you plot* : Your computer creates these large 101 GiB files (approx 101 gigs). Inside are large tables (like excel sheets) where each cell has a random pointer to another cell in the table. This is what the computer is doing, and why it takes so long to create the plot. It is running calculations and putting the “answers” in these millions of cells. The expected life for a k32 plot to be eligible on mainnet is about 7 to 15 years, for now. You can think of each plot as a collection of bingo cards, which have a chance of winning blocks.
+
+Here is why transactions are so green/
 
 ### Farm tab
 
@@ -33,10 +39,13 @@ This will show you how many plots you have created. On the top it will show how 
 
 - *Latest Block Challenges* : This shows the latest challenges and signage points, which can be thought of as mini lotteries. Every 9 seconds, there is a new signage point, which means there is a new opportunity for you to check your plots and see if you've won. Every other signage point will be a winner for someone on the network so there is a new block created about every 18 seconds.
 
-- *Last Attempted Proof* : This is important. There are 5 lines. Currently if you have 157 plots – so each of the lines read  0/157.
-On every signage point (9 seconds), all of your plots are checked to see which ones passes the [plot filter](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Approximately 1/512 of all plots will pass the plot filter for each challenge, so here you can see how many of your plots passed. If a plot is selected or a 2nd plot is selected that is good news and the number changes to 1/157 or 2/157 maybe 3/157. However a plot passing the plot filter does not mean that you have won a block. After passing the filter, each plot will go through a "quality lookup", which does approximately 7 reads on your plot, and tells you whether the plots have won. Winning is very rare, and on average one person wins in the whole world, every 18 seconds. If you won, the whole plot is looked up on disk, and you will see the chia farmed on the Wallet screen. However there are 4,608 chances to win 2 chia every day.
+- *Last Attempted Proof* :This is important.  It is a 2 step process. (Step 1) plot passes filter test.  (Step 2)- Selected Plot is checked for winning hash.  So as an example- your system is running--  There are 5 lines if you have 157 plots – each of the 5 lines read   0/157. If a plot is selected or a 2nd plot is selected that is good news and the number changes to 1/157 or 2/157 maybe 3/157. After passing the filter, each selected plot will go through a "quality lookup", which does approximately 7 reads on your plot, and tells you whether the plots have won.  If you won, it does not show any indication as the transaction is done quickly.  Your wallet increases.
 
-Once that match shows on the first line, it will move down to lines 2-5 , as the blockchain moves. If for some reason those lines stop moving that is another indication you are not in sync with database and need to resync—see below.
+Once that match shows on the first line, it will move down to lines 2-5, then if another plot passes step 1, it starts at the top also, amd moves its way done the filter process. 
+
+Winning is very rare, and on average one person wins in the whole world, every 18 seconds.  On every signage point (9 seconds), all of your plots are checked to see which ones passes the [plot filter].   (https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it). Approximately 1/512 of all plots will pass the plot filter for each challenge, so here you can see how many of your plots passed.  However there are 4,608 chances to win 2 chia every day.
+
+If for some reason those lines stop moving that is another indication you are not in sync with database and need to resync—see below.
 
 ## Create a plot
 
@@ -95,7 +104,7 @@ Phases:
 
 Notes-
 The suggestion is to use an added SSD or NVME storage to create plots and not the primary hard drive (specially for non replaceable NVME like on some Macs or Windows Laptops)
-If for some reason a plot fails to complete it has to be deleted by deleting all of its temp files. Be careful that you don't delete the temp files of another plot that's being plotted.
+If for some reason a plot fails to complete-  it has to be deleted by deleting all of its temp files. Be careful that you don't delete the temp files of another plot that's being plotted.
 
 # Glossary
 
@@ -144,13 +153,17 @@ Can I use USB 3.0  cable connected to SSD/NVME running the Temp files.  Answer- 
 
 Once a hash is used from a plot-- does it need to be deleted.  Answer-- no-- an example is , a plot has 300,000 hashes that the user created.  If one is used, there are enough to last an estimated 5 years. 
 
+Farmer vs Harvester: Harvester checks the plots and reports the results to the farmer, farmer then submits the results to the blockchain
+
 ### New version RC4
 
 The new RC4 version is a new blockchain-- prior coins are erased.  It's all test chia coins right now anyway.   It may take 4-10 hrs to sync-- just let it run-- there may be multiple other revisions coming example 1 per week until final.  When RC4 is loaded-- a new feature is that it waits to download a large file from other PC's then starts to sync-- so that is why the sync will take some time.
 
 ### Peak Blockchain and checking if Chia is in sync
 
-*The chia blockchain software* : Every user has copy of the blockchain on their PC and the goal is that everyone is in sync or very close. Click on the Full Mode tab. If the time and date is off by 30 minutes then the software is not synced to blockchain or others.  Multiple ways to check-- on Full node -- look at peak height and date/time--- then go below and look at connections and your peak should match the other computers.   Also the peak should be close when you click on wallet tab with that wallet peak number. The wallet peak number sometimes is off by 10 numbers. If off by several hundred its not in sync. On the GUI-- on the top menu bar -- click on View then Force Reload. It will take about 5-10 minutes.  It will not affect your plotting.
+*The chia blockchain software* : Every user has copy of the blockchain on their PC and the goal is that everyone is in sync or very close. Click on the Full Mode tab, scroll down to see the connected Nodes/ PC.    If the time and date is off by 30 minutes then the software is not synced to blockchain or others.  Multiple ways to check-- on Full node -- look at peak height and date/time--- then go below and look at connections and your peak should match the other computers.   Also the peak should be close when you click on wallet tab with that wallet peak number. The wallet peak number sometimes is off by 10 numbers. If off by several hundred its not in sync. 
+
+On the GUI-- on the top menu bar -- click on View then Force Reload. It will take about 5-10 minutes, to re-sync.  Your keys will come up again to click to enter Chia.    It will not affect your plotting.
 
 Everyone is very helpful to answer questions. The group does ask for questions to be in the selected chat room. Beginner questions in Beginner etc.
 
