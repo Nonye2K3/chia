@@ -71,8 +71,8 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
 ```bash
 # Request
 
-curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
---key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}'\
+curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt \
+--key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}'\
 -H "Content-Type: application/json" -X POST https://localhost:9256/get_next_address | python -m json.tool
 
 # Response
@@ -88,8 +88,8 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
 ```bash
 # Request
 
-curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
---key ~/.chia/testnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1}' \
+curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt \
+--key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1}' \
 -H "Content-Type: application/json" -X POST https://localhost:9256/get_wallet_balance | python -m json.tool
 
 # Response
@@ -188,7 +188,7 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
 > Params
 > ```
 > older_block_header_hash: the start header hash
-> newer_block_headre_hash: the end header hash
+> newer_block_header_hash: the end header hash
 > ```
 > Response
 > ```json
@@ -202,7 +202,7 @@ curl --insecure --cert ~/.chia/testnet/config/ssl/wallet/private_wallet.crt \
 > Params
 > ```
 > header_hash: header hash of the block
-> newer_block_headre_hash: the end header hash
+> newer_block_header_hash: the end header hash
 > ```
 > Response
 > ```json
