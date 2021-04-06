@@ -93,6 +93,10 @@ First, running more than one node with the same private keys on your home networ
 
 If your node has no connections, it could be one of many reasons. You might need to disable upnp in the config file (~/.chia/VERSION/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
 
+## I am seeing blocks and connections but my node says "Not Synced"
+This is usually a system clock issue, which is causing the display of "Not synced", even though you are. Your clock must be set to the exact time, and cannot be more than 5 minutes off. Check your phone and your computer and ensure the time is the same.
+
+
 # Farming
 
 ## How do I tell if I'm farming correctly?
@@ -122,6 +126,7 @@ Not yet. Currently the plots you generate are plotted to your own self pool key.
 
 There is a possible attack where an attacker who can co-ordinate N deep from the tip of the chain can try to coerce a winning farmer to re-write a historical transaction block. This attack is much more difficult and thus less of a risk in new consensus and thus we only recommend deleting and re-plotting a plot to farmers with in excess of 1PB of farm size. Anyone smaller than that would be difficult for an attacker to locate and can more safely continue to farm plots that have already won. We plan to have the software automate the process up to and including kicking off a remote plotting process if the current hardware that a farmer or harvester are on is not up to the task of re-plotting. But to repeat, deleting winning plots is, and will always be, totally optional.
 
+
 # Wallet
 
 ## How do I send or receive a transaction?
@@ -137,6 +142,14 @@ HD or Hierarchical Deterministic keys are a type of public key/private key schem
 ## How many confirmations do I need to trust a chia transaction is final?
 
 The new consensus uses correlated randomness (an idea introduced in [Proof-of-Stake Longest Chain Protocols: Security vs Predictability](http://tselab.stanford.edu/downloads/PoS_LC_SBC2020.pdf)) to prevent double dipping, and this converges much faster than a chain like Bitcoin. unless there is an attack or network split there is never a reorg. One still needs to wait for more than 6 blocks to get comparable confidence as one would get in Bitcoin for 6 blocks because in Chia the transactions are somewhat decoupled from the proofs (to prevent grinding), and as a consequence the farmers who contributed the x last blocks can collude to rewrite the transactions of the last x blocks. So you should wait for some x blocks, where x is large enough so you're confident that *at least one* of the x (randomly chosen) farmers who contributed the last x blocks will not collude (i.e., be malicious or get bribed). As this is a different type of attack as the one used to justify the 6 blocks Bitcoin rule, one can not just give a number that would correspond to the same confidence in Chia, but the 32 blocks (approx. 10 minutes) suggested in the current [new consensus document](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit) (the "Farmer bribe foliage reorg attack " section on page 23) seems conservative.
+
+## Why is my wallet not synced? Why can I not connect to wallet from the GUI?
+In these cases, your wallet database might be corrupt. Try the following steps:
+1. Shut down chia and all chia proceses, check the task manager to see if they are all shut down. Note that this will cancel running plots, so be careful.
+2. Restart your computer
+3. Delete the ~/.chia/mainnet/wallet/db folder
+4. Restart chia
+
 
 # Support/Miscellaneous
 
