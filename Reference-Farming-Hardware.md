@@ -10,7 +10,7 @@ Here a build from early community user that houses 32 drives farming off a [Rock
 
 Parts list (pricing changes constantly):
 * 32x Hard drives, different sizes and models from sizes 3 to 16 TB
-* 32x USB3/SATA PCB boards, a) reused from shucked drives, b) [replacement USB3/SATA PCB ordered online](https://www.ebay.com/itm/SEAGATE-Expansion-STEB8000100-ASM1153-94V-0-PCB-Sata-USB-Replacement-Board/293098894236)
+* 32x USB3/SATA PCB boards, a) re-used from shucked drives, b) [replacement USB3/SATA PCB ordered online](https://www.ebay.com/itm/SEAGATE-Expansion-STEB8000100-ASM1153-94V-0-PCB-Sata-USB-Replacement-Board/293098894236)
 * 1x [MEAN WELL RSP-500-12 DC Power Supply 500W/12V/42A](https://www.amazon.com/gp/product/B085G65K3Y), $85
 * 1x [Replacement Power Cable, 3 Pin Connector](https://www.amazon.com/gp/product/B0000510ZO), $4 (PSU does not come with it)
 * 2x [Sabrent 16-Port USB 3.0 Data HUB](https://www.amazon.com/gp/product/B07KHRLSTT), $69
