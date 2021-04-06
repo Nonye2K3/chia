@@ -9,6 +9,8 @@ There are many unique DIY builds in the farming hardware channel that find uniqu
 Here a build from early community user that houses 32 drives farming off a [RockPi4](https://rockpi.org/rockpi4) and [Sabrent USB hubs](https://www.amazon.com/dp/B07KHRLSTT/ref=cm_sw_r_cp_awdb_imm_t1_1DEK038PXEQEHDMAR6F8) for an average power consumption of ~250W & ~5.6kWh per day (last 30 days) - easily making it one of the most power-efficient farms built so far!
 
 Parts list (pricing changes constantly):
+* 32x Hard drives, different sizes and models from sizes 3 to 16 TB
+* 32x USB3/SATA PCB boards, a) reused from shucked drives, b) [replacement USB3/SATA PCB ordered online](https://www.ebay.com/itm/SEAGATE-Expansion-STEB8000100-ASM1153-94V-0-PCB-Sata-USB-Replacement-Board/293098894236)
 * 1x [MEAN WELL RSP-500-12 DC Power Supply 500W/12V/42A](https://www.amazon.com/gp/product/B085G65K3Y), $85
 * 1x [Replacement Power Cable, 3 Pin Connector](https://www.amazon.com/gp/product/B0000510ZO), $4 (PSU does not come with it)
 * 2x [Sabrent 16-Port USB 3.0 Data HUB](https://www.amazon.com/gp/product/B07KHRLSTT), $69
@@ -22,7 +24,7 @@ Parts list (pricing changes constantly):
 * 1x and optional [Kasa Smart HS300 Plug Power Strip](https://www.amazon.com/gp/product/B07G95FFN3), $69 (this can be used to monitor power consumption and control power remotely via smart phone)
 
 (approx. $179.02 US for 2 Rock PI 4 & matching heat sink tax/shipping included)
-Total: ~ $350 US (hard drives not included : -) 
+Total: ~ $350 US (hard drives and UB3/SATA PCB not included : -) 
 
 (approx. 240W for 16x 3T HDD + 16x 10-16T HDD, less than 1W per TB, can be much improved when 3T HDD are replaced with larger drives)
 
