@@ -21,7 +21,7 @@ Parts list (prices change constantly):
 * 2x [Single Shelf Upright](https://www.homedepot.com/p/Rubbermaid-68-in-Single-Track-Upright-for-Wood-or-Wire-Shelving-FG4A7501UTLTY/100133076), $8
 * a handful of metal screws and nuts
 * 1x [Rock Pi 4A 4GB](https://shop.allnetchina.cn/products/rock-pi-4-model-a-board-only-no-wlan-bluetooth-poe?variant=15971694084198), $65
-* 1x [Aluminum Heat Sink for Rock Pi 4](https://shop.allnetchina.cn/collections/frontpage/products/heat-sink-for-rock-pi-x), $8
+* 1x [Aluminum Heat Sink for Rock Pi 4](https://shop.allnetchina.cn/products/heatsink-for-rock-pi-4), $8
 * 1x and optional [Kasa Smart HS300 Plug Power Strip](https://www.amazon.com/gp/product/B07G95FFN3), $69 (this can be used to monitor power consumption and control power remotely via smart phone)
 
 (approx. $179.02 US for 2 Rock PI 4 & matching heat sink tax/shipping included)
