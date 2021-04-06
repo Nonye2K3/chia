@@ -22,7 +22,7 @@ Then for each harvester, follow these steps:
 2. Shut down all chia daemon processes with `chia stop all -d`
 3. Make a backup of any settings in your harvester
 4. Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory. This command creates a new certificate signed by your **main** machine's CA.
-5. Open the `~/.chia/beta-1.0bx/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote **`harvester`**'s farmer_peer section (NOT `full_node`).  
+5. Open the `~/.chia/mainnet/config/config.yaml` file in each harvester, and enter your main machine's IP address in the remote **`harvester`**'s farmer_peer section (NOT `full_node`).  
 EX:
 ``` 
 harvester:
