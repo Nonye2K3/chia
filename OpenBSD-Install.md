@@ -1,4 +1,6 @@
-# Install Chia 1.0.1 on OpenBSD 6.8 amd64
+# Install Chia on OpenBSD
+
+(_tested with Chia 1.0.1 on OpenBSD/amd64 6.8_)
 
 ```sh
 # install required packages
@@ -12,8 +14,8 @@ cd
 
 # clone repos
 git clone https://github.com/Chia-Network/chia-blockchain.git --branch latest
-git clone https://github.com/Chia-Network/chiapos.git --branch byteswap # XXX might be merged into main
-git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd
+git clone https://github.com/timkuijsten/chiapos.git --branch openbsd # chiapos/pull/183
+git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd # chiavdf/pull/71
 
 # maturin with patches for openbsd (by octeep)
 git clone https://github.com/timkuijsten/maturin.git
@@ -75,7 +77,7 @@ More details can be found in the [Chia Quick Start Guide](https://github.com/Chi
 
 # GUI Build / Usage
 
-*WARNING: the following has only been tested with OpenBSD 6.7*
+*WARNING: the following has only been tested with Chia 1.0beta7 on OpenBSD/amd64 6.7*
 
 The build instructions in the previous sections above must be completed successfully before attempting to build the GUI using the procedure below.
 
