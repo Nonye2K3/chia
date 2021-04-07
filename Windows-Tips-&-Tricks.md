@@ -9,6 +9,7 @@ In Windows, you can use the chia cli from powershell, allowing you more flexibil
 ```
 
 If start-process doesn't work, try `.\chia.exe plots create yourParametersGoHere` instead.
+
 Or add the path "%USERPROFILE%\AppData\Local\chia-blockchain\app-1.0.3\resources\app.asar.unpacked\daemon" to the path user variable, this way you can
 execute chia commands, only using "chia" in a command window.
 
