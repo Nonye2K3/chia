@@ -1,4 +1,4 @@
-In Windows, you can use the chia cli from powershell, allowing you more flexibility and control. Powershell is a program where you type commands, press enter, and do things like changing folders, moving files, or running programs, like chia.
+In Windows, you can use the chia CLI from Windows PowerShell, allowing you more flexibility and control. PowerShell is a program where you type commands, press enter, and do things like changing folders, moving files, or running programs, like chia.
 
 # 1. Parallel plotting using PowerShell
 ```
@@ -8,10 +8,12 @@ In Windows, you can use the chia cli from powershell, allowing you more flexibil
     ....
 ```
 
-If start-process doesn't work, try `.\chia.exe plots create yourParametersGoHere` instead.
+If `start-process` doesn't work, try `.\chia.exe plots create yourParametersGoHere` instead.
 
-Or add the path "%USERPROFILE%\AppData\Local\chia-blockchain\app-1.0.3\resources\app.asar.unpacked\daemon" to the path user variable, this way you can
+Or add the path `"%USERPROFILE%\AppData\Local\chia-blockchain\app-1.0.3\resources\app.asar.unpacked\daemon"` to the path user variable, this way you can
 execute chia commands, only using "chia" in a command window.
+
+To add a delay between your parallel processes, you can put a `sleep <seconds>` between each `chia plots create` command, e.g. `sleep 3600` to delay the next process by an hour.
 
 ### A specific example:
 ```
@@ -24,7 +26,7 @@ The command above makes one plot (specified by `-n 1`), to plot in parallel you 
 Your configuration and logs are found in `~\.chia\mainnet\log` and `~\.chia\mainnet\config`. You can tail your logs with `Get-Content ~\.chia\mainnet\log\debug.log -wait`. To see more of what is going on, set your log level in `config\config.yaml` to INFO from WARNING and restart. You can also use `\.chia.exe configure --set-log-level INFO` from the app directory outlined above and then restart for the changes to take effect.
 
 # 3. Windows (auto) Update can be a pain
-Consider going through a Windows Update check and install updates prior to starting a plot process. It can take a while, and updates might initiate a reboot.
+Consider going through a Windows Update check and install updates prior to starting a plot process. It can take a while, and updates might initiate a reboot. You can also go into Advanced Options to disable updates for up to 35 days at a time.
 
 # 4. Disable uPnP when running multiple nodes
 If you attempt to run more than one node on your local network, having uPnP on on both will cause both nodes significant confusion. You will need to use powershell to disable uPnP on all but one.
