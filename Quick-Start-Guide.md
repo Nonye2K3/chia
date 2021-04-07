@@ -113,5 +113,5 @@ in the router's configuration.
 
 # RPC Interface
 
-The Node has an RPC Interface with [documentation](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Node-Interface).
+The Node has an RPC Interface with [documentation](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces).
 
