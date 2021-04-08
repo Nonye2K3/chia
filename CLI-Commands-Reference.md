@@ -122,7 +122,7 @@ For more detail, you can read about the DiskProver commands in [chiapos](https:/
 **What does the ratio of full proofs vs expected proofs mean?**
 * If the ratio is >1, your plot was relatively lucky for this run of challenges.
 * If the ratio is <1, your plot was relatively unlucky.
-    * This shouldn't really concern you unless your ratio is <0.70
+    * This shouldn't really concern you unless your ratio is <0.70 # If so, do a more thorough `chia plots check`
 
 In theory, a plot with a ratio >> 1 would be more likely to win challenges on the blockchain. Likewise, a plot with a ratio << 1 would be less likely to win. However, in practice, this isn't actually going to be noticeable. "Number of plots" and "k-size" are much more influential factors at winning blocks than "proofs produced per challenge". Therefore, don't worry if your plot check ratios are less than 1, unless they're _significantly_ less than 1.
 
