@@ -176,6 +176,8 @@ Total iterations since the start of the blockchain: 63291534050
 
 ```
 
+You can add and remove directories for your plots with `chia plots add -d 'your_dir'` or `chia plots remove -d 'your_dir'`, help can be found for respective add/remove with `chia plots add/remove -h`
+
 You can check contents of your wallet with: `chia wallet`, and status of your farmer with `chia farm summary`.
 
 Check harvester and farmer logs: `grep ~/.chia/mainnet/log/debug.log -e harvester`
@@ -187,5 +189,6 @@ Check harvester and farmer logs: `grep ~/.chia/mainnet/log/debug.log -e harveste
 17:08:03.227 harvester src.plotting.plot_tools : INFO     Found plot /home/user/slab1/plots/plot-k32-2021-01-11-17-26-bf2363828e469a3417b89eb98cfa9d694809e1ce8bef0ffd1d12853d4227aa0a.plot of size 32
 17:08:03.227 harvester src.plotting.plot_tools : INFO     Loaded a total of 1 plots of size 0.09895819725716137 TiB
 ```
+
 
 Maybe follow logs: `tail -F ~/.chia/mainnet/log/debug.log`. Chia is nice enough to rotate logs for you.
