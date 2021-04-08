@@ -89,7 +89,7 @@ Example 2 below will create a k34 plot and use 8GB of memory, 2 threads and 64 b
 
 Command: `chia plots check -n [num checks] -l -g [substring]`
 
-First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`.
+First, this looks in all plot directories from your config.yaml. You can check those directories with `chia plots show`. This command will check whether plots are valid given the plot's associated keys and your machine's stored Chia keys, as well as test the plot with challenges to identify found plots vs. expected number of plots.
 
 `-g` check only plots with directory or file name containing case-sensitive [substring].
 **If `-g` isn't specified all plots in every plot directory in your config.yaml will be checked.**
@@ -122,9 +122,11 @@ For more detail, you can read about the DiskProver commands in [chiapos](https:/
 **What does the ratio of full proofs vs expected proofs mean?**
 * If the ratio is >1, your plot was relatively lucky for this run of challenges.
 * If the ratio is <1, your plot was relatively unlucky.
-    * This shouldn't really concern you unless your ratio is <0.70 # If so, do a more thorough `chia plots check`
+    * This shouldn't really concern you unless your ratio is <0.70 # If so, do a more thorough `chia plots check` by increasing your `-n` 
 
-In theory, a plot with a ratio >> 1 would be more likely to win challenges on the blockchain. Likewise, a plot with a ratio << 1 would be less likely to win. However, in practice, this isn't actually going to be noticeable. "Number of plots" and "k-size" are much more influential factors at winning blocks than "proofs produced per challenge". Therefore, don't worry if your plot check ratios are less than 1, unless they're _significantly_ less than 1.
+The plots check challenge is a static challenge. For example if you run a plots check 20 times, with 30 tries against the same file, it will produce the same result every time. So while you may see a plot ratio << 1 for a plot check with `x` number of tries, it does not mean that the plot itself is worthless. It just means that given these static challenges, the plot is producing however many proofs. As the number of tries (`-n`) increases, we would expect the ratio to not be << 1. Since Mainnet is live, and given that the blockchain has new challenges with every signage point - just because a plot is having a bad time with one specific challenge, does not mean it has the same results versus another challenge.  "Number of plots" and "k-size" are much more influential factors at winning blocks than "proofs produced per challenge". 
+
+**In theory**, a plot with a ratio >> 1 would be more likely to win challenges on the blockchain. Likewise, a plot with a ratio << 1 would be less likely to win. However, in practice, this isn't actually going to be noticeable.  Therefore, don't worry if your plot check ratios are less than 1, unless they're _significantly_ less than 1 for _many_ `-n`. 
 
 
 # Other commands (not yet documented)
