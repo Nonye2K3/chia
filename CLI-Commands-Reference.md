@@ -4,6 +4,29 @@ This is not meant to be comprehensive, because often the `-h` text is clear enou
 
 As with the rest of this project, this doc is a work-in-progress. Feel free to browse the [source code](https://github.com/Chia-Network/chia-blockchain/tree/master/src/cmds) or the [Chia Proof of Space Construction Document](https://www.chia.net/assets/Chia_Proof_of_Space_Construction_v1.1.pdf) for more insight in the meantime.
 
+# Locate the `chia` binary executable
+
+## Mac
+
+If you installed `Chia.app` in your `/Applications` directory, you can find the `chia` binary at `/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon/chia`.
+
+Do a sanity check in `Terminal.app` with
+
+`/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon/chia -h`
+
+You can use that if you augment your `PATH` with
+
+`
+PATH=/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon:$PATH
+`
+
+and then `chia -h` should work.
+
+
+## Windows
+
+There is more than one `chia.exe` binary. If the one you try doesn't seem to work, keep looking and try another. (And if you find the right one, clarify this wiki page.)
+
 # [init](https://github.com/Chia-Network/chia-blockchain/blob/master/src/cmds/init.py)
 
 Command: `chia init`
