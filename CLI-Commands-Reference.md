@@ -25,7 +25,11 @@ and then `chia -h` should work.
 
 ## Windows
 
-There is more than one `chia.exe` binary. If the one you try doesn't seem to work, keep looking and try another. (And if you find the right one, clarify this wiki page.)
+There is more than one `chia.exe` binary; the GUI is `Chia.exe` (two of these!) and the CLI is `chia.exe`. They are found in different places. Note the big C versus the little c.
+
+The CLI one is the one referred to in this document, and for version 1.0.3 it can be found at
+
+`~\AppData\Local\chia-blockchain\app-1.0.3\resources\app.asar.unpacked\daemon\chia.exe`
 
 # [init](https://github.com/Chia-Network/chia-blockchain/blob/master/src/cmds/init.py)
 
