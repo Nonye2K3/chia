@@ -72,6 +72,8 @@ sh install.sh
 
 . ./activate
 
+# The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
+
 sh install-gui.sh
 
 cd chia-blockchain-gui
@@ -94,6 +96,8 @@ sh install.sh
 . ./activate
 
 chia init
+
+# The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
 
 sh install-gui.sh
 
@@ -136,7 +140,8 @@ cd chia-blockchain
 sh install.sh
 . ./activate
 
-# gui
+# The GUI requires a windowing system to be installed.
+
 sh install-gui.sh
 cd chia-blockchain-gui
 npm run build
