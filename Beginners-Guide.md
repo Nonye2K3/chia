@@ -168,20 +168,58 @@ On the GUI-- on the top menu bar -- click on View then Force Reload. It will tak
 ### How to tell if Chia is working on Windows GUI
 
 When you are first operating Chia and wondering if the software is working- here is some infomation to keep you informed.  
-All of the chia programming is in a file called config.yaml
-
-its located in c:/Users/ (Your username)/.chia/mainnet/config.yaml
+All of the chia programming is in a file called config.yaml.   Located in c:/Users/ (Your username)/.chia/mainnet/config.yaml
 
 Shut down Chia software before config access.
-Open Config with notepad.  In the middle will see    * log_level: WARNING * change wording of WARNING to INFO. 
+Open Config with notepad.  In the middle  * log_level: WARNING * change wording of WARNING to INFO. 
  Save File and exit.  Start up Chia-- give it 20 minutes to run
 
-Now you can access the log files and read activity.  Its located in c:/Users/ (Your username)/.chia/mainnet/log/debug.log
-Now Chia will create info in these log files you can read them while Chia is running. They are very informative.  Once a log filles to 20mb another is created.  If there are too many you can delete some of them
+Can access the log files and read activity, while Chia is running.  Its located in c:/Users/ (Your username)/.chia/mainnet/log/debug.log
+Log files  are very informative.  Once a log fills to 20mb another is created.  If there are too many you can delete some of them.
+
 Inside what you are looking for are these lines
 *07:02:41.663 harvester src.harvester.harvester : INFO     1 plots were eligible for farming f53c496e80... Found 0 proofs. Time: 0.00500 s. Total 8 plots*
 
-This means Chia is working--  The filter system is 2 parts.  Chia found that 1 plot passed the (1st) part, now it looks inside to determine if a pre-formulated "proof" will be able to do a transaction in fastest time (2-3 seconds) if it secures one in your plot then you win 1 proof means you won a coin.  Many times it will say 0 proofs.  But it shows its working.  This is where luck/time comes into play.   
+This means Chia is working--  The filter system is 2 parts.  Chia found that 1 plot passed the (1st) part, now it looks inside to determine if a pre-formulated "proof" will be able to do a transaction in fastest time (2-3 seconds) if it secures one in your plot then you win 1 proof means you won a coin.  Many times it will say 0 proofs.  But it shows its working.  This is where luck/time comes into play.   At the end of that line it will indicate how many plots the software registers.
+
+What is normal information in a log file
+
+Below is a copy of normal information froma  log file
+9:32:00.322 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer 68b376e5846696df3510822ea527d0899ac6183f261e8858119235cd24903720 193.91.103.92
+09:32:00.328 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer fe01c23f7db38afed341a337c0ba9a29e14d9cb17d55afab0ef61497d1f7fd18 98.216.156.73
+09:32:00.334 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer 1791400606ab6531cca3086117da6de9117b83c87b5c3b38ffe411479e2db468 167.86.94.187
+09:32:00.341 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06 74.138.106.114
+09:32:00.347 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer 47cc583ec012d7862c56256ec794fd42d2872a6be5e9388dd60bfe8bccaff37d 135.180.64.15
+09:32:00.353 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer da78f533987ca8d50681f2789fa55892b6783bec3851ad38b99d8c0bafc08dad 104.220.180.24
+09:32:00.360 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer cc1a4a564847cdd7b56ca97d5022c63d529c889ee1679667a9fdbbac6b7ea664 94.248.116.251
+09:32:00.366 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer c414c88c3cd8ed448618ca7f9e3ddd6686cf4ead1576e4cb8ecb1bb52fc16cb0 218.69.107.66
+09:32:00.372 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer e1a3741a05a30f532dc2f9f7390b9e4a94449951743c4a42e03c41bd58794639 73.76.164.181
+09:32:00.378 full_node full_node_server        : INFO     <- respond_signage_point from peer ac40320fd24cd19c3968d7f7b6f31de42e7a782c26c78a3aeb8c3a1444732e88 146.200.45.157
+09:32:00.385 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24 202.185.44.200
+09:32:00.392 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer ac3a6b178355f8727498a3727f66d5244fbe9c0ddab7f5c901d5ac78c159bbe2 153.92.155.207
+09:32:00.400 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer 0167df1274553106733e32521edbd909d52ab2e56706e46f8fe0c35995641461 84.65.77.212
+09:32:00.407 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer f1dc8f6ac2ef27cc2b9054228007047069a2d8ced2b850977abe0f43b28f4e62 172.112.46.56
+09:32:00.278 farmer farmer_server              : INFO     <- new_signage_point from peer 62d37909657e183dcd702b66d0e694474f907361f5981eceaba00878e84419c4 127.0.0.1
+09:32:01.790 full_node full_node_server        : INFO     <- respond_peers from peer c414c88c3cd8ed448618ca7f9e3ddd6686cf4ead1576e4cb8ecb1bb52fc16cb0 218.69.107.66
+09:32:01.799 full_node full_node_server        : INFO     -> respond_peers to peer 101.67.138.81 61af70170c5b4379836c996b4aec4813197c5db870ac77036ef103b861211de7
+09:32:01.806 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24
+09:32:02.056 full_node full_node_server        : INFO     <- respond_peers from peer c414c88c3cd8ed448618ca7f9e3ddd6686cf4ead1576e4cb8ecb1bb52fc16cb0 218.69.107.66
+09:32:02.066 full_node full_node_server        : INFO     -> respond_peers to peer 101.67.138.81 61af70170c5b4379836c996b4aec4813197c5db870ac77036ef103b861211de7
+09:32:02.074 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24
+09:32:02.648 full_node full_node_server        : INFO     <- respond_peers from peer c414c88c3cd8ed448618ca7f9e3ddd6686cf4ead1576e4cb8ecb1bb52fc16cb0 218.69.107.66
+09:32:02.657 full_node full_node_server        : INFO     -> respond_peers to peer 101.67.138.81 61af70170c5b4379836c996b4aec4813197c5db870ac77036ef103b861211de7
+09:32:02.664 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24
+09:32:08.054 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06 74.138.106.114
+09:32:08.063 full_node full_node_server        : INFO     -> request_signage_point_or_end_of_sub_slot to peer 74.138.106.114 b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06
+09:32:08.070 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer 32abac740b53745cd7a7279939774526d38821fdd87605334f77aaa7e8620d0b 100.2.150.244
+09:32:08.077 full_node full_node_server        : INFO     -> request_signage_point_or_end_of_sub_slot to peer 100.2.150.244 32abac740b53745cd7a7279939774526d38821fdd87605334f77aaa7e8620d0b
+09:32:08.099 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer e1a3741a05a30f532dc2f9f7390b9e4a94449951743c4a42e03c41bd58794639 73.76.164.181
+09:32:08.107 full_node full_node_server        : INFO     -> request_signage_point_or_end_of_sub_slot to peer 73.76.164.181 e1a3741a05a30f532dc2f9f7390b9e4a94449951743c4a42e03c41bd58794639
+09:32:08.115 full_node full_node_server        : INFO     <- respond_signage_point from peer 32abac740b53745cd7a7279939774526d38821fdd87605334f77aaa7e8620d0b 100.2.150.244
+09:32:08.202 harvester harvester_server        : INFO     <- new_signage_point_harvester from peer 5bfd9af9bc76270cf76746255db9a435dca56b9adb37f5d1daec71e3c699c807 192.168.0.44
+09:32:08.211 harvester src.harvester.harvester : INFO     0 plots were eligible for farming fec1fff66e... Found 0 proofs. Time: 0.00200 s. Total 8 plots
+
+the last line again shows at that current time of 09:32:08.211- that on this machine, of the 8 plots farming 0 plots were eligible.  It still means the software recoginzed the plots and its working.
 
 
 Everyone is very helpful to answer questions. The group does ask for questions to be in the selected chat room. Beginner questions in Beginner etc.
