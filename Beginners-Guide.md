@@ -165,5 +165,20 @@ The new RC4 version is a new blockchain-- prior coins are erased.  It's all test
 
 On the GUI-- on the top menu bar -- click on View then Force Reload. It will take about 5-10 minutes, to re-sync.  Your keys will come up again to click to enter Chia.    It will not affect your plotting.
 
+### How to tell if Chia is working on Windows GUI
+
+When you are first operating Chia and wondering if the software is working- here is some infomation to keep you informed
+All of the chia programming is in a file called config.yaml
+its located in c:/Users/ (Your username)/.chia/mainnet/config.yaml
+Shut down Chia software before config access
+Open Config with notepad.  In the middle will see     log_level: WARNING  change wording of WARNING to INFO.  Save File and exit.
+Start up Chia-- give it 20 minutes to run
+Now you can access the log files and read activity.  Its located in c:/Users/ (Your username)/.chia/mainnet/log/debug.log
+Now Chia will create info in these log files you can read them while Chia is running. They are very informative.  Once a log filles to 20mb another is created.  If there are too many you can delete some of them
+Inside what you are looking for are these lines
+07:02:41.663 harvester src.harvester.harvester : INFO     1 plots were eligible for farming f53c496e80... Found 0 proofs. Time: 0.00500 s. Total 8 plots
+This means Chia is working--  The filter system is 2 parts.  Chia found that 1 plot passed the (1st) part, now it looks inside to determine if a pre-formulated "proof" will be able to do a transaction in fastest time (2-3 seconds) if it secures one in your plot then you win 1 proof means you won a coin.  Many times it will say 0 proofs.  But it shows its working.  This is where luck/time comes into play.   
+
+
 Everyone is very helpful to answer questions. The group does ask for questions to be in the selected chat room. Beginner questions in Beginner etc.
 
