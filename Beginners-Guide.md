@@ -184,18 +184,16 @@ This means Chia is working--  The filter system is 2 parts.  Chia found that 1 p
 
 ### What is normal information in a log file
 
-Below is a copy of normal information froma  log file
-9:32:00.322 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer 68b376e5846696df3510822ea527d0899ac6183f261e8858119235cd24903720 193.91.103.92
-9:32:00.278 farmer farmer_server              : INFO     <- new_signage_point from peer 62d37909657e183dcd702b66d0e694474f907361f5981eceaba00878e84419c4 127.0.0.1
-09:32:01.790 full_node full_node_server        : INFO     <- respond_peers from peer c414c88c3cd8ed448618ca7f9e3ddd6686cf4ead1576e4cb8ecb1bb52fc16cb0 218.69.107.66
-09:32:01.799 full_node full_node_server        : INFO     -> respond_peers to peer 101.67.138.81 61af70170c5b4379836c996b4aec4813197c5db870ac77036ef103b861211de7
-09:32:01.806 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24
-09:32:02.056 full_node full_node_server        : INFO     <- respond_peers from peer c414c88c3cd8ed448618ca7f9e3ddd6686cf4ead1576e4cb8ecb1bb52fc16cb0 218.69.107.66
-09:32:02.664 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24
-09:32:08.054 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06 74.138.106.114
-09:32:08.063 full_node full_node_server        : INFO     -> request_signage_point_or_end_of_sub_slot to peer 74.138.106.114 b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06
-09:32:08.202 harvester harvester_server        : INFO     <- new_signage_point_harvester from peer 5bfd9af9bc76270cf76746255db9a435dca56b9adb37f5d1daec71e3c699c807 192.168.0.44
-09:32:08.211 harvester src.harvester.harvester : INFO     0 plots were eligible for farming fec1fff66e... Found 0 proofs. Time: 0.00200 s. Total 8 plots
+Below is a copy of normal information froma  log file.
+9:32:00.322 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer 68b376e5846696df3510822ea527d0899ac6183f261e8858119235cd24903720 193.91.103.92.
+9:32:00.278 farmer farmer_server              : INFO     <- new_signage_point from peer 62d37909657e183dcd702b66d0e694474f907361f5981eceaba00878e84419c4 127.0.0.1.
+09:32:01.806 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24.
+09:32:02.056 full_node full_node_server        : INFO     <- respond_peers from peer c414c88c3cd8ed448618ca7f9e3ddd6686cf4ead1576e4cb8ecb1bb52fc16cb0 218.69.107.66.
+09:32:02.664 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24.
+09:32:08.054 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06 74.138.106.114.
+09:32:08.063 full_node full_node_server        : INFO     -> request_signage_point_or_end_of_sub_slot to peer 74.138.106.114 b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06.
+09:32:08.202 harvester harvester_server        : INFO     <- new_signage_point_harvester from peer 5bfd9af9bc76270cf76746255db9a435dca56b9adb37f5d1daec71e3c699c807 192.168.0.44.
+09:32:08.211 harvester src.harvester.harvester : INFO     0 plots were eligible for farming fec1fff66e... Found 0 proofs. Time: 0.00200 s. Total 8 plots.
 
 The last line again shows at that current time of 09:32:08.211- that on this machine, of the 8 plots farming 0 plots were eligible.  It still means the software recoginzed the plots and its working.
 
