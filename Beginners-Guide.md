@@ -197,15 +197,6 @@ Below is a copy of normal information from a  log file. :
 *09:32:01.806 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24.*
 ***
 
-*09:32:02.056 full_node full_node_server        : INFO     <- respond_peers from peer c414c88c3cd8ed448618ca7f9e3ddd6686cf4ead1576e4cb8ecb1bb52fc16cb0 218.69.107.66.*
-***
-
-*09:32:02.664 full_node full_node_server        : INFO     -> respond_peers to peer 202.185.44.200 e5b7f06ba6ece8698917e0e22971aef8602972de81efe379d693b2baa0dffc24.*
-***
-
-*09:32:08.054 full_node full_node_server        : INFO     <- new_signage_point_or_end_of_sub_slot from peer b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06 74.138.106.114.*
-***
-
 *09:32:08.063 full_node full_node_server        : INFO     -> request_signage_point_or_end_of_sub_slot to peer 74.138.106.114 b567363c3a96c13366ef2dbff2e080da77f310875a8beda7c1c07246173c3a06.*
 ***
 
