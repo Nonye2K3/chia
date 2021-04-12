@@ -1,6 +1,6 @@
 # Install Chia on OpenBSD
 
-(_tested with Chia 1.0.1 on OpenBSD/amd64 6.8_)
+_Tested with Chia 1.0.4.dev27 (6d22878d) on OpenBSD/amd64 6.8_
 
 ```sh
 # install required packages
@@ -13,14 +13,12 @@ doas -u chia ksh -l
 cd
 
 # clone repos
-git clone https://github.com/Chia-Network/chia-blockchain.git --branch latest
-git clone https://github.com/timkuijsten/chiapos.git --branch openbsd # chiapos/pull/183
+git clone https://github.com/Chia-Network/chia-blockchain.git --branch v1.0.x
+git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.5
 git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd # chiavdf/pull/71
 
-# maturin with patches for openbsd (by octeep)
-git clone https://github.com/timkuijsten/maturin.git
-
-git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.4
+# need maturin >v0.10.2 with patches for openbsd (by octeep)
+git clone https://github.com/PyO3/maturin.git
 
 export BUILD_VDF_CLIENT=N
 
@@ -33,9 +31,6 @@ pip install --upgrade pip
 cd ../chiavdf/
 pip install .
 
-cd ../chiapos/
-pip install .
-
 cd ../maturin/
 # don't pass static compiler flags to the rust linker because that would cause
 # a core dump, possibly because of resource limits
@@ -46,18 +41,18 @@ cd ../clvm_rs/
 maturin develop --release
 
 # XXX should be a more elegant way...
-cp target/x86_64-unknown-openbsd/release/libclvm_rs.so ../chia-blockchain/clvm_rs.so
+cp target/release/libclvm_rs.so ../chia-blockchain/clvm_rs.so
 
 cd ../chia-blockchain/
 # use our previous compile results
 sed -i 's|"chiavdf==1.0.1"|"chiavdf==1.0.2.dev1"|' setup.py
-sed -i 's|"chiapos==0.9"|"chiapos==0.10.dev8"|' setup.py
+sed -i 's|"clvm_rs==0.1.4"|"clvm_rs==0.1.5"|' setup.py
 
 # use a hardcoded random secret so the software can run headless and without
 # user intervention
-sed -i 's|elif platform == "linux":|elif platform == "linux" or platform.startswith("openbsd"):|' src/util/keychain.py
+sed -i 's|elif platform == "linux":|elif platform == "linux" or platform.startswith("openbsd"):|' chia/util/keychain.py
 _keyring=$(dd status=none if=/dev/random bs=8 count=1 | od -H | tr -d ' ' | head -1 | cut -b8-25)
-sed -i 's|keyring.keyring_key = "your keyring password"|keyring.keyring_key = "'"$_keyring"'"|' src/util/keychain.py
+sed -i 's|keyring.keyring_key = "your keyring password"|keyring.keyring_key = "'"$_keyring"'"|' chia/util/keychain.py
 unset _keyring
 
 sh install.sh
