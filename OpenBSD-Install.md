@@ -14,7 +14,7 @@ cd
 
 # clone repos
 git clone https://github.com/Chia-Network/chia-blockchain.git --branch v1.0.x
-git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.5
+git clone https://github.com/Chia-Network/clvm_rs.git --branch 0.1.5
 git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd # chiavdf/pull/71
 
 # need maturin >v0.10.2 with patches for openbsd (by octeep)
