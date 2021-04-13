@@ -69,7 +69,8 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
             "reward_infusion_new_challenge": "0x6e5dcf6ae0ef350b38e02ab7f911f0834a76e87d5598a851afda9c967db47c65",
             "signage_point_index": 4,
             "sub_epoch_summary_included": null,
-            "sub_slot_iters": 121634816,
+            "sub_slot_iters": 1216371183532bff220ba46c268991a3ff07eb358e8255a65c30a2dce0e5fbb"
+        ],4816,
             "timestamp": 1618304972,
             "total_iters": 410719057740,
             "weight": 1511211
@@ -405,6 +406,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
 
 # 10. Get block record by height
 You can also query for the full block, or query for the block record by header hash instead (using the other RPCs).
+Block records are summaries of all the information about a block, and their use is recommended over full blocks most of the time.
 
 ```bash
 curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.crt --key ~/.chia/mainnet/config/ssl/full_node/private_full_node.key -d '{"height": 0}' -H "Content-Type: application/json" -X POST https://localhost:8555/get_block_record_by_height
@@ -451,6 +453,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
 ```
 
 ## 11. Get block
+Blocks contain much more data than block records, but are not as easy to use and might contain things that are not relevant, like VDF proofs, etc.
 
 ```bash
 curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.crt --key ~/.chia/mainnet/config/ssl/full_node/private_full_node.key -d '{"header_hash": "0xd780d22c7a87c9e01d98b49a0910f6701c3b95015741316b3fda042e5d7b81d2"}' -H "Content-Type: application/json" -X POST https://localhost:8555/get_block
