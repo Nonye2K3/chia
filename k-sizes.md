@@ -4,6 +4,8 @@ One exception is the final .plot size of k values. To get some insight into the 
 
 **k=32 is now the minimum plot size** that will be eligible for mainnet at the end of the year. [More here.](https://github.com/Chia-Network/chia-blockchain/discussions/452)
 
+The 1.0.4 release changes almost all of the information below for the better. This [blog post](https://chiadecentral.com/chia-plotting-improvements-in-version-1-04/) is a good overview until we can update this.
+
 # Storage requirements
 | K-size | Temp. Size | Final Size |
 |-----|-----|-----|
