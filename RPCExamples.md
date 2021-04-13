@@ -125,6 +125,8 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --ke
 
 
 ## 5. Generate and sign transaction
+Please see [this file](https://github.com/Chia-Network/chia-blockchain/blob/main/tests/wallet/rpc/test_wallet_rpc.py) if you want to see how to spend specific UTXOs (coins), provide a fee, pay to multiple addresses, etc.
+
 ```bash
 curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"additions": [{"amount": 10000000, "puzzle_hash": "3fa549a708302b401c45cf387f8f03b4f76b7c9eabf567bea974f61dedf721e0"}]}' -H "Content-Type: application/json" -X POST https://localhost:9256/create_signed_transaction
 
