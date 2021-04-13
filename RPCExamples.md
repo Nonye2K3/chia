@@ -2,7 +2,7 @@
 
 Here you can see more examples if common uses of the chia RPC. This focuses on uses for creating, submitting, and viewing transactions.
 To try them out, download chia at chia.net, and paste the commands into the command line.
-More details on other RPC apis are providec in the RPC documentation.
+More details on other RPC apis are providec in the [RPC Interfaces documentation](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces). 
 
 1. Get public keys
 2. Generate private key mnemonic
