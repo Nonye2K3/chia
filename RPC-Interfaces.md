@@ -34,7 +34,7 @@ For examples of usage, see the command line implementation (chia wallet, chia sh
 A javascript client can be found here: https://github.com/freddiecoleman/chia-client.
 
 # Some examples:
-
+More examples can be seen [here](https://github.com/Chia-Network/chia-blockchain/wiki/RPCExamples).
 ### Get blockchain state
 ```bash
 # Request
