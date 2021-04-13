@@ -157,7 +157,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.0.3
+pip install chia-blockchain==1.0.4
 
 ```
 
@@ -251,7 +251,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.0.3
+pip install chia-blockchain==1.0.4
 ```
 
 # Other install methods and environments
@@ -289,7 +289,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.0.3
+pip install chia-blockchain==1.0.4
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
