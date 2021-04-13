@@ -10,12 +10,13 @@ These are just a few examples, there are more things you can do that these.
 3. Generate private key mnemonic
 4. Add private key to wallet
 5. Get private key
-6. Generate and sign transaction
-7. Broadcast transaction
-8. Get mempool item by tx id
-9. Get coin record by id
-10. Get block record by height
-11. Get block
+6. Generate new address
+7. Generate and sign transaction
+8. Broadcast transaction
+9. Get mempool item by tx id
+10. Get coin record by id
+11. Get block record by height
+12. Get block
 
 ## 1. Get blockchain state
 ```bash
@@ -89,7 +90,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
 
 ```
 
-## 1. Get public keys
+## 2. Get public keys
 ```bash
 
 curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"":""}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_public_keys
@@ -105,7 +106,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --ke
 
 ```
 
-## 2. Generate private key mnemonic
+## 3. Generate private key mnemonic
 ```bash
 
 curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"":""}' -H "Content-Type: application/json" -X POST https://localhost:9256/generate_mnemonic
@@ -143,7 +144,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --ke
 }
 ```
 
-## 3. Add private key to wallet
+## 4. Add private key to wallet
 ```bash
 curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"mnemonic": [
         "consider",
@@ -181,7 +182,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --ke
 
 ```
 
-## 4. Get private key
+## 5. Get private key
 ```bash
 curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"fingerprint":3967641394}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_private_key
 
@@ -197,9 +198,20 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --ke
 }
 
 ```
+## 6. Generate new address
+Note that this is using HD wallets (child key) of one of the private keys you created. Use `log_in` to change private keys.
+```bash
+curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --key ~/.chia/mainnet/config/ssl/wallet/private_wallet.key -d '{"wallet_id": 1, "new_address":true}' -H "Content-Type: application/json" -X POST https://localhost:9256/get_next_address
 
+# Response 
+{
+    "address": "xch155596a60ua24z9a86evdupnput83aqk6shstww38h882u659rjksaq4vx5",
+    "success": true,
+    "wallet_id": 1
+}
+```
 
-## 5. Generate and sign transaction
+## 7. Generate and sign transaction
 Please see [this file](https://github.com/Chia-Network/chia-blockchain/blob/main/tests/wallet/rpc/test_wallet_rpc.py) if you want to see how to spend specific UTXOs (coins), provide a fee, pay to multiple addresses, etc.
 
 ```bash
@@ -260,7 +272,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --ke
 ```
 
 
-## 6. Broadcast transaction
+## 8. Broadcast transaction
 
 ```bash
 curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.crt --key ~/.chia/mainnet/config/ssl/full_node/private_full_node.key -d '{        "spend_bundle": {
@@ -283,7 +295,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
 {"status": "SUCCESS", "success": true}
 ```
 
-## 7. Get mempool item by tx id
+## 9. Get mempool item by tx id
 Note: this is referred to as "name" in the response for `create_signed_transaction`.
 
 ```bash
@@ -379,7 +391,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt --ke
 ```
 
 
-## 8. Get coin record by ID
+## 10. Get coin record by ID
 Use this with all created coins, to confirm that a transaction's outputs are all confirmed on the blockchain
 
 ```bash
@@ -404,7 +416,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
 
 ```
 
-# 10. Get block record by height
+# 11. Get block record by height
 You can also query for the full block, or query for the block record by header hash instead (using the other RPCs).
 Block records are summaries of all the information about a block, and their use is recommended over full blocks most of the time.
 
@@ -452,7 +464,7 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.cr
 
 ```
 
-## 11. Get block
+## 12. Get block
 Blocks contain much more data than block records, but are not as easy to use and might contain things that are not relevant, like VDF proofs, etc.
 
 ```bash
