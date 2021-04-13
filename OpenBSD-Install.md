@@ -13,7 +13,7 @@ doas -u chia ksh -l
 cd
 
 # clone repos
-git clone https://github.com/Chia-Network/chia-blockchain.git --branch v1.0.x
+git clone https://github.com/Chia-Network/chia-blockchain.git --branch latest
 git clone https://github.com/Chia-Network/clvm_rs.git --branch 0.1.5
 git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd # chiavdf/pull/71
 
@@ -65,7 +65,7 @@ chia keys generate
 # if you are going to setup port forwarding, disable upnp
 chia configure --enable-upnp false
 
-chia start node harvester farmer wallet
+chia start node wallet farmer harvester
 ```
 
 More details can be found in the [Chia Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide).
