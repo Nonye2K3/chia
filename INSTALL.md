@@ -161,6 +161,12 @@ pip install chia-blockchain==1.0.4
 
 ```
 
+Or, combining the last two steps into one, try
+
+```
+pip install --extra-index-url https://hosted.chia.net/simple/ chia-blockchain==1.0.4 miniupnpc==2.1
+```
+
 # WSL2
 
 You can run chia-blockchain in Ubuntu 20.04 LTS via WSL2 on Windows.
