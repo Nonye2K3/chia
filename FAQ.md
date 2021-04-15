@@ -95,6 +95,10 @@ First, running more than one node with the same private keys on your home networ
 
 If your node has no connections, it could be one of many reasons. You might need to disable upnp in the config file (~/.chia/VERSION/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
 
+You should also try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333. 
+
+It can take up to an hour to start receiving peers. If you are still not getting peers, you can try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`.
+
 ## I am seeing blocks and connections but my node says "Not Synced"
 This is usually a system clock issue, which is causing the display of "Not synced", even though you are. Your clock must be set to the exact time, and cannot be more than 5 minutes off. Check your phone and your computer and ensure the time is the same.
 
