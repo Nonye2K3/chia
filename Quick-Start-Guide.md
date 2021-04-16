@@ -8,6 +8,9 @@ If you are using the MacOS or Windows builds, your keys are created during the f
 
 Plots created with Beta 8 and newer version of the chia software will work on mainnet. The minimum plot size will be k=32.
 
+If you want more peers and better network connectivity, you should also try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333. This helps the network be more decentralized.
+
+
 ## Windows
 
 You can learn how to use the Graphical User Interface (GUI) in [Beginners Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide).
