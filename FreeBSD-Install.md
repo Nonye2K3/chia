@@ -13,7 +13,7 @@ If you had been using NFS or Samba sharing to expose your plots to a harvester o
 
 If you are using a fresh jail created by the FreeNAS web GUI you may need to install openssh and setup a ssh key to login as root because by default it appears PAM password logins do not work. The jail shell CLI provided by the FreeNAS GUI allows copy and pasting so you can easily paste your public-key into /root/.ssh/authorized_keys && chmod -R 700 /root/.ssh.
 
-These instructions would be applicable to 11.3 and 11.4 jails created within FreeNAS 11 only. Version 12 (FreeBSD 12) has not yet been tested.
+These instructions would be applicable to 11.3 and 11.4 jails created within FreeNAS 11 only. Version 12 (FreeBSD 12) ✔
 
 ## Other Notes
 
@@ -86,7 +86,7 @@ It's probably possible to build the libraries in a way that doesn't require `exp
 
 ```
 pkg install lang/rust
-pkg install lang/py37 py37-pip py37-setuptools py37-wheel py37-sqlite3 py37-cffi py37-virtualenv python
+pkg install lang/python37 py37-pip py37-setuptools py37-wheel py37-sqlite3 py37-cffi py37-virtualenv py37-maturin python 
 pkg install node npm git openssl
 ```
 
@@ -129,7 +129,6 @@ pip install --upgrade pip
 ```
 git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.4
 cd clvm_rs
-pip install maturin
 maturin develop --release
 pip install git+https://github.com/Chia-Network/clvm@use_clvm_rs
 ```
