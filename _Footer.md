@@ -1,0 +1,2 @@
+Patriot Viper VPN100 VPN100-2TBM28H
+SSD Samsung 980 NVMe M.2 MZ-V8V1T0BW 1 ТБ
