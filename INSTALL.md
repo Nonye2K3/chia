@@ -7,7 +7,7 @@ After installing, follow the remaining instructions in the [Quick Start Guide](h
 All keys and plots from version prior to Beta 8 (released July 16, 2020) are deprecated and can be deleted. Plots from both Beta 8 and newer should work on mainnet. 
 
 ## Minimum Specs
-The minimum supported specs are that of the Rasperry Pi 4:
+The minimum supported specs are that of the Raspberry Pi 4:
 * Quad core 1.5Ghz CPU
 * 2 GB Ram
 * Python 3.7 and above
