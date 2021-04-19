@@ -1,3 +1,5 @@
+Temporary Note: Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide to enable port forwarding on 8444 if you have trouble getting connections on your node.
+
 # Vocabulary
 
 ## What are harvesters, farmers, full nodes, and timelords?
@@ -91,13 +93,13 @@ Another option is port forwarding, where you tell your router/NAT to forward req
 
 First, running more than one node with the same private keys on your home network is wasting bandwidth by syncing two copies of the blockchain over your download link. You can get the same results by running one node and [using multiple harvesters](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines) on multiple computers. Second, if you have [uPnP](https://www.homenethowto.com/ports-and-nat/upnp-automatic-port-forward/) enabled on both nodes and your home router supports uPnP (and most do) it will cause both of your nodes to not sync the blockchain. You need to disable uPnP on all or all but one node behind a uPnP enabled router. The CLI command `chia configure --enable-upnp false` will turn uPnP off on a node. It requires a restart of the node to take effect. If you disable UPnP on all but one of your nodes then your local router will forward inbound 8444 traffic to the one node and the rest will now be able to connect to the network but just will not accept inbound connections from the network.
 
-## Why does my node have no connections?
+## Why does my node have no connections? How can I get more connections?
 
-If your node has no connections, it could be one of many reasons. You might need to disable upnp in the config file (~/.chia/VERSION/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
+If your node has no connections, it could be one of many reasons. The most likely is that there are no users with space to have new connections, so you cannot connect to anyone. To solve this, you should  try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333, and then check if it worked by using https://www.yougetsignal.com/tools/open-ports/ with 8444.
 
-You should also try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333.
+You might need to disable upnp in the config file (~/.chia/VERSION/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
 
-It can take up to an hour to start receiving peers. If you are still not getting peers, you can try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`, and make sure you have installed the latest version.
+It can take a few minutes to start receiving peers. If you are still not getting peers, you can try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`, and make sure you have installed the latest version.
 
 ## I am seeing blocks and connections but my node says "Not Synced"
 This is usually a system clock issue, which is causing the display of "Not synced", even though you are. Your clock must be set to the exact time, and cannot be more than 5 minutes off. Check your phone and your computer and ensure the time is the same.
