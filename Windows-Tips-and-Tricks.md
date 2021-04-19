@@ -43,7 +43,7 @@ Sometimes your wallet database can get corrupted. If you get stuck on the "Conne
 ### For version 1.0.x:
 ```
     cd ~\.chia\mainnet\wallet\db
-    del *.db
+    del *.sqlite
 ```
 
 # 6. Periodic pause during plotting (PowerShell)
