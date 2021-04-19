@@ -30,6 +30,16 @@ There has been at least one k=37 plotted using the Beta 17 plotter. It required 
 * [Beta 8 thru Beta 13](#Beta-8-thru-Beta-13)
 * [Beta 14 Data](#Beta-14-Data) 
 
+
+## k=38
+
+There has been at least one k=38 plotted on 1.0b18.dev831. 
+Approximate working space used (without final file): 21547.738GiB
+Final file size 7657.460 GiB
+Total time = 3986304.072 seconds. (1107.3 hrs) 2/23/21
+
+
+
 ## Beta 17 Data
 
 ### i7-9700K Desktop Windows
