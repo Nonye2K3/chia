@@ -7,7 +7,7 @@ Endurance is how much data can be written to the SSD before it wears out. In Chi
 A mixed use or high endurance data center or enterprise SSD is the best choice for plotting. Used SSDs with plenty of endurance can be found for a good value on eBay, Craigslist, or similar.
 
 Consumer NVMe SSDs are generally not recommended due to the lower endurance, and they often employ caching algorithms to faster media (SLC, or single level cell) for great bursty performance. They do not perform well under heavy workload sustained IO.
-There are very high performance consumer NVMe SSDs that will offer great plotting performance, but the lower rated endurance in TBW will result in a faster wearout.
+There are very high performance consumer NVMe SSDs that will offer great plotting performance, but the lower rated endurance in TBW will result in a faster wearout. more details about [buying SSD for Chia](https://chiadecentral.com/chia-blockchain-ssd-buying-guide/)
 
 working model can be found [here](https://drive.google.com/file/d/1mNUYRWeJUaijEZXupwP5k6IuATZGj1FB/view?usp=sharing)
 
