@@ -59,7 +59,7 @@ npm run electron &
 
 We have an [experimental GUI installer](https://download.chia.net/latest/x86_64-Ubuntu-gui) (x86_64) for Ubuntu 18.04 Desktop and newer and Debian Buster w GUI and newer. There is also an experimental [GUI installer for ARM64](https://download.chia.net/latest/ARM64-Ubuntu-gui) Ubuntu and Debian/Raspberry Pi OS 64. Binary CLI tools can be found in `/usr/lib/chia-blockchain/resources/app.asar.unpacked/daemon/`
 
-Follow below install instructions for Ubuntu 20.04 LTS. If you are installing on Ubuntu 18.04 LTS you should use Python 3.7 instead: `sudo apt-get install python3.7-venv python3.7-distutils git -y`
+Follow below install instructions for Ubuntu 20.04 LTS. If you are installing on Ubuntu 18.04 LTS you should use Python 3.7 instead: `sudo apt-get install python3.7-venv python3.7-distutils python3.7-dev git -y`
 ```bash
 sudo apt-get update
 sudo apt-get upgrade -y
