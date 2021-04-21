@@ -9,14 +9,14 @@ NEW
 
 Plotting can be done on consumer systems (laptops), but is much faster done on high-end desktops, workstations, and servers. Plotting takes scaling for CPU cores to improve the parallelism (this is -r number of threads, or number of parallel processes), scaling in DRAM per process, and fast SSDs or many small 10k hard drives for temporary storage space.
 
-each K=32 will require approximately 332GiB of temporary space, a minimum of 4500MB of DRAM, and at least a single CPU thread. For instance, a 1.6TB SSD would have 1.46TiB usable in the OS, could fit 4 k=32 in parallel (4*330 < 1490GiB), and would require 18GB of DDR4.
+The amount of DRAM and temp space changed in [1.0.4](https://chiadecentral.com/chia-plotting-improvements-in-version-1-04/). The new table below reflects the values in the GUI. You need at least one CPU core (but you can use r to increase thread count speeding up phase 1), and the DRAM and temp space below per plot. The easy math for a system is to take the number of cores and use that as the target for number of processes to run in parallel, the multiply the temp space and DRAM requirements by that to find the minimum amount.
 
-the actual amount of DRAM needed per K value and U value (buckets) based on b17 plotting in MB
-| U/K | 128    | 64     | 32     | 16      |
-|-----|--------|--------|--------|---------|
-| 32  | 4,508  | 9,241  | 18,945 | 38,837  |
-| 33  | 9,241  | 18,945 | 38,837 | 79,616  |
-| 34  | 18,945 | 38,837 | 79,616 | 163,212 |
+| K-value | DRAM (MiB) | Temp Space (GiB) | Temp Space (GB) |
+| ------- | ---------- | ---------------- | --------------- |
+| 32      | 3389       | 239              | 256.6           |
+| 33      | 7400       | 512              | 550             |
+| 34      | 14800      | 1041             | 1118            |
+| 35      | 29600      | 2175             | 2335            |
 
 
 The goal of a plotting machine is to create the highest TiB per day of plots, with the lowest system cost. There are many unique combinations of consumer, data center, and enterprise hardware at many different price points that are adequate for plotting. For SSDs, please see the https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance page
