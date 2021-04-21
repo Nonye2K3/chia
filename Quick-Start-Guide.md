@@ -23,7 +23,7 @@ You can start with the Command Line Interface (CLI) by checking the commands ava
 
 2. Change Directory `cd` 
 
-	On *PowerShell* type `cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.0.5\resources\app.asar.unpacked\daemon\` and press the enter key.
+	On *PowerShell* type `cd $env:localAPPDATA\Chia-Blockchain\app-1.0.5\resources\app.asar.unpacked\daemon\` and press the enter key.
 
 3. Read Chia help
 
