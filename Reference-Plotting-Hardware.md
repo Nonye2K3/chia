@@ -13,8 +13,8 @@ The amount of DRAM and temp space changed in [1.0.4](https://chiadecentral.com/c
 
 | K-value | DRAM (MiB) | Temp Space (GiB) | Temp Space (GB) |
 | ------- | ---------- | ---------------- | --------------- |
-| 32      | 3389       | 239              | 256.6           |
-| 33      | 7400       | 512              | 550             |
+| 32      | 3390       | 239              | 256.6           |
+| 33      | 7400       | 521              | 550             |
 | 34      | 14800      | 1041             | 1118            |
 | 35      | 29600      | 2175             | 2335            |
 
