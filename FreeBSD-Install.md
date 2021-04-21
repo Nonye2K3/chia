@@ -164,7 +164,7 @@ pip install git+https://github.com/Chia-Network/clvm@use_clvm_rs
 
 clvm_rs 0.1.6 is now installed in your virtual environment.
 
-###Install py-cryptography to the venv
+### Install py-cryptography to the venv
 
 Copy py-cryptography and its meta-data from the staging directory to your virtual environment:
 
