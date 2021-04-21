@@ -173,9 +173,9 @@ Using your favorite text editor, modify setup.py to edit the cryptography packag
 "cryptography==3.4.6" --> to --> "cryptography==3.3.2"
 ```
 
-Now you must modify src/util/keychain.py to provide a static key when using the Python keyring. This is mandatory otherwise every time the keyring is accessed your passphrase will need to be entered on the command line, and for the CLI daemon this will not do.
+Now you must modify chia/util/keychain.py to provide a static key when using the Python keyring. This is mandatory otherwise every time the keyring is accessed your passphrase will need to be entered on the command line, and for the CLI daemon this will not do.
 
-On line 25 of src/util/keychain.py, change:
+On line 25 of chia/util/keychain.py, change:
 
 ```
 elif platform=="linux":
