@@ -1,13 +1,20 @@
-# Building Chia from Source for FreeBSD 11
+# Building Chia from Source for FreeBSD
 
 _**Tested on FreeBSD 11.3- and 11.4-RELEASE**_
 
 ***
 
+## Upgrading Existing Chia Installs
+
+If you're upgrading from a previously built chia installation, exit from your previous venv environment (```deactivate```), create a new directory in which to place the latest Chia (e.g. ```mkdir ~/chia-1.0.5 && cd ~/chia-1.0.5```), clone the latest repo (```git clone https://github.com/Chia-Network/chia-blockchain.git -b latest```), enter it and create a new Python virtual environment within it (```python3 -m venv venv```). Now, activate the newest environment (```. venv/bin/activate```), upgrade pip (```pip install --upgrade pip```). Now you may skip down to the [clvm_rs install section](#clvm_rs) and begin there.
+
+***
+
+## Introduction
 
 Currently, the only way to ensure a FreeBSD build is to do it from source. By following these instructions to the letter, you should have no problem building the latest Chia from source on a FreeBSD 11.3 or 11.4. This should also work on FreeBSD 12, possibly with some modifications - for instance if the ports py-cryptography version is newer than 3.3.2, simply edit as needed - or if your preferred Python version is 3.8 or 3.9 I believe it should all still work considering you modify the package names as necessary.
 
-## FreeNAS / TrueNAS
+### Notes on FreeNAS (TrueNAS)
 
 If you had been using NFS or Samba sharing to expose your plots to a harvester on another OS, such as Linux, you can instead build Chia within a jail (see the FreeNAS manual for 'jails'), expose your plot directories to it and run the harvester within. In my experience, it provides lower-latency and more reliable access to the plots since the disks are direct-attached and not being provided through an extra few layers of network protocols.
 
@@ -15,7 +22,7 @@ If you are using a fresh jail created by the FreeNAS web GUI you may need to ins
 
 These instructions would be applicable to 11.3 and 11.4 jails created within FreeNAS 11 only. Version 12 (FreeBSD 12) ✔
 
-## Other Notes
+### Other Notes
 
 These instructions will have you building both chia-blockchain and clvm_rs from github source, and python-cryptography from FreeBSD's ports.
 
@@ -23,7 +30,7 @@ The result of this build will be the "chia version" showing the current release 
 
 _**These instructions assume a fresh FreeBSD 11 installation!**_
 
-## Discouraged?
+### Discouraged?
 
 Following the instructions in this document will result in a working Chia CLI build on FreeBSD 11 if you follow step-by-step starting from a vanilla FreeBSD installation. Is something broken? Compare the commands you typed, accessible in your **bash** shell history, and match them with each command in this document. If you feel you've messed something up, do the following:
 
@@ -32,7 +39,7 @@ Following the instructions in this document will result in a working Chia CLI bu
 deactivate
 # remove the chia-blockchain directory which will contain clvm_rs and the Python venv
 rm -rf chia-blockchain
-# ... now start again!
+# ... now start again! You don't need to do all the setup steps but instead may start at the upgrade notes above if you had finished up to the py-cryptography ports build.
 ```
 
 ### Pre-requisite package installation
@@ -124,17 +131,6 @@ Upgrade pip:
 pip install --upgrade pip
 ```
 
-### Building clvm_rs 0.1.4
-
-```
-git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.4
-cd clvm_rs
-maturin develop --release
-pip install git+https://github.com/Chia-Network/clvm@use_clvm_rs
-```
-
-clvm_rs 0.1.4 is now installed in your virtual environment.
-
 ### Building py-cryptography from ports
 
 _**You'll need to switch to root for this part.**_
@@ -148,11 +144,29 @@ echo "DEFAULT_VERSIONS+=ssl=openssl" >> /etc/make.conf
 make
 ```
 
-You'll probably see a bunch of warnings and notices; these are not errors and it will build. After it is done building, switch back to your non-root user (if you optioned so). Ensure you are in your venv after switching!
+You'll probably see a bunch of warnings and notices; these are not errors and it will build.
 
-We're going to do our own py-cryptography install since 'make install' does not copy to our venv. (If you know how to change this, please edit).
+Do NOT run make install. We will do our own py-cryptography install because 'make install' does not copy to our virtual environment. (If you know how to change this, please edit).
 
-Copy py-cryptography and its meta-data from the staging directory to your virtual environment.
+
+Once complete switch back to your non-root user if you so optioned. You must now be in your venv once again.
+
+### clvm_rs
+
+Build and install the current version of clvm_rs (0.1.6).
+
+```
+git clone http://github.com/Chia-Network/clvm_rs.git --branch 0.1.6
+cd clvm_rs
+maturin develop --release
+pip install git+https://github.com/Chia-Network/clvm@use_clvm_rs
+```
+
+clvm_rs 0.1.6 is now installed in your virtual environment.
+
+###Install py-cryptography to the venv
+
+Copy py-cryptography and its meta-data from the staging directory to your virtual environment:
 
 ```
 cp -R /usr/ports/security/py-cryptography/work-py37/stage/usr/local/lib/python3.7/site-packages/cryptography ${VIRTUAL_ENV}/lib/python3.7/site-packages/cryptography
