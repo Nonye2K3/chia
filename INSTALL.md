@@ -73,6 +73,7 @@ sh install.sh
 . ./activate
 
 # The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
+# You can not install and run the GUI as root
 
 sh install-gui.sh
 
@@ -98,6 +99,7 @@ sh install.sh
 chia init
 
 # The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
+# You can not install and run the GUI as root
 
 sh install-gui.sh
 
@@ -141,6 +143,7 @@ sh install.sh
 . ./activate
 
 # The GUI requires a windowing system to be installed.
+# You can not install and run the GUI as root
 
 sh install-gui.sh
 cd chia-blockchain-gui
