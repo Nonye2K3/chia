@@ -95,11 +95,19 @@ First, running more than one node with the same private keys on your home networ
 
 ## Why does my node have no connections? How can I get more connections?
 
-If your node has no connections, it could be one of many reasons. The most likely is that there are no users with space to have new connections, so you cannot connect to anyone. To solve this, you should  try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333, and then check if it worked by using https://www.yougetsignal.com/tools/open-ports/ with 8444.
+Step 1. If your node has no connections, it could be one of many reasons. The most likely is that there are no users with space to have new connections, so you cannot connect to anyone. To solve this, you should  try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333, and then check if it worked by using https://www.yougetsignal.com/tools/open-ports/ with 8444.
 
-You might need to disable upnp in the config file (~/.chia/VERSION/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
+Port 8444 is the port where other Chia computers can communicate into your pc, so that Chia can quickly talk to another verified PC and link up and start to download and sync with Chia blockchain and have the user's pc sync up.
+The network is under a heavy rapid growth / expansion. And many of the newly arrived Chia peers (computers) do not open up port 8444. It makes it very hard for the network, to help the other users sync.  Once your port is open, it will quickly sync with others.
 
-It can take a few minutes to start receiving peers. If you are still not getting peers, you can try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`, and make sure you have installed the latest version.
+**Detailed explanation** A regular pc can communicate out with endless ports-- if user is sending a signal out-- pc opens a port- signal goes out, pc closes the port. Chia uses port 8444 as instant communication. So an open port can allow instant communication and start the blockchain sync. Signal comes in on port 8444- that Chia pc is verified, then both user's pc, opens their own "communication ports ex port 8421" and that new user can now sync and now they are linked together forming part of Chia mesh.
+If the users port 8444 is closed, the users pc has to start sending multiple signals out and hope that a pc with open port 8444 will link with them, then the sync starts. (1) pc can only link up a few pc and with so many other chia users coming on board, they all have to wait. Keep in mind, Chia is built on a mesh network, the blockchain is shared among all the users, not from central pc.
+
+
+
+Step 2: You might need to disable upnp in the config file (~/.chia/VERSION/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
+
+Step 3: It can take a few minutes to start receiving peers. If you are still not getting peers, you can try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`, and make sure you have installed the latest version.
 
 ## I am seeing blocks and connections but my node says "Not Synced"
 This is usually a system clock issue, which is causing the display of "Not synced", even though you are. Your clock must be set to the exact time, and cannot be more than 5 minutes off. Check your phone and your computer and ensure the time is the same.
