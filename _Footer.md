@@ -1,1 +1,1 @@
-I use arch btw, this a footer btw too
+I use arch btw, this a footer btw too!
