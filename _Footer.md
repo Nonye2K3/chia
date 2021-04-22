@@ -1,1 +1,1 @@
-Install Gentoo
+I use arch btw, this a footer btw too
