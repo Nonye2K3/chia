@@ -1,1 +1,1 @@
-This is a footer
+Install Gentoo
