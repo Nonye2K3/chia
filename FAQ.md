@@ -105,9 +105,11 @@ If the users port 8444 is closed, the users pc has to start sending multiple sig
 
 
 
-Step 2: You might need to disable upnp in the config file (~/.chia/VERSION/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
+Step 2: You might need to disable upnp in the config file (~/.chia/mainnet/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
 
-Step 3: It can take a few minutes to start receiving peers. If you are still not getting peers, you can try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`, and make sure you have installed the latest version.
+Step 3: Try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`.
+
+Step 4: Edit `~/.chia/mainnet/config/config.yaml`, search for `weight_proof_timeout` and increase it from 180 to 400. It can take a few minutes to start receiving peers. Also make sure you have installed the latest version.
 
 ## I am seeing blocks and connections but my node says "Not Synced"
 This is usually a system clock issue, which is causing the display of "Not synced", even though you are. Your clock must be set to the exact time, and cannot be more than 5 minutes off. Check your phone and your computer and ensure the time is the same.
