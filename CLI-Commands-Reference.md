@@ -102,6 +102,11 @@ Example 2 below will create a k34 plot and use 8GB of memory, 2 threads and 64 b
 
 `chia plots create -k 34 -e -b 8000 -r 2 -u 64 -t /path/to/temporary/directory -d /path/to/final/directory`
 
+Example 3 below will create five k32 plots one at a time using 4GB (note - not GiB) of memory.
+
+`chia plots create -k 32 -b 4000 -t /path/to/temporary/directory -d /path/to/final/directory -n 5`
+
+
 **Additional Plotting Notes**
 
 * During plotting, Phase 1 (Forward Propagation) and Phase 3 (Compression) tend to take the most time. Therefore, to maximize plotting speed, `-t` and `-2` should be on your fastest drives, and `-d` can be on a slow drive.
