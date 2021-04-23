@@ -105,7 +105,7 @@ If the users port 8444 is closed, the users pc has to start sending multiple sig
 
 
 
-Step 2: You might need to disable upnp in the config file (~/.chia/mainnet/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia appliations on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
+Step 2: You might need to disable upnp in the config file (~/.chia/mainnet/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia applications on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
 
 Step 3: Try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`.
 
