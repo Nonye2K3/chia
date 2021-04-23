@@ -8,7 +8,7 @@ In Windows, you can use the chia CLI from Windows PowerShell, allowing you more 
     ....
 ```
 
-After version 1.1.0 it appears the new location for the Chia daemon is 
+In some instances it appears the Chia daemon is stored in the following directory. This may be either due to installing as Admin or after version 1.1.0 (to be determined). If you can't find the daemon above, try the path below.
 ```
     cd C:\ProgramData\yourUserName\chia-blockchain\app-1.1.0\resources\app.asar.unpacked\daemon\
 ```
