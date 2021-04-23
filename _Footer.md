@@ -1,1 +1,1 @@
-_[Chia Networks](https://chia.net/)_j
+_[Chia Networks](https://chia.net/)_ - The crypto of the future.
