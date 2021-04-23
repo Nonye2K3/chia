@@ -78,4 +78,8 @@ To know its working
 * On your main pc under Farm  tab- at the bottom select "Hide Advanced Options"- scroll down and " Your Harvester Network" wil now show (2) Node ID-- (1) your main pc and (2) your harvester
 * also under farm tab under "Last Attempted Proof" your qty of  plots on your harvester will also show up there
 
+**IMPORTANT**
+* Chia does upgrades- if you are finding your harvester is not sync with blockchain or wallet-- you may have to re-copy the CA files again from main pc
+* Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory and its network lcoation. This command creates a new certificate signed by your **main** machine's CA.
+
 If you want to see that its working in the logs-- go to beginner guide -- see on right side and it will have directions on how to turn on logs to see transactions
