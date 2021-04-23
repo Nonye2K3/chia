@@ -68,6 +68,7 @@ sudo apt-get upgrade -y
 git clone https://github.com/Chia-Network/chia-blockchain.git -b latest --recurse-submodules
 cd chia-blockchain
 
+chmod +x ./install.sh
 sh install.sh
 
 . ./activate
@@ -75,6 +76,7 @@ sh install.sh
 # The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
 # You can not install and run the GUI as root
 
+chmod +x ./install-gui.sh
 sh install-gui.sh
 
 cd chia-blockchain-gui
