@@ -1,5 +1,3 @@
-Temporary Note: Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide to enable port forwarding on 8444 (instead of 8333) if you have trouble getting connections on your node.
-
 # Vocabulary
 
 ## What are harvesters, farmers, full nodes, and timelords?
