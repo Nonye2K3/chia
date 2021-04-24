@@ -33,7 +33,7 @@ harvester:
     host: Main.Machine.IP
     port: 8447
 ```
-6. Launch the harvester by running CLI `chia start harvester` and you should see a new connection on your main machine in your INFO level logs.
+6. Launch the harvester by running CLI `chia start harvester -r` and you should see a new connection on your main machine in your INFO level logs.
 7. To stop the harvester, you run CLI `chia stop harvester`
 
 *Warning:*
