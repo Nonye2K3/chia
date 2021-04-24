@@ -1,1 +1,1 @@
-_[Chia Networks](https://chia.net/)_ - The crypto of the future.
+_[Chia Networks](https://chia.net/)_ - Green money for a digital world.
