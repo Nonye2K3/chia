@@ -14,7 +14,7 @@
 * [Reference Plotting Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Plotting-Hardware)
 * [Reference Farming Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Farming-Hardware)
 * [Farming on Many Machines](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines)
-* [Good Security Practices on Multi-Machine Setup](https://github.com/Chia-Network/chia-blockchain/wiki/Good-Security-Practices-on-Multi-Machine-Setup)
+* [Good Security Practices on Many Machines](https://github.com/Chia-Network/chia-blockchain/wiki/Good-Security-Practices-on-Many-Machines)
 * [Chialisp Documentation (Official)](https://chialisp.com/)
 * [Chialisp Notes](https://github.com/Chia-Network/chia-blockchain/wiki/ChiaLisp/)
 * [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
