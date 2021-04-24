@@ -23,7 +23,7 @@ To secure their connection, the UI will need the daemon's certificates. Copy the
 
 ## On the UI host
 
-_right now (03/31/2021) this only works when the *CHIA_ROOT* environment variable is set to the correct location of `~/.chia/mainnet/`_
+_This only works when the *CHIA_ROOT* environment variable is set to the correct location of `~/.chia/mainnet/`_
 
 Place the daemon's cert files, copied earlier, in the following location:
 
@@ -55,7 +55,7 @@ If the title bar doesn't look like that ensure that the `CHIA_ROOT` environment 
 
 ### Can the GUI find the remote daemon's certs?
 
-Double check that in the `ui` section the crt and key paths are correct. It _shouldn't_ point to the folder where the local certs are stored. It has to point to the folder where you copied the dameon's certs.
+Double check that in the `ui` section the crt and key paths are correct. It _shouldn't_ point to the folder where the local certs are stored. It has to point to the folder where you copied the daemon's certs.
 
 ## Connectivity
 
