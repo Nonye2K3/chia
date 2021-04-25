@@ -164,14 +164,14 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.1.1
+pip install chia-blockchain==1.1.2
 
 ```
 
 Or, combining the last two steps into one, try
 
 ```
-pip install --extra-index-url https://hosted.chia.net/simple/ chia-blockchain==1.1.1 miniupnpc==2.1
+pip install --extra-index-url https://hosted.chia.net/simple/ chia-blockchain==1.1.2 miniupnpc==2.1
 ```
 
 # WSL2
@@ -264,7 +264,7 @@ ln -s venv/bin/activate
 pip install --upgrade pip
 pip install -i https://download.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.10
 
-pip install chia-blockchain==1.1.1
+pip install chia-blockchain==1.1.2
 ```
 
 # Other install methods and environments
@@ -302,7 +302,7 @@ pip install -i https://hosted.chia.net/simple/ miniupnpc==2.1 setproctitle==1.1.
 Install chia-blockchain.
 
 ```bash
-pip install chia-blockchain==1.1.1
+pip install chia-blockchain==1.1.2
 ```
 
 Before you use chia-blockchain in future, you must "enter" your virtual environment.
