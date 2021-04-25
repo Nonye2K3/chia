@@ -63,7 +63,7 @@ If for some reason those lines stop moving that is another indication you are no
 		4. *Queue name*: This is useful to mix parallel and series plotting. IE: If you want to do 2 plots at a time, 10 plots in total, you can make 5 plots to Queue name: "My First Queue" and after that add another 5 plots to Queue name: "My Second Queue".
 
 4. Select Temporary Directory: This is where plots are created. About 128 temp files will be created (depending on buckets), then compacted to one plot file. This creation grows to 332 GiB (357 GB) and when finished it will be compressed to a single k 32 plot (101 GiB).
-    1. Its recommended to use a SSD drive or NVME drive for this work but make sure you are aware of [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance).
+    1. It's recommended to use a SSD drive or NVME drive for this work but make sure you are aware of [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance).
 
 5. Select Permanent directory—once the plot is created—it will go to this location to be farmed to earn chia coins. Storage will fill quickly due to size of plot. Storage can be internal or usb connected drives. Networked drives can work but could congest your local network or be to slow to respond for rewards (should be less than 30 seconds). Plan ahead—storage fills quickly.
 
@@ -161,7 +161,7 @@ The new RC4 version is a new blockchain-- prior coins are erased. It's all test 
 
 ### Peak Blockchain and checking if Chia is in sync
 
-*The chia blockchain software* : Every user has copy of the blockchain on their PC and the goal is that everyone is in sync or very close. Click on the Full Mode tab, scroll down to see the connected Nodes/ PC. If the time and date is off by 30 minutes then the software is not synced to blockchain or others. Multiple ways to check-- on Full node -- look at peak height and date/time--- then go below and look at connections and your peak should match the other computers. Also the peak should be close when you click on wallet tab with that wallet peak number. The wallet peak number sometimes is off by 10 numbers. If off by several hundred its not in sync. 
+*The chia blockchain software* : Every user has copy of the blockchain on their PC and the goal is that everyone is in sync or very close. Click on the Full Mode tab, scroll down to see the connected Nodes/ PC. If the time and date is off by 30 minutes then the software is not synced to blockchain or others. Multiple ways to check-- on Full node -- look at peak height and date/time--- then go below and look at connections and your peak should match the other computers. Also the peak should be close when you click on wallet tab with that wallet peak number. The wallet peak number sometimes is off by 10 numbers. If off by several hundred it's not in sync. 
 
 On the GUI-- on the top menu bar -- click on View then Force Reload. It will take about 5-10 minutes, to re-sync. Your keys will come up again to click to enter Chia. It will not affect your plotting.
 
@@ -174,7 +174,7 @@ Shut down Chia software before config access.
 Open Config with notepad. In the middle  * log_level: WARNING * change wording of WARNING to INFO. 
  Save File and exit. Start up Chia-- give it 20 minutes to run
 
-Can access the log files and read activity, while Chia is running. Its located in c:/Users/ (Your username)/.chia/mainnet/log/debug.log
+Can access the log files and read activity, while Chia is running. It's located in c:/Users/ (Your username)/.chia/mainnet/log/debug.log
 Log files are very informative. Once a log fills to 20mb another is created. If there are too many you can delete some of them.
 
 Inside what you are looking for are these lines
@@ -207,7 +207,7 @@ Below is a copy of normal information from a  log file. :
 ***
 
 
-The last line again shows at that current time of 09:32:08.211- that on this machine, of the 8 plots farming 0 plots were eligible. It still means the software recognized the plots and its working.
+The last line again shows at that current time of 09:32:08.211- that on this machine, of the 8 plots farming 0 plots were eligible. It still means the software recognized the plots and it's working.
 
 
 Everyone is very helpful to answer questions. The group does ask for questions to be in the selected chat room. Beginner questions in Beginner etc.
