@@ -4,7 +4,7 @@ This guide allows you to run a harvester on each machine, without having to run 
 
 The architecture is composed of one main machine which runs the farmer, full node, and wallet, and other machines which run only the harvester. Only your main machine will connect to the Chia network.
 
-To secure communication between your harvester and **main** machine, TLS is used where your **main** machine will be the private Certification Authority (CA) that signs all certificates. Each harvester must have it's own signed certificate to properly communicate with your **main** machine.
+To secure communication between your harvester and **main** machine, TLS is used where your **main** machine will be the private Certification Authority (CA) that signs all certificates. Each harvester must have its own signed certificate to properly communicate with your **main** machine.
 
 ```                                          
                                        _____  Harvester 1 (certificate A)
