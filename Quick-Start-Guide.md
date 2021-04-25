@@ -15,7 +15,7 @@ If you want more peers and better network connectivity, you should also try open
 
 You can learn how to use the Graphical User Interface (GUI) in [Beginners Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide).
 
-You can start with the Command Line Interface (CLI) by checking the commands available in `~\AppData\Local\Chia-Blockchain\app-1.1.1\resources\app.asar.unpacked\daemon\`. Try `.\chia -h` or `.\chia plots -h` for example:
+You can start with the Command Line Interface (CLI) by checking the commands available in `~\AppData\Local\Chia-Blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\`. Try `.\chia -h` or `.\chia plots -h` for example:
 
 1. Open *PowerShell* 
 
@@ -23,7 +23,7 @@ You can start with the Command Line Interface (CLI) by checking the commands ava
 
 2. Change Directory `cd` 
 
-	On *PowerShell* type `cd $env:localAPPDATA\Chia-Blockchain\app-1.1.1\resources\app.asar.unpacked\daemon\` and press the enter key.
+	On *PowerShell* type `cd $env:localAPPDATA\Chia-Blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\` and press the enter key.
 
 3. Read Chia help
 
