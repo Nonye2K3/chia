@@ -74,10 +74,10 @@ If for some reason those lines stop moving that is another indication you are no
 Creating a plot is time consuming with an average of 9-20 hours on a normal computer and 4-8 hours on a high end machine. There are 4 phases that does operations in 7 tables.
 
 Phases:
-1. **Computing tables 1 to 7:** It creates the buckets (default: 128) as files on your temp directory, when the 7 tables are computed the plot time progress is about **42 %**
-2. **Back propagation tables 7 to 1:** When the 7 tables are back propagated the plot time progress is about **61 %**
-3. **Compression of tables 1 to 7 in pairs:** When the 7 tables are compressed the plot time progress is about **98 %**
-4. **Write checkpoint tables:** Transfers your plot to your permanent drive. It will delete all the files in your temp storage and this completes the progress to **100 %**
+1. **Computing tables 1 to 7:** It creates the buckets (default: 128) as files on your temp directory, when the 7 tables are computed the plot time progress is about **42%**
+2. **Back propagation tables 7 to 1:** When the 7 tables are back propagated the plot time progress is about **61%**
+3. **Compression of tables 1 to 7 in pairs:** When the 7 tables are compressed the plot time progress is about **98%**
+4. **Write checkpoint tables:** Transfers your plot to your permanent drive. It will delete all the files in your temp storage and this completes the progress to **100%**
 
 | Phase | Step                       | % Progress |
 | :---: | :------------------------- | ---------: |
