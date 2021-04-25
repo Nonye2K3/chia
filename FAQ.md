@@ -32,7 +32,7 @@ You can see some example plot sizes, times to plot, and working space needed bas
 
 Plots created with Beta 8 (July, 2020) and newer versions of the Chia software will work on mainnet at launch. The minimum plot size is k=32. 
 
-There is only one reason why you might want to plot larger than k=32 and that is to optimize the total utilization of a given drive or space. A couple of k=33 plots with a majority of k=32 plots can bring down the leftover unused space on a drive. 
+There is only one reason why you might want to plot larger than k=32 and that would be to maximize the total utilization of a given drive or space. A couple of k=33 plots with a majority of k=32 plots can reduce the amount of leftover unused space on a drive. 
 
 The Chia dev team will continue to enhance the plotter though many of the theoretical methods to speed up plotting have been implemented. Bram believes we may be able to cut plot time in half once more - but that's likely the maximum improvement in plotting speed remaining. The goal is to keep it so that the top-of-the-line hardware takes at least 1 hour to plot the minimum k-size, and Phase 1 takes at least ~10 minutes so there is no way to cheat the system.
 
