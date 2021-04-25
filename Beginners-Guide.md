@@ -155,10 +155,6 @@ Once a hash is used from a plot-- does it need to be deleted. Answer-- no-- an e
 
 Farmer vs Harvester: Harvester checks the plots and reports the results to the farmer, farmer then submits the results to the blockchain
 
-### New version RC4
-
-The new RC4 version is a new blockchain-- prior coins are erased. It's all test chia coins right now anyway. It may take 4-10 hrs to sync-- just let it run-- there may be multiple other revisions coming example 1 per week until final. When RC4 is loaded-- a new feature is that it waits to download a large file from other PC's then starts to sync-- so that is why the sync will take some time.
-
 ### Peak Blockchain and checking if Chia is in sync
 
 *The chia blockchain software* : Every user has copy of the blockchain on their PC and the goal is that everyone is in sync or very close. Click on the Full Mode tab, scroll down to see the connected Nodes/ PC. If the time and date is off by 30 minutes then the software is not synced to blockchain or others. Multiple ways to check-- on Full node -- look at peak height and date/time--- then go below and look at connections and your peak should match the other computers. Also the peak should be close when you click on wallet tab with that wallet peak number. The wallet peak number sometimes is off by 10 numbers. If off by several hundred it's not in sync. 
