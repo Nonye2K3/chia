@@ -65,8 +65,8 @@ If you are running the GUI and want to run multiple Harvesters
 * Change   enable_upnp: true-- change that to **false**
 * Locate farmer_peer:   host:localhost-- change only this location-- type in your main pc ip address  (ex 192.192.x.x)
 * Locate the CA folder you copied from main computer-- know its network location.
-* Go to command prompt.  Type in or copy **cd C:\Users\(your username)\AppData\Local\Chia-Blockchain\app-1.0.5\resources\app.asar.unpacked\daemon\**
-* Make sure the (app-1.0.5) is the current version-- this is when version 1.0.5 is active
+* Go to command prompt.  Type in or copy **cd C:\Users\(your username)\AppData\Local\Chia-Blockchain\app-1.1.1\resources\app.asar.unpacked\daemon\**
+* Make sure the (app-1.1.1) is the current version-- this is when version 1.1.1 is active
 * Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory and its network lcoation. This command creates a new certificate signed by your **main** machine's CA.
 * [directory] this is where you type the link to where your CA folder is stored-- if on the c drive then type for example c:\ca.  The full line would look like `chia init -c c:\ca`
 * Then press enter.  Once that process is complete
