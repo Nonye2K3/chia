@@ -29,7 +29,7 @@ You can start with the Command Line Interface (CLI) by checking the commands ava
 
 	On *PowerShell* type `.\chia -h` and press the enter key.
 
-For more information you can check these [Windows Tips & Tricks](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips-&-Tricks) and read more about commands in general in [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference).
+For more information you can check these [Windows Tips & Tricks](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips-and-Tricks) and read more about commands in general in [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference).
 
 You can view your logs by opening "\.chia\mainnet\log\debug.log" with a text editor like *notepad* or see it as it runs in *PowerShell* by using Get-Content, `Get-Content ~\.chia\mainnet\log\debug.log -wait`.
 
