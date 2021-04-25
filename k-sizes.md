@@ -53,6 +53,16 @@ Total time = 3986304.072 seconds. (1107.3 hrs) 2/23/21
 | 34 | 397.25         | 1,406.57          | 429.88          | 0.305622898 | 1176.478        | 100%                      | 100%   |  -b 12000 -u 128 -r 8 | b17     |      
 | 33 | 181.17         | 675.17          | 208.83          | 0.309301735 | 588.203        | 100%                      | 100%   |  -b 6000 -u 128 -r 8 | b17     |    
 
+### i5-4690K Debian 10 Desktop
+* Processor: Intel i5-4690k (4 cores @ 3.9GHz)
+* Memory: 8GB DDR3 1600Mhz
+* Storage: 1TB Samsung 870 EVO SATA SSD
+
+|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version |
+| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   |
+| 32  |     162.1     |      422.43     |      101.3       |   0.2398   |    269.326    |      101%        |   -e -b 4000 -r 2  |   1.1.1   |
+| 33  |     ---       |      896.03     |      208.8       |   0.2330   |    588.227    |      103%        |   -e -b 4000 -r 2  |   1.1.1   |
+
 ## Beta 14 Data
 
 The following are data collected from plotting using the older and slower beta beta versions.
@@ -369,13 +379,3 @@ incorrectly listed as GB - most should be GiB
 | k  |  plot time (minutes) | plot size (GB)  | working (GB)  | CPU Utilization  | Note |
 |---|---|---|---|---|---|
 | 33  |  3093 | 208.85  | 1096.03  | 79.63%  | beta 3.0 2 concurrent |    |
-
-### Debian 10 Desktop/Server
-* Processor: Intel i5-4690k (4 cores @ 3.9GHz)
-* Memory: 8GB DDR3 1600Mhz
-* Storage: 1TB Samsung 870 EVO SATA SSD
-
-|  k  | Phase 1 (min) | Plot time (min) | Plot size (GiB)  | GiB/minute | working (GiB) | CPU Utilization  | -b setting | Version |
-| --- |      ---      |        ---      |      ---         |    ---     |     ---       |      ---         |     ---    |   ---   |
-| 32  |     162.1     |      422.43     |      101.3       |   0.2398   |    269.326    |      101%        |   -e -b 4000 -r 2  |   1.1.1   |
-| 33  |     ---       |      896.03     |      208.8       |   0.2330   |    588.227    |      103%        |   -e -b 4000 -r 2  |   1.1.1   |
