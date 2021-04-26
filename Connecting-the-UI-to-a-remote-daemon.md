@@ -72,3 +72,8 @@ chia start farmer
 ### Is the daemon's port opened on the firewall?
 
 Run `sudo ufw status | grep 55400` or your OS and firewall equivalent. You should see something like `55400/tcp                  ALLOW`.
+
+
+### Is VMWare Plugin Service bound to daemon port?
+
+Verify port default port 55400 is not bound to VMWare Plugin or other service on daemon host. If pre-bound, stop other service or change `daemon_port` value in `config.yaml`.
