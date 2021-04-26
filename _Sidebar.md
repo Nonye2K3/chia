@@ -1,20 +1,2 @@
 * [Home](https://github.com/Chia-Network/chia-blockchain/wiki)
-* [Beginners Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide)
-* [Install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL)
-* [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
-* [FAQ](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ) for running Chia
-* [Chia Project FAQ](https://www.chia.net/faq/)
-* [Plotting Basics](https://www.chia.net/2021/02/22/plotting-basics.html)
-* [Plot Sizes (k-sizes)](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
-* [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference)
-* [Windows Tips & Tricks](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips-and-Tricks)
-* [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) - Important notes on using SSD to plot.
-* [Reference Plotting Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Plotting-Hardware)
-* [Reference Farming Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Farming-Hardware)
-* [Farming on Many Machines](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines)
-* [Chialisp Documentation (Official)](https://chialisp.com/)
-* [Chialisp Notes](https://github.com/Chia-Network/chia-blockchain/wiki/ChiaLisp/)
-* [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
-* [Release Notes](https://www.chia.net/releases/)
-* [RPC Interfaces](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces)
-* [Port 8444 Issue- Resolve sync issues](https://github.com/Chia-Network/chia-blockchain/wiki/Port-8444)
+
