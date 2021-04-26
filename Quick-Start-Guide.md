@@ -6,7 +6,7 @@ All configuration data is stored in a directory structure at the $CHIA_ROOT envi
 If you are using the MacOS or Windows builds, your keys are created during the first run. We recommend saving the mnemonic. You can start plotting a plot file using the Plot tab or the command line. This can take a long time depending on the [size of the plots](https://github.com/Chia-Network/chia-blockchain/wiki/k-sizes)
 (the k variable). To be competitive on mainnet you will probably have to have a few k=32 or larger plots but a k=32 plot currently takes about 10 hours to plot on an [M.2 PCIe NVMe SSD](https://en.wikipedia.org/wiki/M.2) and requires 232 GiB of temporary working space to create a final plot file of 101.3 GiB. Your likelihood of winning a given plot is only driven by the final size of files.
 
-Plots created with Beta 8 and newer version of the chia software will work on mainnet. The minimum plot size will be k=32.
+The minimum plot size is k=32. Plots created with Beta 8 and newer version of the chia software will work on mainnet.
 
 If you want more peers and better network connectivity, you should also try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333. This helps the network be more decentralized.
 
