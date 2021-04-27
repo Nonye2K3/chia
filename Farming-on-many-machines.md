@@ -63,7 +63,7 @@ If you are running the GUI and want to run multiple Harvesters
 * Load Chia and use your regular 24 key words to see that it works.  Then shut down chia
 * In c:\users\(your user name)\.chia\mainnet\config file-- open it with notepad
 * Change   enable_upnp: true-- change that to **false**
-* Locate farmer_peer:   host:localhost-- change only this location-- type in your main pc ip address  (ex 192.192.x.x)
+* Locate farmer_peer: host:localhost-- change only this location (Clarification needed- Windows GUI v1.1.1 and 1.1.2 have host:localhost under BOTH full_node and harvester sections.)-- type in your main pc ip address  (ex 192.192.x.x)
 * Locate the CA folder you copied from main computer-- know its network location.
 * Go to command prompt.  Type in or copy **cd C:\Users\(your username)\AppData\Local\Chia-Blockchain\app-1.1.1\resources\app.asar.unpacked\daemon\**
 * Make sure the (app-1.1.1) is the current version-- this is when version 1.1.1 is active
