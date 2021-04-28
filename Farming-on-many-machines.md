@@ -57,7 +57,7 @@ The new_signage_point message states the farmer sent a challenge to your harvest
 If you are running the GUI and want to run multiple Harvesters
 * Shut down Chia on main computer 
 * Find your IP address on computer
-* Make a copy of your **main** machine CA directory located in `c:\users\(your user name)\.chia\mainnet\ssl- copy the CA file` ; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester. You must copy the new `ssl/ca` directory with each version of `chia-blockchain`-- copy the CA file to the harvester machine -- know its location 
+* Make a copy of your **main** machine CA directory located in `c:\users\(your user name)\.chia\mainnet\config\ssl` - copy the CA file; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester. You must copy the new `ssl/ca` directory with each version of `chia-blockchain`-- copy the CA file to the harvester machine -- know its location 
 
 * In new Harvester - follow steps below
 * Load Chia and use your regular 24 word mnemonic key to see that it works.  Then shut down Chia
