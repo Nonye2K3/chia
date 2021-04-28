@@ -60,17 +60,17 @@ If you are running the GUI and want to run multiple Harvesters
 * Make a copy of your **main** machine CA directory located in `c:\users\(your user name)\.chia\mainnet\ssl- copy the CA file` ; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester. You must copy the new `ssl/ca` directory with each version of `chia-blockchain`-- copy the CA file to the harvester machine -- know its location 
 
 * In new Harvester - follow steps below
-* Load Chia and use your regular 24 key words to see that it works.  Then shut down chia
+* Load Chia and use your regular 24 word mnemonic key to see that it works.  Then shut down Chia
 * In c:\users\(your user name)\.chia\mainnet\config file-- open it with notepad
 * Change   enable_upnp: true-- change that to **false**
 * Locate harvester: farmer_peer: host: localhost-- change only this location-- type in your main pc ip address  (ex 192.192.x.x)
 * Locate the CA folder you copied from main computer-- know its network location.
 * Go to command prompt.  Type in or copy **cd C:\Users\(your username)\AppData\Local\Chia-Blockchain\app-1.1.1\resources\app.asar.unpacked\daemon\**
 * Make sure the (app-1.1.1) is the current version-- this is when version 1.1.1 is active
-* Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory and its network lcoation. This command creates a new certificate signed by your **main** machine's CA.
+* Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory and its network location. This command creates a new certificate signed by your **main** machine's CA.
 * [directory] this is where you type the link to where your CA folder is stored-- if on the c drive then type for example c:\ca.  The full line would look like `chia init -c c:\ca`
 * Then press enter.  Once that process is complete
-*Start up both your main pc and the new harvester
+*Start both your main pc and the new harvester
 * The new harvester may take a 10-20 minutes to start the sync procees- it will be a little bit slower- but should start to sync
 and will make a full copy of the blockchain to get to normal sync.  You can create plots on that machine or copy plots over.  It will only farm once full sync is completed. 
 
@@ -80,6 +80,6 @@ To know its working
 
 **IMPORTANT**
 * Chia does upgrades- if you are finding your harvester is not sync with blockchain or wallet-- you may have to re-copy the CA files again from main pc
-* Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory and its network lcoation. This command creates a new certificate signed by your **main** machine's CA.
+* Run `chia init -c [directory]` on your harvester, where `[directory]` is the copy of your **main** machine CA directory and its network location. This command creates a new certificate signed by your **main** machine's CA.
 
-If you want to see that its working in the logs-- go to beginner guide -- see on right side and it will have directions on how to turn on logs to see transactions
+If you want to see that it's working in the logs: [Commands Reference - Checking Logs](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference#checking-logs-and-status)
