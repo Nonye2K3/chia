@@ -210,9 +210,13 @@ Total iterations since the start of the blockchain: 63291534050
 
 You can add and remove directories for your plots with `chia plots add -d 'your_dir'` or `chia plots remove -d 'your_dir'`, help can be found for respective add/remove with `chia plots add/remove -h`
 
+## Checking Logs and Status
+
 You can check contents of your wallet with: `chia wallet`, and status of your farmer with `chia farm summary`.
 
 Check harvester and farmer logs: `grep ~/.chia/mainnet/log/debug.log -e harvester`
+
+Sample result:
 
 ```
 17:08:03.191 harvester harvester_server        : INFO     <- harvester_handshake from peer 214b269a425b8223cb50fbd458dab056599348e255f07a018c13ea9efb509ee5 127.0.0.1
