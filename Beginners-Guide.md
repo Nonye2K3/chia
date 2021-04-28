@@ -51,7 +51,7 @@ If for some reason those lines stop moving that is another indication you are no
 
 1. Click on green button- top right “Add a Plot”
 
-2. Starting size plot is k 32 (101 GiB). You need a temp storage location of at least 332 GiB (357 GB) to create the plot.
+2. Starting size plot is k 32 (101 GiB). You need a temp storage location of at least 239 GiB (256 GB) to create the plot.
 
 3. Chose number of plots — you can select quantity to create.
     1. *Plot to Queue* : Means if (5) is selected it will plot #1, then when finished will start #2
