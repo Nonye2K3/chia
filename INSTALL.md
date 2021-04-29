@@ -106,6 +106,7 @@ chia init
 cd chia-blockchain-gui
 git fetch
 cd ..
+chmod +x ./install-gui.sh
 ./install-gui.sh
 
 cd chia-blockchain-gui
