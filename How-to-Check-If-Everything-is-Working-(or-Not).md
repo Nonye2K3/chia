@@ -1,4 +1,4 @@
-# How to Check If Everything is Working (or Not)
+
 :hammer_and_wrench: **A work-in-progress** :hammer_and_wrench:
 
 This doc assumes you know how to use the CLI. Using the CLI is the best way to troubleshoot (and to do everything Chia too). The [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) and [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference) have useful info to get you familiar with the CLI.
