@@ -33,7 +33,16 @@ The file paths for Linux, macOS, and Windows versions of Chia are similar.
 * Chia log:  `C:\Users\USERNAME\.chia\mainnet\log\debug.log`
 
 # Logs
-In `config.yaml` you can set the level of detail for your logs. It’s useful to change the logger settings from `WARNING` to `INFO` to get the detail needed to troubleshoot.
+In `config.yaml` you can set the level of detail for your logs. 
+
+Look for this section in `config.yaml`. It’s useful to change the logger setting `log_level` from `WARNING` to `INFO` to get the detail needed to troubleshoot.
+
+```yaml
+logging: &id001
+    log_filename: log/debug.log
+    log_level: WARNING
+    log_stdout: false
+```
 
 You can run `grep`  (Linux, macOS) or `Select-String` (Windows) to search through your logs for relevant information. 
 
