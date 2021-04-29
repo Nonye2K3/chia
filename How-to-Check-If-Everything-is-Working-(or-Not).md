@@ -47,16 +47,25 @@ logging: &id001
 You can run `grep`  (Linux, macOS) or `Select-String` (Windows) to search through your logs for relevant information. 
 
 # Is It Working?
+
+If you want to quickly find errors, run this:
+* Linux/macOS: `cat ~/.chia/mainnet/log/debug.log | grep error`
+* Windows: `Get-Content -Path "C:\Users\user\.chia\mainnet\log\debug.log" | Select-String -Pattern "error"`
+
 ## Harvester
-You want your the time it takes to check your plot for a proof to be under 5 seconds. If you see higher times, something is wrong with your setup.
+The time it takes to do a proof challenge should be below 30 seconds. If you see higher times, something is wrong with your setup.
 
 You can use these commands to narrow down your search for problems in `debug.log`
 
-* Linux/macOS: `tail ~/.chia/mainnet/log/debug* | grep eligible`
+* Linux/macOS: `tail ~/.chia/mainnet/log/debug.log | grep eligible`
 * Windows:
 	* `Select-String -Path “~\.chia\mainnet\log\debug*” -Pattern “eligible”`
 	* `Select-String -Path “~\.chia\mainnet\log\debug*” -Pattern “Found [^0] proof”`
 	* `Select-String -Path “~\.chia\mainnet\log\debug*” -Pattern “Farmed unfinished_block`
+        * `Get-Content -Path "C:\Users\user\.chia\mainnet\log\debug.log" -Wait | Select-String -Pattern "found"`
+    
+
+
 
 ## Plotting
 * With the CLI, run the command  `chia plots check` 
