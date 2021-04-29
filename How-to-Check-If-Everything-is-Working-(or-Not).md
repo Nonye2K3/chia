@@ -29,8 +29,8 @@ The file paths for Linux, macOS, and Windows versions of Chia are similar.
 * Chia log: `~/.chia.mainnet/log/debug.log`
 
 ### Windows
-* Chia config:  `C:\Users\USERNAME\.chia\mainnet\config\config.yaml`
-* Chia log:  `C:\Users\USERNAME\.chia\mainnet\log\debug.log`
+* Chia config:  `C:\Users\%USERNAME%\.chia\mainnet\config\config.yaml`
+* Chia log:  `C:\Users\%USERNAME%\.chia\mainnet\log\debug.log`
 
 # Logs
 In `config.yaml` you can set the level of detail for your logs. 
