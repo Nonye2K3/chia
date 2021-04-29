@@ -94,6 +94,7 @@ git reset --hard FETCH_HEAD
 
 # If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
 
+chmod +x ./install.sh
 ./install.sh
 
 . ./activate
