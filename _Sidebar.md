@@ -9,7 +9,7 @@
 * [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference)
 * [Windows Tips & Tricks](https://github.com/Chia-Network/chia-blockchain/wiki/Windows-Tips-and-Tricks)
 * [How to Check if Everything is Working (or Not)](https://github.com/Chia-Network/chia-blockchain/wiki/How-to-Check-If-Everything-is-Working-(or-Not))
-* [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) - Important notes on using SSD to plot.
+* [SSD Endurance](https://github.com/Chia-Network/chia-blockchain/wiki/SSD-Endurance) - notes on using SSD to plot.
 * [Reference Plotting Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Plotting-Hardware)
 * [Reference Farming Hardware](https://github.com/Chia-Network/chia-blockchain/wiki/Reference-Farming-Hardware)
 * [Farming on Many Machines](https://github.com/Chia-Network/chia-blockchain/wiki/Farming-on-many-machines)
