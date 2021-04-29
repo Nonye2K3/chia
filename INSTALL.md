@@ -69,7 +69,7 @@ git clone https://github.com/Chia-Network/chia-blockchain.git -b latest --recurs
 cd chia-blockchain
 
 chmod +x ./install.sh
-sh install.sh
+./install.sh
 
 . ./activate
 
@@ -77,7 +77,7 @@ sh install.sh
 # You can not install and run the GUI as root
 
 chmod +x ./install-gui.sh
-sh install-gui.sh
+./install-gui.sh
 
 cd chia-blockchain-gui
 npm run electron &
@@ -94,7 +94,7 @@ git reset --hard FETCH_HEAD
 
 # If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
 
-sh install.sh
+./install.sh
 
 . ./activate
 
@@ -105,7 +105,7 @@ chia init
 cd chia-blockchain-gui
 git fetch
 cd ..
-sh install-gui.sh
+./install-gui.sh
 
 cd chia-blockchain-gui
 npm run electron &
