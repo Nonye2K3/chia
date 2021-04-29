@@ -72,4 +72,4 @@ You can use these commands to narrow down your search for problems in `debug.log
 You can find the documentation for the `check` command on the [CLI Commands Reference - check](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference#check) page
 
 * To check all your plots, run `chia plots check` 
-* Use `chia plots check -h` to the options
+* Use `chia plots check -h` to see the options for this command
