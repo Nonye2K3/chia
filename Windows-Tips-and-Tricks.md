@@ -2,7 +2,7 @@ In Windows, you can use the chia CLI from Windows PowerShell, allowing you more 
 
 # 1. Parallel plotting using PowerShell
 ```
-    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\
+    cd %systemdrive%%homepath%\AppData\Local\Chia-Blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\
     start-process .\chia.exe -argumentlist "plots create yourParametersGoHere"
     start-process ....
     ....
@@ -10,7 +10,7 @@ In Windows, you can use the chia CLI from Windows PowerShell, allowing you more 
 
 In some instances it appears the Chia daemon is stored in the following directory. This may be either due to installing as Admin or after version 1.1.0 (to be determined). If you can't find the daemon above, try the path below.
 ```
-    cd C:\ProgramData\yourUserName\chia-blockchain\app-1.1.0\resources\app.asar.unpacked\daemon\
+    cd %systemdrive%\ProgramData\%USERNAME%\chia-blockchain\app-1.1.0\resources\app.asar.unpacked\daemon\
 ```
 
 If `start-process` doesn't work, try `.\chia.exe plots create yourParametersGoHere` instead.
@@ -22,7 +22,7 @@ To add a delay between your parallel processes, you can put a `sleep <seconds>` 
 
 ### A specific example:
 ```
-    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\
+    cd %systemdrive%%homepath%\AppData\Local\Chia-Blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\
     start-process ./chia.exe -argumentlist "plots create -k 32 -b 4000 -u 128 -r 4 -t d:\tempdrive1 -2 e:\tempdrive2 -d F:\plots -n 1"
 ```
 The command above makes one plot (specified by `-n 1`), to plot in parallel you need to repeat the command (without closing the first one). Increase the `-n` value for sequential plotting, i.e. once the 1st plot is completed, the next is started.
@@ -38,7 +38,7 @@ If you attempt to run more than one node on your local network, having uPnP on o
 
 ### For version 1.0:
 ```
-    cd C:\Users\yourUserName\AppData\Local\Chia-Blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\
+    cd %systemdrive%%homepath%\AppData\Local\Chia-Blockchain\app-1.1.2\resources\app.asar.unpacked\daemon\
     ./chia.exe configure --enable-upnp false
 ```
 
