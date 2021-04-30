@@ -131,15 +131,21 @@ Upgrade pip:
 pip install --upgrade pip
 ```
 
+To exit the virtual environment:
+```
+deactivate
+```
+
 ### Building py-cryptography from ports
 
-_**You'll need to switch to root for this part.**_
+_**You'll need to switch to root for this part. If you're already using root remember to leave the virtual environment for this step.**_
 
 ```
 cd /usr/ports/security/py-cryptography
 
 # Instruct 'make' that the SSL library is openssl.
-echo "DEFAULT_VERSIONS+=ssl=openssl" >> /etc/make.conf
+# Also force the Python version in case the port tries for a higher one
+echo "DEFAULT_VERSIONS+=ssl=openssl python=3.7 python3=3.7" >> /etc/make.conf
 
 make
 ```
@@ -147,6 +153,15 @@ make
 You'll probably see a bunch of warnings and notices; these are not errors and it will build.
 
 Do NOT run make install. We will do our own py-cryptography install because 'make install' does not copy to our virtual environment. (If you know how to change this, please edit).
+
+If you are running inside a jail and make fails with an error about the OSVERSION not matching UNAME, you will need to set the UNAME_r environment variable to match your jails OSVERSION:
+
+```
+# Adjust the value to match your jails OSVERSION
+export UNAME_r=11.4-RELEASE
+```
+
+A full version list can be found [here](https://docs.freebsd.org/en/books/porters-handbook/book.html#versions).
 
 
 Once complete switch back to your non-root user if you so optioned. You must now be in your venv once again.
