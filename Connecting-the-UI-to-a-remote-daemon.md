@@ -1,5 +1,7 @@
 # Setup
 
+For Linux based systems
+
 ## On the daemon host
 
 ### Expose the daemon to the network
