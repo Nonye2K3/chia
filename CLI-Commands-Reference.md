@@ -92,7 +92,7 @@ Command: `chia plots create [add flags and parameters]`
 
 `-e` [bitfield plotting]: Using the `-e` flag will disable the bitfield plotting algorithm, and revert back to the older b17 plotting style. After 1.0.4 it’s better to use bitfield for most cases (not using `-e`). Before 1.0.4 (obsolete) using the `-e` flag (bitfield disabled) lowers memory requirement, but also writes about 12% more data during creation of the plot. For now, SSD temp space will likely plot faster with `-e` (bitfield back propagation disabled) and for slower spinning disks, i.e SATA 5400/7200 rpm, **not** using `-e` (bitfield enabled) is a better option.
 
-**Example**
+### Example Plotting Commands
 
 Example below will create a k32 plot and use 4GB (note - not GiB) of memory.
 
@@ -102,16 +102,16 @@ Example 2 below will create a k34 plot and use 8GB of memory, 2 threads and 64 b
 
 `chia plots create -k 34 -e -b 8000 -r 2 -u 64 -t /path/to/temporary/directory -d /path/to/final/directory`
 
-Example 3 below will create five k32 plots one at a time using 4GB (note - not GiB) of memory.
+Example 3 below will create five k32 plots (`-n 5`) one at a time using 4GB `-b 4000` (note - not GiB) of memory and uses a secondary temp directory (`-2 /path/to/secondary/temp/directory`).
 
-`chia plots create -k 32 -b 4000 -t /path/to/temporary/directory -d /path/to/final/directory -n 5`
+`chia plots create -k 32 -b 4000 -n 5 -t /path/to/temporary/directory -2 /path/to/secondary/temp/directory -d /path/to/final/directory`
 
 
 **Additional Plotting Notes**
 
 * During plotting, Phase 1 (Forward Propagation) and Phase 3 (Compression) tend to take the most time. Therefore, to maximize plotting speed, `-t` and `-2` should be on your fastest drives, and `-d` can be on a slow drive.
 
-* Currently, plotting only uses 1 CPU thread. Therefore, most Chia users have determined it's more efficient to plot in parallel, rather than series. You can do this by just having multiple plotting instances open.
+* There are 4 major phases to plotting. Phase 1 of plotting can utilize multi-threading. Phases 2-3 do not. You can better optimize your plotting by using the `-r` flag in your command and setting it to greater than 2, e.g,. `-r 2`. Above 4 threads there are diminishing returns. Many Chia users have determined it's more efficient to plot in parallel, rather than series. You can do this by just having multiple plotting instances open but staggering when they start 30min or more. 
 
 * It's objectively faster to plot on SSD's instead of HDD's. However, SSD's have significantly more limited lifespans, and early Chia testing has seemed to indicate that plotting on SSD's wears them out pretty quickly. Therefore, many Chia users have decided it's more "green" to plot in parallel on many HDD's at once.
 
