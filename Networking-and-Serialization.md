@@ -72,7 +72,7 @@ After the handshake is completed, both peers can send Chia protocol messages, an
 ## Heartbeat
 Heartbeat messages are sent periodically by the Websocket libraries. Peers that are unresponsive will therefore be disconnected.
 
-If a node does receive any messages from a peer for a certain period of time, even if heartbeats are being received, then the node will disconnect and remove the peer from the active peer list.
+If a node does not receive any messages from a peer for a certain period of time, even if heartbeats are being received, then the node will disconnect and remove the peer from the active peer list.
 
 ## Introducer
 
