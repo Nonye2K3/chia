@@ -8,11 +8,6 @@ In Windows, you can use the chia CLI from Windows PowerShell, allowing you more 
     ....
 ```
 
-In some instances it appears the Chia daemon is stored in the following directory. This may be either due to installing as Admin or after version 1.1.0 (to be determined). If you can't find the daemon above, try the path below.
-```
-    cd %systemdrive%\ProgramData\%USERNAME%\chia-blockchain\app-1.1.0\resources\app.asar.unpacked\daemon\
-```
-
 If `start-process` doesn't work, try `.\chia.exe plots create yourParametersGoHere` instead.
 
 Or add the path `"%USERPROFILE%\AppData\Local\chia-blockchain\app-1.1.2\resources\app.asar.unpacked\daemon"` to the path user variable, this way you can
