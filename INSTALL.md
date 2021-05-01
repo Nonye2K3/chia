@@ -8,7 +8,7 @@ All keys and plots from version prior to Beta 8 (released July 16, 2020) are dep
 
 ## Minimum Specs
 The minimum supported specs are that of the Raspberry Pi 4:
-* Quad core 1.5Ghz CPU
+* Quad core 1.5Ghz CPU (must be 64 bit)
 * 2 GB Ram
 * Python 3.7 and above
 
