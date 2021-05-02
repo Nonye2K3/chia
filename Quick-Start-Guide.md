@@ -8,7 +8,7 @@ If you are using the MacOS or Windows builds, your keys are created during the f
 
 The minimum plot size is k=32. Plots created with Beta 8 and newer version of the chia software will work on mainnet.
 
-If you want more peers and better network connectivity, you should also try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333. This helps the network be more decentralized.
+If you want more peers and better network connectivity, you should also try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333. This helps the network be more decentralized. For further details about sync issues and port 8444, visit the [Resolving Sync Issues](https://github.com/Chia-Network/chia-blockchain/wiki/Resolving-Sync-Issues---Port-8444) page.
 
 # Using the Command-line Interface (CLI)
 
