@@ -55,7 +55,7 @@ If you want to quickly find errors, run this:
 ## Harvester
 The time it takes to do a proof challenge should be below 30 seconds. If you see higher times, something is wrong with your setup.
 
-You can use these commands to narrow down your search for problems in `debug.log`
+Here are some commands you can use to examine `debug.log` for problems.
 
 * Linux/macOS: `tail ~/.chia/mainnet/log/debug.log | grep eligible`
 * Windows:
