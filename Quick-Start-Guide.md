@@ -10,6 +10,9 @@ The minimum plot size is k=32. Plots created with Beta 8 and newer version of th
 
 If you want more peers and better network connectivity, you should also try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333. This helps the network be more decentralized.
 
+# Using the Command-line Interface (CLI)
+
+Using the CLI with Chia gives you greater and more precise control. For a more details on the commands, read the [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference).
 
 ## Windows
 
@@ -39,7 +42,7 @@ There are commands available in `/Applications/Chia.app/Contents/Resources/app.a
 A handy trick is to add that directory to your path - `export PATH=/Applications/Chia.app/Contents/Resources/app.asar.unpacked/daemon:$PATH`. To make it persistent add the same line to your .bashrc or .zshrc
 
 ## Linux
-If you installed Chia with the linux installer files, your chia executable should be in one of the following locations:
+If you installed Chia with the Linux installer files, your chia executable should be in one of the following locations:
 
 `/usr/lib/chia-blockchain/resources/app.asar.unpacked/daemon/chia`
 
