@@ -68,8 +68,7 @@ sudo apt-get upgrade -y
 git clone https://github.com/Chia-Network/chia-blockchain.git -b latest --recurse-submodules
 cd chia-blockchain
 
-chmod +x ./install.sh
-./install.sh
+sh install.sh
 
 . ./activate
 
@@ -94,8 +93,7 @@ git reset --hard FETCH_HEAD
 
 # If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
 
-chmod +x ./install.sh
-./install.sh
+sh install.sh
 
 . ./activate
 
