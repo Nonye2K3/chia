@@ -29,7 +29,7 @@ There is more than one `chia.exe` binary; the GUI is `Chia.exe` (two of these!) 
 
 The CLI one is the one referred to in this document, and for version 1.1.1 it can be found at
 
-`~\AppData\Local\chia-blockchain\app-1.1.1\resources\app.asar.unpacked\daemon\chia.exe`
+`~\AppData\Local\chia-blockchain\app-1.1.3\resources\app.asar.unpacked\daemon\chia.exe`
 
 # [init](https://github.com/Chia-Network/chia-blockchain/blob/master/src/cmds/init.py)
 
