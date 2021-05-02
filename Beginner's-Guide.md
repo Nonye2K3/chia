@@ -19,7 +19,7 @@ The [Chia CLI](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands
 
 ## Setting Expectations 
 
-Once you have completed plots and are farming, you will see "Time to Win Coin" in the farming tab. Whatever time it shows here is just an estimate. It might take 3 to 4 times longer than the time shown. For example, if it shows 2 days, it might take 5 or 8 days, sometimes even more to ear your first coin or partial coin. This is normal as luck plays a role over the short run. Your computer is being linked up to all the other computer nodes. As you add more plots—especially after about 50 plots, then the “time to win” gets a little more accurate and closer to estimated time. 
+Once you have completed plots and are farming, you will see "Time to Win Coin" in the farming tab. Whatever time it shows here is just an estimate. It might take 3 to 4 times longer than the time shown. For example, if it shows 2 days, it might take 5 or 8 days, sometimes even more to earn your first coin or partial coin. This is normal as luck plays a role over the short run. As you add more plots, especially after about 50 plots, then the “time to win” gets a little more accurate and closer to the estimated time. 
 
 
 ### Full Node Tab in the GUI
