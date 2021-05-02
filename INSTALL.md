@@ -83,7 +83,7 @@ npm run electron &
 ```
 
 To Update/Upgrade from previous version
-```
+```bash
 cd chia-blockchain
 chia stop -d all
 deactivate
@@ -92,6 +92,12 @@ git checkout latest
 git reset --hard FETCH_HEAD
 
 # If you get RELEASE.dev0 then delete the package-lock.json in chia-blockchain-gui and install.sh again
+
+git status
+
+# git status should say "nothing to commit, working tree clean", 
+# if you have uncommitted changes, RELEASE.dev0 will be reported.
+# Remove or re-checkout the specific files or directories that have uncommitted changes
 
 sh install.sh
 
