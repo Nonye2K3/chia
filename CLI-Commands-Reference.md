@@ -27,7 +27,7 @@ and then `chia -h` should work.
 
 There is more than one `chia.exe` binary; the GUI is `Chia.exe` (two of these!) and the CLI is `chia.exe`. They are found in different places. Note the big C versus the little c.
 
-The CLI one is the one referred to in this document, and for version 1.1.1 it can be found at
+The CLI one is the one referred to in this document, and for version 1.1.3 it can be found at
 
 `~\AppData\Local\chia-blockchain\app-1.1.3\resources\app.asar.unpacked\daemon\chia.exe`
 
