@@ -1,4 +1,4 @@
-# Basic information about Chia to get started
+# The Basics of Chia to Get You Started
 
 Chia is a new type of cryptocurrency that is based on the capacity of pre-stored random-looking data that the user creates and stores in files called plots. With Chia a very low resource intensive process checks plot files. This makes Chia very fast and green. It is an improvement over proof of work blockchains, which rely on fast graphic cards and custom machines doing millions of calculations per second and wasting a lot of electricity. Chia also has many improvements to scripting, scripting environment, cryptography, usability, and scalability, and aims to be a simple, secure, and powerful blockchain. 
 
@@ -13,6 +13,9 @@ The simplest way to start with Chia is to [install the Chia software](https://gi
 Once Chia is installed, users will use the Chia application to create plots. Depending on your hardware it can take 4-12+ hours to create a plot. Each approximately 101 [GiBs](https://simple.wikipedia.org/wiki/Gibibyte) in size. The user stores these plots on computer equipment and then farms the created plots for the potential to earn coins. 
 
 Inside each plot is a large number of pre-formulated calculations stored in large table (spreadsheet) of blocks called (hash) cells. You win potential coins by providing the winning pre-formulated (hash) code to allow the transaction to occur. The winning transaction is very quickly done within 2-3 seconds and the user is compensated with coins to facilitate the transaction. Plots have many (hash) cells inside so if 1 is used there is still many left. In other words, you do not need to delete a plot if it wins you coins. Plots can keep earning you coins. Plots are estimated to last over 5 years.
+
+### The CLI - Command-line Interface
+The [Chia CLI](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference) is the more advanced way to use Chia. The CLI can do everything the GUI can do and more (like better utilize your hardware to optimize plotting). It is recommended you start with the GUI to get the basics of Chia down before starting to use the CLI. 
 
 ## Setting Expectations 
 
