@@ -50,7 +50,7 @@ You can run `grep`  (Linux, macOS) or `Select-String` (Windows) to search throug
 
 If you want to quickly find errors, run this:
 * Linux/macOS: `cat ~/.chia/mainnet/log/debug.log | grep error`
-* Windows: `Get-Content -Path "C:\Users\user\.chia\mainnet\log\debug.log" | Select-String -Pattern "error"`
+* Windows: `Get-Content -Path "~\.chia\mainnet\log\debug.log" | Select-String -Pattern "error"`
 
 ## Harvester
 The time it takes to do a proof challenge should be below 30 seconds. If you see higher times, something is wrong with your setup.
@@ -61,8 +61,8 @@ Here are some commands you can use to examine `debug.log` for problems.
 * Windows:
 	* `Select-String -Path “~\.chia\mainnet\log\debug*” -Pattern “eligible”`
 	* `Select-String -Path “~\.chia\mainnet\log\debug*” -Pattern “Found [^0] proof”`
-	* `Select-String -Path “~\.chia\mainnet\log\debug*” -Pattern “Farmed unfinished_block`
-        * `Get-Content -Path "C:\Users\user\.chia\mainnet\log\debug.log" -Wait | Select-String -Pattern "found"`
+	* `Select-String -Path “~\.chia\mainnet\log\debug*” -Pattern “Farmed unfinished_block”`
+	* `Get-Content -Path "~\.chia\mainnet\log\debug.log" -Wait | Select-String -Pattern "found"`
     
 
 
