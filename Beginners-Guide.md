@@ -1,10 +1,10 @@
 # The Basics of Chia to Get You Started
 
-Chia is a new type of cryptocurrency that is based on the capacity of pre-stored random-looking data that the user creates and stores in files called plots. With Chia a very low resource intensive process checks plot files. This makes Chia very fast and green. It is an improvement over proof of work blockchains, which rely on fast graphic cards and custom machines doing millions of calculations per second and wasting a lot of electricity. Chia also has many improvements to scripting, scripting environment, cryptography, usability, and scalability, and aims to be a simple, secure, and powerful blockchain. 
+Chia is a new type of cryptocurrency that is based on the capacity of pre-stored random-looking data that the user creates and stores in files called _plots_. With Chia a very low resource intensive process checks plot files for _proof of space and time_. This makes Chia very fast and green. It is an improvement over proof of work blockchains, which rely on fast graphic cards and custom machines doing millions of calculations per second and wasting a lot of electricity. Chia also has many improvements to scripting, scripting environment, cryptography, usability, and scalability, and aims to be a simple, secure, and powerful blockchain. 
 
 ## How it works
 
-The simplest way to start with Chia is to [install the Chia software](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) on the operating system of your choice and run the GUI (Graphical User Interface). The Windows version automatically starts once installed, and the Mac just needs to be opened from the Applications directory. Once the application is opened, it loads and starts to sync with the rest of the network and blockchain. As of this writing, fully syncing can take 4-6 hrs and this will increases over time. Basically, you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The Chia blockchain database copy will be stored on your computer. Everyone with Chia installed on their computer also has a copy.
+The simplest way to start with Chia is to [install the Chia software](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) on the operating system of your choice and run the GUI (Graphical User Interface). The Windows version automatically starts once installed, and the Mac just needs to be opened from the Applications directory. Once the application is opened, it loads and starts to sync with the rest of the network and blockchain. As of this writing, fully syncing can take 4-6 hours and this will increases over time as the blockchain grows. Basically, you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The Chia blockchain database copy will be stored on your computer. Everyone with Chia installed on their computer also has a copy.
 
 ### The Basics of Farming
 
@@ -20,7 +20,7 @@ The [Chia CLI](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands
 Once you have completed plots and are farming, you will see "Time to Win Coin" in the farming tab. Whatever time it shows here is just an estimate. It might take 3 to 4 times longer than the time shown. For example, if it shows 2 days, it might take 5 or 8 days, sometimes even more to earn your first coin or partial coin. This is normal as luck plays a role over the short run. As you add more plots, especially after about 50 plots, then the “time to win” gets a little more accurate and closer to the estimated time. 
 
 ## How to Get Help
-* Read over the documents in [this Wiki](https://github.com/Chia-Network/chia-blockchain/wiki). Most of the information you need is here already.
+* Read over the documents in [this Wiki](https://github.com/Chia-Network/chia-blockchain/wiki) first. Most of the information you need is here already.
 * Get support on the [Chia Keybase chat channels](https://keybase.io/team/chia_network.public). #beginner and #support is where you can get help
 * Submit an issue here on Github
 
