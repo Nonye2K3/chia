@@ -55,7 +55,7 @@ Example output may look like this:
 09:55:52.737 harvester src.harvester.harvester : INFO     3 plots were eligible for farming 2d8b1c58a0... Found 0 proofs. Time: 0.43679 s. Total 100 plots
 09:56:01.646 harvester src.harvester.harvester : INFO     2 plots were eligible for farming 2d8b1c58a0... Found 0 proofs. Time: 0.14055 s. Total 100 plots
 ```
-**If youre seeing output like above here, this is already good!**
+**If you are seeing output like above here, this is already good!**
 
 It means that plots are passing the plot filter and your farm seems to work as intended. Do this for each logfile to see wether or not you had any outages or wether something went wrong.
 
