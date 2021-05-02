@@ -26,7 +26,7 @@ The file paths for Linux, macOS, and Windows versions of Chia are similar.
 
 ### Linux & macOS
 * Chia config: `~/.chia/mainnet/config/config.yaml`
-* Chia log: `~/.chia.mainnet/log/debug.log`
+* Chia log: `~/.chia/mainnet/log/debug.log`
 
 ### Windows
 * Chia config:  `C:\Users\%USERNAME%\.chia\mainnet\config\config.yaml`
