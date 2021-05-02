@@ -21,7 +21,7 @@
 * [Timelords and Cluster Timelords](https://github.com/Chia-Network/chia-blockchain/wiki/Timelords)
 * [Release Notes](https://www.chia.net/releases/)
 * [RPC Interfaces](https://github.com/Chia-Network/chia-blockchain/wiki/RPC-Interfaces)
-* [Port 8444 Issue - Resolve sync issues](https://github.com/Chia-Network/chia-blockchain/wiki/Port-8444)
+* [Sync Issues - Port 8444](https://github.com/Chia-Network/chia-blockchain/wiki/Resolving-Sync-Issues---Port-8444)
 
 The items below remain useful but we have implemented a significant revision to the consensus algorithm. We invite your comments and questions on our **[working draft of new consensus](https://docs.google.com/document/d/1tmRIb7lgi4QfKkNaxuKOBHRmwbVlGL4f7EsBDr_5xZE/edit)**.
 
