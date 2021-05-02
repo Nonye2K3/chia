@@ -14,7 +14,7 @@ The minimum supported specs are that of the Raspberry Pi 4:
 
 ## Drive format support
 
-Chia plot files are at least 108GB in size (for K32). To plot successfully requires drives formatted to support large files; e.g. NTFS, APFS, exFAT, ext4, etc. Drives with FAT formatting (FAT12, FAT16, or FAT32) will fail plotting midway through. Future versions of Chia will check for unsupported drives, but for now it's up to each user to check their drive format.
+Chia plot files are at least 108GB in size (for K32). To plot successfully requires drives formatted to support large files; e.g. NTFS, APFS, exFAT, ext4, etc. Do not use drives with FAT formatting (FAT12, FAT16, or FAT32) or else plotting will fail. Future versions of Chia will check for unsupported drives, but for now it's up to each user to check their drive format.
 
 ## Sleep kills plots
 
@@ -32,12 +32,12 @@ As the Chia code signing certificate is new you will likely have to ask to keep 
 
 You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 
-# MacOS
-MacOS Mojave (10.14.x) or newer is required.
+# macOS
+macOS Mojave (10.14.x) or newer is required.
 
-Install the MacOS dmg installer - [Chia Blockchain MacOS](https://download.chia.net/latest/Setup-MacOS.dmg)
+Install the macOS .dmg installer - [Chia Blockchain MacOS](https://download.chia.net/latest/Setup-MacOS.dmg)
 
-When the installer first runs it will import or create multiple keys and add them to the MacOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
+When the installer first runs it will import or create multiple keys and add them to the macOS keychain. You may be prompted up to 3 times for your password. We suggest choosing "always allow."
 
 You can now proceed to the [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide)
 
@@ -126,7 +126,7 @@ But it doesn't hurt to double check using `ps -aux | grep chia` to make sure the
 
 If all else fails, rebooting the machine and restarting the chia daemon/processes usually does the trick.
 
-# CentOS / Red Hat / Fedora
+# CentOS/Red Hat/Fedora
 
 We have an experimental [GUI installer](https://download.chia.net/latest/x86_64-Redhat-gui) for RH/CentOS 8.0 and Fedora 28 and newer.
 
@@ -229,7 +229,7 @@ WSL2 uses a Virtual Hardware Disk (VHD) to store files, and it automatically res
 ## Setting a maximum limit to WSL2 memory access
 If you try plotting Chia in WSL2 without limiting the memory access, WSL2 will use 100% of your available machine's memory, and your computer will get bogged down and begin swapping memory to your hard drive. This will severely cripple your plotting speeds. To set the maximum memory that WSL2 is allowed to use, create a configuration file [as described in this guide](https://www.bleepingcomputer.com/news/microsoft/windows-10-wsl2-now-allows-you-to-configure-global-options/).
 
-## WSL VHD Plotting Nuance
+## WSL VHD Plotting Nuances
 Plotting within WSL2 can write to either the native VHD (which is EXT4) or to any other drive, which can be NTFS or any other FS-type. Writing to the native VHD is faster than writing out to another drive.
 
 Plotting uses three commands for directory control:
