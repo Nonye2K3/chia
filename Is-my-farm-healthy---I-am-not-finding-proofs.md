@@ -13,7 +13,7 @@ Farming status: Farming
 ```
 ..then you know no broader errors have occured.
 
-## Change the log level ouput
+## Change the log level output
 To get detailed information about how your farm operates, you need to set the log-level of your farmer to `INFO`. For this you need to edit the chia config under `~/.chia/mainnet/config`. You are looking for a part of the file that looks like this:
 ```
 farmer:
