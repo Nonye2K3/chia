@@ -97,7 +97,6 @@ git status
 
 # git status should say "nothing to commit, working tree clean", 
 # if you have uncommitted changes, RELEASE.dev0 will be reported.
-# Remove or re-checkout the specific files or directories that have uncommitted changes
 
 sh install.sh
 
