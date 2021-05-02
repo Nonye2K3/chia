@@ -4,9 +4,7 @@ Chia is a new type of cryptocurrency that is based on the capacity of pre-stored
 
 ## How it works
 
-### The GUI - Graphical User Interface
-
-The simplest way to start with Chia is to [install the Chia software](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) on the operating system of your choice and run the GUI. The Windows version automatically starts once installed, and the Mac just needs to be opened from the Applications directory. Once the application is opened, it loads and starts to sync with the rest of the network and blockchain. As of this writing, fully syncing can take 4-6 hrs and this will increases over time. Basically, you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The Chia blockchain database copy will be stored on your computer. Everyone with Chia installed on their computer also has a copy.
+The simplest way to start with Chia is to [install the Chia software](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) on the operating system of your choice and run the GUI (Graphical User Interface). The Windows version automatically starts once installed, and the Mac just needs to be opened from the Applications directory. Once the application is opened, it loads and starts to sync with the rest of the network and blockchain. As of this writing, fully syncing can take 4-6 hrs and this will increases over time. Basically, you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The Chia blockchain database copy will be stored on your computer. Everyone with Chia installed on their computer also has a copy.
 
 ### The Basics of Farming
 
@@ -15,12 +13,13 @@ Once Chia is installed, users will use the Chia application to create plots. Dep
 Inside each plot is a large number of pre-formulated calculations stored in large table (spreadsheet) of blocks called (hash) cells. You win potential coins by providing the winning pre-formulated (hash) code to allow the transaction to occur. The winning transaction is very quickly done within 2-3 seconds and the user is compensated with coins to facilitate the transaction. Plots have many (hash) cells inside so if 1 is used there is still many left. In other words, you do not need to delete a plot if it wins you coins. Plots can keep earning you coins. Plots are estimated to last over 5 years.
 
 ### The CLI - Command-line Interface
-The [Chia CLI](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference) is the more advanced way to use Chia. The CLI can do everything the GUI can do and more (like better utilize your hardware to optimize plotting). It is recommended you start with the GUI to get the basics of Chia down before starting to use the CLI. 
+The [Chia CLI](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference) is the more advanced way to use Chia. The CLI can do everything the GUI can do and more (like better utilize your hardware to optimize plotting). It is recommended you start with the GUI to understand the basics of Chia before starting to use the CLI. 
 
 ## Setting Expectations 
 
 Once you have completed plots and are farming, you will see "Time to Win Coin" in the farming tab. Whatever time it shows here is just an estimate. It might take 3 to 4 times longer than the time shown. For example, if it shows 2 days, it might take 5 or 8 days, sometimes even more to earn your first coin or partial coin. This is normal as luck plays a role over the short run. As you add more plots, especially after about 50 plots, then the “time to win” gets a little more accurate and closer to the estimated time. 
 
+## The GUI - Graphical User Interface
 
 ### Full Node Tab in the GUI
 
