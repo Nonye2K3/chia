@@ -1,17 +1,35 @@
-Of the computers that may have sync issues-- here is 1 solution to check
+Port forwarding port 8444 can solve many sync issues and it helps improve Chia's network health.
 
-Port 8444 is the [port](https://en.wikipedia.org/wiki/Port_%28computer_networking%29) through which other Chia computers can communicate with your PC, Chia can quickly talk to other PCs, link up, and start downloading and syncing with Chia blockchain.
+Port 8444 is the [port](https://en.wikipedia.org/wiki/Port_%28computer_networking%29) through which other Chia computers can communicate with your PC. When you set up port forwarding on port 8444, the Chia software on your computer can quickly talk to other PCs, link up, and start downloading and syncing with the Chia blockchain.
 
-The network is undergoing rapid growth and expansion. Many of the newly arrived Chia peers (computers) do not open up port 8444. It makes it very hard for the network. 
+The network is undergoing rapid growth and expansion. Many of the newly arrived Chia peers (computers) do not open up port 8444. It makes it very hard for the network. So please port forward on port 8444!
 
-Please use this link to check if your router's port 8444 is closed. It is recommended you open it: 
-* [https://www.yougetsignal.com/tools/open-ports/](https://www.yougetsignal.com/tools/open-ports/
-)
-* [https://portchecker.co/](https://portchecker.co/)
+Use this link to check if your router's port 8444 is closed: [https://portchecker.co/](https://portchecker.co/)
+
+# What to do
+
+Port forwarding is done on your router. How you set it up depends on your router's make and model. Look through your router's manual or just search for "<your router name and model> how to port forward" to get started.
+
+When you port forward you want to allow outside IP addresses to connect to your main node (computer) through port 8444 to the Chia software.
+
+## Port Forwarding Settings
+
+Most routers will ask you from where you are allowing and to what you are connecting to. You want to set up port forwarding to allow any outside connection to connect to the IP address of your main node on your network through port 8444. Router manufacturers might call the settings different things, but the concept is always the same: Outside computers connecting through port 8444 to your computer.
+
+Here are the settings most routers will ask for:
+
+* Set connection type to _TCP_ or _TCP & UDP_
+* Destination (or Forwarding) IP address - This is your main node (computer) IP address on your internal network; search online on how to do this for your type of computer. If you search for "what is my IP address" it will give you your external IP address, this is not the one you want.
+* Originating (or From) IP address - Set this to all or sometimes just an asterisk may be used `*`
+
+
+## Why forward port 8444?
 
 All peers (computers) with a closed port 8444 are completely dependent on pc peers with open port 8444. They are the only PCs they can talk to. If you got 1,000 nodes with an open port 8444, but 20,000 nodes with a closed port 8444, trying to sync, it will only just be able to theoretically have enough IP's estimated 3,000 can sync at a time, while the other wait for another open chia user with open port 8444.   Right now (Mid April '20) it seems that number is even much worse. And it causes a scenario where there just isn't enough open port 8444 peers to serve all the closed port 8444 peers. The only way around this is to ensure that you got an open port 8444.
 
-If you somehow are able to open up your port 8444, within a minute, you will have peers connecting to you, at least, you should have a much easier time to get connections established. 
+If you somehow are able to open up your port 8444 you will quickly have peers connecting to you and have a much easier time to get connections established. 
+
+## Speed up connecting to nodes
 
 If you would like to speed up connecting to other nodes and syncing, add one of these introducer nodes:
 * North Asia `introducer-apne.chia.net:8444`
@@ -23,11 +41,6 @@ If you would like to speed up connecting to other nodes and syncing, add one of 
 There is a public node share the available 8444 peers every hour.
 
 * [chia.keva.app](https://chia.keva.app)
-
-On the subject of how to port forward, all I'm going to say, it's different from router brand to brand, even from model to model.
-Google.com presents 60+ million hits on "[Port forwarding](https://www.google.com/search?q=port+forwarding&source=hp&ei=HDB-YILlDoOB9u8P-72_4AM&iflsig=AINFCbYAAAAAYH4-LJZmDqT9olTepGniZToDYoAz5s4Q&oq=port+for&gs_lcp=Cgdnd3Mtd2l6EAMYADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADICCAA6CAgAELEDEIMBOgUIABCxAzoICC4QsQMQgwE6CwgAELEDEMcBEKMCOgUILhCxAzoICAAQxwEQrwE6CAguELEDEJMCOgIILjoECAAQCjoGCAAQChATOggIABAKEB4QEzoGCAAQHhATUMMPWLghYJgqaANwAHgAgAFeiAGlBZIBAjEwmAEAoAEBqgEHZ3dzLXdperABAA&sclient=gws-wiz)"
-
-**Note:** The Chia software does what it can to open port 8444 automatically for you. But the UPnP protocol is a hit and miss kind of thing, some dont have a good implementation of it, others simply don't have it enabled by default. Please test for open port 8444!
 
 # Detailed explanation 
 A regular pc can communicate **out** with endless ports-- if the user is sending a signal out -- pc opens a port -- signal goes out, pc closes the port. 
