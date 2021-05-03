@@ -1,16 +1,36 @@
 # The Basics of Chia to Get You Started
 
-Chia is a new type of cryptocurrency that is based on the capacity of pre-stored random-looking data that the user creates and stores in files called _plots_. With Chia a very low resource intensive process checks plot files for _proof of space and time_. This makes Chia very fast and green. It is an improvement over proof of work blockchains, which rely on fast graphic cards and custom machines doing millions of calculations per second and wasting a lot of electricity. Chia also has many improvements to scripting, scripting environment, cryptography, usability, and scalability, and aims to be a simple, secure, and powerful blockchain. 
+### Chia - Short Version
 
-## How it works
+Chia is a new blockchain technology where your computer creates _plot_ files that you can _farm_ to potentially earn _Chia_ (XCH) coins. 
+
+### Chia - Long Version
+
+Chia is a new type of cryptocurrency that is based on the capacity of pre-stored random-looking data that the user creates and stores in files called _plots_. With Chia a very low resource-intensive process checks plot files for _proof of space and time_. This makes Chia very fast and green. It is an improvement over proof of work blockchains, which rely on fast graphic cards and custom machines doing millions of calculations per second and wasting a lot of electricity. Chia also has many improvements to scripting, scripting environment, cryptography, usability, and scalability, and aims to be a simple, secure, and powerful blockchain. 
+
+The Chia software is made up of several parts called _daemons_. Each daemon does different things. The main ones important to beginners are:
+* node - This syncs your computer with the blockchain
+* farmer - The farmer sends out proof requests to the harvester
+* harvester - The harvester checks your plots to see if they satisfy the proof. If you have the best proof, you win coins.
+
+## What to do as a beginner
+
+For now, focus on installing the Chia software, setting it up properly, and learn how to make plots. There are two main things to get working:
+
+* Making sure you are connecting to other nodes (other computers with the blockchain) and syncing with them.
+* Starting making plots and farming.
 
 The simplest way to start with Chia is to [install the Chia software](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) on the operating system of your choice and run the GUI (Graphical User Interface). The Windows version automatically starts once installed, and the Mac just needs to be opened from the Applications directory. Once the application is opened, it loads and starts to sync with the rest of the network and blockchain. As of this writing, fully syncing can take 4-6 hours and this will increases over time as the blockchain grows. Basically, you are syncing with everyone on the network, downloading the whole blockchain, which includes all transactions ever processed on the network. The Chia blockchain database copy will be stored on your computer. Everyone with Chia installed on their computer also has a copy.
 
 ### The Basics of Farming
 
-Once Chia is installed, users will use the Chia application to create plots. Depending on your hardware it can take 4-12+ hours to create a plot. Each approximately 101 [GiBs](https://simple.wikipedia.org/wiki/Gibibyte) in size. The user stores these plots on computer equipment and then farms the created plots for the potential to earn coins. 
+Farming just means you have some plots and have the Chia software checking them periodically to see if they win a proof.
 
-Inside each plot is a large number of pre-formulated calculations stored in large table (spreadsheet) of blocks called (hash) cells. You win potential coins by providing the winning pre-formulated (hash) code to allow the transaction to occur. The winning transaction is very quickly done within 2-3 seconds and the user is compensated with coins to facilitate the transaction. Plots have many (hash) cells inside so if 1 is used there is still many left. In other words, you do not need to delete a plot if it wins you coins. Plots can keep earning you coins. Plots are estimated to last over 5 years.
+**Gigabytes (GB) vs Gibigytes (GiB)**: You are going to see the unit _GiB_ used a lot. Just know that 1 Gibibyte is equal to about 1.07 Gigabytes (GB). Most hard drives are talked about with GB so please keep that in mind.
+
+Once Chia is installed, users will use the Chia application to create plots. Depending on your hardware it can take 4-12+ hours to create a plot. Each approximately 101 [GiBs](https://simple.wikipedia.org/wiki/Gibibyte) in size (108 GB). The user stores these plots on computer equipment and then farms the created plots for the potential to earn coins. 
+
+Inside each plot is a large number of pre-formulated calculations stored in large table (spreadsheet) of blocks called (hash) cells. You win potential coins by providing the winning pre-formulated (hash) code to allow the transaction to occur. The winning transaction is very quickly done within 2-3 seconds and the user is compensated with coins to facilitate the transaction. Plots have many (hash) cells inside so if one wins there is still many left that can win. In other words, you do not need to delete a plot if it wins you coins. Plots can keep earning you coins. Plots are estimated to last over 5 years.
 
 ### The CLI - Command-line Interface
 The [Chia CLI](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference) is the more advanced way to use Chia. The CLI can do everything the GUI can do and more (like better utilize your hardware to optimize plotting). It is recommended you start with the GUI to understand the basics of Chia before starting to use the CLI. 
