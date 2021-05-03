@@ -19,7 +19,7 @@ Follow the instructions on setting up certificates on harvesters on the [Farming
 
 # Keep Your Wallet Separate
 
-One way to not get your wallet hacked is to not have it accessible to the internet. 
+One way to not get your wallet hacked is to not have it accessible to the internet. ([Implementation](https://github.com/Chia-Network/chia-blockchain/wiki/Chia-Keys-Management))
 
 > Your reward address for chia rewards should be a separate key as well, kept in an offline machine. You can generate an address on a different computer, and put this address in the config.yaml (farmer.xch_target_address and pool.xch_target_address), so if your farming machine gets hacked, you don't lose past rewards. ([Source](https://github.com/Chia-Network/chia-blockchain/discussions/1116#discussioncomment-420398))
 
