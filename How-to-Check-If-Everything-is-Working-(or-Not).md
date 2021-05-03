@@ -3,7 +3,7 @@
 
 This doc assumes you know how to use the CLI. Using the CLI is the best way to troubleshoot (and to do everything Chia too). The [Quick Start Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Quick-Start-Guide) and [CLI Commands Reference](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference) have useful info to get you familiar with the CLI.
 
-## Where to Find Things: The File Paths
+## Where to Find Things
 The file paths for Linux, macOS, and Windows versions of Chia are similar. 
 ```
 /home/user
