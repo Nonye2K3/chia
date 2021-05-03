@@ -9,10 +9,10 @@ The 1.0.4 release changes almost all of the information below for the better. Th
 # Storage requirements
 | K-size | Temp. Size | Final Size |
 |-----|-----|-----|
-| K=32 | 332 GiB (356.5 GB) | 101.4 GiB (108.9 GB) |
-| K=33 | 589 GiB (632.4 GB) | 208.8 GiB (224.2 GB) |
-| K=34 | 1177 GiB (1263.8 GB) | 429.8 GiB (461.5 GB) |
-| K=35 | 2355 GiB (2528.7 GB) | 884.1 GiB (949.3 GB) |
+| K=32 | 329 GiB (256.6 GB) | 101.4 GiB (108.9 GB) |
+| K=33 | 512 GiB (550 GB) | 208.8 GiB (224.2 GB) |
+| K=34 | 1041 GiB (1118 GB) | 429.8 GiB (461.5 GB) |
+| K=35 | 2175 GiB (2335 GB) | 884.1 GiB (949.3 GB) |
 
 When planning on how much plotting space is required, only calculate the temporary disk size requirement.
 
