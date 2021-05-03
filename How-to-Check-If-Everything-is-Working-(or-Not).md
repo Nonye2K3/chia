@@ -71,5 +71,5 @@ Here are some commands you can use to examine `debug.log` for problems.
 
 You can find the documentation for the `check` command on the [CLI Commands Reference - check](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference#check) page
 
-* To check all your plots, run `chia plots check` 
+* To check all your plots, run `chia plots check`. This will check all directories you have listed in your `config.yaml` to contain plots.
 * Use `chia plots check -h` to see the options for this command
