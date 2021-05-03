@@ -1,4 +1,6 @@
-_Updated for mainnet release to support TLS_
+Another title for this:
+
+# How to harvest on other machines that are not your main machine
 
 This guide allows you to run a harvester on each machine, without having to run a full node, wallet, and farmer on each one. This keeps your system simpler, uses less bandwidth, space, CPU, and also keeps your keys safer. It also makes your overall farm quicker and more efficient when replying to challenges.
 
@@ -12,11 +14,15 @@ To secure communication between your harvester and **main** machine, TLS is used
 other network peers  --------   Main machine (CA) ------  Harvester 2 (certificate B)
                                       \_____  Harvester 3 (certificate C)
 ```
+## Prerequisites
 * First, make sure Chia is installed on all machines and initialized by running the CLI `chia init`. 
 * When creating plots on the other harvesters, use `chia plots create -f farmer_key -p pool_key`, inserting the farmer and pool keys from your main machine. Alternatively, you could copy your private keys over by using `chia keys add`, but this is less secure. After creating a plot, run `chia plots check` to ensure everything is working correctly.
 * Make a copy of your **main** machine CA directory located in `~/.chia/mainnet/config/ssl/ca` to be accessible by your harvester machines; you can share the `ssl/ca` directory on a network drive, USB key, or do a network copy to each harvester. You must copy the new `ssl/ca` directory with each version of `chia-blockchain`, so if you are upgrading from `beta` -> `mainnet` you must copy the new `ca` contents.
 
+## Setup Steps
 Then for each harvester, follow these steps:
+
+**NOTE:** For step 4, you are using a copy of your `/ca` folder from your main machine temporarily. You're just showing the harvester those files once and then you can delete them.
 
 1. Make sure your **main** machines IP address on port 8447 is accessible by your harvester machines
 2. Shut down all chia daemon processes with `chia stop all -d`
