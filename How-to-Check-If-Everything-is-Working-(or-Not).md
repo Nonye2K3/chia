@@ -49,7 +49,7 @@ You can run `grep`  (Linux, macOS) or `Select-String` (Windows) to search throug
 # Is It Working?
 
 If you want to quickly find errors, run this:
-* Linux/macOS: `cat ~/.chia/mainnet/log/debug.log | grep error`
+* Linux/macOS: `cat ~/.chia/mainnet/log/debug.log | grep 'error'`
 * Windows: `Get-Content -Path "~\.chia\mainnet\log\debug.log" | Select-String -Pattern "error"`
 
 ## Harvester
