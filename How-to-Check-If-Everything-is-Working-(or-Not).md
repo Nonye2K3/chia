@@ -40,7 +40,7 @@ Look for this section in `config.yaml`. It’s useful to change the logger setti
 ```yaml
 logging: &id001
     log_filename: log/debug.log
-    log_level: WARNING
+    log_level: INFO
     log_stdout: false
 ```
 
