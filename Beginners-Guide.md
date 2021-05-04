@@ -26,7 +26,7 @@ The simplest way to start with Chia is to [install the Chia software](https://gi
 
 Farming just means you have some plots and have the Chia software checking them periodically to see if they win a proof.
 
-**Gigabytes (GB) vs Gibigytes (GiB)**: You are going to see the unit _GiB_ used a lot. Just know that 1 Gibibyte is equal to about 1.07 Gigabytes (GB). Most hard drives are talked about with GB so please keep that in mind.
+**Gigabytes (GB) vs Gibibytes (GiB)**: You are going to see the unit _GiB_ used a lot. Just know that 1 Gibibyte is equal to about 1.07 Gigabytes (GB). Most hard drives are talked about with GB so please keep that in mind.
 
 Once Chia is installed, users will use the Chia application to create plots. Depending on your hardware it can take 4-12+ hours to create a plot. Each approximately 101 [GiBs](https://simple.wikipedia.org/wiki/Gibibyte) in size (108 GB). The user stores these plots on computer equipment and then farms the created plots for the potential to earn coins. 
 
