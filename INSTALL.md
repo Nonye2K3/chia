@@ -122,7 +122,7 @@ npm run electron &
 Sometimes stray daemons left over from previously running processes will cause strange bugs/errors when upgrading to a new version.  Make sure all daemons and chia processes are killed before installing or upgrading.  
 
 This is normally done by executing `chia stop -d all` from the upgrade example above.  
-But it doesn't hurt to double check using `ps -aux | grep chia` to make sure there are no chia processes left running.  You may have to manually kill the chia daemon if an install and chia start was performed without first running `chia stop -d all`
+But it doesn't hurt to double check using `ps -Af | grep chia` to make sure there are no chia processes left running.  You may have to manually kill the chia daemon if an install and chia start was performed without first running `chia stop -d all`
 
 If all else fails, rebooting the machine and restarting the chia daemon/processes usually does the trick.
 
