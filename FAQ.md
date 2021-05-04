@@ -208,11 +208,6 @@ If you use the GUI, it will migrate from release to release for you. For both th
 
 This is the Repository FAQ which focuses on how to use the software.  We have released our [Business Whitepaper](https://www.chia.net/2021/02/10/chia-businesss-whitepaper.html) that goes into details of both the tokenomics, the pre-farm, and our go to market strategy. Additionally you can review the [Project FAQ](https://www.chia.net/faq/).
 
-## When mainnet?
-
-Mainnet was started on March 19th, 2021. The first transaction launch is planned for block 193536, or roughly the start of May. Our community members warn that each time you ask in [Keybase](https://keybase.io/team/chia_network.public) it gets moved back a week.
-
-
 ## How can I contribute?
 
 You should check out [CONTRIBUTING.md](https://github.com/Chia-Network/chia-blockchain/blob/master/CONTRIBUTING.md) in the repository but the quick answer is to please base your pull requests off the dev branch. The dev branch will only accept rebase merges or squash merges. You can help [translate the application](https://crowdin.com/project/chia-blockchain/) as well. Translating the GUI is especially useful and pretty easy to do with our Crowdin [Chia-Blockchain-GUI](https://crowdin.com/project/chia-blockchain) tool.
