@@ -19,9 +19,11 @@ Follow the instructions on setting up certificates on harvesters on the [Farming
 
 # Keep Your Wallet Separate
 
-One way to not get your wallet hacked is to not have it accessible to the internet. ([Implementation](https://github.com/Chia-Network/chia-blockchain/wiki/Chia-Keys-Management))
+One way to not get your wallet hacked is to not have it accessible to the internet. Here is how to do this: [Chia Keys Management](https://github.com/Chia-Network/chia-blockchain/wiki/Chia-Keys-Management)
 
 > Your reward address for chia rewards should be a separate key as well, kept in an offline machine. You can generate an address on a different computer, and put this address in the config.yaml (farmer.xch_target_address and pool.xch_target_address), so if your farming machine gets hacked, you don't lose past rewards. ([Source](https://github.com/Chia-Network/chia-blockchain/discussions/1116#discussioncomment-420398))
 
 ## How to Find Your Keys
+_Use the following command in a safe place. Your private and public keys will be visible._
+
 You'll need to [use the CLI](https://github.com/Chia-Network/chia-blockchain/wiki/CLI-Commands-Reference). Use this command to list all your keys: `chia keys show`
