@@ -1,3 +1,6 @@
+# Before You Begin
+**Keep it simple.** Focus on learning what Chia is and how to make _one_ plot. Once you do that, move on to doing more. It's easier to start simple than to do too much and get confused about what went wrong.
+
 # The Basics of Chia to Get You Started
 
 ### Chia - Short Version
