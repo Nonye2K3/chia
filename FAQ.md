@@ -4,9 +4,9 @@
   
 - [Plotting](#plotting)
  
-- [Full Node](#full-node)
+- [Full Node](#full-node) - Your Main Computer
 
-- [Farming](#farming)
+- [Farming](#farming) - The Farmer and Harvester
 
 - [Support/Miscellaneous](#support-miscellaneous)
 
