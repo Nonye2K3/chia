@@ -111,23 +111,24 @@ First, running more than one node with the same private keys on your home networ
 
 ## Why does my node have no connections? How can I get more connections?
 
-Step 1. If your node has no connections, it could be one of many reasons. The most likely is that there are no users with space to have new connections, so you cannot connect to anyone. To solve this, you should  try opening port 8444 on your router so other peers can connect to you. Follow [this](https://bitcoin.org/en/full-node#port-forwarding) guide but using port 8444 instead of 8333, and then check if it worked by using https://www.yougetsignal.com/tools/open-ports/ with 8444.
+Step 1. Make sure you are running the most recent version of the Chia software. Check out the [INSTALL](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) page.
 
-Port 8444 is the port where other Chia computers can communicate into your pc, Chia can quickly talk to another verified PC and link up and start to download and sync with Chia blockchain.
-The network is under a heavy rapid growth / expansion. And many of the newly arrived Chia peers (computers) do not open up port 8444. It makes it very hard for the network, to help the other users sync.  Once your port is open, it will quickly sync with others.
+Step 2. If your node has no connections, it could be one of many reasons. The most likely reason is that there are no users with space to have new connections, so you cannot connect to them. To solve this, you should  try opening port 8444 on your router so other peers can connect to you. Follow the steps here: [Resolving Sync Issues Port 8444](https://github.com/Chia-Network/chia-blockchain/wiki/Resolving-Sync-Issues---Port-8444)
 
-**Detailed explanation** A regular pc can communicate out with endless ports-- if user is sending a signal out-- pc opens a port- signal goes out, pc closes the port. Chia uses port 8444 as instant verified communication. So an open port can allow instant communication and start the blockchain sync. Signal comes in on port 8444- that Chia pc is verified, then both user's pc, opens their own "communication ports ex port 8421" and that new user can now sync and now they are linked together forming part of Chia mesh.
-If the users port 8444 is closed, the users pc has to start sending multiple signals out and hope that a pc with open port 8444 will link with them, then the sync starts. (1) pc can only link up a few pc and with so many other chia users coming on board, they all have to wait. Keep in mind, Chia is built on a mesh network, the blockchain is shared among all the users, not from central pc.
+Port 8444 is the port through which other Chia computers can communicate with your PC. When you set up port forwarding on port 8444, the Chia software on your computer can quickly talk to other PCs, link up, and start downloading and syncing with the Chia blockchain.
+
+The network is undergoing rapid growth and expansion. Many of the newly arrived Chia peers (computers) do not open up port 8444. It makes it very hard for the network. So please port forward on port 8444!
+
+Use this link to check if your router's port 8444 is closed: [https://portchecker.co/](https://portchecker.co/)
 
 
+Step 3: You might need to disable UPnP in the config file (~/.chia/mainnet/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all Chia applications on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
 
-Step 2: You might need to disable upnp in the config file (~/.chia/mainnet/config/config.yaml) or by using the cli command `chia configure -upnp false`. You might have multiple nodes running on the same machine, or in the same wifi network. Make sure to close all chia applications on your computer. Also check your firewall or antivirus software, which might be blocking connections. 
+Step 4: Try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`. Close then restart Chia.
 
-Step 3: Try deleting your peer DB which is located at `~/.chia/mainnet/db/peer_table_node.sqlite`.
+Step 5: Edit `~/.chia/mainnet/config/config.yaml`, search for `weight_proof_timeout` and increase it from 180 to 400. If that value is not there, you can add it under the `full_node` section. 
 
-Step 4: Edit `~/.chia/mainnet/config/config.yaml`, search for `weight_proof_timeout` and increase it from 180 to 400. If that value is not there, you can add it under the `full_node` section. 
-
-It can take a few minutes to start receiving peers. Also make sure you have installed the latest version.
+It can take a few minutes to start receiving peers and several hours to completely sync.
 
 ## I am seeing blocks and connections but my node says "Not Synced"
 This is usually a system clock issue, which is causing the display of "Not synced", even though you are. Your clock must be set to the exact time, and cannot be more than 5 minutes off. Check your phone and your computer and ensure the time is the same.
