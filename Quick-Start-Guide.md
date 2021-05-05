@@ -1,3 +1,6 @@
+## Read the Beginners Guide First
+This is a more intermediate guide. If you have not read the [Beginners Guide](https://github.com/Chia-Network/chia-blockchain/wiki/Beginners-Guide), do that first.
+
 # Install
 To install chia-blockchain, follow [these install instructions](https://github.com/Chia-Network/chia-blockchain/wiki/INSTALL) according to your operating system. This software only supports 64 bit operating systems.
 
