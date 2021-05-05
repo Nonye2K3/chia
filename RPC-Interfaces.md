@@ -41,7 +41,7 @@ More examples can be seen [here](https://github.com/Chia-Network/chia-blockchain
 
 curl --insecure --cert ~/.chia/mainnet/config/ssl/full_node/private_full_node.crt \
 --key ~/.chia/mainnet/config/ssl/full_node/private_full_node.key \
--d '{"":""}' -H "Content-Type: application/json" -X POST https://localhost:8555/get_blockchain_state | python -m json.tool
+-d '{}' -H "Content-Type: application/json" -X POST https://localhost:8555/get_blockchain_state | python -m json.tool
 
 # Response:
 
