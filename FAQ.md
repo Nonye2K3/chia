@@ -8,6 +8,9 @@
 
 - [Farming](#farming) - The Farmer and Harvester
 
+- [Wallet](#wallet) - Wallet and Transactions
+
+
 - [Support/Miscellaneous](#support-miscellaneous)
 
 ***
@@ -200,6 +203,15 @@ In these cases, your wallet database might be corrupt. Try the following steps:
 2. Restart your computer
 3. Delete the ~/.chia/mainnet/wallet/db folder
 4. Restart chia
+
+## Why do I have a negative balance? Why is my pending transaction not confirming?
+
+Your pending transaction can take a few minutes if blocks are full. If it's not confirmed after a while, your pending transaction might be stuck. Try the following steps:
+
+1. Shut down your wallet and node
+2. Delete your wallet db files: located at `~/.chia/mainnet/wallet/db`. This will require syncing up your wallet, but not your node. And then you can resubmit the transaction.
+3. Make sure you have upgraded to the latest version
+4. Start the application and wait for the wallet to sync up
 
 
 # Support/Miscellaneous
