@@ -1,6 +1,6 @@
 # Install Chia on OpenBSD
 
-_Tested with Chia 1.0.5 on OpenBSD/amd64 6.8_
+_Tested with Chia 1.1.4 on OpenBSD/amd64 6.8_
 
 ```sh
 # install required packages
@@ -14,7 +14,7 @@ cd
 
 # clone repos
 git clone https://github.com/Chia-Network/chia-blockchain.git --branch latest
-git clone https://github.com/Chia-Network/clvm_rs.git --branch 0.1.6
+git clone https://github.com/Chia-Network/clvm_rs.git --branch 0.1.7
 git clone https://github.com/PyO3/maturin.git --branch v0.10.3
 git clone https://github.com/timkuijsten/chiavdf.git --branch openbsd # chiavdf/pull/71
 
@@ -44,7 +44,6 @@ cp target/release/libclvm_rs.so ../chia-blockchain/clvm_rs.so
 cd ../chia-blockchain/
 # use our previous compile results
 sed -i 's|"chiavdf==1.0.1"|"chiavdf==1.0.2.dev1"|' setup.py
-sed -i 's|"clvm_rs==0.1.4"|"clvm_rs==0.1.6"|' setup.py
 
 # use a hardcoded random secret so the software can run headless and without
 # user intervention
