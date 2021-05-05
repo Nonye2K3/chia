@@ -50,6 +50,7 @@ You cannot copy the entire `config/ssl` directory from one machine to another. E
 
 Since beta27, the CA files are copied to each harvester, as the daemon currently needs it to startup correctly. This is not ideal, and a new way to distribute certificates will be implemented in a subsequent release post mainnet launch. Please be careful when running your harvester that is accessible from the open internet.
 
+
 *Note:*
 
 Currently (mainnet), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `INFO` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/mainnet/log/debug.log` and see if you get messages like the following:
@@ -59,6 +60,8 @@ Currently (mainnet), the GUI doesn't show harvester plots. The best way to see i
 ```
 
 The new_signage_point message states the farmer sent a challenge to your harvester. The new_proof_of_space message states the harvester found a proof for the challenge. You will get more new_signage_point messages than new_proof_of_space messages.
+
+Here's how to find your logs: [Where to Find Things](https://github.com/Chia-Network/chia-blockchain/wiki/How-to-Check-If-Everything-is-Working-(or-Not)#where-to-find-things)
 
 If you are running the GUI and want to run multiple Harvesters
 * Shut down Chia on main computer 
