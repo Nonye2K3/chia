@@ -55,11 +55,12 @@ Since beta27, the CA files are copied to each harvester, as the daemon currently
 
 Currently (mainnet), the GUI doesn't show harvester plots. The best way to see if it's working is shut down Chia full node and set your logging level to `INFO` in your `config.yaml` on your main machine and restart Chia full node. Now you can check the log `~/.chia/mainnet/log/debug.log` and see if you get messages like the following:
 ```
-[time stamp] farmer farmer_server   : INFO   -> new_signage_point to peer [harvester IP address] [peer id - 64 char hexadecimal]
+[time stamp] farmer farmer_server   : INFO   -> new_signage_point_harvester to peer [harvester IP address] [peer id - 64 char hexadecimal]
+[time stamp] farmer farmer_server   : INFO   <- farming_info from peer [peer id - 64 char hexadecimal] [harvester IP address]
 [time stamp] farmer farmer_server   : INFO   <- new_proof_of_space from peer [peer id - 64 char hexadecimal] [harvester IP address]
 ```
 
-The new_signage_point message states the farmer sent a challenge to your harvester. The new_proof_of_space message states the harvester found a proof for the challenge. You will get more new_signage_point messages than new_proof_of_space messages.
+The outgoing `new_signage_point_harvester` message states the farmer sent a challenge to your harvester and the incoming `farming_info` message indicates a response. The `new_proof_of_space` message states the harvester found a proof for the challenge. You will get more `new_signage_point` and `farming_info` messages than `new_proof_of_space` messages.
 
 Here's how to find your logs: [Where to Find Things](https://github.com/Chia-Network/chia-blockchain/wiki/How-to-Check-If-Everything-is-Working-(or-Not)#where-to-find-things)
 
