@@ -12,7 +12,18 @@ A Chia blockchain node consists of several components that each handle different
 By default, Chia allows debug.log to grow to 20MB, and then rotates the file by closing debug.log, renaming it do debug.log.1, and renames any existing older log files to debug.log.x, to a maximum of 7 logs.  After the seventh log is full, it is overwritten with the next earliest file using a maximum of 140MB of the most recent messages.  
 
 ## Log detail level:
-Chia is shipped with the debug.log only containing messages at the WARN or ERROR level.  Many of the messages needed to fully monitor a node are only visible at the INFO level.  By stopping the node, changes to the logging level can be done in the `config.yaml` file in the `mainnet/config` folder.
+Chia is shipped with the debug.log only containing messages at the WARN or ERROR level.  Many of the messages needed to fully monitor a node are only visible at the INFO level.  Changes to the logging level can be done in the `config.yaml` file in the `mainnet/config` folder.
+
+## Change the log level output:
+You are looking for the first reference to logging in the file that looks like this:
+```
+farmer:
+  logging: &id001
+    log_filename: log/debug.log
+    log_level: WARN
+    log_stdout: false
+```
+Change the log_level to INFO, save the file, and restart the node.
 
 ## Node Components:
 |Component|Function|
@@ -33,11 +44,11 @@ Chia is shipped with the debug.log only containing messages at the WARN or ERROR
 |Message |see below<br>
 
 ## Log messages confirming node health:
-1. “x plots were eligible for farming” – this message from harvester shows how the node responds to challenges.  The x value shows how many plots passed the initial filter [more on filters here.](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it).  
-> * The block prefix is shown, and the “Found y proofs.” The y value shows how many plots were accepted as proofs, and usually the value is zero. Most of the time if there is a proof you win, but not always as described [in the FAQ.](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#is-it-possible-to-have-a-proof-but-not-get-a-reward).
+1. “x plots were eligible for farming” – this message from harvester shows how the node responds to challenges.  The x value shows how many plots passed the initial filter, [more on filters here.](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#what-is-the-plot-filter-and-why-didnt-my-plot-pass-it)  
+> * The block prefix is shown, and the “Found y proofs.” The y value shows how many plots were accepted as proofs, and usually the value is zero. Most of the time if there is a proof you win, but not always as described [in the FAQ.](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#is-it-possible-to-have-a-proof-but-not-get-a-reward)  
 > * Next is “Time: x.xxx s.” which shows how long the node took to respond to the challenge.  The network requires a response in less than 28 seconds from the time the challenge was originated, so a recommended response time is less than 5 seconds. If this value is greater than 3 seconds a warning will be displayed in the GUI. (Read more here:
 > * Finally “Total x plots” shows the number of plots recognized by the node.  If this doesn't look right [check your plots are valid.](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#how-do-i-know-if-my-plots-are-ok)
-2. “Updated Wallet peak to height x, weight y” message from the wallet_blockchain component.  Value x is the current height of the blockchain, and should match the Height shown in the `chia show -s` command.  This indicates that the node wallet is fully synced with the network.  If that is not the case[check here for a common solution.](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#why-is-my-wallet-not-synced-why-can-i-not-connect-to-wallet-from-the-gui)
+2. “Updated Wallet peak to height x, weight y” message from the wallet_blockchain component.  Value x is the current height of the blockchain, and should match the Height shown in the `chia show -s` command.  This indicates that the node wallet is fully synced with the network.  If that is not the case [check here for a common solution.](https://github.com/Chia-Network/chia-blockchain/wiki/FAQ#why-is-my-wallet-not-synced-why-can-i-not-connect-to-wallet-from-the-gui)
 3. <other key messages>
 
 ## Other normal log messages:
