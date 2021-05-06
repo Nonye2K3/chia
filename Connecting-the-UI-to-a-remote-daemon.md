@@ -78,4 +78,4 @@ Run `sudo ufw status | grep 55400` or your OS and firewall equivalent. You shoul
 
 ### Is VMWare Plugin Service bound to daemon port?
 
-Verify port default port 55400 is not bound to VMWare Plugin or other service on daemon host. If pre-bound, stop other service or change `daemon_port` value in `config.yaml`.
+Verify that the default port 55400 is not bound to VMWare Plugin or other service on the daemon host. If pre-bound, stop that other service or change the `daemon_port` value in `config.yaml`. `netstat -tulpn` includes the process name of listeners. It should be `chia_daemon`.
