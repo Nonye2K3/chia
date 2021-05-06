@@ -22,6 +22,14 @@ To add a delay between your parallel processes, you can put a `sleep <seconds>` 
 ```
 The command above makes one plot (specified by `-n 1`), to plot in parallel you need to repeat the command (without closing the first one). Increase the `-n` value for sequential plotting, i.e. once the 1st plot is completed, the next is started.
 
+### Reminder: Manually Add logging when plotting in PowerShell
+
+When plotting with the GUI, the plotter will write logs in \mainnet\plotter for each plot. Many third party tools (such as the excellent Chia Plot Status) rely on the logs for their information reporting. One way to have manual logs when plotting from CLI is to use the built in "tee" command like this: 
+
+```
+.\chia.exe plots create -k 32 -n 2 -u 128 -t G:\ChiaTemp -d O:\Chia8O -r 2 -n 5 | tee -filepath %systemdrive%%homepath%\.chia\mainnet\plotter\plots-5-6-2021-B.txt
+```
+
 # 2. Take a good look at log files
 Your configuration and logs are found in `~\.chia\mainnet\log` and `~\.chia\mainnet\config`. You can tail your logs with `Get-Content ~\.chia\mainnet\log\debug.log -wait`. To see more of what is going on, set your log level in `config\config.yaml` to INFO from WARNING and restart. You can also use `\.chia.exe configure --set-log-level INFO` from the app directory outlined above and then restart for the changes to take effect.
 
