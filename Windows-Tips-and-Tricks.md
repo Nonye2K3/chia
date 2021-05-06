@@ -50,5 +50,5 @@ If your PowerShell plotting processes seem to pause, you should disable Quick Ed
 
 If you are still seeing this symptom it is almost always a [problem with your RAM](https://www.tomshardware.com/how-to/how-to-test-ram).
 
-#7 Leave free space on your drive 
+# 7. Leave free space on your drive 
 If you end up having your HDD or SSD have any issues that require disk repair, you will need to have free space on the disk that is larger than the largest file. For k32 plots, you will need to leave > 101 GB. This way, if your plots ever have errors (as reported by plot check tool), you will at least be able to try to repair them with CHKDSK /r. However, CHKDSK cannot repair files that are larger than the remaining free space on a drive, and will have an error
