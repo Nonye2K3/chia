@@ -16,8 +16,8 @@ The risk is that, if your computer is compromised, the attacker would have acces
 Another solution for farming XCH and securing them is to use two keys:
 
 ## 2 keys (farming key + cold storage key)
-Default key used for: plotting and farming
-Cold storage key used for: Wallet operations. Receiving/Sending funds and receiving farming rewards.
+1. Default key used for: plotting and farming
+1. Cold storage key used for: Wallet operations. Receiving/Sending funds and receiving farming rewards.
 
 The downside of that solution is that you will not have direct access to your wallet and XCH. Would you want to do an XCH operation you will have to manually import the cold storage key. The upside is: even if your computer is compromised the attacker will not be able to access your wallet. Since the private key receiving rewards will not be stored on it.
 
