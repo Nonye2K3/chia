@@ -140,7 +140,9 @@ Phases:
 | 3     | Compressing tables 5 and 6 |        92% |
 | 3     | Compressing tables 6 and 7 |        98% |
 | 4     | Write checkpoint tables    |       100% |
-(FYI) The information above is an example- if a user has a fast pc and large amount of ram --compared to older pc and low ram- both can still plot just different amount of total time to create the plot.
+
+
+#(FYI) The information above is an example- if a user has a fast pc and large amount of ram --compared to older pc and low ram- both can still plot just different amount of total time to create the plot.
 #### Notes
 The suggestion is to use an added SSD or NVME storage to create plots and not the primary hard drive (specially for non replaceable NVME like on some Macs or Windows Laptops)
 If for some reason a plot fails to complete- it has to be deleted by deleting all of its temp files. Be careful that you don't delete the temp files of another plot that's being plotted.
