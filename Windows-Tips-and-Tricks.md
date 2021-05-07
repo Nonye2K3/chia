@@ -2,7 +2,7 @@ In Windows, you can use the chia CLI from Windows PowerShell, allowing you more 
 
 # 1. Parallel plotting using PowerShell
 ```
-    cd %systemdrive%%homepath%\AppData\Local\Chia-Blockchain\app-1.1.4\resources\app.asar.unpacked\daemon\
+    cd $env:userprofile\AppData\Local\Chia-Blockchain\app-1.1.4\resources\app.asar.unpacked\daemon\
     start-process .\chia.exe -argumentlist "plots create yourParametersGoHere"
     start-process ....
     ....
@@ -17,7 +17,7 @@ To add a delay between your parallel processes, you can put a `sleep <seconds>` 
 
 ### A specific example:
 ```
-    cd %systemdrive%%homepath%\AppData\Local\Chia-Blockchain\app-1.1.4\resources\app.asar.unpacked\daemon\
+    cd $env:userprofile\AppData\Local\Chia-Blockchain\app-1.1.4\resources\app.asar.unpacked\daemon\
     start-process ./chia.exe -argumentlist "plots create -k 32 -b 4000 -u 128 -r 4 -t d:\tempdrive1 -2 e:\tempdrive2 -d F:\plots -n 1"
 ```
 The command above makes one plot (specified by `-n 1`), to plot in parallel you need to repeat the command (without closing the first one). Increase the `-n` value for sequential plotting, i.e. once the 1st plot is completed, the next is started.
@@ -27,7 +27,7 @@ The command above makes one plot (specified by `-n 1`), to plot in parallel you 
 When plotting with the GUI, the plotter will write logs in \mainnet\plotter for each plot. Many third party tools (such as the excellent Chia Plot Status) rely on the logs for their information reporting. One way to have manual logs when plotting from CLI is to use the built in "tee" command like this: 
 
 ```
-.\chia.exe plots create -k 32 -n 2 -u 128 -t G:\ChiaTemp -d O:\Chia8O -r 2 -n 5 | tee -filepath %systemdrive%%homepath%\.chia\mainnet\plotter\plots-5-6-2021-B.txt
+.\chia.exe plots create -k 32 -n 2 -u 128 -t G:\ChiaTemp -d O:\Chia8O -r 2 -n 5 | tee -filepath $env:userprofile\.chia\mainnet\plotter\plots-5-6-2021-B.txt
 ```
 
 # 2. Take a good look at log files
@@ -41,7 +41,7 @@ If you attempt to run more than one node on your local network, having uPnP on o
 
 ### For version 1.0:
 ```
-    cd %systemdrive%%homepath%\AppData\Local\Chia-Blockchain\app-1.1.4\resources\app.asar.unpacked\daemon\
+    cd $env:userprofile\AppData\Local\Chia-Blockchain\app-1.1.4\resources\app.asar.unpacked\daemon\
     ./chia.exe configure --enable-upnp false
 ```
 
