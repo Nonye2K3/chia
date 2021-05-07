@@ -212,6 +212,7 @@ Your pending transaction can take a few minutes if blocks are full. If it's not 
 2. Delete your wallet db files: located at `~/.chia/mainnet/wallet/db`. This will require syncing up your wallet, but not your node. And then you can resubmit the transaction.
 3. Make sure you have upgraded to the latest version
 4. Start the application and wait for the wallet to sync up
+5. After your wallet is resynced, any previous outgoing transactions will appear incorrectly, but your wallet balance will be correct.
 
 
 # Support/Miscellaneous
