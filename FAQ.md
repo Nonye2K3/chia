@@ -216,6 +216,14 @@ Your pending transaction can take a few minutes if blocks are full. If it's not 
 
 Known problem: After your wallet is resynced, any previous outgoing transactions will appear as incoming transaction at the block height you made the outgoing transaction.
 
+## Where can I buy Chia?
+[Gate.io](https://www.gate.io/)
+XCH/USDT
+XCH/ETH
+
+[MXC.com](https://www.mxc.com/)
+XCH/USDT
+
 
 # Support/Miscellaneous
 
