@@ -1,1 +1,1 @@
-   
+[Chia Network](https://www.chia.net/) - Green money for a digital world.
