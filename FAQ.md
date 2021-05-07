@@ -218,11 +218,11 @@ Known problem: After your wallet is resynced, any previous outgoing transactions
 
 ## Where can I buy Chia?
 [Gate.io](https://www.gate.io/)
-XCH/USDT
-XCH/ETH
+* XCH/USDT
+* XCH/ETH
 
-[MXC.com](https://www.mxc.com/)
-XCH/USDT
+[MXC](https://www.mxc.com/)
+* XCH/USDT
 
 
 # Support/Miscellaneous
