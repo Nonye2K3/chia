@@ -9,7 +9,7 @@ The 1.0.4 release changes almost all of the information below for the better. Th
 # Storage requirements
 | K-size | Temp. Size | Final Size |
 |-----|-----|-----|
-| K=32 | 269 GiB (288.8 GB) | 101.4 GiB (108.9 GB) |
+| K=32 | 239 GiB (256.6 GB) | 101.4 GiB (108.9 GB) |
 | K=33 | 512 GiB (550 GB) | 208.8 GiB (224.2 GB) |
 | K=34 | 1041 GiB (1118 GB) | 429.8 GiB (461.5 GB) |
 | K=35 | 2175 GiB (2335 GB) | 884.1 GiB (949.3 GB) |
