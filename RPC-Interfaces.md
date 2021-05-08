@@ -202,7 +202,6 @@ curl --insecure --cert ~/.chia/mainnet/config/ssl/wallet/private_wallet.crt \
 > Params
 > ```
 > header_hash: header hash of the block
-> newer_block_header_hash: the end header hash
 > ```
 > Response
 > ```json
