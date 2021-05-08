@@ -325,6 +325,6 @@ chia -h
 
 
 # Testnets
-To join the testnets, we recommend you keep a separate environment by prepending `CHIA_ROOT="~/.chia/testnetx` to all
+To join the testnets, we recommend you keep a separate environment by prepending `CHIA_ROOT="~/.chia/testnetx"` to all
 of your cli commands. For example, `CHIA_ROOT="~/.chia/testnet5 chia init`. You should also change the `selected_network`
 in the config.yaml, for all services, from `mainnet` to `testnetx` (i.e. `testnet5`). You should also replace `8444` with `58444` in the config file, and potentially change the introducer url as well (ask on keybase).
