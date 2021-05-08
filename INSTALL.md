@@ -88,6 +88,7 @@ npm run electron &
 To Update/Upgrade from previous version
 ```bash
 cd chia-blockchain
+. ./activate
 chia stop -d all
 deactivate
 git fetch
