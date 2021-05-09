@@ -42,6 +42,8 @@ There is a public node share the available 8444 peers every hour.
 
 * [chia.keva.app](https://chia.keva.app)
 
+These can be added in the GUI via the button, or via the CLI with `chia show -a PEER_ADDRESS:PORT` where `PORT` will usually be 8444.
+
 # Detailed explanation 
 A regular pc can communicate **out** with endless ports-- if the user is sending a signal out -- pc opens a port -- signal goes out, pc closes the port. 
 Chia uses port 8444 as instant verified communication.  So an open port can allow instant communication and start the blockchain sync.  Signal comes in on port 8444- that Chia pc is verified, then **both** user's pc, opens their own "communication ports ex port 8421" and that new user can now sync and now they are linked together forming part of Chia mesh. 
