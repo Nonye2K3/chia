@@ -78,8 +78,7 @@ sh install.sh
 # The GUI requires you have Ubuntu Desktop or a similar windowing system installed.
 # You can not install and run the GUI as root
 
-chmod +x ./install-gui.sh
-./install-gui.sh
+sh install-gui.sh
 
 cd chia-blockchain-gui
 npm run electron &
